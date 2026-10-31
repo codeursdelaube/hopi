@@ -1,0 +1,184 @@
+{
+  "level": "A2",
+  "title_en": "Money at work",
+  "title_fr": "L'argent en entreprise",
+  "lessons": [
+    {
+      "title_en": "Invoices & payments",
+      "terms": [
+        {
+          "term": "invoice",
+          "pos": "noun",
+          "translation_fr": "facture",
+          "definition_en": "A document that asks a customer to pay for goods or services.",
+          "explanation_fr": "Une « invoice » est une facture : elle indique ce qui a été vendu, le prix et la date de paiement.",
+          "example_en": "Please send the invoice by email.",
+          "example_fr": "Merci d'envoyer la facture par e-mail.",
+          "ipa": "/ˈɪnvɔɪs/"
+        },
+        {
+          "term": "payment",
+          "pos": "noun",
+          "translation_fr": "paiement",
+          "definition_en": "Money given to someone for goods or services.",
+          "explanation_fr": "Un « payment » est un paiement : en espèces, par virement ou par mobile money.",
+          "example_en": "We received your payment this morning.",
+          "example_fr": "Nous avons reçu ton paiement ce matin.",
+          "ipa": "/ˈpeɪmənt/"
+        },
+        {
+          "term": "receipt",
+          "pos": "noun",
+          "translation_fr": "reçu",
+          "definition_en": "A paper or message that proves you paid.",
+          "explanation_fr": "Un « receipt » est un reçu, la preuve du paiement. Attention : le « p » ne se prononce pas.",
+          "example_en": "Keep the receipt for your records.",
+          "example_fr": "Garde le reçu pour tes archives.",
+          "ipa": "/rɪˈsiːt/"
+        },
+        {
+          "term": "supplier",
+          "pos": "noun",
+          "translation_fr": "fournisseur",
+          "definition_en": "A company that sells goods or services to another company.",
+          "explanation_fr": "Un « supplier » est un fournisseur ; l'inverse est le client (« customer »).",
+          "example_en": "Our supplier delivers rice every Monday.",
+          "example_fr": "Notre fournisseur livre du riz chaque lundi.",
+          "ipa": "/səˈplaɪə/"
+        },
+        {
+          "term": "due date",
+          "pos": "noun",
+          "translation_fr": "date d'échéance",
+          "definition_en": "The last day to pay an invoice.",
+          "explanation_fr": "La « due date » est la date limite de paiement d'une facture.",
+          "example_en": "The due date is the end of the month.",
+          "example_fr": "La date d'échéance est la fin du mois."
+        },
+        {
+          "term": "balance",
+          "pos": "noun",
+          "translation_fr": "solde",
+          "definition_en": "The amount of money in an account, or the amount still to pay.",
+          "explanation_fr": "Le « balance » est le solde : l'argent disponible sur un compte, ou ce qui reste à payer.",
+          "example_en": "Check the balance of the account every week.",
+          "example_fr": "Vérifie le solde du compte chaque semaine.",
+          "ipa": "/ˈbæləns/"
+        },
+        {
+          "term": "refund",
+          "pos": "noun",
+          "translation_fr": "remboursement",
+          "definition_en": "Money given back to a customer.",
+          "explanation_fr": "Un « refund » est un remboursement ; « to refund » = rembourser.",
+          "example_en": "The customer asked for a refund.",
+          "example_fr": "Le client a demandé un remboursement.",
+          "ipa": "/ˈriːfʌnd/"
+        },
+        {
+          "term": "discount",
+          "pos": "noun",
+          "translation_fr": "remise (réduction)",
+          "definition_en": "A lower price than usual.",
+          "explanation_fr": "Un « discount » est une remise ou une réduction de prix.",
+          "example_en": "We give a ten percent discount for fast payment.",
+          "example_fr": "Nous accordons une remise de dix pour cent pour paiement rapide.",
+          "ipa": "/ˈdɪskaʊnt/"
+        }
+      ],
+      "sentences": [
+        { "en": "Please pay the invoice today", "fr": "Merci de payer la facture aujourd'hui" },
+        { "en": "Keep every receipt", "fr": "Garde chaque reçu" }
+      ]
+    },
+    {
+      "title_en": "Revenue & costs",
+      "terms": [
+        {
+          "term": "revenue",
+          "pos": "noun",
+          "translation_fr": "chiffre d'affaires",
+          "definition_en": "All the money a company receives from selling goods or services.",
+          "explanation_fr": "Le « revenue » est le chiffre d'affaires : le total des ventes, avant de retirer les coûts.",
+          "example_en": "Our revenue grew by twenty percent this year.",
+          "example_fr": "Notre chiffre d'affaires a augmenté de vingt pour cent cette année.",
+          "ipa": "/ˈrevənjuː/"
+        },
+        {
+          "term": "cost",
+          "pos": "noun",
+          "translation_fr": "coût",
+          "definition_en": "The money needed to make, buy or do something.",
+          "explanation_fr": "Un « cost » est un coût. « To cost » = coûter.",
+          "example_en": "The cost of transport is too high.",
+          "example_fr": "Le coût du transport est trop élevé.",
+          "ipa": "/kɒst/"
+        },
+        {
+          "term": "expense",
+          "pos": "noun",
+          "translation_fr": "dépense (charge)",
+          "definition_en": "Money spent to run a business.",
+          "explanation_fr": "Une « expense » est une dépense ou charge de l'entreprise (loyer, salaires, électricité).",
+          "example_en": "Rent is our biggest expense.",
+          "example_fr": "Le loyer est notre plus grosse dépense.",
+          "ipa": "/ɪkˈspens/"
+        },
+        {
+          "term": "profit",
+          "pos": "noun",
+          "translation_fr": "bénéfice",
+          "definition_en": "The money left after you pay all your costs.",
+          "explanation_fr": "Le « profit » est le bénéfice : le chiffre d'affaires moins les charges.",
+          "example_en": "The shop made a small profit last month.",
+          "example_fr": "La boutique a fait un petit bénéfice le mois dernier.",
+          "ipa": "/ˈprɒfɪt/"
+        },
+        {
+          "term": "loss",
+          "pos": "noun",
+          "translation_fr": "perte",
+          "definition_en": "When costs are higher than the money received.",
+          "explanation_fr": "Une « loss » est une perte : les charges dépassent les revenus.",
+          "example_en": "The company made a loss in its first year.",
+          "example_fr": "L'entreprise a subi une perte la première année.",
+          "ipa": "/lɒs/"
+        },
+        {
+          "term": "sales",
+          "pos": "noun (plural)",
+          "translation_fr": "ventes",
+          "definition_en": "The goods sold, or the money earned by selling.",
+          "explanation_fr": "« Sales » désigne les ventes, en quantité ou en valeur ; la « sales team » est l'équipe commerciale.",
+          "example_en": "Sales are higher during the holidays.",
+          "example_fr": "Les ventes sont plus élevées pendant les fêtes.",
+          "ipa": "/seɪlz/"
+        },
+        {
+          "term": "margin",
+          "pos": "noun",
+          "translation_fr": "marge",
+          "definition_en": "The difference between the selling price and the cost.",
+          "explanation_fr": "La « margin » est la marge : ce que tu gagnes sur chaque vente après le coût.",
+          "example_en": "Our margin on each phone is small.",
+          "example_fr": "Notre marge sur chaque téléphone est faible.",
+          "ipa": "/ˈmɑːdʒɪn/"
+        },
+        {
+          "term": "cash",
+          "pos": "noun",
+          "translation_fr": "espèces (trésorerie)",
+          "definition_en": "Money in coins and notes, or money available right now.",
+          "explanation_fr": "« Cash » = argent liquide, et plus largement la trésorerie disponible. « To pay cash » = payer en espèces.",
+          "example_en": "Many customers still pay in cash.",
+          "example_fr": "Beaucoup de clients paient encore en espèces.",
+          "ipa": "/kæʃ/"
+        }
+      ],
+      "sentences": [
+        { "en": "Our sales are growing fast", "fr": "Nos ventes augmentent vite" },
+        { "en": "Rent is a fixed expense", "fr": "Le loyer est une dépense fixe" }
+      ]
+    }
+  ]
+}

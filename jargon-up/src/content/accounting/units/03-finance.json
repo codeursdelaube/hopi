@@ -1,0 +1,194 @@
+{
+  "level": "B2",
+  "title_en": "Financial statements & management",
+  "title_fr": "États financiers et gestion",
+  "lessons": [
+    {
+      "title_en": "Financial statements",
+      "terms": [
+        {
+          "term": "balance sheet",
+          "pos": "noun",
+          "translation_fr": "bilan",
+          "definition_en": "A statement that shows what a company owns and owes on a given date.",
+          "explanation_fr": "Le « balance sheet » est le bilan : les actifs d'un côté, le passif et les capitaux propres de l'autre (système SYSCOHADA en Afrique de l'Ouest).",
+          "example_en": "The balance sheet is ready for the auditors.",
+          "example_fr": "Le bilan est prêt pour les auditeurs."
+        },
+        {
+          "term": "income statement",
+          "pos": "noun",
+          "translation_fr": "compte de résultat",
+          "definition_en": "A statement that shows revenue, expenses and profit over a period.",
+          "explanation_fr": "L'« income statement » (ou « profit and loss account ») est le compte de résultat.",
+          "example_en": "The income statement shows a profit this year.",
+          "example_fr": "Le compte de résultat affiche un bénéfice cette année."
+        },
+        {
+          "term": "cash flow",
+          "pos": "noun",
+          "translation_fr": "flux de trésorerie",
+          "definition_en": "The money moving into and out of a business.",
+          "explanation_fr": "Le « cash flow » mesure les entrées et sorties d'argent ; une entreprise rentable peut quand même manquer de trésorerie.",
+          "example_en": "Late payments hurt our cash flow.",
+          "example_fr": "Les retards de paiement pèsent sur notre trésorerie."
+        },
+        {
+          "term": "assets",
+          "pos": "noun (plural)",
+          "translation_fr": "actifs",
+          "definition_en": "Things a company owns that have value, like buildings or cash.",
+          "explanation_fr": "Les « assets » sont les actifs : bâtiments, machines, stocks, créances, trésorerie.",
+          "example_en": "The company's assets include two trucks and a warehouse.",
+          "example_fr": "Les actifs de l'entreprise comprennent deux camions et un entrepôt.",
+          "ipa": "/ˈæsets/"
+        },
+        {
+          "term": "liabilities",
+          "pos": "noun (plural)",
+          "translation_fr": "passif (dettes)",
+          "definition_en": "Money a company owes to others.",
+          "explanation_fr": "Les « liabilities » sont les dettes de l'entreprise (emprunts, fournisseurs à payer).",
+          "example_en": "Our liabilities are lower than last year.",
+          "example_fr": "Nos dettes sont plus faibles que l'an dernier.",
+          "ipa": "/ˌlaɪəˈbɪlətiz/"
+        },
+        {
+          "term": "equity",
+          "pos": "noun",
+          "translation_fr": "capitaux propres",
+          "definition_en": "The value of a company that belongs to its owners.",
+          "explanation_fr": "L'« equity » correspond aux capitaux propres : les actifs moins les dettes.",
+          "example_en": "The owners added more equity to the business.",
+          "example_fr": "Les propriétaires ont apporté plus de capitaux propres à l'entreprise.",
+          "ipa": "/ˈekwəti/"
+        },
+        {
+          "term": "depreciation",
+          "pos": "noun",
+          "translation_fr": "amortissement",
+          "definition_en": "The loss of value of equipment over time, recorded as a cost.",
+          "explanation_fr": "La « depreciation » est l'amortissement : on répartit le coût d'un équipement sur sa durée d'utilisation.",
+          "example_en": "The depreciation of the computers is spread over three years.",
+          "example_fr": "L'amortissement des ordinateurs est réparti sur trois ans.",
+          "ipa": "/dɪˌpriːʃiˈeɪʃən/"
+        },
+        {
+          "term": "audit",
+          "pos": "noun",
+          "translation_fr": "audit",
+          "definition_en": "An official check of a company's accounts by an expert.",
+          "explanation_fr": "Un « audit » est un contrôle des comptes par un expert indépendant (« auditor »).",
+          "example_en": "The audit starts next week.",
+          "example_fr": "L'audit commence la semaine prochaine.",
+          "ipa": "/ˈɔːdɪt/"
+        }
+      ],
+      "sentences": [
+        { "en": "The audit went very well", "fr": "L'audit s'est très bien passé" },
+        { "en": "We need a better cash flow", "fr": "Nous avons besoin d'une meilleure trésorerie" }
+      ]
+    },
+    {
+      "title_en": "Budgets & forecasts",
+      "terms": [
+        {
+          "term": "forecast",
+          "pos": "noun",
+          "translation_fr": "prévision",
+          "definition_en": "A calculation of what will probably happen in the future.",
+          "explanation_fr": "Un « forecast » est une prévision (ventes, trésorerie) basée sur des données.",
+          "example_en": "The sales forecast for next year is positive.",
+          "example_fr": "La prévision des ventes pour l'an prochain est positive.",
+          "ipa": "/ˈfɔːkɑːst/"
+        },
+        {
+          "term": "break-even point",
+          "pos": "noun",
+          "translation_fr": "seuil de rentabilité",
+          "definition_en": "The level of sales where you make neither a profit nor a loss.",
+          "explanation_fr": "Le « break-even point » est le seuil de rentabilité : le chiffre d'affaires à partir duquel tu ne perds plus d'argent.",
+          "example_en": "We will reach the break-even point in June.",
+          "example_fr": "Nous atteindrons le seuil de rentabilité en juin."
+        },
+        {
+          "term": "overheads",
+          "pos": "noun (plural)",
+          "translation_fr": "frais généraux",
+          "definition_en": "Regular business costs like rent, electricity and insurance.",
+          "explanation_fr": "Les « overheads » sont les frais généraux, qui ne dépendent pas directement de la production.",
+          "example_en": "Our overheads include rent and electricity.",
+          "example_fr": "Nos frais généraux comprennent le loyer et l'électricité.",
+          "ipa": "/ˈəʊvəhedz/"
+        },
+        {
+          "term": "investment",
+          "pos": "noun",
+          "translation_fr": "investissement",
+          "definition_en": "Money spent today to earn more in the future.",
+          "explanation_fr": "Un « investment » est un investissement : dépenser aujourd'hui pour gagner plus demain.",
+          "example_en": "The new machine is a good investment.",
+          "example_fr": "La nouvelle machine est un bon investissement.",
+          "ipa": "/ɪnˈvestmənt/"
+        },
+        {
+          "term": "return on investment",
+          "pos": "noun",
+          "translation_fr": "retour sur investissement",
+          "definition_en": "The profit you get from an investment, compared with its cost.",
+          "explanation_fr": "Le « return on investment » (ROI) mesure ce que rapporte un investissement par rapport à ce qu'il a coûté.",
+          "example_en": "The return on investment was thirty percent.",
+          "example_fr": "Le retour sur investissement a été de trente pour cent."
+        },
+        {
+          "term": "fixed costs",
+          "pos": "noun (plural)",
+          "translation_fr": "coûts fixes",
+          "definition_en": "Costs that stay the same, whatever you sell.",
+          "explanation_fr": "Les « fixed costs » ne changent pas avec le volume de ventes (loyer, abonnements).",
+          "example_en": "Rent and insurance are fixed costs.",
+          "example_fr": "Le loyer et l'assurance sont des coûts fixes."
+        },
+        {
+          "term": "variable costs",
+          "pos": "noun (plural)",
+          "translation_fr": "coûts variables",
+          "definition_en": "Costs that change with the amount you produce or sell.",
+          "explanation_fr": "Les « variable costs » augmentent avec la production (matières premières, transport).",
+          "example_en": "Raw materials are variable costs.",
+          "example_fr": "Les matières premières sont des coûts variables."
+        },
+        {
+          "term": "cost-cutting",
+          "pos": "noun",
+          "translation_fr": "réduction des coûts",
+          "definition_en": "Reducing the money a company spends.",
+          "explanation_fr": "Le « cost-cutting » regroupe les mesures pour réduire les dépenses.",
+          "example_en": "The cost-cutting plan saved two million francs.",
+          "example_fr": "Le plan de réduction des coûts a fait économiser deux millions de francs.",
+          "ipa": "/ˈkɒst ˌkʌtɪŋ/"
+        }
+      ],
+      "sentences": [
+        { "en": "Our forecast is too optimistic", "fr": "Notre prévision est trop optimiste" },
+        {
+          "en": "Cut the overheads by ten percent",
+          "fr": "Réduis les frais généraux de dix pour cent"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Budget meeting",
+          "lines": [{ "speaker": "CEO", "text": "Can we buy the new machine this year?" }],
+          "options": [
+            "Yes, the forecast shows a return on investment in 18 months.",
+            "Yes, we don't need to check the numbers.",
+            "No, because machines are boring."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "On justifie une décision avec des chiffres : « the forecast shows a return on investment in 18 months » = « la prévision montre un retour sur investissement en 18 mois »."
+        }
+      ]
+    }
+  ]
+}

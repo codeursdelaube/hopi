@@ -1,0 +1,201 @@
+{
+  "level": "B1",
+  "title_en": "Bookkeeping & tax",
+  "title_fr": "Tenue des comptes et fiscalité",
+  "lessons": [
+    {
+      "title_en": "Keeping the books",
+      "terms": [
+        {
+          "term": "bookkeeping",
+          "pos": "noun",
+          "translation_fr": "tenue des comptes",
+          "definition_en": "Recording all the money that comes in and goes out of a business.",
+          "explanation_fr": "Le « bookkeeping » est la tenue des comptes au quotidien : enregistrer chaque recette et chaque dépense.",
+          "example_en": "Good bookkeeping saves time at the end of the year.",
+          "example_fr": "Une bonne tenue des comptes fait gagner du temps en fin d'année.",
+          "ipa": "/ˈbʊkkiːpɪŋ/"
+        },
+        {
+          "term": "ledger",
+          "pos": "noun",
+          "translation_fr": "grand livre",
+          "definition_en": "The main record of all the accounts of a business.",
+          "explanation_fr": "Le « ledger » (ou « general ledger ») est le grand livre qui regroupe tous les comptes.",
+          "example_en": "Every payment goes into the ledger.",
+          "example_fr": "Chaque paiement est inscrit au grand livre.",
+          "ipa": "/ˈledʒə/"
+        },
+        {
+          "term": "entry",
+          "pos": "noun",
+          "translation_fr": "écriture comptable",
+          "definition_en": "One line recorded in the accounts.",
+          "explanation_fr": "Une « entry » (ou « journal entry ») est une écriture comptable.",
+          "example_en": "This entry has the wrong date.",
+          "example_fr": "Cette écriture a la mauvaise date.",
+          "ipa": "/ˈentri/"
+        },
+        {
+          "term": "account",
+          "pos": "noun",
+          "translation_fr": "compte",
+          "definition_en": "A record of money for one type of item, or a bank account.",
+          "explanation_fr": "Un « account » est un compte : compte bancaire, ou compte comptable (ventes, achats, banque…).",
+          "example_en": "Open a separate account for the business.",
+          "example_fr": "Ouvre un compte séparé pour l'entreprise.",
+          "ipa": "/əˈkaʊnt/"
+        },
+        {
+          "term": "debit",
+          "pos": "noun",
+          "translation_fr": "débit",
+          "definition_en": "An amount recorded on the left side of an account.",
+          "explanation_fr": "Le « debit » est le côté gauche d'un compte ; en partie double, chaque débit a un crédit correspondant.",
+          "example_en": "Each debit needs a matching credit.",
+          "example_fr": "Chaque débit doit avoir un crédit correspondant.",
+          "ipa": "/ˈdebɪt/"
+        },
+        {
+          "term": "credit",
+          "pos": "noun",
+          "translation_fr": "crédit",
+          "definition_en": "An amount recorded on the right side of an account.",
+          "explanation_fr": "Le « credit » est le côté droit d'un compte. « On credit » veut aussi dire « à crédit » (payer plus tard).",
+          "example_en": "Record the sale as a credit to the sales account.",
+          "example_fr": "Enregistre la vente au crédit du compte de ventes.",
+          "ipa": "/ˈkredɪt/"
+        },
+        {
+          "term": "bank statement",
+          "pos": "noun",
+          "translation_fr": "relevé bancaire",
+          "definition_en": "A document from the bank that lists all the movements on an account.",
+          "explanation_fr": "Le « bank statement » est le relevé de compte envoyé par la banque.",
+          "example_en": "Compare the bank statement with your records.",
+          "example_fr": "Compare le relevé bancaire avec tes écritures."
+        },
+        {
+          "term": "reconciliation",
+          "pos": "noun",
+          "translation_fr": "rapprochement (bancaire)",
+          "definition_en": "Checking that two records, like the books and the bank, match.",
+          "explanation_fr": "La « reconciliation » (rapprochement bancaire) vérifie que la comptabilité et le relevé de la banque concordent.",
+          "example_en": "We do the bank reconciliation every month.",
+          "example_fr": "Nous faisons le rapprochement bancaire chaque mois.",
+          "ipa": "/ˌrekənsɪliˈeɪʃən/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Record every payment in the ledger",
+          "fr": "Enregistre chaque paiement au grand livre"
+        },
+        { "en": "The accounts must balance", "fr": "Les comptes doivent être équilibrés" }
+      ]
+    },
+    {
+      "title_en": "Tax & payroll",
+      "terms": [
+        {
+          "term": "tax",
+          "pos": "noun",
+          "translation_fr": "impôt (taxe)",
+          "definition_en": "Money that people and companies must pay to the government.",
+          "explanation_fr": "Un « tax » est un impôt ou une taxe versé à l'État.",
+          "example_en": "The company pays tax on its profit.",
+          "example_fr": "L'entreprise paie un impôt sur son bénéfice.",
+          "ipa": "/tæks/"
+        },
+        {
+          "term": "VAT",
+          "pos": "noun",
+          "translation_fr": "TVA",
+          "definition_en": "A tax added to the price of most goods and services.",
+          "explanation_fr": "La « VAT » (Value Added Tax) est la TVA ; au Togo, son taux normal est de 18 %.",
+          "example_en": "The price includes VAT.",
+          "example_fr": "Le prix comprend la TVA.",
+          "ipa": "/ˌviː eɪ ˈtiː/"
+        },
+        {
+          "term": "payroll",
+          "pos": "noun",
+          "translation_fr": "paie",
+          "definition_en": "The list of employees and the salaries a company pays them.",
+          "explanation_fr": "Le « payroll » est la paie : la gestion des salaires et des cotisations sociales.",
+          "example_en": "We run the payroll on the 25th.",
+          "example_fr": "Nous faisons la paie le 25.",
+          "ipa": "/ˈpeɪrəʊl/"
+        },
+        {
+          "term": "gross salary",
+          "pos": "noun",
+          "translation_fr": "salaire brut",
+          "definition_en": "Your pay before taxes and contributions are taken out.",
+          "explanation_fr": "Le « gross salary » est le salaire brut, avant retenues.",
+          "example_en": "Her gross salary is 400,000 francs.",
+          "example_fr": "Son salaire brut est de 400 000 francs."
+        },
+        {
+          "term": "net salary",
+          "pos": "noun",
+          "translation_fr": "salaire net",
+          "definition_en": "Your pay after taxes and contributions are taken out.",
+          "explanation_fr": "Le « net salary » est le salaire net, ce que l'employé reçoit vraiment.",
+          "example_en": "The net salary is paid by bank transfer.",
+          "example_fr": "Le salaire net est payé par virement."
+        },
+        {
+          "term": "deduction",
+          "pos": "noun",
+          "translation_fr": "retenue (déduction)",
+          "definition_en": "An amount taken away from a total, like tax from a salary.",
+          "explanation_fr": "Une « deduction » est une retenue sur salaire ou une déduction fiscale.",
+          "example_en": "Each deduction is shown on the payslip.",
+          "example_fr": "Chaque retenue figure sur le bulletin de paie.",
+          "ipa": "/dɪˈdʌkʃən/"
+        },
+        {
+          "term": "tax return",
+          "pos": "noun",
+          "translation_fr": "déclaration d'impôts",
+          "definition_en": "The form you send to the tax office about your income.",
+          "explanation_fr": "La « tax return » est la déclaration fiscale envoyée à l'administration (au Togo, l'OTR).",
+          "example_en": "Send the tax return before the deadline.",
+          "example_fr": "Envoie la déclaration d'impôts avant la date limite."
+        },
+        {
+          "term": "social security",
+          "pos": "noun",
+          "translation_fr": "sécurité sociale",
+          "definition_en": "The public system that pays for pensions and health, using contributions.",
+          "explanation_fr": "La « social security » est la protection sociale financée par les cotisations ; au Togo, elle est gérée par la CNSS.",
+          "example_en": "Employers must pay social security contributions.",
+          "example_fr": "Les employeurs doivent payer les cotisations de sécurité sociale."
+        }
+      ],
+      "sentences": [
+        { "en": "The price includes all taxes", "fr": "Le prix comprend toutes les taxes" },
+        { "en": "Payroll is ready for this month", "fr": "La paie de ce mois est prête" }
+      ],
+      "dialogues": [
+        {
+          "context": "Accounting team",
+          "lines": [
+            {
+              "speaker": "Manager",
+              "text": "The bank balance doesn't match our books. What should we do?"
+            }
+          ],
+          "options": [
+            "Let's do a bank reconciliation line by line.",
+            "Let's change the bank statement.",
+            "It doesn't matter, nobody will check."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's do a bank reconciliation line by line » = « Faisons un rapprochement bancaire ligne par ligne ». On ne modifie jamais un relevé bancaire !"
+        }
+      ]
+    }
+  ]
+}

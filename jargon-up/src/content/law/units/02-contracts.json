@@ -1,0 +1,200 @@
+{
+  "level": "B1",
+  "title_en": "Contracts",
+  "title_fr": "Les contrats",
+  "lessons": [
+    {
+      "title_en": "Making a contract",
+      "terms": [
+        {
+          "term": "contract",
+          "pos": "noun",
+          "translation_fr": "contrat",
+          "definition_en": "A legal agreement between two or more people or companies.",
+          "explanation_fr": "Un « contract » est un accord juridique qui crée des obligations entre les parties.",
+          "example_en": "Read the contract carefully before you sign it.",
+          "example_fr": "Lis attentivement le contrat avant de le signer.",
+          "ipa": "/ˈkɒntrækt/"
+        },
+        {
+          "term": "party",
+          "pos": "noun",
+          "translation_fr": "partie (au contrat)",
+          "definition_en": "A person or company that takes part in a contract or a case.",
+          "explanation_fr": "Une « party » est une partie à un contrat ou à un procès. Attention : dans la vie courante, « party » veut dire « fête ».",
+          "example_en": "Each party must keep a signed copy.",
+          "example_fr": "Chaque partie doit garder un exemplaire signé.",
+          "ipa": "/ˈpɑːti/"
+        },
+        {
+          "term": "clause",
+          "pos": "noun",
+          "translation_fr": "clause",
+          "definition_en": "A specific part of a contract that covers one point.",
+          "explanation_fr": "Une « clause » est une disposition précise du contrat (clause de confidentialité, de paiement…).",
+          "example_en": "This clause explains how payment works.",
+          "example_fr": "Cette clause explique comment fonctionne le paiement.",
+          "ipa": "/klɔːz/"
+        },
+        {
+          "term": "terms and conditions",
+          "pos": "noun",
+          "translation_fr": "conditions générales",
+          "definition_en": "The rules that people must accept to use a service or buy something.",
+          "explanation_fr": "Les « terms and conditions » (T&C) sont les conditions générales qu'on accepte souvent en cochant une case.",
+          "example_en": "Please accept the terms and conditions to continue.",
+          "example_fr": "Merci d'accepter les conditions générales pour continuer."
+        },
+        {
+          "term": "signature",
+          "pos": "noun",
+          "translation_fr": "signature",
+          "definition_en": "Your name written by you to show you agree with a document.",
+          "explanation_fr": "La « signature » prouve que tu acceptes le document. Le verbe est « to sign ».",
+          "example_en": "We are waiting for the director's signature.",
+          "example_fr": "Nous attendons la signature du directeur.",
+          "ipa": "/ˈsɪɡnətʃə/"
+        },
+        {
+          "term": "agreement",
+          "pos": "noun",
+          "translation_fr": "accord",
+          "definition_en": "A decision or arrangement accepted by two or more parties.",
+          "explanation_fr": "Un « agreement » est un accord ; un contrat est un « agreement » qui a une valeur juridique.",
+          "example_en": "Both companies reached an agreement on the price.",
+          "example_fr": "Les deux entreprises sont parvenues à un accord sur le prix.",
+          "ipa": "/əˈɡriːmənt/"
+        },
+        {
+          "term": "draft",
+          "pos": "noun",
+          "translation_fr": "projet (version provisoire)",
+          "definition_en": "A first version of a document that is not final yet.",
+          "explanation_fr": "Un « draft » est une version provisoire d'un contrat ou d'un texte, qu'on peut encore modifier.",
+          "example_en": "I will send you the draft by email.",
+          "example_fr": "Je t'enverrai le projet de contrat par e-mail.",
+          "ipa": "/drɑːft/"
+        },
+        {
+          "term": "amendment",
+          "pos": "noun",
+          "translation_fr": "avenant (modification)",
+          "definition_en": "A change made to a contract or a law.",
+          "explanation_fr": "Un « amendment » modifie un texte existant ; pour un contrat, on parle en français d'« avenant ».",
+          "example_en": "We signed an amendment to extend the contract.",
+          "example_fr": "Nous avons signé un avenant pour prolonger le contrat.",
+          "ipa": "/əˈmendmənt/"
+        }
+      ],
+      "sentences": [
+        { "en": "Both parties signed the contract", "fr": "Les deux parties ont signé le contrat" },
+        { "en": "Please send me the new draft", "fr": "Envoie-moi le nouveau projet s'il te plaît" }
+      ]
+    },
+    {
+      "title_en": "When things go wrong",
+      "terms": [
+        {
+          "term": "breach of contract",
+          "pos": "noun",
+          "translation_fr": "violation du contrat",
+          "definition_en": "Failing to do what a contract says you must do.",
+          "explanation_fr": "Un « breach of contract » est une violation du contrat : une partie ne respecte pas ses obligations (retard, non-paiement…).",
+          "example_en": "Not paying on time is a breach of contract.",
+          "example_fr": "Ne pas payer à temps est une violation du contrat."
+        },
+        {
+          "term": "damages",
+          "pos": "noun (plural)",
+          "translation_fr": "dommages-intérêts",
+          "definition_en": "Money that a court orders someone to pay for harm they caused.",
+          "explanation_fr": "Au pluriel, « damages » = dommages-intérêts (une somme d'argent). Au singulier, « damage » = dégât.",
+          "example_en": "The court ordered the company to pay damages.",
+          "example_fr": "Le tribunal a condamné l'entreprise à verser des dommages-intérêts.",
+          "ipa": "/ˈdæmɪdʒɪz/"
+        },
+        {
+          "term": "termination",
+          "pos": "noun",
+          "translation_fr": "résiliation",
+          "definition_en": "The official end of a contract.",
+          "explanation_fr": "La « termination » est la résiliation : la fin officielle du contrat, par exemple après un préavis.",
+          "example_en": "He received a letter of termination yesterday.",
+          "example_fr": "Il a reçu une lettre de résiliation hier.",
+          "ipa": "/ˌtɜːmɪˈneɪʃən/"
+        },
+        {
+          "term": "notice period",
+          "pos": "noun",
+          "translation_fr": "préavis",
+          "definition_en": "The time between announcing the end of a contract and the real end.",
+          "explanation_fr": "Le « notice period » est le préavis : le délai à respecter avant que la résiliation ou la démission prenne effet.",
+          "example_en": "The notice period is one month.",
+          "example_fr": "Le préavis est d'un mois."
+        },
+        {
+          "term": "dispute",
+          "pos": "noun",
+          "translation_fr": "litige",
+          "definition_en": "A serious disagreement between two parties.",
+          "explanation_fr": "Un « dispute » est un litige, un désaccord sérieux qui peut aller jusqu'au tribunal.",
+          "example_en": "The dispute is about the final price.",
+          "example_fr": "Le litige porte sur le prix final.",
+          "ipa": "/dɪˈspjuːt/"
+        },
+        {
+          "term": "settlement",
+          "pos": "noun",
+          "translation_fr": "accord à l'amiable",
+          "definition_en": "An agreement that ends a dispute without a trial.",
+          "explanation_fr": "Un « settlement » est un accord qui met fin au litige sans jugement : on parle de règlement à l'amiable.",
+          "example_en": "They reached a settlement before the trial.",
+          "example_fr": "Ils ont trouvé un accord à l'amiable avant le procès.",
+          "ipa": "/ˈsetəlmənt/"
+        },
+        {
+          "term": "arbitration",
+          "pos": "noun",
+          "translation_fr": "arbitrage",
+          "definition_en": "A way to solve a dispute with a private judge instead of a court.",
+          "explanation_fr": "L'« arbitration » confie le litige à un arbitre privé. Dans l'espace OHADA, la CCJA d'Abidjan organise des arbitrages.",
+          "example_en": "The contract says disputes go to arbitration.",
+          "example_fr": "Le contrat prévoit que les litiges passent par l'arbitrage.",
+          "ipa": "/ˌɑːbɪˈtreɪʃən/"
+        },
+        {
+          "term": "force majeure",
+          "pos": "noun",
+          "translation_fr": "force majeure",
+          "definition_en": "An event nobody can control, like a flood, that stops a party from doing its job.",
+          "explanation_fr": "La « force majeure » (expression venue du français) est un événement imprévisible et irrésistible qui libère une partie de ses obligations.",
+          "example_en": "The flood was a case of force majeure.",
+          "example_fr": "L'inondation était un cas de force majeure.",
+          "ipa": "/ˌfɔːs mæˈʒɜː/"
+        }
+      ],
+      "sentences": [
+        { "en": "We want to avoid a long dispute", "fr": "Nous voulons éviter un long litige" },
+        { "en": "The notice period starts today", "fr": "Le préavis commence aujourd'hui" }
+      ],
+      "dialogues": [
+        {
+          "context": "Call with a client",
+          "lines": [
+            {
+              "speaker": "Client",
+              "text": "Your company delivered three weeks late. This is a breach of contract."
+            }
+          ],
+          "options": [
+            "I'm sorry. Let's look at the penalty clause together.",
+            "Contracts are not important.",
+            "We delivered early, so everything is fine."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "On reconnaît le problème et on propose une solution : « Let's look at the penalty clause together » = « Regardons ensemble la clause de pénalité »."
+        }
+      ]
+    }
+  ]
+}

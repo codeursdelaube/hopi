@@ -274,9 +274,9 @@ export const fr = {
   },
   fields: [
     { slug: "tech", icon: "💻", name: "Informatique", published: true },
-    { slug: "law", icon: "⚖️", name: "Droit", published: false },
-    { slug: "communication", icon: "📣", name: "Communication", published: false },
-    { slug: "accounting", icon: "📊", name: "Compta / Gestion", published: false },
-    { slug: "economics", icon: "📈", name: "Économie", published: false },
+    { slug: "law", icon: "⚖️", name: "Droit", published: true },
+    { slug: "communication", icon: "📣", name: "Communication", published: true },
+    { slug: "accounting", icon: "📊", name: "Compta / Gestion", published: true },
+    { slug: "economics", icon: "📈", name: "Économie", published: true },
   ],
 } as const;

@@ -1,0 +1,185 @@
+{
+  "level": "A2",
+  "title_en": "Communication basics",
+  "title_fr": "Les bases de la communication",
+  "lessons": [
+    {
+      "title_en": "Messages & audiences",
+      "terms": [
+        {
+          "term": "audience",
+          "pos": "noun",
+          "translation_fr": "public",
+          "definition_en": "The people who receive a message, watch or listen.",
+          "explanation_fr": "L'« audience » est le public : les personnes qui regardent, écoutent ou lisent ton message.",
+          "example_en": "Know your audience before you write.",
+          "example_fr": "Connais ton public avant d'écrire.",
+          "ipa": "/ˈɔːdiəns/"
+        },
+        {
+          "term": "message",
+          "pos": "noun",
+          "translation_fr": "message",
+          "definition_en": "The main idea you want people to understand.",
+          "explanation_fr": "Le « message » est l'idée principale que tu veux faire passer.",
+          "example_en": "Keep your message short and clear.",
+          "example_fr": "Garde ton message court et clair.",
+          "ipa": "/ˈmesɪdʒ/"
+        },
+        {
+          "term": "target",
+          "pos": "noun",
+          "translation_fr": "cible",
+          "definition_en": "The specific group of people you want to reach.",
+          "explanation_fr": "La « target » (ou « target audience ») est le groupe précis que tu veux toucher : âge, ville, métier…",
+          "example_en": "Our target is students in Lomé.",
+          "example_fr": "Notre cible, ce sont les étudiants de Lomé.",
+          "ipa": "/ˈtɑːɡɪt/"
+        },
+        {
+          "term": "brand",
+          "pos": "noun",
+          "translation_fr": "marque",
+          "definition_en": "The name, image and personality of a company or product.",
+          "explanation_fr": "Une « brand » est une marque, avec son nom, son logo, ses couleurs et sa personnalité.",
+          "example_en": "Our brand must look the same everywhere.",
+          "example_fr": "Notre marque doit avoir la même image partout.",
+          "ipa": "/brænd/"
+        },
+        {
+          "term": "slogan",
+          "pos": "noun",
+          "translation_fr": "slogan",
+          "definition_en": "A short, easy phrase that people remember.",
+          "explanation_fr": "Un « slogan » est une phrase courte et mémorable associée à une marque.",
+          "example_en": "The new slogan is easy to remember.",
+          "example_fr": "Le nouveau slogan est facile à retenir.",
+          "ipa": "/ˈsləʊɡən/"
+        },
+        {
+          "term": "logo",
+          "pos": "noun",
+          "translation_fr": "logo",
+          "definition_en": "A symbol or design that represents a brand.",
+          "explanation_fr": "Le « logo » est le symbole graphique d'une marque.",
+          "example_en": "Put the logo at the top of the poster.",
+          "example_fr": "Mets le logo en haut de l'affiche.",
+          "ipa": "/ˈləʊɡəʊ/"
+        },
+        {
+          "term": "feedback",
+          "pos": "noun",
+          "translation_fr": "retours (avis)",
+          "definition_en": "Opinions and comments about something you did.",
+          "explanation_fr": "Le « feedback » est l'avis des gens sur ton travail. C'est un mot indénombrable : « some feedback ».",
+          "example_en": "We got great feedback from our customers.",
+          "example_fr": "Nous avons eu de très bons retours de nos clients.",
+          "ipa": "/ˈfiːdbæk/"
+        },
+        {
+          "term": "channel",
+          "pos": "noun",
+          "translation_fr": "canal",
+          "definition_en": "A way to send a message, like radio, email or WhatsApp.",
+          "explanation_fr": "Un « channel » est un canal de communication : radio, affichage, e-mail, WhatsApp, réseaux sociaux…",
+          "example_en": "WhatsApp is our best channel in Togo.",
+          "example_fr": "WhatsApp est notre meilleur canal au Togo.",
+          "ipa": "/ˈtʃænəl/"
+        }
+      ],
+      "sentences": [
+        { "en": "Know your audience first", "fr": "Connais d'abord ton public" },
+        { "en": "Our message must be simple", "fr": "Notre message doit être simple" }
+      ]
+    },
+    {
+      "title_en": "Social media",
+      "terms": [
+        {
+          "term": "post",
+          "pos": "noun / verb",
+          "translation_fr": "publication",
+          "definition_en": "A message, photo or video shared on social media.",
+          "explanation_fr": "Un « post » est une publication sur un réseau social. « To post » = publier.",
+          "example_en": "Our last post had two hundred likes.",
+          "example_fr": "Notre dernière publication a eu deux cents j'aime.",
+          "ipa": "/pəʊst/"
+        },
+        {
+          "term": "follower",
+          "pos": "noun",
+          "translation_fr": "abonné",
+          "definition_en": "A person who chooses to see your posts on social media.",
+          "explanation_fr": "Un « follower » est un abonné à ton compte.",
+          "example_en": "Every new follower sees our next videos.",
+          "example_fr": "Chaque nouvel abonné voit nos prochaines vidéos.",
+          "ipa": "/ˈfɒləʊə/"
+        },
+        {
+          "term": "engagement",
+          "pos": "noun",
+          "translation_fr": "engagement (interactions)",
+          "definition_en": "How much people react to content: likes, comments and shares.",
+          "explanation_fr": "L'« engagement » mesure les interactions (j'aime, commentaires, partages) avec ton contenu.",
+          "example_en": "Videos usually get more engagement than photos.",
+          "example_fr": "Les vidéos obtiennent souvent plus d'engagement que les photos.",
+          "ipa": "/ɪnˈɡeɪdʒmənt/"
+        },
+        {
+          "term": "hashtag",
+          "pos": "noun",
+          "translation_fr": "mot-dièse",
+          "definition_en": "A word after the # sign that helps people find a topic.",
+          "explanation_fr": "Un « hashtag » (#) regroupe les publications sur un même sujet.",
+          "example_en": "Use the hashtag of the event in your caption.",
+          "example_fr": "Utilise le hashtag de l'événement dans ta légende.",
+          "ipa": "/ˈhæʃtæɡ/"
+        },
+        {
+          "term": "influencer",
+          "pos": "noun",
+          "translation_fr": "influenceur",
+          "definition_en": "A person with many followers who can change what people buy or think.",
+          "explanation_fr": "Un « influencer » a une grande communauté et peut influencer ses choix ; les marques le paient pour des partenariats.",
+          "example_en": "We work with a local influencer in Lomé.",
+          "example_fr": "Nous travaillons avec une influenceuse locale à Lomé.",
+          "ipa": "/ˈɪnfluənsə/"
+        },
+        {
+          "term": "content",
+          "pos": "noun",
+          "translation_fr": "contenu",
+          "definition_en": "Text, photos, videos and other material you publish.",
+          "explanation_fr": "Le « content » désigne tout ce que tu publies : textes, images, vidéos, podcasts.",
+          "example_en": "We create new content every week.",
+          "example_fr": "Nous créons du nouveau contenu chaque semaine.",
+          "ipa": "/ˈkɒntent/"
+        },
+        {
+          "term": "reach",
+          "pos": "noun",
+          "translation_fr": "portée",
+          "definition_en": "The number of people who see your content.",
+          "explanation_fr": "La « reach » est le nombre de personnes différentes qui ont vu ton contenu.",
+          "example_en": "The reach of this video was very high.",
+          "example_fr": "La portée de cette vidéo a été très élevée.",
+          "ipa": "/riːtʃ/"
+        },
+        {
+          "term": "viral",
+          "pos": "adjective",
+          "translation_fr": "viral",
+          "definition_en": "Shared very quickly by a very large number of people.",
+          "explanation_fr": "Un contenu « viral » se partage très vite et très largement. « To go viral » = devenir viral.",
+          "example_en": "Her video went viral in one day.",
+          "example_fr": "Sa vidéo est devenue virale en un jour.",
+          "ipa": "/ˈvaɪrəl/"
+        }
+      ],
+      "sentences": [
+        { "en": "Our video went viral", "fr": "Notre vidéo est devenue virale" },
+        { "en": "Post every day at six", "fr": "Publie tous les jours à six heures" }
+      ]
+    }
+  ]
+}

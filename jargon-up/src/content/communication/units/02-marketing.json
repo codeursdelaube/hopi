@@ -1,0 +1,183 @@
+{
+  "level": "B1",
+  "title_en": "Marketing & campaigns",
+  "title_fr": "Marketing et campagnes",
+  "lessons": [
+    {
+      "title_en": "Planning a campaign",
+      "terms": [
+        {
+          "term": "campaign",
+          "pos": "noun",
+          "translation_fr": "campagne",
+          "definition_en": "A planned set of actions to promote a product or an idea.",
+          "explanation_fr": "Une « campaign » est une série d'actions planifiées (publicités, publications, événements) autour d'un objectif.",
+          "example_en": "The campaign starts on Monday.",
+          "example_fr": "La campagne commence lundi.",
+          "ipa": "/kæmˈpeɪn/"
+        },
+        {
+          "term": "budget",
+          "pos": "noun",
+          "translation_fr": "budget",
+          "definition_en": "The amount of money you can spend on something.",
+          "explanation_fr": "Le « budget » est la somme disponible pour un projet.",
+          "example_en": "Our budget for this campaign is small.",
+          "example_fr": "Notre budget pour cette campagne est petit.",
+          "ipa": "/ˈbʌdʒɪt/"
+        },
+        {
+          "term": "launch",
+          "pos": "noun / verb",
+          "translation_fr": "lancement",
+          "definition_en": "The moment a new product or campaign starts.",
+          "explanation_fr": "Le « launch » est le lancement ; « to launch » = lancer.",
+          "example_en": "The launch of the app is next week.",
+          "example_fr": "Le lancement de l'appli a lieu la semaine prochaine.",
+          "ipa": "/lɔːntʃ/"
+        },
+        {
+          "term": "strategy",
+          "pos": "noun",
+          "translation_fr": "stratégie",
+          "definition_en": "A plan to reach a long-term goal.",
+          "explanation_fr": "Une « strategy » est un plan d'ensemble pour atteindre un objectif ; les actions concrètes relèvent de la tactique.",
+          "example_en": "We need a clear strategy for social media.",
+          "example_fr": "Nous avons besoin d'une stratégie claire pour les réseaux sociaux.",
+          "ipa": "/ˈstrætədʒi/"
+        },
+        {
+          "term": "KPI",
+          "pos": "noun",
+          "translation_fr": "indicateur clé de performance",
+          "definition_en": "A number used to measure if you are reaching your goal.",
+          "explanation_fr": "Un « KPI » (Key Performance Indicator) est un indicateur clé : nombre de ventes, taux de clic, abonnés gagnés…",
+          "example_en": "Our main KPI is the number of sign-ups.",
+          "example_fr": "Notre principal indicateur est le nombre d'inscriptions.",
+          "ipa": "/ˌkeɪ piː ˈaɪ/"
+        },
+        {
+          "term": "brief",
+          "pos": "noun",
+          "translation_fr": "brief (cahier des charges)",
+          "definition_en": "A short document that explains what a project must achieve.",
+          "explanation_fr": "Le « brief » résume la demande : objectif, cible, message, budget, délais. C'est la base de tout projet de communication.",
+          "example_en": "Read the client's brief before the meeting.",
+          "example_fr": "Lis le brief du client avant la réunion.",
+          "ipa": "/briːf/"
+        },
+        {
+          "term": "timeline",
+          "pos": "noun",
+          "translation_fr": "calendrier (planning)",
+          "definition_en": "A plan that shows when each step will happen.",
+          "explanation_fr": "La « timeline » est le calendrier du projet, avec les dates de chaque étape.",
+          "example_en": "The timeline is too short for a video.",
+          "example_fr": "Le calendrier est trop court pour une vidéo.",
+          "ipa": "/ˈtaɪmlaɪn/"
+        },
+        {
+          "term": "objective",
+          "pos": "noun",
+          "translation_fr": "objectif",
+          "definition_en": "A precise result you want to achieve.",
+          "explanation_fr": "Un « objective » est un objectif précis et mesurable (par exemple « +20 % de ventes en trois mois »).",
+          "example_en": "Our objective is to double our followers.",
+          "example_fr": "Notre objectif est de doubler nos abonnés.",
+          "ipa": "/əbˈdʒektɪv/"
+        }
+      ],
+      "sentences": [
+        { "en": "The campaign starts next month", "fr": "La campagne commence le mois prochain" },
+        { "en": "We need a clear brief", "fr": "Nous avons besoin d'un brief clair" }
+      ]
+    },
+    {
+      "title_en": "Advertising",
+      "terms": [
+        {
+          "term": "advertisement",
+          "pos": "noun",
+          "translation_fr": "publicité (annonce)",
+          "definition_en": "A message, picture or video that tries to sell something.",
+          "explanation_fr": "Une « advertisement » (souvent « ad ») est une annonce publicitaire. « Advertising » = la publicité en général.",
+          "example_en": "We saw your advertisement on Facebook.",
+          "example_fr": "Nous avons vu votre publicité sur Facebook.",
+          "ipa": "/ədˈvɜːtɪsmənt/"
+        },
+        {
+          "term": "billboard",
+          "pos": "noun",
+          "translation_fr": "panneau publicitaire",
+          "definition_en": "A very large outdoor board for advertising.",
+          "explanation_fr": "Un « billboard » est un grand panneau d'affichage au bord de la route.",
+          "example_en": "There is a new billboard near the market.",
+          "example_fr": "Il y a un nouveau panneau publicitaire près du marché.",
+          "ipa": "/ˈbɪlbɔːd/"
+        },
+        {
+          "term": "call to action",
+          "pos": "noun",
+          "translation_fr": "appel à l'action",
+          "definition_en": "A short sentence that tells people what to do next, like 'Buy now'.",
+          "explanation_fr": "Le « call to action » (CTA) invite le public à agir : « Achetez maintenant », « Inscrivez-vous »…",
+          "example_en": "Add a clear call to action at the end.",
+          "example_fr": "Ajoute un appel à l'action clair à la fin."
+        },
+        {
+          "term": "conversion",
+          "pos": "noun",
+          "translation_fr": "conversion",
+          "definition_en": "When a person does what you wanted, like buying or signing up.",
+          "explanation_fr": "Une « conversion » a lieu quand un visiteur réalise l'action voulue (achat, inscription). Le taux de conversion mesure l'efficacité.",
+          "example_en": "The new page doubled our conversion rate.",
+          "example_fr": "La nouvelle page a doublé notre taux de conversion.",
+          "ipa": "/kənˈvɜːʃən/"
+        },
+        {
+          "term": "newsletter",
+          "pos": "noun",
+          "translation_fr": "lettre d'information",
+          "definition_en": "A regular email with news sent to subscribers.",
+          "explanation_fr": "Une « newsletter » est un e-mail régulier envoyé aux abonnés.",
+          "example_en": "Sign up for our monthly newsletter.",
+          "example_fr": "Inscris-toi à notre lettre d'information mensuelle.",
+          "ipa": "/ˈnjuːzletə/"
+        },
+        {
+          "term": "landing page",
+          "pos": "noun",
+          "translation_fr": "page d'atterrissage",
+          "definition_en": "A web page made for one campaign, where visitors arrive after a click.",
+          "explanation_fr": "Une « landing page » est une page web conçue pour une campagne, avec un seul objectif (s'inscrire, acheter…).",
+          "example_en": "The ad sends people to a special landing page.",
+          "example_fr": "La publicité envoie les gens vers une page d'atterrissage dédiée."
+        },
+        {
+          "term": "sponsor",
+          "pos": "noun",
+          "translation_fr": "sponsor (parrain)",
+          "definition_en": "A company that pays for an event in exchange for publicity.",
+          "explanation_fr": "Un « sponsor » finance un événement ou une équipe en échange de visibilité.",
+          "example_en": "A mobile operator is the main sponsor of the festival.",
+          "example_fr": "Un opérateur mobile est le principal sponsor du festival.",
+          "ipa": "/ˈspɒnsə/"
+        },
+        {
+          "term": "banner",
+          "pos": "noun",
+          "translation_fr": "bannière",
+          "definition_en": "A long advertisement on a website or a large printed sign.",
+          "explanation_fr": "Une « banner » est une bannière : publicité rectangulaire sur un site, ou grande banderole imprimée.",
+          "example_en": "Put the banner at the entrance of the event.",
+          "example_fr": "Mets la bannière à l'entrée de l'événement.",
+          "ipa": "/ˈbænə/"
+        }
+      ],
+      "sentences": [
+        { "en": "Click here to buy now", "fr": "Clique ici pour acheter maintenant" },
+        { "en": "The billboard is near the market", "fr": "Le panneau est près du marché" }
+      ]
+    }
+  ]
+}

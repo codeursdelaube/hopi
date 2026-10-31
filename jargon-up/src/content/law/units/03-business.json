@@ -1,0 +1,201 @@
+{
+  "level": "B2",
+  "title_en": "Business law & the courtroom",
+  "title_fr": "Droit des affaires et audience",
+  "lessons": [
+    {
+      "title_en": "Companies & intellectual property",
+      "terms": [
+        {
+          "term": "shareholder",
+          "pos": "noun",
+          "translation_fr": "actionnaire (associé)",
+          "definition_en": "A person or company that owns part of a company.",
+          "explanation_fr": "Un « shareholder » détient des parts ou des actions d'une société.",
+          "example_en": "Each shareholder receives part of the profit.",
+          "example_fr": "Chaque actionnaire reçoit une partie du bénéfice.",
+          "ipa": "/ˈʃeəhəʊldə/"
+        },
+        {
+          "term": "board of directors",
+          "pos": "noun",
+          "translation_fr": "conseil d'administration",
+          "definition_en": "The group of people who make the big decisions for a company.",
+          "explanation_fr": "Le « board of directors » est le conseil d'administration, qui fixe la stratégie et contrôle la direction.",
+          "example_en": "The board of directors meets every three months.",
+          "example_fr": "Le conseil d'administration se réunit tous les trois mois."
+        },
+        {
+          "term": "articles of association",
+          "pos": "noun",
+          "translation_fr": "statuts (de société)",
+          "definition_en": "The official document that sets the rules of a company.",
+          "explanation_fr": "Les « articles of association » sont les statuts : objet, capital et règles de fonctionnement de la société (exigés par l'Acte uniforme OHADA).",
+          "example_en": "The articles of association list the company's activities.",
+          "example_fr": "Les statuts énumèrent les activités de la société."
+        },
+        {
+          "term": "trademark",
+          "pos": "noun",
+          "translation_fr": "marque déposée",
+          "definition_en": "A registered name or logo that only one company can use.",
+          "explanation_fr": "Un « trademark » est une marque déposée (nom, logo) protégée ; en Afrique francophone, on la dépose à l'OAPI.",
+          "example_en": "We registered our logo as a trademark.",
+          "example_fr": "Nous avons déposé notre logo comme marque.",
+          "ipa": "/ˈtreɪdmɑːk/"
+        },
+        {
+          "term": "copyright",
+          "pos": "noun",
+          "translation_fr": "droit d'auteur",
+          "definition_en": "The legal right to control the use of a book, song, photo or software.",
+          "explanation_fr": "Le « copyright » protège les œuvres (textes, musique, logiciels) : on ne peut pas les copier sans autorisation.",
+          "example_en": "This photo is protected by copyright.",
+          "example_fr": "Cette photo est protégée par le droit d'auteur.",
+          "ipa": "/ˈkɒpiraɪt/"
+        },
+        {
+          "term": "intellectual property",
+          "pos": "noun",
+          "translation_fr": "propriété intellectuelle",
+          "definition_en": "Creations of the mind, like inventions, brands and designs, protected by law.",
+          "explanation_fr": "L'« intellectual property » (IP) regroupe brevets, marques, droits d'auteur et dessins protégés par la loi.",
+          "example_en": "Our software is our most important intellectual property.",
+          "example_fr": "Notre logiciel est notre propriété intellectuelle la plus importante."
+        },
+        {
+          "term": "data protection",
+          "pos": "noun",
+          "translation_fr": "protection des données",
+          "definition_en": "Laws that control how personal information is collected and used.",
+          "explanation_fr": "La « data protection » encadre l'usage des données personnelles ; le Togo s'est doté d'une loi sur la protection des données personnelles en 2019.",
+          "example_en": "Data protection rules apply to all our customer files.",
+          "example_fr": "Les règles de protection des données s'appliquent à tous nos fichiers clients."
+        },
+        {
+          "term": "merger",
+          "pos": "noun",
+          "translation_fr": "fusion",
+          "definition_en": "When two companies join to become one.",
+          "explanation_fr": "Un « merger » est une fusion de deux sociétés en une seule ; le rachat d'une société par une autre se dit « acquisition ».",
+          "example_en": "The merger created the biggest bank in the region.",
+          "example_fr": "La fusion a créé la plus grande banque de la région.",
+          "ipa": "/ˈmɜːdʒə/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The shareholders approved the merger",
+          "fr": "Les actionnaires ont approuvé la fusion"
+        },
+        { "en": "Protect your brand with a trademark", "fr": "Protège ta marque en la déposant" }
+      ]
+    },
+    {
+      "title_en": "In the courtroom",
+      "terms": [
+        {
+          "term": "hearing",
+          "pos": "noun",
+          "translation_fr": "audience",
+          "definition_en": "A meeting in court where a case is discussed.",
+          "explanation_fr": "Une « hearing » est une audience : une séance au tribunal où l'affaire est examinée.",
+          "example_en": "The next hearing is on Monday.",
+          "example_fr": "La prochaine audience a lieu lundi.",
+          "ipa": "/ˈhɪərɪŋ/"
+        },
+        {
+          "term": "ruling",
+          "pos": "noun",
+          "translation_fr": "décision (de justice)",
+          "definition_en": "An official decision made by a judge.",
+          "explanation_fr": "Un « ruling » est la décision officielle d'un juge, sur un point du dossier ou sur l'affaire entière.",
+          "example_en": "The ruling was good news for our client.",
+          "example_fr": "La décision était une bonne nouvelle pour notre client.",
+          "ipa": "/ˈruːlɪŋ/"
+        },
+        {
+          "term": "appeal",
+          "pos": "noun / verb",
+          "translation_fr": "appel",
+          "definition_en": "A request to a higher court to change a decision.",
+          "explanation_fr": "« To appeal » = faire appel : demander à une juridiction supérieure de réexaminer la décision.",
+          "example_en": "Our lawyer will file an appeal next week.",
+          "example_fr": "Notre avocat fera appel la semaine prochaine.",
+          "ipa": "/əˈpiːl/"
+        },
+        {
+          "term": "verdict",
+          "pos": "noun",
+          "translation_fr": "verdict",
+          "definition_en": "The final decision about whether someone is guilty or not.",
+          "explanation_fr": "Le « verdict » est la décision finale sur la culpabilité, surtout dans un procès pénal.",
+          "example_en": "Everyone was waiting for the verdict.",
+          "example_fr": "Tout le monde attendait le verdict.",
+          "ipa": "/ˈvɜːdɪkt/"
+        },
+        {
+          "term": "guilty",
+          "pos": "adjective",
+          "translation_fr": "coupable",
+          "definition_en": "Responsible for breaking the law, according to a court.",
+          "explanation_fr": "« Guilty » = coupable ; le contraire est « not guilty ». « To plead guilty » = plaider coupable.",
+          "example_en": "The court found him guilty of fraud.",
+          "example_fr": "Le tribunal l'a déclaré coupable de fraude.",
+          "ipa": "/ˈɡɪlti/"
+        },
+        {
+          "term": "sentence",
+          "pos": "noun",
+          "translation_fr": "peine (condamnation)",
+          "definition_en": "The punishment that a judge gives to a guilty person.",
+          "explanation_fr": "En droit, « sentence » = la peine prononcée. Attention : dans la vie courante, « sentence » veut aussi dire « phrase ».",
+          "example_en": "She received a sentence of two years.",
+          "example_fr": "Elle a été condamnée à une peine de deux ans.",
+          "ipa": "/ˈsentəns/"
+        },
+        {
+          "term": "testimony",
+          "pos": "noun",
+          "translation_fr": "témoignage",
+          "definition_en": "What a witness says in court.",
+          "explanation_fr": "La « testimony » est le témoignage donné sous serment devant le tribunal.",
+          "example_en": "Her testimony changed the case.",
+          "example_fr": "Son témoignage a changé le cours de l'affaire.",
+          "ipa": "/ˈtestɪməni/"
+        },
+        {
+          "term": "legal advice",
+          "pos": "noun",
+          "translation_fr": "conseil juridique",
+          "definition_en": "Professional help from a lawyer about a legal problem.",
+          "explanation_fr": "« Legal advice » = conseil juridique. « Advice » est indénombrable : on dit « a piece of advice », jamais « an advice ».",
+          "example_en": "Get legal advice before you start your business.",
+          "example_fr": "Demande un conseil juridique avant de lancer ton entreprise."
+        }
+      ],
+      "sentences": [
+        { "en": "The hearing starts at nine", "fr": "L'audience commence à neuf heures" },
+        { "en": "We will appeal the decision", "fr": "Nous allons faire appel de la décision" }
+      ],
+      "dialogues": [
+        {
+          "context": "Law firm",
+          "lines": [
+            {
+              "speaker": "Senior partner",
+              "text": "The client wants to know if she can win the case."
+            }
+          ],
+          "options": [
+            "We have strong evidence, but there is always a risk.",
+            "She will win for sure, there is no risk.",
+            "I don't know what a case is."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "Un juriste reste prudent : « We have strong evidence, but there is always a risk » = « Nous avons des preuves solides, mais il y a toujours un risque »."
+        }
+      ]
+    }
+  ]
+}

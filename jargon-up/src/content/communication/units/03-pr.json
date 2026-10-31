@@ -1,0 +1,219 @@
+{
+  "level": "B2",
+  "title_en": "Media relations & presentations",
+  "title_fr": "Relations presse et présentations",
+  "lessons": [
+    {
+      "title_en": "Media relations",
+      "terms": [
+        {
+          "term": "press release",
+          "pos": "noun",
+          "translation_fr": "communiqué de presse",
+          "definition_en": "An official written statement sent to journalists.",
+          "explanation_fr": "Un « press release » est un communiqué de presse envoyé aux médias pour annoncer une nouvelle.",
+          "example_en": "We sent a press release about the new product.",
+          "example_fr": "Nous avons envoyé un communiqué de presse sur le nouveau produit."
+        },
+        {
+          "term": "journalist",
+          "pos": "noun",
+          "translation_fr": "journaliste",
+          "definition_en": "A person who writes or reports news for the media.",
+          "explanation_fr": "Un « journalist » collecte et publie l'information (presse, radio, télévision, web).",
+          "example_en": "A journalist called to ask about the launch.",
+          "example_fr": "Un journaliste a appelé pour se renseigner sur le lancement.",
+          "ipa": "/ˈdʒɜːnəlɪst/"
+        },
+        {
+          "term": "interview",
+          "pos": "noun",
+          "translation_fr": "interview (entretien)",
+          "definition_en": "A meeting where someone answers questions from a journalist.",
+          "explanation_fr": "Une « interview » est un entretien avec un journaliste ; le mot sert aussi pour un entretien d'embauche.",
+          "example_en": "The director gave an interview on the radio.",
+          "example_fr": "Le directeur a donné une interview à la radio.",
+          "ipa": "/ˈɪntəvjuː/"
+        },
+        {
+          "term": "spokesperson",
+          "pos": "noun",
+          "translation_fr": "porte-parole",
+          "definition_en": "The person chosen to speak officially for an organisation.",
+          "explanation_fr": "Le « spokesperson » est le porte-parole officiel de l'organisation.",
+          "example_en": "Our spokesperson will answer the questions.",
+          "example_fr": "Notre porte-parole répondra aux questions.",
+          "ipa": "/ˈspəʊkspɜːsən/"
+        },
+        {
+          "term": "press conference",
+          "pos": "noun",
+          "translation_fr": "conférence de presse",
+          "definition_en": "A meeting where an organisation speaks to many journalists.",
+          "explanation_fr": "Une « press conference » réunit plusieurs journalistes pour une annonce officielle, suivie de questions.",
+          "example_en": "The minister held a press conference this morning.",
+          "example_fr": "Le ministre a tenu une conférence de presse ce matin."
+        },
+        {
+          "term": "statement",
+          "pos": "noun",
+          "translation_fr": "déclaration",
+          "definition_en": "An official public announcement.",
+          "explanation_fr": "Un « statement » est une déclaration officielle, écrite ou orale.",
+          "example_en": "The company published a statement on its website.",
+          "example_fr": "L'entreprise a publié une déclaration sur son site.",
+          "ipa": "/ˈsteɪtmənt/"
+        },
+        {
+          "term": "crisis",
+          "pos": "noun",
+          "translation_fr": "crise",
+          "definition_en": "A sudden, serious problem that can hurt an organisation.",
+          "explanation_fr": "Une « crisis » est une situation grave et urgente ; la « crisis communication » consiste à la gérer publiquement. Pluriel : « crises ».",
+          "example_en": "We need a plan in case of a crisis.",
+          "example_fr": "Nous avons besoin d'un plan en cas de crise.",
+          "ipa": "/ˈkraɪsɪs/"
+        },
+        {
+          "term": "reputation",
+          "pos": "noun",
+          "translation_fr": "réputation",
+          "definition_en": "What people think about a person or an organisation.",
+          "explanation_fr": "La « reputation » est l'image que le public a de toi ou de ton entreprise.",
+          "example_en": "One bad post can damage your reputation.",
+          "example_fr": "Une seule mauvaise publication peut nuire à ta réputation.",
+          "ipa": "/ˌrepjʊˈteɪʃən/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Our spokesperson will speak first",
+          "fr": "Notre porte-parole parlera en premier"
+        },
+        {
+          "en": "We sent the press release today",
+          "fr": "Nous avons envoyé le communiqué aujourd'hui"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Crisis on social media",
+          "lines": [
+            {
+              "speaker": "Manager",
+              "text": "Customers are angry about the delays. What do we post?"
+            }
+          ],
+          "options": [
+            "A short apology and a clear date for the solution.",
+            "Nothing. We delete all the comments.",
+            "A funny meme about delays."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "En situation de crise, on reconnaît le problème et on donne une solution concrète : « A short apology and a clear date for the solution » = « De brèves excuses et une date précise pour la solution »."
+        }
+      ]
+    },
+    {
+      "title_en": "Presenting & pitching",
+      "terms": [
+        {
+          "term": "presentation",
+          "pos": "noun",
+          "translation_fr": "présentation",
+          "definition_en": "A talk where you show and explain information to a group.",
+          "explanation_fr": "Une « presentation » est un exposé devant un public, souvent avec des diapositives.",
+          "example_en": "My presentation lasts ten minutes.",
+          "example_fr": "Ma présentation dure dix minutes.",
+          "ipa": "/ˌprezənˈteɪʃən/"
+        },
+        {
+          "term": "slide",
+          "pos": "noun",
+          "translation_fr": "diapositive",
+          "definition_en": "One page of a presentation shown on a screen.",
+          "explanation_fr": "Une « slide » est une diapositive (PowerPoint, Google Slides…).",
+          "example_en": "Put only one idea on each slide.",
+          "example_fr": "Mets une seule idée par diapositive.",
+          "ipa": "/slaɪd/"
+        },
+        {
+          "term": "pitch",
+          "pos": "noun",
+          "translation_fr": "pitch (présentation éclair)",
+          "definition_en": "A short talk to convince people, like investors or clients.",
+          "explanation_fr": "Un « pitch » est une présentation courte et convaincante, par exemple pour obtenir un financement.",
+          "example_en": "She has three minutes for her pitch.",
+          "example_fr": "Elle a trois minutes pour son pitch.",
+          "ipa": "/pɪtʃ/"
+        },
+        {
+          "term": "storytelling",
+          "pos": "noun",
+          "translation_fr": "art du récit",
+          "definition_en": "Using stories to make a message interesting and memorable.",
+          "explanation_fr": "Le « storytelling » consiste à raconter une histoire pour rendre un message plus vivant et mémorable.",
+          "example_en": "Good storytelling makes people remember your brand.",
+          "example_fr": "Un bon storytelling aide les gens à se souvenir de ta marque.",
+          "ipa": "/ˈstɔːritelɪŋ/"
+        },
+        {
+          "term": "key message",
+          "pos": "noun",
+          "translation_fr": "message clé",
+          "definition_en": "The most important idea you want the audience to remember.",
+          "explanation_fr": "Le « key message » est l'idée principale à retenir ; une bonne présentation en a deux ou trois au maximum.",
+          "example_en": "Repeat your key message at the end.",
+          "example_fr": "Répète ton message clé à la fin."
+        },
+        {
+          "term": "Q&A",
+          "pos": "noun",
+          "translation_fr": "questions-réponses",
+          "definition_en": "The part of a talk when the audience asks questions.",
+          "explanation_fr": "« Q&A » (Questions and Answers) est la séance de questions-réponses après une présentation.",
+          "example_en": "We will have a short Q&A after the talk.",
+          "example_fr": "Nous aurons une courte séance de questions-réponses après l'exposé.",
+          "ipa": "/ˌkjuː ən ˈeɪ/"
+        },
+        {
+          "term": "rehearse",
+          "pos": "verb",
+          "translation_fr": "répéter (s'entraîner)",
+          "definition_en": "To practise a talk or a performance before the real event.",
+          "explanation_fr": "« To rehearse » = répéter, s'entraîner avant le jour J. Le nom est « rehearsal ».",
+          "example_en": "Rehearse your pitch three times before the event.",
+          "example_fr": "Répète ton pitch trois fois avant l'événement.",
+          "ipa": "/rɪˈhɜːs/"
+        },
+        {
+          "term": "stakeholder",
+          "pos": "noun",
+          "translation_fr": "partie prenante",
+          "definition_en": "A person or group affected by a project, like clients, staff or partners.",
+          "explanation_fr": "Un « stakeholder » est une partie prenante : toute personne concernée par le projet (clients, employés, partenaires, autorités…).",
+          "example_en": "We must inform every stakeholder before the launch.",
+          "example_fr": "Nous devons informer chaque partie prenante avant le lancement.",
+          "ipa": "/ˈsteɪkhəʊldə/"
+        }
+      ],
+      "sentences": [
+        { "en": "One idea per slide please", "fr": "Une idée par diapositive s'il te plaît" },
+        { "en": "I will rehearse my pitch tonight", "fr": "Je vais répéter mon pitch ce soir" }
+      ],
+      "dialogues": [
+        {
+          "context": "Pitch to investors",
+          "lines": [{ "speaker": "Investor", "text": "Why should we invest in your project?" }],
+          "options": [
+            "Because we already solve a real problem for 10,000 users.",
+            "Because I really need the money.",
+            "I don't know, you tell me."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "Un bon pitch s'appuie sur des preuves : « we already solve a real problem for 10,000 users » = « nous résolvons déjà un vrai problème pour 10 000 utilisateurs »."
+        }
+      ]
+    }
+  ]
+}

@@ -12,6 +12,9 @@ export const PRIVATE_PREFIXES = [
 ] as const;
 
 export const LOGIN_PATH = "/login";
+
+/** Cookie temporaire : page à rouvrir après la connexion Google. */
+export const NEXT_COOKIE = "hopi_next";
 export const HOME_PATH = "/learn";
 
 export function isPrivatePath(pathname: string): boolean {

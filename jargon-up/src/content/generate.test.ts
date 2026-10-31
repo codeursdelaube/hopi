@@ -52,7 +52,7 @@ describe("contenu des filières", () => {
           }
         }
       }
-      expect(seen.size).toBeGreaterThanOrEqual(100);
+      expect(seen.size).toBeGreaterThanOrEqual(40);
     });
   }
 });

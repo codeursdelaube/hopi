@@ -133,7 +133,13 @@ for (const fieldDir of fieldDirs) {
     }
   }
 
+  // Une filière avec du contenu devient choisissable à l'onboarding.
+  check(
+    await supabase.from("fields").update({ is_published: true }).eq("id", field.id).select("id"),
+    `Publication de la filière « ${slug} »`,
+  );
+
   console.log(
-    `✔ ${slug} : ${files.length} unités, ${lessonCount} leçons, ${termCount} termes, ${exerciseCount} exercices`,
+    `✔ ${slug} : ${files.length} unités, ${lessonCount} leçons, ${termCount} termes, ${exerciseCount} exercices (publiée)`,
   );
 }

@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createClient } from "@/lib/supabase/server";
-import { LOGIN_PATH, safeNextPath } from "@/lib/auth/paths";
+import { LOGIN_PATH, NEXT_COOKIE, safeNextPath } from "@/lib/auth/paths";
 
 /**
  * Retour de Google (via Supabase) : échange le `code` contre une session,
@@ -9,16 +9,31 @@ import { LOGIN_PATH, safeNextPath } from "@/lib/auth/paths";
 export async function GET(request: NextRequest) {
   const { searchParams, origin } = request.nextUrl;
   const code = searchParams.get("code");
-  const next = safeNextPath(searchParams.get("next"));
+  const next = safeNextPath(
+    request.cookies.get(NEXT_COOKIE)?.value
+      ? decodeURIComponent(request.cookies.get(NEXT_COOKIE)!.value)
+      : null,
+  );
 
-  if (!code) {
-    return NextResponse.redirect(new URL(`${LOGIN_PATH}?error=oauth`, origin));
+  const redirectTo = (path: string) => {
+    const response = NextResponse.redirect(new URL(path, origin));
+    response.cookies.delete(NEXT_COOKIE);
+    return response;
+  };
+
+  // Google ou Supabase peuvent renvoyer une erreur (accès refusé, URL non autorisée…).
+  if (!code || searchParams.has("error")) {
+    if (searchParams.has("error")) {
+      console.error("OAuth :", searchParams.get("error"), searchParams.get("error_description"));
+    }
+    return redirectTo(`${LOGIN_PATH}?error=oauth`);
   }
 
   const supabase = await createClient();
   const { data, error } = await supabase.auth.exchangeCodeForSession(code);
   if (error || !data.user) {
-    return NextResponse.redirect(new URL(`${LOGIN_PATH}?error=callback`, origin));
+    console.error("Échange du code OAuth :", error?.message);
+    return redirectTo(`${LOGIN_PATH}?error=callback`);
   }
 
   const { data: profile } = await supabase
@@ -27,6 +42,5 @@ export async function GET(request: NextRequest) {
     .eq("id", data.user.id)
     .maybeSingle();
 
-  const destination = profile?.field_id ? next : "/onboarding";
-  return NextResponse.redirect(new URL(destination, origin));
+  return redirectTo(profile?.field_id ? next : "/onboarding");
 }

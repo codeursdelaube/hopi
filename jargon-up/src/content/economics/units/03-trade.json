@@ -1,0 +1,195 @@
+{
+  "level": "B2",
+  "title_en": "Trade & development",
+  "title_fr": "Commerce et développement",
+  "lessons": [
+    {
+      "title_en": "International trade",
+      "terms": [
+        {
+          "term": "export",
+          "pos": "verb / noun",
+          "translation_fr": "exporter (exportation)",
+          "definition_en": "To sell goods to another country.",
+          "explanation_fr": "« To export » = exporter, vendre à l'étranger ; « exports » = les exportations.",
+          "example_en": "Togo wants to export more cashew nuts.",
+          "example_fr": "Le Togo veut exporter davantage de noix de cajou.",
+          "ipa": "/ɪkˈspɔːt/"
+        },
+        {
+          "term": "import",
+          "pos": "verb / noun",
+          "translation_fr": "importer (importation)",
+          "definition_en": "To buy goods from another country.",
+          "explanation_fr": "« To import » = importer, acheter à l'étranger ; « imports » = les importations.",
+          "example_en": "We import most of our rice.",
+          "example_fr": "Nous importons la plus grande partie de notre riz.",
+          "ipa": "/ɪmˈpɔːt/"
+        },
+        {
+          "term": "trade balance",
+          "pos": "noun",
+          "translation_fr": "balance commerciale",
+          "definition_en": "The difference between the value of exports and imports.",
+          "explanation_fr": "La « trade balance » compare exportations et importations ; si un pays importe plus qu'il n'exporte, elle est déficitaire.",
+          "example_en": "The trade balance is negative this year.",
+          "example_fr": "La balance commerciale est négative cette année."
+        },
+        {
+          "term": "tariff",
+          "pos": "noun",
+          "translation_fr": "droit de douane",
+          "definition_en": "A tax on goods coming into a country.",
+          "explanation_fr": "Un « tariff » est un droit de douane sur les produits importés.",
+          "example_en": "The new tariff makes imported cars more expensive.",
+          "example_fr": "Le nouveau droit de douane rend les voitures importées plus chères.",
+          "ipa": "/ˈtærɪf/"
+        },
+        {
+          "term": "free trade",
+          "pos": "noun",
+          "translation_fr": "libre-échange",
+          "definition_en": "Trade between countries without tariffs or limits.",
+          "explanation_fr": "Le « free trade » est le libre-échange ; la ZLECAf (AfCFTA en anglais) vise une grande zone de libre-échange africaine.",
+          "example_en": "Free trade can open new markets for small companies.",
+          "example_fr": "Le libre-échange peut ouvrir de nouveaux marchés aux petites entreprises."
+        },
+        {
+          "term": "customs",
+          "pos": "noun (plural)",
+          "translation_fr": "douane",
+          "definition_en": "The government office that controls goods entering a country.",
+          "explanation_fr": "Les « customs » sont la douane ; « to go through customs » = passer la douane.",
+          "example_en": "The goods are waiting at customs in the port.",
+          "example_fr": "Les marchandises attendent à la douane du port.",
+          "ipa": "/ˈkʌstəmz/"
+        },
+        {
+          "term": "trade agreement",
+          "pos": "noun",
+          "translation_fr": "accord commercial",
+          "definition_en": "A deal between countries about the rules of trade.",
+          "explanation_fr": "Un « trade agreement » fixe les règles des échanges entre pays (droits de douane, quotas…).",
+          "example_en": "The countries signed a new trade agreement.",
+          "example_fr": "Les pays ont signé un nouvel accord commercial."
+        },
+        {
+          "term": "globalisation",
+          "pos": "noun",
+          "translation_fr": "mondialisation",
+          "definition_en": "The process by which economies around the world become more connected.",
+          "explanation_fr": "La « globalisation » (en anglais américain « globalization ») est la mondialisation des échanges, des capitaux et des idées.",
+          "example_en": "Globalisation has changed how companies work.",
+          "example_fr": "La mondialisation a changé la façon dont les entreprises travaillent.",
+          "ipa": "/ˌɡləʊbəlaɪˈzeɪʃən/"
+        }
+      ],
+      "sentences": [
+        { "en": "We want to export more products", "fr": "Nous voulons exporter plus de produits" },
+        { "en": "The goods are at customs", "fr": "Les marchandises sont à la douane" }
+      ],
+      "dialogues": [
+        {
+          "context": "Meeting with an exporter",
+          "lines": [{ "speaker": "Exporter", "text": "Why should we start selling in Ghana now?" }],
+          "options": [
+            "The free trade area reduces tariffs, so our products become cheaper there.",
+            "Because Ghana has no customs at all.",
+            "Because exports are always bad for us."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« The free trade area reduces tariffs » = « La zone de libre-échange réduit les droits de douane ». C'est l'argument clé de la ZLECAf."
+        }
+      ]
+    },
+    {
+      "title_en": "Development & investment",
+      "terms": [
+        {
+          "term": "foreign direct investment",
+          "pos": "noun",
+          "translation_fr": "investissement direct étranger",
+          "definition_en": "Money a foreign company invests to build or buy a business in a country.",
+          "explanation_fr": "Le « foreign direct investment » (FDI, en français IDE) : une entreprise étrangère investit durablement dans le pays (usine, rachat…).",
+          "example_en": "Foreign direct investment created jobs in the free zone.",
+          "example_fr": "L'investissement direct étranger a créé des emplois dans la zone franche."
+        },
+        {
+          "term": "development",
+          "pos": "noun",
+          "translation_fr": "développement",
+          "definition_en": "Improvement in the economy and in people's living conditions.",
+          "explanation_fr": "Le « development » désigne le développement économique et social (santé, éducation, revenus).",
+          "example_en": "Education is the key to development.",
+          "example_fr": "L'éducation est la clé du développement.",
+          "ipa": "/dɪˈveləpmənt/"
+        },
+        {
+          "term": "poverty",
+          "pos": "noun",
+          "translation_fr": "pauvreté",
+          "definition_en": "The situation of not having enough money for basic needs.",
+          "explanation_fr": "La « poverty » est la pauvreté ; « poverty line » = seuil de pauvreté.",
+          "example_en": "The program aims to reduce poverty in rural areas.",
+          "example_fr": "Le programme vise à réduire la pauvreté dans les zones rurales.",
+          "ipa": "/ˈpɒvəti/"
+        },
+        {
+          "term": "infrastructure",
+          "pos": "noun",
+          "translation_fr": "infrastructures",
+          "definition_en": "Basic systems like roads, ports, electricity and internet.",
+          "explanation_fr": "L'« infrastructure » regroupe les équipements de base : routes, ports, électricité, internet. Le mot est indénombrable en anglais.",
+          "example_en": "Good infrastructure attracts investors.",
+          "example_fr": "De bonnes infrastructures attirent les investisseurs.",
+          "ipa": "/ˈɪnfrəstrʌktʃə/"
+        },
+        {
+          "term": "microfinance",
+          "pos": "noun",
+          "translation_fr": "microfinance",
+          "definition_en": "Small loans and services for people who cannot use normal banks.",
+          "explanation_fr": "La « microfinance » propose de petits prêts et de l'épargne aux personnes exclues des banques classiques.",
+          "example_en": "Microfinance helped her open a small shop.",
+          "example_fr": "La microfinance l'a aidée à ouvrir une petite boutique.",
+          "ipa": "/ˈmaɪkrəʊfaɪnæns/"
+        },
+        {
+          "term": "sustainable",
+          "pos": "adjective",
+          "translation_fr": "durable",
+          "definition_en": "Able to continue for a long time without harming people or nature.",
+          "explanation_fr": "« Sustainable » = durable ; « sustainable development » = développement durable.",
+          "example_en": "We need sustainable growth for the next generation.",
+          "example_fr": "Nous avons besoin d'une croissance durable pour la prochaine génération.",
+          "ipa": "/səˈsteɪnəbəl/"
+        },
+        {
+          "term": "emerging market",
+          "pos": "noun",
+          "translation_fr": "marché émergent",
+          "definition_en": "A country whose economy is growing fast and becoming more developed.",
+          "explanation_fr": "Un « emerging market » est une économie en forte croissance qui attire les investisseurs.",
+          "example_en": "Investors see the region as an emerging market.",
+          "example_fr": "Les investisseurs voient la région comme un marché émergent."
+        },
+        {
+          "term": "value chain",
+          "pos": "noun",
+          "translation_fr": "chaîne de valeur",
+          "definition_en": "All the steps that add value to a product, from raw material to the buyer.",
+          "explanation_fr": "La « value chain » décrit toutes les étapes de production, de la matière première au client ; transformer le cacao sur place permet de capter plus de valeur.",
+          "example_en": "Processing cocoa locally keeps more of the value chain in the country.",
+          "example_fr": "Transformer le cacao sur place garde une plus grande part de la chaîne de valeur dans le pays."
+        }
+      ],
+      "sentences": [
+        { "en": "Education reduces poverty", "fr": "L'éducation réduit la pauvreté" },
+        {
+          "en": "Investors like good infrastructure",
+          "fr": "Les investisseurs aiment les bonnes infrastructures"
+        }
+      ]
+    }
+  ]
+}

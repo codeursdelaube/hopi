@@ -1,0 +1,185 @@
+{
+  "level": "A2",
+  "title_en": "Everyday economics",
+  "title_fr": "L'économie au quotidien",
+  "lessons": [
+    {
+      "title_en": "Markets & prices",
+      "terms": [
+        {
+          "term": "market",
+          "pos": "noun",
+          "translation_fr": "marché",
+          "definition_en": "A place or a system where people buy and sell.",
+          "explanation_fr": "Un « market » est un marché, physique (le grand marché de Lomé) ou abstrait (le marché du travail).",
+          "example_en": "Prices at the market went up this week.",
+          "example_fr": "Les prix au marché ont augmenté cette semaine.",
+          "ipa": "/ˈmɑːkɪt/"
+        },
+        {
+          "term": "supply",
+          "pos": "noun",
+          "translation_fr": "offre",
+          "definition_en": "The amount of a product that sellers want to sell.",
+          "explanation_fr": "En économie, « supply » = l'offre : la quantité que les producteurs proposent à la vente.",
+          "example_en": "The supply of tomatoes is low in the dry season.",
+          "example_fr": "L'offre de tomates est faible pendant la saison sèche.",
+          "ipa": "/səˈplaɪ/"
+        },
+        {
+          "term": "demand",
+          "pos": "noun",
+          "translation_fr": "demande",
+          "definition_en": "The amount of a product that buyers want to buy.",
+          "explanation_fr": "La « demand » est la demande : ce que les acheteurs veulent acheter. L'offre et la demande déterminent le prix.",
+          "example_en": "Demand for mobile data is growing fast.",
+          "example_fr": "La demande de données mobiles augmente vite.",
+          "ipa": "/dɪˈmɑːnd/"
+        },
+        {
+          "term": "consumer",
+          "pos": "noun",
+          "translation_fr": "consommateur",
+          "definition_en": "A person who buys goods or services for their own use.",
+          "explanation_fr": "Un « consumer » est un consommateur.",
+          "example_en": "The consumer always compares prices.",
+          "example_fr": "Le consommateur compare toujours les prix.",
+          "ipa": "/kənˈsjuːmə/"
+        },
+        {
+          "term": "producer",
+          "pos": "noun",
+          "translation_fr": "producteur",
+          "definition_en": "A person or company that makes or grows goods.",
+          "explanation_fr": "Un « producer » est un producteur : agriculteur, usine, entreprise minière…",
+          "example_en": "Togo is an important producer of phosphate.",
+          "example_fr": "Le Togo est un producteur important de phosphate.",
+          "ipa": "/prəˈdjuːsə/"
+        },
+        {
+          "term": "goods",
+          "pos": "noun (plural)",
+          "translation_fr": "biens (marchandises)",
+          "definition_en": "Physical products that people buy and sell.",
+          "explanation_fr": "Les « goods » sont des biens matériels (riz, téléphones, voitures). Toujours au pluriel dans ce sens.",
+          "example_en": "The port of Lomé handles goods for the whole region.",
+          "example_fr": "Le port de Lomé traite des marchandises pour toute la région.",
+          "ipa": "/ɡʊdz/"
+        },
+        {
+          "term": "services",
+          "pos": "noun (plural)",
+          "translation_fr": "services",
+          "definition_en": "Work done for people, like banking, transport or teaching.",
+          "explanation_fr": "Les « services » sont des prestations immatérielles : transport, banque, éducation, télécoms.",
+          "example_en": "Services are a big part of the economy.",
+          "example_fr": "Les services représentent une grande partie de l'économie.",
+          "ipa": "/ˈsɜːvɪsɪz/"
+        },
+        {
+          "term": "price",
+          "pos": "noun",
+          "translation_fr": "prix",
+          "definition_en": "The amount of money you pay for something.",
+          "explanation_fr": "Le « price » est le prix. « Prices go up / go down » = les prix montent / baissent.",
+          "example_en": "The price of fuel changed again.",
+          "example_fr": "Le prix du carburant a encore changé.",
+          "ipa": "/praɪs/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Prices go up when demand grows",
+          "fr": "Les prix montent quand la demande augmente"
+        },
+        { "en": "Supply is low this month", "fr": "L'offre est faible ce mois-ci" }
+      ]
+    },
+    {
+      "title_en": "Money & banks",
+      "terms": [
+        {
+          "term": "currency",
+          "pos": "noun",
+          "translation_fr": "monnaie (devise)",
+          "definition_en": "The money used in a country.",
+          "explanation_fr": "Une « currency » est la monnaie d'un pays ; le Togo utilise le franc CFA (XOF), commun aux huit pays de l'UEMOA.",
+          "example_en": "The CFA franc is the currency of eight countries.",
+          "example_fr": "Le franc CFA est la monnaie de huit pays.",
+          "ipa": "/ˈkʌrənsi/"
+        },
+        {
+          "term": "bank",
+          "pos": "noun",
+          "translation_fr": "banque",
+          "definition_en": "A business that keeps money safe and lends money.",
+          "explanation_fr": "Une « bank » garde l'argent de ses clients et accorde des prêts.",
+          "example_en": "She opened an account at a local bank.",
+          "example_fr": "Elle a ouvert un compte dans une banque locale.",
+          "ipa": "/bæŋk/"
+        },
+        {
+          "term": "loan",
+          "pos": "noun",
+          "translation_fr": "prêt (crédit)",
+          "definition_en": "Money that you borrow and must pay back.",
+          "explanation_fr": "Un « loan » est un prêt : de l'argent emprunté qu'on rembourse avec des intérêts.",
+          "example_en": "He took a loan to buy a taxi.",
+          "example_fr": "Il a pris un prêt pour acheter un taxi.",
+          "ipa": "/ləʊn/"
+        },
+        {
+          "term": "interest rate",
+          "pos": "noun",
+          "translation_fr": "taux d'intérêt",
+          "definition_en": "The percentage you pay to borrow money.",
+          "explanation_fr": "L'« interest rate » est le taux d'intérêt : le prix de l'argent emprunté, en pourcentage.",
+          "example_en": "The interest rate on this loan is nine percent.",
+          "example_fr": "Le taux d'intérêt de ce prêt est de neuf pour cent."
+        },
+        {
+          "term": "savings",
+          "pos": "noun (plural)",
+          "translation_fr": "épargne",
+          "definition_en": "Money that you keep for the future.",
+          "explanation_fr": "Les « savings » désignent l'épargne, l'argent mis de côté.",
+          "example_en": "She keeps her savings in a mobile wallet.",
+          "example_fr": "Elle garde son épargne sur un portefeuille mobile.",
+          "ipa": "/ˈseɪvɪŋz/"
+        },
+        {
+          "term": "inflation",
+          "pos": "noun",
+          "translation_fr": "inflation",
+          "definition_en": "A general rise in prices over time.",
+          "explanation_fr": "L'« inflation » est la hausse générale des prix : avec la même somme, on achète moins.",
+          "example_en": "Inflation makes food more expensive.",
+          "example_fr": "L'inflation rend la nourriture plus chère.",
+          "ipa": "/ɪnˈfleɪʃən/"
+        },
+        {
+          "term": "exchange rate",
+          "pos": "noun",
+          "translation_fr": "taux de change",
+          "definition_en": "The value of one currency compared with another.",
+          "explanation_fr": "L'« exchange rate » est le taux de change ; le franc CFA a une parité fixe avec l'euro (1 € = 655,957 F CFA).",
+          "example_en": "The exchange rate between the CFA franc and the euro is fixed.",
+          "example_fr": "Le taux de change entre le franc CFA et l'euro est fixe."
+        },
+        {
+          "term": "mobile money",
+          "pos": "noun",
+          "translation_fr": "argent mobile",
+          "definition_en": "A service to send, receive and keep money with a mobile phone.",
+          "explanation_fr": "Le « mobile money » (T-Money, Flooz au Togo) permet de payer et de transférer de l'argent avec un téléphone.",
+          "example_en": "Most traders accept mobile money now.",
+          "example_fr": "La plupart des commerçants acceptent maintenant le mobile money."
+        }
+      ],
+      "sentences": [
+        { "en": "I pay with mobile money", "fr": "Je paie avec le mobile money" },
+        { "en": "Inflation is rising this year", "fr": "L'inflation augmente cette année" }
+      ]
+    }
+  ]
+}

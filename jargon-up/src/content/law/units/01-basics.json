@@ -1,0 +1,188 @@
+{
+  "level": "A2",
+  "title_en": "Legal basics",
+  "title_fr": "Les bases du droit",
+  "lessons": [
+    {
+      "title_en": "Courts & people",
+      "terms": [
+        {
+          "term": "court",
+          "pos": "noun",
+          "translation_fr": "tribunal",
+          "definition_en": "A place where legal cases are heard and decided.",
+          "explanation_fr": "Une « court » est un tribunal ou une cour : le lieu où des juges examinent les affaires et rendent des décisions.",
+          "example_en": "The case will go to court next month.",
+          "example_fr": "L'affaire ira au tribunal le mois prochain.",
+          "ipa": "/kɔːt/"
+        },
+        {
+          "term": "judge",
+          "pos": "noun",
+          "translation_fr": "juge",
+          "definition_en": "The person who controls a trial and decides a case.",
+          "explanation_fr": "Le « judge » dirige l'audience et tranche le litige en appliquant la loi.",
+          "example_en": "The judge asked both sides to explain their position.",
+          "example_fr": "Le juge a demandé aux deux parties d'expliquer leur position.",
+          "ipa": "/dʒʌdʒ/"
+        },
+        {
+          "term": "lawyer",
+          "pos": "noun",
+          "translation_fr": "avocat (juriste)",
+          "definition_en": "A person whose job is to give legal advice and represent clients.",
+          "explanation_fr": "« Lawyer » est le mot général pour un juriste qui conseille ou défend des clients. On le traduit souvent par « avocat ».",
+          "example_en": "You should talk to a lawyer before you sign.",
+          "example_fr": "Tu devrais parler à un avocat avant de signer.",
+          "ipa": "/ˈlɔːjə/"
+        },
+        {
+          "term": "law",
+          "pos": "noun",
+          "translation_fr": "loi (droit)",
+          "definition_en": "A rule made by the government that everyone must follow.",
+          "explanation_fr": "« Law » désigne une loi précise (« a new law ») ou le droit en général (« to study law »).",
+          "example_en": "This new law protects online buyers.",
+          "example_fr": "Cette nouvelle loi protège les acheteurs en ligne.",
+          "ipa": "/lɔː/"
+        },
+        {
+          "term": "lawsuit",
+          "pos": "noun",
+          "translation_fr": "procès (action en justice)",
+          "definition_en": "A case that one person or company brings against another in court.",
+          "explanation_fr": "Un « lawsuit » est une action en justice civile : une personne ou une entreprise en poursuit une autre devant le tribunal.",
+          "example_en": "The customer filed a lawsuit against the bank.",
+          "example_fr": "Le client a intenté un procès contre la banque.",
+          "ipa": "/ˈlɔːsuːt/"
+        },
+        {
+          "term": "plaintiff",
+          "pos": "noun",
+          "translation_fr": "demandeur (plaignant)",
+          "definition_en": "The person who starts a case against someone in court.",
+          "explanation_fr": "Le « plaintiff » est celui qui engage l'action en justice : le demandeur.",
+          "example_en": "The plaintiff asks for five million francs.",
+          "example_fr": "Le demandeur réclame cinq millions de francs.",
+          "ipa": "/ˈpleɪntɪf/"
+        },
+        {
+          "term": "defendant",
+          "pos": "noun",
+          "translation_fr": "défendeur (accusé)",
+          "definition_en": "The person or company that is accused or sued in court.",
+          "explanation_fr": "Le « defendant » est la partie poursuivie : le défendeur dans un procès civil, l'accusé dans un procès pénal.",
+          "example_en": "The defendant says the contract was never signed.",
+          "example_fr": "Le défendeur affirme que le contrat n'a jamais été signé.",
+          "ipa": "/dɪˈfendənt/"
+        },
+        {
+          "term": "witness",
+          "pos": "noun",
+          "translation_fr": "témoin",
+          "definition_en": "A person who tells the court what they saw or know.",
+          "explanation_fr": "Un « witness » est un témoin qui raconte devant le tribunal ce qu'il a vu ou entendu.",
+          "example_en": "The witness saw the accident from her shop.",
+          "example_fr": "Le témoin a vu l'accident depuis sa boutique.",
+          "ipa": "/ˈwɪtnəs/"
+        }
+      ],
+      "sentences": [
+        { "en": "The judge will decide tomorrow", "fr": "Le juge décidera demain" },
+        { "en": "I need a good lawyer", "fr": "J'ai besoin d'un bon avocat" }
+      ]
+    },
+    {
+      "title_en": "Rights & obligations",
+      "terms": [
+        {
+          "term": "right",
+          "pos": "noun",
+          "translation_fr": "droit",
+          "definition_en": "Something the law says you are allowed to have or do.",
+          "explanation_fr": "Un « right » est un droit : ce que la loi te permet d'avoir ou de faire (« the right to vote »). Le droit en tant que matière se dit « law ».",
+          "example_en": "Every worker has the right to a payslip.",
+          "example_fr": "Chaque travailleur a droit à un bulletin de paie.",
+          "ipa": "/raɪt/"
+        },
+        {
+          "term": "obligation",
+          "pos": "noun",
+          "translation_fr": "obligation",
+          "definition_en": "Something you must do because of a law or an agreement.",
+          "explanation_fr": "Une « obligation » est un devoir imposé par la loi ou par un contrat.",
+          "example_en": "The seller has an obligation to deliver on time.",
+          "example_fr": "Le vendeur a l'obligation de livrer à temps.",
+          "ipa": "/ˌɒblɪˈɡeɪʃən/"
+        },
+        {
+          "term": "regulation",
+          "pos": "noun",
+          "translation_fr": "réglementation",
+          "definition_en": "An official rule made by a government or an authority.",
+          "explanation_fr": "Une « regulation » est une règle officielle, souvent technique, fixée par l'État ou une autorité (par exemple un règlement de l'UEMOA).",
+          "example_en": "The new regulation applies to all banks.",
+          "example_fr": "La nouvelle réglementation s'applique à toutes les banques.",
+          "ipa": "/ˌreɡjʊˈleɪʃən/"
+        },
+        {
+          "term": "liability",
+          "pos": "noun",
+          "translation_fr": "responsabilité (juridique)",
+          "definition_en": "Legal responsibility for something, especially for paying for damage.",
+          "explanation_fr": "La « liability » est la responsabilité juridique : l'obligation de répondre d'un dommage et souvent de le payer. « Limited liability » = responsabilité limitée (comme dans une SARL).",
+          "example_en": "The company accepts liability for the damage.",
+          "example_fr": "L'entreprise reconnaît sa responsabilité pour les dégâts.",
+          "ipa": "/ˌlaɪəˈbɪləti/"
+        },
+        {
+          "term": "compliance",
+          "pos": "noun",
+          "translation_fr": "conformité",
+          "definition_en": "Following the laws and rules that apply to you.",
+          "explanation_fr": "La « compliance » consiste à respecter les lois et règlements ; beaucoup d'entreprises ont un service « compliance ».",
+          "example_en": "Our compliance team checks every new contract.",
+          "example_fr": "Notre équipe conformité vérifie chaque nouveau contrat.",
+          "ipa": "/kəmˈplaɪəns/"
+        },
+        {
+          "term": "penalty",
+          "pos": "noun",
+          "translation_fr": "sanction (pénalité)",
+          "definition_en": "A punishment for breaking a law, a rule or a contract.",
+          "explanation_fr": "Une « penalty » est une sanction : amende, pénalité de retard prévue dans un contrat, etc.",
+          "example_en": "There is a penalty for late delivery.",
+          "example_fr": "Il y a une pénalité en cas de livraison tardive.",
+          "ipa": "/ˈpenəlti/"
+        },
+        {
+          "term": "fine",
+          "pos": "noun",
+          "translation_fr": "amende",
+          "definition_en": "Money you must pay as a punishment.",
+          "explanation_fr": "Une « fine » est une amende. Attention : dans la vie courante, « fine » veut aussi dire « bien » (« I'm fine »).",
+          "example_en": "The company paid a fine of two million francs.",
+          "example_fr": "L'entreprise a payé une amende de deux millions de francs.",
+          "ipa": "/faɪn/"
+        },
+        {
+          "term": "evidence",
+          "pos": "noun",
+          "translation_fr": "preuves",
+          "definition_en": "Information or objects that show something is true.",
+          "explanation_fr": "« Evidence » désigne les preuves présentées au tribunal. C'est un nom indénombrable : on dit « some evidence », jamais « an evidence ».",
+          "example_en": "The lawyer showed new evidence to the court.",
+          "example_fr": "L'avocat a présenté de nouvelles preuves au tribunal.",
+          "ipa": "/ˈevɪdəns/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Every citizen has rights and duties",
+          "fr": "Chaque citoyen a des droits et des devoirs"
+        },
+        { "en": "We must respect the regulation", "fr": "Nous devons respecter la réglementation" }
+      ]
+    }
+  ]
+}

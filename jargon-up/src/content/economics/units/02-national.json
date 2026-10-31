@@ -1,0 +1,179 @@
+{
+  "level": "B1",
+  "title_en": "The national economy",
+  "title_fr": "L'économie nationale",
+  "lessons": [
+    {
+      "title_en": "Growth & jobs",
+      "terms": [
+        {
+          "term": "GDP",
+          "pos": "noun",
+          "translation_fr": "PIB",
+          "definition_en": "The total value of all goods and services produced in a country in a year.",
+          "explanation_fr": "Le « GDP » (Gross Domestic Product) est le PIB : la richesse produite dans un pays en un an.",
+          "example_en": "Togo's GDP grew last year.",
+          "example_fr": "Le PIB du Togo a augmenté l'an dernier.",
+          "ipa": "/ˌdʒiː diː ˈpiː/"
+        },
+        {
+          "term": "economic growth",
+          "pos": "noun",
+          "translation_fr": "croissance économique",
+          "definition_en": "An increase in the goods and services a country produces.",
+          "explanation_fr": "L'« economic growth » est la croissance économique, mesurée par la hausse du PIB.",
+          "example_en": "Economic growth creates new jobs.",
+          "example_fr": "La croissance économique crée de nouveaux emplois."
+        },
+        {
+          "term": "recession",
+          "pos": "noun",
+          "translation_fr": "récession",
+          "definition_en": "A period when the economy gets smaller and activity falls.",
+          "explanation_fr": "Une « recession » est une période de recul de l'activité économique (souvent deux trimestres de baisse du PIB).",
+          "example_en": "Many companies closed during the recession.",
+          "example_fr": "Beaucoup d'entreprises ont fermé pendant la récession.",
+          "ipa": "/rɪˈseʃən/"
+        },
+        {
+          "term": "unemployment",
+          "pos": "noun",
+          "translation_fr": "chômage",
+          "definition_en": "The situation of people who want a job but cannot find one.",
+          "explanation_fr": "L'« unemployment » est le chômage ; le « unemployment rate » est le taux de chômage.",
+          "example_en": "Youth unemployment is a big challenge.",
+          "example_fr": "Le chômage des jeunes est un grand défi.",
+          "ipa": "/ˌʌnɪmˈplɔɪmənt/"
+        },
+        {
+          "term": "labour market",
+          "pos": "noun",
+          "translation_fr": "marché du travail",
+          "definition_en": "The supply of workers and the jobs available.",
+          "explanation_fr": "Le « labour market » (en anglais américain « labor market ») est le marché du travail : la rencontre entre les travailleurs et les emplois.",
+          "example_en": "Digital skills are in demand on the labour market.",
+          "example_fr": "Les compétences numériques sont recherchées sur le marché du travail."
+        },
+        {
+          "term": "sector",
+          "pos": "noun",
+          "translation_fr": "secteur",
+          "definition_en": "One part of the economy, like agriculture or banking.",
+          "explanation_fr": "Un « sector » est un secteur d'activité : primaire (agriculture), secondaire (industrie), tertiaire (services).",
+          "example_en": "Agriculture is still the biggest sector for jobs.",
+          "example_fr": "L'agriculture reste le premier secteur pour l'emploi.",
+          "ipa": "/ˈsektə/"
+        },
+        {
+          "term": "informal sector",
+          "pos": "noun",
+          "translation_fr": "secteur informel",
+          "definition_en": "Economic activity that is not registered or taxed by the state.",
+          "explanation_fr": "L'« informal sector » regroupe les activités non déclarées (petit commerce, artisans) ; il est très important en Afrique de l'Ouest.",
+          "example_en": "Most workers in the region are in the informal sector.",
+          "example_fr": "La plupart des travailleurs de la région sont dans le secteur informel."
+        },
+        {
+          "term": "productivity",
+          "pos": "noun",
+          "translation_fr": "productivité",
+          "definition_en": "How much is produced for each hour of work or each worker.",
+          "explanation_fr": "La « productivity » mesure ce qui est produit par heure ou par travailleur ; elle augmente avec la formation et les outils.",
+          "example_en": "New tools can improve productivity.",
+          "example_fr": "De nouveaux outils peuvent améliorer la productivité.",
+          "ipa": "/ˌprɒdʌkˈtɪvəti/"
+        }
+      ],
+      "sentences": [
+        { "en": "Growth creates new jobs", "fr": "La croissance crée de nouveaux emplois" },
+        { "en": "Unemployment is falling slowly", "fr": "Le chômage baisse lentement" }
+      ]
+    },
+    {
+      "title_en": "Government & policy",
+      "terms": [
+        {
+          "term": "public spending",
+          "pos": "noun",
+          "translation_fr": "dépenses publiques",
+          "definition_en": "Money spent by the government on schools, roads, health and more.",
+          "explanation_fr": "Le « public spending » (ou « government spending ») désigne les dépenses de l'État.",
+          "example_en": "Public spending on roads increased this year.",
+          "example_fr": "Les dépenses publiques pour les routes ont augmenté cette année."
+        },
+        {
+          "term": "budget deficit",
+          "pos": "noun",
+          "translation_fr": "déficit budgétaire",
+          "definition_en": "When a government spends more than it receives.",
+          "explanation_fr": "Le « budget deficit » est le déficit budgétaire : les dépenses de l'État dépassent ses recettes. Dans l'UEMOA, la règle est de rester sous 3 % du PIB.",
+          "example_en": "The budget deficit must stay under three percent.",
+          "example_fr": "Le déficit budgétaire doit rester sous les trois pour cent."
+        },
+        {
+          "term": "public debt",
+          "pos": "noun",
+          "translation_fr": "dette publique",
+          "definition_en": "The total money a government owes.",
+          "explanation_fr": "La « public debt » est la dette publique : l'ensemble des emprunts de l'État.",
+          "example_en": "Public debt grew during the crisis.",
+          "example_fr": "La dette publique a augmenté pendant la crise."
+        },
+        {
+          "term": "taxation",
+          "pos": "noun",
+          "translation_fr": "fiscalité",
+          "definition_en": "The system of taxes in a country.",
+          "explanation_fr": "La « taxation » désigne la fiscalité, le système d'impôts d'un pays.",
+          "example_en": "Fair taxation helps pay for schools.",
+          "example_fr": "Une fiscalité juste aide à financer les écoles.",
+          "ipa": "/tækˈseɪʃən/"
+        },
+        {
+          "term": "subsidy",
+          "pos": "noun",
+          "translation_fr": "subvention",
+          "definition_en": "Money the government pays to keep a price low or to help an activity.",
+          "explanation_fr": "Une « subsidy » est une subvention de l'État (sur le carburant, les engrais…).",
+          "example_en": "The fuel subsidy keeps prices lower.",
+          "example_fr": "La subvention sur le carburant maintient les prix plus bas.",
+          "ipa": "/ˈsʌbsədi/"
+        },
+        {
+          "term": "central bank",
+          "pos": "noun",
+          "translation_fr": "banque centrale",
+          "definition_en": "The national bank that controls money and interest rates.",
+          "explanation_fr": "La « central bank » gère la monnaie ; pour le franc CFA d'Afrique de l'Ouest, c'est la BCEAO, basée à Dakar.",
+          "example_en": "The central bank raised its interest rates.",
+          "example_fr": "La banque centrale a relevé ses taux d'intérêt."
+        },
+        {
+          "term": "monetary policy",
+          "pos": "noun",
+          "translation_fr": "politique monétaire",
+          "definition_en": "Decisions by the central bank about money and interest rates.",
+          "explanation_fr": "La « monetary policy » est menée par la banque centrale (taux d'intérêt, quantité de monnaie) pour contrôler l'inflation.",
+          "example_en": "Monetary policy aims to keep inflation low.",
+          "example_fr": "La politique monétaire vise à maintenir une inflation faible."
+        },
+        {
+          "term": "fiscal policy",
+          "pos": "noun",
+          "translation_fr": "politique budgétaire",
+          "definition_en": "Government decisions about taxes and public spending.",
+          "explanation_fr": "La « fiscal policy » est la politique budgétaire de l'État (impôts et dépenses). À ne pas confondre avec « monetary policy ».",
+          "example_en": "Fiscal policy can support growth.",
+          "example_fr": "La politique budgétaire peut soutenir la croissance."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The central bank controls inflation",
+          "fr": "La banque centrale contrôle l'inflation"
+        },
+        { "en": "The state cut public spending", "fr": "L'État a réduit les dépenses publiques" }
+      ]
+    }
+  ]
+}

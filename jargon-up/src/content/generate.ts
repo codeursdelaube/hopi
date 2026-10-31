@@ -148,17 +148,22 @@ export function generateLessonExercises(lesson: ContentLesson): GeneratedExercis
     },
     withTerm(t[7], fillBlank(t[7], t, random), ` Phrase : « ${t[7].example_fr} »`),
     sentence(1),
-    ...lesson.dialogues.map((d): GeneratedExercise => ({
-      type: "dialogue",
-      payload: {
-        context: d.context,
-        lines: d.lines,
-        options: d.options,
-        answerIndex: d.answerIndex,
-      },
-      term: null,
-      explanation_fr: d.explanation_fr,
-    })),
+    ...lesson.dialogues.map((d): GeneratedExercise => {
+      // Options mélangées : la bonne réponse n'est pas toujours à la même place.
+      const correct = d.options[d.answerIndex];
+      const options = shuffle(d.options, random);
+      return {
+        type: "dialogue",
+        payload: {
+          context: d.context,
+          lines: d.lines,
+          options,
+          answerIndex: options.indexOf(correct),
+        },
+        term: null,
+        explanation_fr: d.explanation_fr,
+      };
+    }),
   ];
 
   const result = exercises.filter((e): e is GeneratedExercise => e !== null);

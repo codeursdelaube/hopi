@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { NEXT_COOKIE } from "@/lib/auth/paths";
 import { createClient } from "@/lib/supabase/client";
 import { fr } from "@/lib/i18n/fr";
 
@@ -11,12 +12,15 @@ export function GoogleButton({ next }: { next: string }) {
   async function signIn() {
     setLoading(true);
     setFailed(false);
-    const redirectTo = new URL("/auth/callback", window.location.origin);
-    redirectTo.searchParams.set("next", next);
+    // L'URL de retour doit correspondre EXACTEMENT à une « Redirect URL » autorisée dans Supabase,
+    // sinon Supabase renvoie vers la « Site URL ». On ne met donc aucun paramètre dedans :
+    // la page à rouvrir après connexion passe par un cookie de courte durée.
+    document.cookie = `${NEXT_COOKIE}=${encodeURIComponent(next)}; path=/; max-age=600; samesite=lax`;
+    const redirectTo = `${window.location.origin}/auth/callback`;
 
     const { error } = await createClient().auth.signInWithOAuth({
       provider: "google",
-      options: { redirectTo: redirectTo.toString() },
+      options: { redirectTo },
     });
     // En cas de succès, le navigateur part vers Google : on ne revient ici qu'en cas d'erreur.
     if (error) {
