@@ -1,0 +1,293 @@
+{
+  "level": "A2",
+  "title_en": "Web & APIs",
+  "title_fr": "Le Web et les API",
+  "lessons": [
+    {
+      "title_en": "Client & server",
+      "terms": [
+        {
+          "term": "client",
+          "pos": "noun",
+          "translation_fr": "client",
+          "definition_en": "A program or device that asks a server for data.",
+          "explanation_fr": "Le « client » est ce qui envoie des demandes : ton navigateur, une appli mobile… Le client demande, le serveur répond.",
+          "example_en": "The mobile app is the client.",
+          "example_fr": "L'application mobile est le client.",
+          "ipa": "/ˈklaɪənt/"
+        },
+        {
+          "term": "server",
+          "pos": "noun",
+          "translation_fr": "serveur",
+          "definition_en": "A computer that receives requests and sends back data.",
+          "explanation_fr": "Un « server » est un ordinateur (souvent dans un centre de données) qui reçoit les demandes des clients et leur renvoie des données ou des pages.",
+          "example_en": "The server has been down since this morning.",
+          "example_fr": "Le serveur est en panne depuis ce matin.",
+          "ipa": "/ˈsɜːvə/"
+        },
+        {
+          "term": "browser",
+          "pos": "noun",
+          "translation_fr": "navigateur",
+          "definition_en": "A program used to open websites, like Chrome or Firefox.",
+          "explanation_fr": "Le « browser » est le logiciel qui affiche les sites web : Chrome, Firefox, Safari…",
+          "example_en": "Open the page in another browser.",
+          "example_fr": "Ouvre la page dans un autre navigateur.",
+          "ipa": "/ˈbraʊzə/"
+        },
+        {
+          "term": "request",
+          "pos": "noun",
+          "translation_fr": "requête",
+          "definition_en": "A message sent by a client to ask for something.",
+          "explanation_fr": "Une « request » est un message envoyé par le client au serveur pour demander une page ou des données.",
+          "example_en": "Each click sends a request to the API.",
+          "example_fr": "Chaque clic envoie une requête à l'API.",
+          "ipa": "/rɪˈkwest/"
+        },
+        {
+          "term": "response",
+          "pos": "noun",
+          "translation_fr": "réponse",
+          "definition_en": "The message a server sends back after a request.",
+          "explanation_fr": "La « response » est ce que le serveur renvoie : des données, une page ou un message d'erreur.",
+          "example_en": "The response arrived in 200 milliseconds.",
+          "example_fr": "La réponse est arrivée en 200 millisecondes.",
+          "ipa": "/rɪˈspɒns/"
+        },
+        {
+          "term": "frontend",
+          "pos": "noun",
+          "translation_fr": "front-end (partie visible)",
+          "definition_en": "The part of an application that users see and use.",
+          "explanation_fr": "Le « frontend » est la partie visible d'une appli : écrans, boutons, formulaires. On le code souvent en HTML, CSS et JavaScript.",
+          "example_en": "She works on the frontend with React.",
+          "example_fr": "Elle travaille sur le front-end avec React.",
+          "ipa": "/ˈfrʌntend/"
+        },
+        {
+          "term": "backend",
+          "pos": "noun",
+          "translation_fr": "back-end (partie serveur)",
+          "definition_en": "The part of an application that runs on the server.",
+          "explanation_fr": "Le « backend » est la partie invisible qui tourne sur le serveur : logique métier, base de données, sécurité.",
+          "example_en": "The backend saves the orders in a database.",
+          "example_fr": "Le back-end enregistre les commandes dans une base de données.",
+          "ipa": "/ˈbækend/"
+        },
+        {
+          "term": "hosting",
+          "pos": "noun",
+          "translation_fr": "hébergement",
+          "definition_en": "A service that keeps your website online on a server.",
+          "explanation_fr": "L'« hosting » est le service qui met ton site en ligne sur un serveur (Vercel, Hostinger, AWS…).",
+          "example_en": "We pay for hosting every month.",
+          "example_fr": "Nous payons l'hébergement chaque mois.",
+          "ipa": "/ˈhəʊstɪŋ/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The browser sends a request to the server",
+          "fr": "Le navigateur envoie une requête au serveur"
+        },
+        { "en": "I work on the backend", "fr": "Je travaille sur le back-end" }
+      ]
+    },
+    {
+      "title_en": "HTTP requests",
+      "terms": [
+        {
+          "term": "endpoint",
+          "pos": "noun",
+          "translation_fr": "point d'accès",
+          "definition_en": "A specific URL of an API that you can call.",
+          "explanation_fr": "Un « endpoint » est une adresse précise d'une API, par exemple /users ou /orders, qui réalise une action précise.",
+          "example_en": "Call the endpoint /users to get the list.",
+          "example_fr": "Appelle le point d'accès /users pour obtenir la liste.",
+          "ipa": "/ˈendpɔɪnt/"
+        },
+        {
+          "term": "status code",
+          "pos": "noun",
+          "translation_fr": "code de statut",
+          "definition_en": "A number that tells if a request worked, like 200 or 404.",
+          "explanation_fr": "Le « status code » est un nombre renvoyé par le serveur : 200 = OK, 404 = introuvable, 500 = erreur du serveur.",
+          "example_en": "The status code is 404, so the page does not exist.",
+          "example_fr": "Le code de statut est 404, donc la page n'existe pas.",
+          "ipa": "/ˈsteɪtəs kəʊd/"
+        },
+        {
+          "term": "header",
+          "pos": "noun",
+          "translation_fr": "en-tête",
+          "definition_en": "Extra information sent with a request or a response.",
+          "explanation_fr": "Un « header » est une information ajoutée à une requête ou à une réponse : type de contenu, jeton d'authentification, langue…",
+          "example_en": "Add the token in the Authorization header.",
+          "example_fr": "Ajoute le jeton dans l'en-tête Authorization.",
+          "ipa": "/ˈhedə/"
+        },
+        {
+          "term": "body",
+          "pos": "noun",
+          "translation_fr": "corps (de la requête)",
+          "definition_en": "The main content of a request or a response.",
+          "explanation_fr": "Le « body » est le contenu principal d'une requête ou d'une réponse, par exemple les données JSON d'un formulaire.",
+          "example_en": "Send the user's name in the body.",
+          "example_fr": "Envoie le nom de l'utilisateur dans le corps de la requête.",
+          "ipa": "/ˈbɒdi/"
+        },
+        {
+          "term": "GET",
+          "pos": "HTTP method",
+          "translation_fr": "GET (lire)",
+          "definition_en": "An HTTP method used to read data.",
+          "explanation_fr": "« GET » est la méthode HTTP pour lire ou récupérer des données, sans rien modifier.",
+          "example_en": "Use GET to read the list of products.",
+          "example_fr": "Utilise GET pour lire la liste des produits.",
+          "ipa": "/ɡet/"
+        },
+        {
+          "term": "POST",
+          "pos": "HTTP method",
+          "translation_fr": "POST (envoyer)",
+          "definition_en": "An HTTP method used to send new data to the server.",
+          "explanation_fr": "« POST » est la méthode HTTP pour envoyer de nouvelles données, par exemple pour créer un compte.",
+          "example_en": "The form uses POST to create a new account.",
+          "example_fr": "Le formulaire utilise POST pour créer un nouveau compte.",
+          "ipa": "/pəʊst/"
+        },
+        {
+          "term": "URL",
+          "pos": "noun",
+          "translation_fr": "adresse web",
+          "definition_en": "The address of a page or a resource on the web.",
+          "explanation_fr": "Une « URL » est l'adresse complète d'une page ou d'une ressource, comme https://hopigame.vercel.app/learn.",
+          "example_en": "Copy the URL and send it to me.",
+          "example_fr": "Copie l'URL et envoie-la-moi.",
+          "ipa": "/ˌjuː ɑːr ˈel/"
+        },
+        {
+          "term": "timeout",
+          "pos": "noun",
+          "translation_fr": "délai dépassé",
+          "definition_en": "An error when a request takes too long to get an answer.",
+          "explanation_fr": "Un « timeout » se produit quand une requête attend trop longtemps sans réponse : elle est alors abandonnée.",
+          "example_en": "The payment failed because of a timeout.",
+          "example_fr": "Le paiement a échoué à cause d'un délai dépassé.",
+          "ipa": "/ˈtaɪmaʊt/"
+        }
+      ],
+      "sentences": [
+        { "en": "The server returned a 404 error", "fr": "Le serveur a renvoyé une erreur 404" },
+        {
+          "en": "Send the data with a POST request",
+          "fr": "Envoie les données avec une requête POST"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Debugging with a colleague",
+          "lines": [{ "speaker": "Kodjo", "text": "The API returns a 500 error." }],
+          "options": [
+            "That means something is wrong on the server.",
+            "That means the page was found.",
+            "That means we have 500 users."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "Les codes 5xx signalent une erreur côté serveur. « That means something is wrong on the server » = « Ça veut dire qu'il y a un problème sur le serveur »."
+        }
+      ]
+    },
+    {
+      "title_en": "REST APIs",
+      "terms": [
+        {
+          "term": "API",
+          "pos": "noun",
+          "translation_fr": "interface de programmation (API)",
+          "definition_en": "A set of rules that lets two programs talk to each other.",
+          "explanation_fr": "Une « API » permet à deux logiciels de communiquer : par exemple, ton appli demande la météo à l'API d'un service météo.",
+          "example_en": "Our app uses the API of a payment company.",
+          "example_fr": "Notre appli utilise l'API d'une entreprise de paiement.",
+          "ipa": "/ˌeɪ piː ˈaɪ/"
+        },
+        {
+          "term": "resource",
+          "pos": "noun",
+          "translation_fr": "ressource",
+          "definition_en": "An object an API gives access to, like a user or an order.",
+          "explanation_fr": "Dans une API REST, une « resource » est un objet manipulé : un utilisateur, une commande, un produit… Chacune a sa propre URL.",
+          "example_en": "Each resource has its own address.",
+          "example_fr": "Chaque ressource a sa propre adresse.",
+          "ipa": "/rɪˈzɔːs/"
+        },
+        {
+          "term": "JSON",
+          "pos": "noun",
+          "translation_fr": "JSON (format de données)",
+          "definition_en": "A simple text format used to exchange data.",
+          "explanation_fr": "Le « JSON » est un format texte très répandu pour échanger des données, avec des paires clé/valeur, par exemple {\"name\": \"Koffi\"}.",
+          "example_en": "The API returns the data in JSON.",
+          "example_fr": "L'API renvoie les données en JSON.",
+          "ipa": "/ˈdʒeɪsən/"
+        },
+        {
+          "term": "payload",
+          "pos": "noun",
+          "translation_fr": "données utiles",
+          "definition_en": "The actual data sent in a request or a response.",
+          "explanation_fr": "Le « payload » désigne les données utiles transportées par une requête ou une réponse, sans les en-têtes.",
+          "example_en": "The payload contains the customer's name and phone number.",
+          "example_fr": "Les données contiennent le nom et le numéro de téléphone du client.",
+          "ipa": "/ˈpeɪləʊd/"
+        },
+        {
+          "term": "authentication",
+          "pos": "noun",
+          "translation_fr": "authentification",
+          "definition_en": "Checking who a user is, for example with a password.",
+          "explanation_fr": "L'« authentication » consiste à vérifier l'identité de quelqu'un (mot de passe, compte Google…). À ne pas confondre avec l'autorisation, qui définit ce qu'il a le droit de faire.",
+          "example_en": "The API needs authentication before it sends any data.",
+          "example_fr": "L'API exige une authentification avant d'envoyer des données.",
+          "ipa": "/ɔːˌθentɪˈkeɪʃən/"
+        },
+        {
+          "term": "token",
+          "pos": "noun",
+          "translation_fr": "jeton",
+          "definition_en": "A secret string that proves a user is logged in.",
+          "explanation_fr": "Un « token » est une chaîne secrète remise après la connexion ; on l'envoie avec chaque requête pour prouver qui on est.",
+          "example_en": "Your token expires after one hour.",
+          "example_fr": "Ton jeton expire au bout d'une heure.",
+          "ipa": "/ˈtəʊkən/"
+        },
+        {
+          "term": "rate limit",
+          "pos": "noun",
+          "translation_fr": "limite de requêtes",
+          "definition_en": "The maximum number of requests you can make in a period of time.",
+          "explanation_fr": "Une « rate limit » limite le nombre d'appels autorisés (par exemple 100 requêtes par minute) pour protéger l'API.",
+          "example_en": "We hit the rate limit, so wait one minute.",
+          "example_fr": "Nous avons atteint la limite de requêtes, attends une minute.",
+          "ipa": "/ˈreɪt ˌlɪmɪt/"
+        },
+        {
+          "term": "documentation",
+          "pos": "noun",
+          "translation_fr": "documentation",
+          "definition_en": "Written explanations of how to use a tool or an API.",
+          "explanation_fr": "La « documentation » (ou « docs ») explique comment utiliser une API ou un outil, avec des exemples.",
+          "example_en": "Read the documentation before you call the API.",
+          "example_fr": "Lis la documentation avant d'appeler l'API.",
+          "ipa": "/ˌdɒkjʊmenˈteɪʃən/"
+        }
+      ],
+      "sentences": [
+        { "en": "The API returns data in JSON", "fr": "L'API renvoie des données en JSON" },
+        { "en": "Read the documentation first", "fr": "Lis d'abord la documentation" }
+      ]
+    }
+  ]
+}

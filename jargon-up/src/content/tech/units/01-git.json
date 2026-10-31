@@ -1,0 +1,299 @@
+{
+  "level": "A2",
+  "title_en": "Git & version control",
+  "title_fr": "Git et gestion de versions",
+  "lessons": [
+    {
+      "title_en": "Repositories & commits",
+      "terms": [
+        {
+          "term": "repository",
+          "pos": "noun",
+          "translation_fr": "dépôt",
+          "definition_en": "A place where all the files and the history of a project are stored.",
+          "explanation_fr": "Un « repository » (ou « repo ») est le dossier d'un projet suivi par Git : il contient le code et tout l'historique des modifications.",
+          "example_en": "Clone the repository before you start working.",
+          "example_fr": "Clone le dépôt avant de commencer à travailler.",
+          "ipa": "/rɪˈpɒzɪtəri/"
+        },
+        {
+          "term": "commit",
+          "pos": "noun / verb",
+          "translation_fr": "commit (enregistrement)",
+          "definition_en": "A saved snapshot of your changes, with a short message.",
+          "explanation_fr": "Un « commit » est une sauvegarde de tes modifications dans l'historique, avec un message qui explique ce qui a changé. Le verbe « to commit » veut dire enregistrer ces changements.",
+          "example_en": "Write a clear message for each commit.",
+          "example_fr": "Écris un message clair pour chaque commit.",
+          "ipa": "/kəˈmɪt/"
+        },
+        {
+          "term": "clone",
+          "pos": "verb",
+          "translation_fr": "cloner",
+          "definition_en": "To copy a remote repository to your computer.",
+          "explanation_fr": "« To clone » : télécharger une copie complète d'un dépôt distant (code et historique) sur ton ordinateur.",
+          "example_en": "You can clone the project with one command.",
+          "example_fr": "Tu peux cloner le projet avec une seule commande.",
+          "ipa": "/kləʊn/"
+        },
+        {
+          "term": "push",
+          "pos": "verb",
+          "translation_fr": "envoyer (pousser)",
+          "definition_en": "To send your local commits to the remote repository.",
+          "explanation_fr": "« To push » : envoyer tes commits locaux vers le dépôt en ligne (GitHub, GitLab…) pour que l'équipe les voie.",
+          "example_en": "Don't forget to push your changes tonight.",
+          "example_fr": "N'oublie pas d'envoyer tes modifications ce soir.",
+          "ipa": "/pʊʃ/"
+        },
+        {
+          "term": "pull",
+          "pos": "verb",
+          "translation_fr": "récupérer (tirer)",
+          "definition_en": "To download the latest changes from the remote repository.",
+          "explanation_fr": "« To pull » : récupérer les derniers changements du dépôt distant et les intégrer à ta copie locale. C'est l'inverse de « push ».",
+          "example_en": "Always pull before you start a new task.",
+          "example_fr": "Récupère toujours les changements avant de commencer une nouvelle tâche.",
+          "ipa": "/pʊl/"
+        },
+        {
+          "term": "staging area",
+          "pos": "noun",
+          "translation_fr": "zone de préparation",
+          "definition_en": "The place where you prepare changes before a commit.",
+          "explanation_fr": "La « staging area » (ou index) est une zone intermédiaire : avec « git add », tu y places les fichiers à inclure dans le prochain commit.",
+          "example_en": "Add the file to the staging area with git add.",
+          "example_fr": "Ajoute le fichier à la zone de préparation avec git add.",
+          "ipa": "/ˈsteɪdʒɪŋ ˌeəriə/"
+        },
+        {
+          "term": "history",
+          "pos": "noun",
+          "translation_fr": "historique",
+          "definition_en": "The list of all the commits made in a project.",
+          "explanation_fr": "L'« history » d'un dépôt est la liste de tous les commits : qui a changé quoi, et quand.",
+          "example_en": "Check the history to see who changed this file.",
+          "example_fr": "Regarde l'historique pour voir qui a modifié ce fichier.",
+          "ipa": "/ˈhɪstəri/"
+        },
+        {
+          "term": "version control",
+          "pos": "noun",
+          "translation_fr": "gestion de versions",
+          "definition_en": "A system that tracks every change made to files over time.",
+          "explanation_fr": "Le « version control » est un système (comme Git) qui garde la trace de chaque modification et permet de revenir en arrière.",
+          "example_en": "Our team uses Git for version control.",
+          "example_fr": "Notre équipe utilise Git pour la gestion de versions.",
+          "ipa": "/ˈvɜːʃən kənˌtrəʊl/"
+        }
+      ],
+      "sentences": [
+        { "en": "I push my code every evening", "fr": "J'envoie mon code chaque soir" },
+        {
+          "en": "Please pull the latest changes",
+          "fr": "Merci de récupérer les derniers changements"
+        }
+      ]
+    },
+    {
+      "title_en": "Branches & merges",
+      "terms": [
+        {
+          "term": "branch",
+          "pos": "noun",
+          "translation_fr": "branche",
+          "definition_en": "A separate line of work inside a repository.",
+          "explanation_fr": "Une « branch » est une version parallèle du code où tu développes une fonctionnalité sans toucher à la version principale.",
+          "example_en": "Create a new branch for this feature.",
+          "example_fr": "Crée une nouvelle branche pour cette fonctionnalité.",
+          "ipa": "/brɑːntʃ/"
+        },
+        {
+          "term": "merge",
+          "pos": "verb",
+          "translation_fr": "fusionner",
+          "definition_en": "To combine the changes of one branch into another.",
+          "explanation_fr": "« To merge » : intégrer les changements d'une branche dans une autre, par exemple ta branche de travail dans « main ».",
+          "example_en": "We will merge your branch after the review.",
+          "example_fr": "Nous fusionnerons ta branche après la relecture.",
+          "ipa": "/mɜːdʒ/"
+        },
+        {
+          "term": "merge conflict",
+          "pos": "noun",
+          "translation_fr": "conflit de fusion",
+          "definition_en": "A problem that appears when two people changed the same lines of code.",
+          "explanation_fr": "Un « merge conflict » arrive quand deux personnes ont modifié les mêmes lignes : Git ne sait pas quelle version garder et te demande de choisir.",
+          "example_en": "I need ten minutes to fix this merge conflict.",
+          "example_fr": "J'ai besoin de dix minutes pour résoudre ce conflit de fusion.",
+          "ipa": "/ˈmɜːdʒ ˌkɒnflɪkt/"
+        },
+        {
+          "term": "checkout",
+          "pos": "verb (git command)",
+          "translation_fr": "basculer (de branche)",
+          "definition_en": "To switch to another branch or version of the code.",
+          "explanation_fr": "La commande « git checkout » (ou « git switch ») permet de passer d'une branche à une autre dans ton dossier de travail.",
+          "example_en": "Use checkout to switch to the main branch.",
+          "example_fr": "Utilise checkout pour passer sur la branche principale.",
+          "ipa": "/ˈtʃekaʊt/"
+        },
+        {
+          "term": "main branch",
+          "pos": "noun",
+          "translation_fr": "branche principale",
+          "definition_en": "The central branch that contains the official version of the code.",
+          "explanation_fr": "La « main branch » (souvent appelée « main », autrefois « master ») contient la version officielle et stable du projet.",
+          "example_en": "Never push directly to the main branch.",
+          "example_fr": "Ne pousse jamais directement sur la branche principale.",
+          "ipa": "/meɪn brɑːntʃ/"
+        },
+        {
+          "term": "rebase",
+          "pos": "verb",
+          "translation_fr": "rebaser",
+          "definition_en": "To move your commits on top of the latest version of another branch.",
+          "explanation_fr": "« To rebase » : rejouer tes commits par-dessus la dernière version d'une autre branche, pour garder un historique propre et linéaire.",
+          "example_en": "Please rebase your branch on main before merging.",
+          "example_fr": "Merci de rebaser ta branche sur main avant de fusionner.",
+          "ipa": "/ˌriːˈbeɪs/"
+        },
+        {
+          "term": "fork",
+          "pos": "noun / verb",
+          "translation_fr": "fork (copie d'un dépôt)",
+          "definition_en": "Your own copy of someone else's repository.",
+          "explanation_fr": "Un « fork » est ta propre copie d'un dépôt qui appartient à quelqu'un d'autre. On l'utilise beaucoup pour contribuer à l'open source.",
+          "example_en": "Make a fork of the project to contribute.",
+          "example_fr": "Fais un fork du projet pour contribuer.",
+          "ipa": "/fɔːk/"
+        },
+        {
+          "term": "tag",
+          "pos": "noun",
+          "translation_fr": "étiquette (version)",
+          "definition_en": "A label that marks an important version, like a release.",
+          "explanation_fr": "Un « tag » est une étiquette posée sur un commit précis, souvent pour marquer une version publiée (v1.0, v2.3…).",
+          "example_en": "We added a tag for version 2.0.",
+          "example_fr": "Nous avons ajouté une étiquette pour la version 2.0.",
+          "ipa": "/tæɡ/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Create a branch for each feature",
+          "fr": "Crée une branche pour chaque fonctionnalité"
+        },
+        { "en": "I will merge my branch today", "fr": "Je vais fusionner ma branche aujourd'hui" }
+      ]
+    },
+    {
+      "title_en": "Pull requests",
+      "terms": [
+        {
+          "term": "pull request",
+          "pos": "noun",
+          "translation_fr": "demande de fusion",
+          "definition_en": "A request to review and merge your changes into another branch.",
+          "explanation_fr": "Une « pull request » (PR) est une demande pour que l'équipe relise ton code avant de le fusionner dans la branche principale.",
+          "example_en": "I opened a pull request for the login page.",
+          "example_fr": "J'ai ouvert une pull request pour la page de connexion.",
+          "ipa": "/ˈpʊl rɪˌkwest/"
+        },
+        {
+          "term": "review",
+          "pos": "noun / verb",
+          "translation_fr": "relecture",
+          "definition_en": "A careful check of someone's code by a teammate.",
+          "explanation_fr": "Une « review » (ou « code review ») : un collègue relit ton code pour trouver des erreurs et proposer des améliorations.",
+          "example_en": "Can you do a quick review of my code?",
+          "example_fr": "Peux-tu faire une relecture rapide de mon code ?",
+          "ipa": "/rɪˈvjuː/"
+        },
+        {
+          "term": "reviewer",
+          "pos": "noun",
+          "translation_fr": "relecteur",
+          "definition_en": "The person who checks your code.",
+          "explanation_fr": "Le « reviewer » est la personne chargée de relire ta pull request.",
+          "example_en": "The reviewer asked me to rename this function.",
+          "example_fr": "Le relecteur m'a demandé de renommer cette fonction.",
+          "ipa": "/rɪˈvjuːə/"
+        },
+        {
+          "term": "approve",
+          "pos": "verb",
+          "translation_fr": "approuver",
+          "definition_en": "To say that the changes are good and can be merged.",
+          "explanation_fr": "« To approve » une PR : confirmer que le code est correct et peut être fusionné.",
+          "example_en": "Two people must approve the changes.",
+          "example_fr": "Deux personnes doivent approuver les changements.",
+          "ipa": "/əˈpruːv/"
+        },
+        {
+          "term": "comment",
+          "pos": "noun",
+          "translation_fr": "commentaire",
+          "definition_en": "A note you write about a specific line of code.",
+          "explanation_fr": "Un « comment » est une remarque laissée sur une ligne de code, dans le code lui-même ou dans une pull request.",
+          "example_en": "She left a comment on line 42.",
+          "example_fr": "Elle a laissé un commentaire sur la ligne 42.",
+          "ipa": "/ˈkɒment/"
+        },
+        {
+          "term": "diff",
+          "pos": "noun",
+          "translation_fr": "différences",
+          "definition_en": "The list of lines that were added or removed.",
+          "explanation_fr": "Le « diff » montre exactement ce qui a changé : les lignes ajoutées (en vert) et supprimées (en rouge).",
+          "example_en": "The diff is small, so it will be quick to check.",
+          "example_fr": "Les différences sont petites, ce sera donc rapide à vérifier.",
+          "ipa": "/dɪf/"
+        },
+        {
+          "term": "feature",
+          "pos": "noun",
+          "translation_fr": "fonctionnalité",
+          "definition_en": "A new function or capability of an application.",
+          "explanation_fr": "Une « feature » est une fonctionnalité de l'application, par exemple « payer par mobile money ».",
+          "example_en": "This feature lets users pay by phone.",
+          "example_fr": "Cette fonctionnalité permet aux utilisateurs de payer par téléphone.",
+          "ipa": "/ˈfiːtʃə/"
+        },
+        {
+          "term": "bug fix",
+          "pos": "noun",
+          "translation_fr": "correction de bug",
+          "definition_en": "A change that corrects an error in the code.",
+          "explanation_fr": "Un « bug fix » est une modification qui corrige une erreur (un « bug »).",
+          "example_en": "This is a small bug fix for the payment page.",
+          "example_fr": "C'est une petite correction de bug pour la page de paiement.",
+          "ipa": "/ˈbʌɡ fɪks/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I opened a pull request this morning",
+          "fr": "J'ai ouvert une pull request ce matin"
+        },
+        {
+          "en": "The reviewer approved my changes",
+          "fr": "Le relecteur a approuvé mes changements"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Code review on GitHub",
+          "lines": [{ "speaker": "Aïcha", "text": "I left two comments on your pull request." }],
+          "options": [
+            "Thanks, I'll fix them right away.",
+            "I don't like comments.",
+            "My pull request is a database."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Thanks, I'll fix them right away » = « Merci, je les corrige tout de suite ». C'est la réponse polie et professionnelle quand un collègue relit ton code."
+        }
+      ]
+    }
+  ]
+}

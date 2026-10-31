@@ -9,11 +9,11 @@ export const metadata: Metadata = { title: fr.onboarding.title };
 
 export default function OnboardingPage() {
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col px-4 py-6">
+    <div className="flex flex-1 flex-col py-6">
       <Suspense fallback={<div className="h-96 w-full skeleton" />}>
         <OnboardingLoader />
       </Suspense>
-    </main>
+    </div>
   );
 }
 

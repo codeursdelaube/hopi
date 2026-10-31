@@ -1,0 +1,201 @@
+{
+  "level": "B1",
+  "title_en": "Networks",
+  "title_fr": "Réseaux",
+  "lessons": [
+    {
+      "title_en": "IP addresses & DNS",
+      "terms": [
+        {
+          "term": "IP address",
+          "pos": "noun",
+          "translation_fr": "adresse IP",
+          "definition_en": "A number that identifies a device on a network.",
+          "explanation_fr": "Une « IP address » est le numéro d'un appareil sur un réseau, comme 192.168.1.10 : c'est son adresse sur Internet.",
+          "example_en": "What is the IP address of the server?",
+          "example_fr": "Quelle est l'adresse IP du serveur ?",
+          "ipa": "/ˌaɪ ˈpiː əˌdres/"
+        },
+        {
+          "term": "domain name",
+          "pos": "noun",
+          "translation_fr": "nom de domaine",
+          "definition_en": "An easy name for a website, like google.com.",
+          "explanation_fr": "Un « domain name » est un nom facile à retenir (exemple.com) qui remplace l'adresse IP d'un site.",
+          "example_en": "We bought a new domain name for the company.",
+          "example_fr": "Nous avons acheté un nouveau nom de domaine pour l'entreprise.",
+          "ipa": "/dəˈmeɪn neɪm/"
+        },
+        {
+          "term": "DNS",
+          "pos": "noun",
+          "translation_fr": "DNS (annuaire d'Internet)",
+          "definition_en": "The system that turns domain names into IP addresses.",
+          "explanation_fr": "Le « DNS » est l'annuaire d'Internet : il traduit un nom de domaine en adresse IP.",
+          "example_en": "The site is down because of a DNS problem.",
+          "example_fr": "Le site est inaccessible à cause d'un problème de DNS.",
+          "ipa": "/ˌdiː en ˈes/"
+        },
+        {
+          "term": "router",
+          "pos": "noun",
+          "translation_fr": "routeur",
+          "definition_en": "A device that sends data between networks.",
+          "explanation_fr": "Un « router » dirige les données entre les réseaux, par exemple entre ton réseau local et Internet (ta box est un routeur).",
+          "example_en": "Restart the router if the connection is slow.",
+          "example_fr": "Redémarre le routeur si la connexion est lente.",
+          "ipa": "/ˈruːtə/"
+        },
+        {
+          "term": "network",
+          "pos": "noun",
+          "translation_fr": "réseau",
+          "definition_en": "A group of computers connected together.",
+          "explanation_fr": "Un « network » est un ensemble d'appareils reliés qui échangent des données (réseau local, Internet…).",
+          "example_en": "The office network is very slow today.",
+          "example_fr": "Le réseau du bureau est très lent aujourd'hui.",
+          "ipa": "/ˈnetwɜːk/"
+        },
+        {
+          "term": "bandwidth",
+          "pos": "noun",
+          "translation_fr": "bande passante",
+          "definition_en": "The amount of data a connection can carry per second.",
+          "explanation_fr": "La « bandwidth » est la quantité de données qu'une connexion peut transporter par seconde (en Mbit/s).",
+          "example_en": "Videos use a lot of bandwidth.",
+          "example_fr": "Les vidéos utilisent beaucoup de bande passante.",
+          "ipa": "/ˈbændwɪdθ/"
+        },
+        {
+          "term": "latency",
+          "pos": "noun",
+          "translation_fr": "latence",
+          "definition_en": "The delay before data arrives.",
+          "explanation_fr": "La « latency » est le temps de trajet des données, en millisecondes. Une latence élevée rend une appli lente à réagir.",
+          "example_en": "High latency makes video calls difficult.",
+          "example_fr": "Une latence élevée rend les appels vidéo difficiles.",
+          "ipa": "/ˈleɪtənsi/"
+        },
+        {
+          "term": "gateway",
+          "pos": "noun",
+          "translation_fr": "passerelle",
+          "definition_en": "A point that connects one network or service to another.",
+          "explanation_fr": "Une « gateway » est un point de passage entre deux réseaux ; on parle aussi de passerelle de paiement (« payment gateway »).",
+          "example_en": "The payment gateway accepts mobile money.",
+          "example_fr": "La passerelle de paiement accepte le mobile money.",
+          "ipa": "/ˈɡeɪtweɪ/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The DNS turns names into addresses",
+          "fr": "Le DNS transforme les noms en adresses"
+        },
+        { "en": "Please restart the router", "fr": "Redémarre le routeur s'il te plaît" }
+      ]
+    },
+    {
+      "title_en": "Ports & protocols",
+      "terms": [
+        {
+          "term": "port",
+          "pos": "noun",
+          "translation_fr": "port",
+          "definition_en": "A number that identifies a service on a computer, like 443.",
+          "explanation_fr": "Un « port » est un numéro qui indique quel service joindre sur une machine : 80 pour HTTP, 443 pour HTTPS, 22 pour SSH.",
+          "example_en": "The app runs on port 3000.",
+          "example_fr": "L'appli tourne sur le port 3000.",
+          "ipa": "/pɔːt/"
+        },
+        {
+          "term": "protocol",
+          "pos": "noun",
+          "translation_fr": "protocole",
+          "definition_en": "A set of rules for how computers communicate.",
+          "explanation_fr": "Un « protocol » est un ensemble de règles de communication entre machines : HTTP pour le Web, SMTP pour les e-mails, TCP…",
+          "example_en": "HTTP is the protocol of the web.",
+          "example_fr": "HTTP est le protocole du Web.",
+          "ipa": "/ˈprəʊtəkɒl/"
+        },
+        {
+          "term": "HTTPS",
+          "pos": "noun",
+          "translation_fr": "HTTPS (HTTP sécurisé)",
+          "definition_en": "The secure, encrypted version of HTTP.",
+          "explanation_fr": "« HTTPS » est la version chiffrée de HTTP : c'est le petit cadenas dans le navigateur. Indispensable pour les mots de passe et les paiements.",
+          "example_en": "Always use HTTPS for login pages.",
+          "example_fr": "Utilise toujours HTTPS pour les pages de connexion.",
+          "ipa": "/ˌeɪtʃ tiː tiː piː ˈes/"
+        },
+        {
+          "term": "SSH",
+          "pos": "noun",
+          "translation_fr": "SSH (connexion sécurisée)",
+          "definition_en": "A secure way to connect to a remote server.",
+          "explanation_fr": "« SSH » permet de se connecter à distance à un serveur, de façon sécurisée, en ligne de commande.",
+          "example_en": "Connect to the server with SSH.",
+          "example_fr": "Connecte-toi au serveur avec SSH.",
+          "ipa": "/ˌes es ˈeɪtʃ/"
+        },
+        {
+          "term": "packet",
+          "pos": "noun",
+          "translation_fr": "paquet",
+          "definition_en": "A small piece of data sent over a network.",
+          "explanation_fr": "Un « packet » est un petit morceau de données : les fichiers sont découpés en paquets pour voyager sur le réseau.",
+          "example_en": "One packet was lost on the way.",
+          "example_fr": "Un paquet a été perdu en chemin.",
+          "ipa": "/ˈpækɪt/"
+        },
+        {
+          "term": "proxy",
+          "pos": "noun",
+          "translation_fr": "proxy (intermédiaire)",
+          "definition_en": "A server that sits between a user and the internet.",
+          "explanation_fr": "Un « proxy » est un serveur intermédiaire entre l'utilisateur et Internet : il peut filtrer les sites, cacher l'adresse IP ou accélérer l'accès.",
+          "example_en": "The company uses a proxy to filter websites.",
+          "example_fr": "L'entreprise utilise un proxy pour filtrer les sites.",
+          "ipa": "/ˈprɒksi/"
+        },
+        {
+          "term": "load balancer",
+          "pos": "noun",
+          "translation_fr": "répartiteur de charge",
+          "definition_en": "A tool that shares traffic between several servers.",
+          "explanation_fr": "Un « load balancer » répartit les visiteurs entre plusieurs serveurs pour qu'aucun ne soit surchargé.",
+          "example_en": "The load balancer sends users to three servers.",
+          "example_fr": "Le répartiteur de charge envoie les utilisateurs vers trois serveurs.",
+          "ipa": "/ˈləʊd ˌbælənsə/"
+        },
+        {
+          "term": "downtime",
+          "pos": "noun",
+          "translation_fr": "indisponibilité",
+          "definition_en": "A period when a service is not working.",
+          "explanation_fr": "Le « downtime » est la période pendant laquelle un service est en panne ou inaccessible.",
+          "example_en": "We had two hours of downtime last night.",
+          "example_fr": "Nous avons eu deux heures d'indisponibilité hier soir.",
+          "ipa": "/ˈdaʊntaɪm/"
+        }
+      ],
+      "sentences": [
+        { "en": "The app runs on port 8080", "fr": "L'appli tourne sur le port 8080" },
+        { "en": "Use HTTPS to protect the data", "fr": "Utilise HTTPS pour protéger les données" }
+      ],
+      "dialogues": [
+        {
+          "context": "Incident in the team chat",
+          "lines": [{ "speaker": "Manager", "text": "The website is down! What do we do?" }],
+          "options": [
+            "Let me check the DNS and the server logs.",
+            "Let me buy a new keyboard.",
+            "The website is up, so it is down."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let me check the DNS and the server logs » = « Je vais vérifier le DNS et les journaux du serveur ». « Down » = en panne ; « up » = en ligne."
+        }
+      ]
+    }
+  ]
+}

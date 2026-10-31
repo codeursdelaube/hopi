@@ -8,6 +8,7 @@ export const PRIVATE_PREFIXES = [
   "/leaderboard",
   "/profile",
   "/settings",
+  "/upgrade",
 ] as const;
 
 export const LOGIN_PATH = "/login";

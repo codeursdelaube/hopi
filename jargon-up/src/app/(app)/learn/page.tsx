@@ -2,15 +2,22 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { LearnPath } from "@/components/learn/LearnPath";
+import { ReviewCard } from "@/components/learn/ReviewCard";
+import { WordOfDayCard } from "@/components/learn/WordOfDayCard";
 import { Mascot } from "@/components/game/Mascot";
 import { requireProfile } from "@/lib/auth/session";
-import { buildPath } from "@/lib/learn/path";
-import { createClient } from "@/lib/supabase/server";
+import { loadPath } from "@/lib/learn/load";
 import { fr } from "@/lib/i18n/fr";
 
 export default function LearnPage() {
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col px-4 py-6">
+    <main className="mx-auto flex w-full max-w-md flex-1 flex-col gap-6 px-4 py-6">
+      <Suspense fallback={<div className="h-24 w-full skeleton" />}>
+        <WordOfDayCard />
+      </Suspense>
+      <Suspense fallback={null}>
+        <ReviewCard />
+      </Suspense>
       <Suspense fallback={<PathSkeleton />}>
         <PathLoader />
       </Suspense>
@@ -22,45 +29,8 @@ async function PathLoader() {
   const profile = await requireProfile();
   if (!profile.field_id) redirect("/onboarding");
 
-  const supabase = await createClient();
-  const [unitsRes, progressRes] = await Promise.all([
-    supabase
-      .from("units")
-      .select("id, level, position, title_en, title_fr")
-      .eq("field_id", profile.field_id)
-      .order("position"),
-    supabase
-      .from("lesson_progress")
-      .select("lesson_id")
-      .eq("user_id", profile.id)
-      .not("completed_at", "is", null),
-  ]);
-  if (unitsRes.error) throw new Error(`Chargement des unités : ${unitsRes.error.message}`);
-  if (progressRes.error)
-    throw new Error(`Chargement de la progression : ${progressRes.error.message}`);
-
-  const units = unitsRes.data;
-  if (units.length === 0) return <EmptyPath />;
-
-  const lessonsRes = await supabase
-    .from("lessons")
-    .select("id, unit_id, position, title_en, xp_reward")
-    .in(
-      "unit_id",
-      units.map((u) => u.id),
-    )
-    .order("position");
-  if (lessonsRes.error) throw new Error(`Chargement des leçons : ${lessonsRes.error.message}`);
-
-  const path = buildPath(
-    units.map((u) => ({
-      ...u,
-      lessons: lessonsRes.data.filter((l) => l.unit_id === u.id),
-    })),
-    new Set(progressRes.data.map((p) => p.lesson_id)),
-    profile.level,
-  );
-
+  const path = await loadPath(profile);
+  if (path.length === 0) return <EmptyPath />;
   return <LearnPath units={path} />;
 }
 

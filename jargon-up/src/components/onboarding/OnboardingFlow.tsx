@@ -4,7 +4,7 @@ import { useState, useTransition } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Mascot } from "@/components/game/Mascot";
 import { ArrowLeftIcon } from "@/components/ui/icons";
-import { completeOnboarding } from "@/app/(app)/onboarding/actions";
+import { completeOnboarding } from "@/app/(play)/onboarding/actions";
 import { DAILY_GOALS, LEVELS, type DailyGoal } from "@/lib/learn/options";
 import { fr } from "@/lib/i18n/fr";
 import type { Level } from "@/types/database";

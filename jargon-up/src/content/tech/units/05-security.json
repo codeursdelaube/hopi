@@ -1,0 +1,209 @@
+{
+  "level": "B1",
+  "title_en": "Security basics",
+  "title_fr": "Bases de la cybersécurité",
+  "lessons": [
+    {
+      "title_en": "Common threats",
+      "terms": [
+        {
+          "term": "malware",
+          "pos": "noun",
+          "translation_fr": "logiciel malveillant",
+          "definition_en": "Software made to damage a computer or to steal data.",
+          "explanation_fr": "Un « malware » est un logiciel malveillant : virus, logiciel espion, rançongiciel…",
+          "example_en": "This file contains malware, so do not open it.",
+          "example_fr": "Ce fichier contient un logiciel malveillant, ne l'ouvre donc pas.",
+          "ipa": "/ˈmælweə/"
+        },
+        {
+          "term": "phishing",
+          "pos": "noun",
+          "translation_fr": "hameçonnage",
+          "definition_en": "A fake message that tries to steal your password or your money.",
+          "explanation_fr": "Le « phishing » est une arnaque par e-mail ou SMS qui imite une banque ou un service connu pour voler tes identifiants.",
+          "example_en": "This email is a phishing attempt.",
+          "example_fr": "Cet e-mail est une tentative d'hameçonnage.",
+          "ipa": "/ˈfɪʃɪŋ/"
+        },
+        {
+          "term": "vulnerability",
+          "pos": "noun",
+          "translation_fr": "vulnérabilité (faille)",
+          "definition_en": "A weakness that an attacker can use.",
+          "explanation_fr": "Une « vulnerability » est une faille dans un logiciel qu'un pirate peut exploiter.",
+          "example_en": "The team fixed a serious vulnerability.",
+          "example_fr": "L'équipe a corrigé une grave vulnérabilité.",
+          "ipa": "/ˌvʌlnərəˈbɪləti/"
+        },
+        {
+          "term": "attacker",
+          "pos": "noun",
+          "translation_fr": "attaquant (pirate)",
+          "definition_en": "A person who tries to break into a system.",
+          "explanation_fr": "Un « attacker » est une personne qui tente de pénétrer dans un système ou de voler des données.",
+          "example_en": "The attacker used a stolen password.",
+          "example_fr": "L'attaquant a utilisé un mot de passe volé.",
+          "ipa": "/əˈtækə/"
+        },
+        {
+          "term": "data breach",
+          "pos": "noun",
+          "translation_fr": "fuite de données",
+          "definition_en": "When private data is stolen or made public.",
+          "explanation_fr": "Un « data breach » est une fuite de données : des informations privées (e-mails, mots de passe…) sont volées ou exposées.",
+          "example_en": "The data breach exposed thousands of emails.",
+          "example_fr": "La fuite de données a exposé des milliers d'e-mails.",
+          "ipa": "/ˈdeɪtə briːtʃ/"
+        },
+        {
+          "term": "ransomware",
+          "pos": "noun",
+          "translation_fr": "rançongiciel",
+          "definition_en": "Malware that locks your files and asks for money.",
+          "explanation_fr": "Un « ransomware » chiffre tes fichiers et exige une rançon pour les débloquer.",
+          "example_en": "A ransomware attack blocked all the computers of the hospital.",
+          "example_fr": "Une attaque par rançongiciel a bloqué tous les ordinateurs de l'hôpital.",
+          "ipa": "/ˈrænsəmweə/"
+        },
+        {
+          "term": "spam",
+          "pos": "noun",
+          "translation_fr": "courrier indésirable",
+          "definition_en": "Unwanted messages sent to many people.",
+          "explanation_fr": "Le « spam » désigne les messages non sollicités envoyés en masse : publicités, arnaques…",
+          "example_en": "Most of these emails are spam.",
+          "example_fr": "La plupart de ces e-mails sont des courriers indésirables.",
+          "ipa": "/spæm/"
+        },
+        {
+          "term": "exploit",
+          "pos": "noun",
+          "translation_fr": "code d'attaque (exploit)",
+          "definition_en": "Code that takes advantage of a vulnerability.",
+          "explanation_fr": "Un « exploit » est un code ou une technique qui profite d'une vulnérabilité pour attaquer un système.",
+          "example_en": "An exploit for this bug is already online.",
+          "example_fr": "Un code d'attaque pour ce bug circule déjà en ligne.",
+          "ipa": "/ˈeksplɔɪt/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Never click on suspicious links",
+          "fr": "Ne clique jamais sur des liens suspects"
+        },
+        {
+          "en": "Update your software every week",
+          "fr": "Mets à jour tes logiciels chaque semaine"
+        }
+      ]
+    },
+    {
+      "title_en": "Protecting accounts",
+      "terms": [
+        {
+          "term": "password manager",
+          "pos": "noun",
+          "translation_fr": "gestionnaire de mots de passe",
+          "definition_en": "An app that stores all your passwords safely.",
+          "explanation_fr": "Un « password manager » retient et génère des mots de passe solides à ta place (Bitwarden, 1Password…).",
+          "example_en": "Use a password manager to create strong passwords.",
+          "example_fr": "Utilise un gestionnaire de mots de passe pour créer des mots de passe solides.",
+          "ipa": "/ˈpɑːswɜːd ˌmænɪdʒə/"
+        },
+        {
+          "term": "two-factor authentication",
+          "pos": "noun",
+          "translation_fr": "double authentification",
+          "definition_en": "A login that needs your password and a second proof, like a code.",
+          "explanation_fr": "La « two-factor authentication » (2FA) demande un mot de passe ET une deuxième preuve (code SMS, appli…). Même si ton mot de passe fuit, ton compte reste protégé.",
+          "example_en": "Turn on two-factor authentication for your email.",
+          "example_fr": "Active la double authentification pour ta messagerie.",
+          "ipa": "/ˌtuː ˈfæktə ɔːˌθentɪˈkeɪʃən/"
+        },
+        {
+          "term": "encryption",
+          "pos": "noun",
+          "translation_fr": "chiffrement",
+          "definition_en": "Turning data into a secret code that only the right people can read.",
+          "explanation_fr": "L'« encryption » transforme les données en code illisible sans la bonne clé. En français, on dit « chiffrement » (et non « cryptage »).",
+          "example_en": "WhatsApp uses end-to-end encryption.",
+          "example_fr": "WhatsApp utilise un chiffrement de bout en bout.",
+          "ipa": "/ɪnˈkrɪpʃən/"
+        },
+        {
+          "term": "firewall",
+          "pos": "noun",
+          "translation_fr": "pare-feu",
+          "definition_en": "A system that blocks dangerous network traffic.",
+          "explanation_fr": "Un « firewall » filtre le trafic réseau et bloque les connexions dangereuses ou non autorisées.",
+          "example_en": "The firewall blocks this port.",
+          "example_fr": "Le pare-feu bloque ce port.",
+          "ipa": "/ˈfaɪəwɔːl/"
+        },
+        {
+          "term": "patch",
+          "pos": "noun",
+          "translation_fr": "correctif",
+          "definition_en": "A small update that fixes a problem or a security hole.",
+          "explanation_fr": "Un « patch » est une petite mise à jour qui corrige un bug ou une faille de sécurité.",
+          "example_en": "Install the security patch today.",
+          "example_fr": "Installe le correctif de sécurité aujourd'hui.",
+          "ipa": "/pætʃ/"
+        },
+        {
+          "term": "permission",
+          "pos": "noun",
+          "translation_fr": "autorisation (droit)",
+          "definition_en": "The right to see or do something in a system.",
+          "explanation_fr": "Une « permission » définit ce qu'un utilisateur a le droit de faire : lire, modifier, supprimer…",
+          "example_en": "You don't have permission to delete this file.",
+          "example_fr": "Tu n'as pas l'autorisation de supprimer ce fichier.",
+          "ipa": "/pəˈmɪʃən/"
+        },
+        {
+          "term": "access",
+          "pos": "noun",
+          "translation_fr": "accès",
+          "definition_en": "The ability to enter or use a system.",
+          "explanation_fr": "L'« access » est la possibilité d'utiliser un système ou des données. « To give access » = donner l'accès.",
+          "example_en": "Only admins have access to this page.",
+          "example_fr": "Seuls les administrateurs ont accès à cette page.",
+          "ipa": "/ˈækses/"
+        },
+        {
+          "term": "login",
+          "pos": "noun",
+          "translation_fr": "connexion (identifiants)",
+          "definition_en": "The process or the details used to enter an account.",
+          "explanation_fr": "Le « login » désigne la connexion à un compte ou les identifiants utilisés. Le verbe s'écrit en deux mots : « to log in ».",
+          "example_en": "Your login details are not correct.",
+          "example_fr": "Tes identifiants de connexion ne sont pas corrects.",
+          "ipa": "/ˈlɒɡɪn/"
+        }
+      ],
+      "sentences": [
+        { "en": "Turn on two-factor authentication", "fr": "Active la double authentification" },
+        { "en": "Never share your password", "fr": "Ne partage jamais ton mot de passe" }
+      ],
+      "dialogues": [
+        {
+          "context": "Message from a colleague",
+          "lines": [
+            {
+              "speaker": "Afi",
+              "text": "I got an email from 'the bank' asking for my password. Should I answer?"
+            }
+          ],
+          "options": [
+            "No, don't share it. It's probably phishing.",
+            "Yes, banks always ask for passwords by email.",
+            "Send it to me first, I will check it."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "Une vraie banque ne demande jamais ton mot de passe par e-mail. « Don't share it. It's probably phishing » = « Ne le partage pas. C'est sûrement de l'hameçonnage »."
+        }
+      ]
+    }
+  ]
+}

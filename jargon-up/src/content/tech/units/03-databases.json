@@ -1,0 +1,191 @@
+{
+  "level": "B1",
+  "title_en": "Databases",
+  "title_fr": "Bases de données",
+  "lessons": [
+    {
+      "title_en": "Tables & queries",
+      "terms": [
+        {
+          "term": "database",
+          "pos": "noun",
+          "translation_fr": "base de données",
+          "definition_en": "An organized collection of data stored on a computer.",
+          "explanation_fr": "Une « database » stocke les données de l'application de façon organisée (PostgreSQL, MySQL…).",
+          "example_en": "All user accounts are saved in the database.",
+          "example_fr": "Tous les comptes utilisateurs sont enregistrés dans la base de données.",
+          "ipa": "/ˈdeɪtəbeɪs/"
+        },
+        {
+          "term": "table",
+          "pos": "noun",
+          "translation_fr": "table",
+          "definition_en": "A set of data organized in rows and columns.",
+          "explanation_fr": "Une « table » ressemble à un tableau Excel : chaque ligne est un élément, chaque colonne une information.",
+          "example_en": "Create a table for the orders.",
+          "example_fr": "Crée une table pour les commandes.",
+          "ipa": "/ˈteɪbəl/"
+        },
+        {
+          "term": "row",
+          "pos": "noun",
+          "translation_fr": "ligne",
+          "definition_en": "One line in a table, for one item.",
+          "explanation_fr": "Une « row » est une ligne d'une table : elle représente un seul élément, par exemple un client.",
+          "example_en": "Each row is one customer.",
+          "example_fr": "Chaque ligne correspond à un client.",
+          "ipa": "/rəʊ/"
+        },
+        {
+          "term": "column",
+          "pos": "noun",
+          "translation_fr": "colonne",
+          "definition_en": "One type of information in a table, like the name or the email.",
+          "explanation_fr": "Une « column » contient le même type d'information pour toutes les lignes (nom, e-mail, date…).",
+          "example_en": "Add a column for the phone number.",
+          "example_fr": "Ajoute une colonne pour le numéro de téléphone.",
+          "ipa": "/ˈkɒləm/"
+        },
+        {
+          "term": "query",
+          "pos": "noun",
+          "translation_fr": "requête (SQL)",
+          "definition_en": "A question you ask the database, usually in SQL.",
+          "explanation_fr": "Une « query » est une demande faite à la base de données, généralement en SQL, pour lire ou modifier des données.",
+          "example_en": "This query is too slow.",
+          "example_fr": "Cette requête est trop lente.",
+          "ipa": "/ˈkwɪəri/"
+        },
+        {
+          "term": "record",
+          "pos": "noun",
+          "translation_fr": "enregistrement",
+          "definition_en": "One complete entry stored in a database.",
+          "explanation_fr": "Un « record » est une entrée complète dans la base ; c'est un synonyme de « row ». Attention à la prononciation : « REcord » pour le nom.",
+          "example_en": "We deleted the old record by mistake.",
+          "example_fr": "Nous avons supprimé l'ancien enregistrement par erreur.",
+          "ipa": "/ˈrekɔːd/"
+        },
+        {
+          "term": "index",
+          "pos": "noun",
+          "translation_fr": "index",
+          "definition_en": "A structure that makes searches in a table faster.",
+          "explanation_fr": "Un « index » accélère les recherches dans une table, comme l'index à la fin d'un livre.",
+          "example_en": "Add an index to make the search faster.",
+          "example_fr": "Ajoute un index pour accélérer la recherche.",
+          "ipa": "/ˈɪndeks/"
+        },
+        {
+          "term": "schema",
+          "pos": "noun",
+          "translation_fr": "schéma",
+          "definition_en": "The structure of a database: its tables, columns and types.",
+          "explanation_fr": "Le « schema » décrit la structure de la base : quelles tables, quelles colonnes et quels types de données.",
+          "example_en": "We changed the schema to store the payments.",
+          "example_fr": "Nous avons modifié le schéma pour enregistrer les paiements.",
+          "ipa": "/ˈskiːmə/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "This query returns all the users",
+          "fr": "Cette requête renvoie tous les utilisateurs"
+        },
+        { "en": "Add a column for the email", "fr": "Ajoute une colonne pour l'e-mail" }
+      ]
+    },
+    {
+      "title_en": "Keys & relationships",
+      "terms": [
+        {
+          "term": "primary key",
+          "pos": "noun",
+          "translation_fr": "clé primaire",
+          "definition_en": "A column that uniquely identifies each row.",
+          "explanation_fr": "La « primary key » est la colonne qui identifie chaque ligne de façon unique, souvent un « id ».",
+          "example_en": "The id column is the primary key.",
+          "example_fr": "La colonne id est la clé primaire.",
+          "ipa": "/ˌpraɪməri ˈkiː/"
+        },
+        {
+          "term": "foreign key",
+          "pos": "noun",
+          "translation_fr": "clé étrangère",
+          "definition_en": "A column that points to a row in another table.",
+          "explanation_fr": "Une « foreign key » relie une table à une autre : par exemple, une commande contient l'id du client qui l'a passée.",
+          "example_en": "Each order has a foreign key to its customer.",
+          "example_fr": "Chaque commande a une clé étrangère vers son client.",
+          "ipa": "/ˌfɒrən ˈkiː/"
+        },
+        {
+          "term": "relationship",
+          "pos": "noun",
+          "translation_fr": "relation",
+          "definition_en": "A link between two tables.",
+          "explanation_fr": "Une « relationship » est un lien entre deux tables : un client peut avoir plusieurs commandes (relation « un-à-plusieurs »).",
+          "example_en": "There is a relationship between users and orders.",
+          "example_fr": "Il y a une relation entre les utilisateurs et les commandes.",
+          "ipa": "/rɪˈleɪʃənʃɪp/"
+        },
+        {
+          "term": "join",
+          "pos": "noun",
+          "translation_fr": "jointure",
+          "definition_en": "A query that combines data from two tables.",
+          "explanation_fr": "Un « join » (jointure) combine dans une même requête les données de deux tables liées.",
+          "example_en": "Use a join to get each order with its customer.",
+          "example_fr": "Utilise une jointure pour obtenir chaque commande avec son client.",
+          "ipa": "/dʒɔɪn/"
+        },
+        {
+          "term": "migration",
+          "pos": "noun",
+          "translation_fr": "migration",
+          "definition_en": "A file that changes the database structure step by step.",
+          "explanation_fr": "Une « migration » est un script versionné qui modifie la structure de la base (ajouter une table, une colonne…), étape par étape.",
+          "example_en": "Run the migration before you start the app.",
+          "example_fr": "Exécute la migration avant de lancer l'appli.",
+          "ipa": "/maɪˈɡreɪʃən/"
+        },
+        {
+          "term": "backup",
+          "pos": "noun",
+          "translation_fr": "sauvegarde",
+          "definition_en": "A copy of data you keep in case something goes wrong.",
+          "explanation_fr": "Un « backup » est une copie de sécurité des données, pour pouvoir les restaurer en cas de problème.",
+          "example_en": "We make a backup every night.",
+          "example_fr": "Nous faisons une sauvegarde chaque nuit.",
+          "ipa": "/ˈbækʌp/"
+        },
+        {
+          "term": "constraint",
+          "pos": "noun",
+          "translation_fr": "contrainte",
+          "definition_en": "A rule that the data in a table must follow.",
+          "explanation_fr": "Une « constraint » est une règle imposée aux données : valeur unique, champ obligatoire, nombre positif…",
+          "example_en": "This constraint stops duplicate emails.",
+          "example_fr": "Cette contrainte empêche les e-mails en double.",
+          "ipa": "/kənˈstreɪnt/"
+        },
+        {
+          "term": "transaction",
+          "pos": "noun",
+          "translation_fr": "transaction",
+          "definition_en": "A group of database changes that succeed or fail together.",
+          "explanation_fr": "Une « transaction » regroupe plusieurs opérations : soit tout réussit, soit rien n'est appliqué. Indispensable pour les paiements.",
+          "example_en": "Put the payment and the order in one transaction.",
+          "example_fr": "Mets le paiement et la commande dans une seule transaction.",
+          "ipa": "/trænˈzækʃən/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Make a backup before the migration",
+          "fr": "Fais une sauvegarde avant la migration"
+        },
+        { "en": "The id column is unique", "fr": "La colonne id est unique" }
+      ]
+    }
+  ]
+}

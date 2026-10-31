@@ -1,14 +1,17 @@
 /**
- * Importe le contenu de src/content/<filière>/course.json dans Supabase.
- * Idempotent : relancer met à jour sans dupliquer (upsert sur les positions).
+ * Importe le contenu de src/content/<filière>/units/*.json dans Supabase :
+ * unités, leçons, termes et exercices (générés par src/content/generate.ts).
  *
- * Usage : npm run seed
- * (exécuté directement par Node, qui retire les types TypeScript ; variables lues dans .env.local)
+ * Idempotent : relancer met à jour sans dupliquer (upsert sur les positions et les termes ;
+ * les exercices de chaque leçon sont remplacés).
+ *
+ * Usage : npm run seed  (Node exécute le TypeScript directement ; variables lues dans .env.local)
  */
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { createClient } from "@supabase/supabase-js";
-import { courseSchema } from "../src/content/schema.ts";
+import { unitSchema } from "../src/content/schema.ts";
+import { generateLessonExercises } from "../src/content/generate.ts";
 
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const secretKey = process.env.SUPABASE_SECRET_KEY;
@@ -28,19 +31,27 @@ function check<T>(result: { data: T | null; error: { message: string } | null },
   return result.data;
 }
 
-const folders = (await readdir(contentDir, { withFileTypes: true })).filter((d) => d.isDirectory());
+const fieldDirs = (await readdir(contentDir, { withFileTypes: true })).filter((d) =>
+  d.isDirectory(),
+);
 
-for (const folder of folders) {
-  const raw = JSON.parse(await readFile(join(contentDir, folder.name, "course.json"), "utf8"));
-  const course = courseSchema.parse(raw);
+for (const fieldDir of fieldDirs) {
+  const slug = fieldDir.name;
+  const unitsDir = join(contentDir, slug, "units");
+  const files = (await readdir(unitsDir)).filter((f) => f.endsWith(".json")).sort();
 
   const field = check(
-    await supabase.from("fields").select("id").eq("slug", course.field).single(),
-    `Filière « ${course.field} » introuvable (migration de référence appliquée ?)`,
+    await supabase.from("fields").select("id").eq("slug", slug).single(),
+    `Filière « ${slug} » introuvable (migration de référence appliquée ?)`,
   ) as { id: string };
 
   let lessonCount = 0;
-  for (const [unitIndex, unit] of course.units.entries()) {
+  let termCount = 0;
+  let exerciseCount = 0;
+
+  for (const [unitIndex, file] of files.entries()) {
+    const unit = unitSchema.parse(JSON.parse(await readFile(join(unitsDir, file), "utf8")));
+
     const savedUnit = check(
       await supabase
         .from("units")
@@ -56,24 +67,73 @@ for (const folder of folders) {
         )
         .select("id")
         .single(),
-      `Unité ${unitIndex + 1}`,
+      `Unité ${file}`,
     ) as { id: string };
 
-    const lessons = unit.lessons.map((lesson, i) => ({
-      unit_id: savedUnit.id,
-      position: i + 1,
-      title_en: lesson.title_en,
-      xp_reward: lesson.xp_reward,
-    }));
-    check(
-      await supabase
-        .from("lessons")
-        .upsert(lessons, { onConflict: "unit_id,position" })
-        .select("id"),
-      `Leçons de l'unité ${unitIndex + 1}`,
-    );
-    lessonCount += lessons.length;
+    for (const [lessonIndex, lesson] of unit.lessons.entries()) {
+      const savedLesson = check(
+        await supabase
+          .from("lessons")
+          .upsert(
+            {
+              unit_id: savedUnit.id,
+              position: lessonIndex + 1,
+              title_en: lesson.title_en,
+              xp_reward: lesson.xp_reward,
+            },
+            { onConflict: "unit_id,position" },
+          )
+          .select("id")
+          .single(),
+        `Leçon « ${lesson.title_en} »`,
+      ) as { id: string };
+
+      const savedTerms = check(
+        await supabase
+          .from("terms")
+          .upsert(
+            lesson.terms.map((t) => ({
+              field_id: field.id,
+              term: t.term,
+              part_of_speech: t.pos,
+              definition_en: t.definition_en,
+              explanation_fr: t.explanation_fr,
+              example_en: t.example_en,
+              example_fr: t.example_fr,
+              pronunciation_ipa: t.ipa ?? null,
+              level: unit.level,
+            })),
+            { onConflict: "field_id,term" },
+          )
+          .select("id, term"),
+        `Termes de « ${lesson.title_en} »`,
+      ) as { id: string; term: string }[];
+      const termIds = new Map(savedTerms.map((t) => [t.term, t.id]));
+      termCount += savedTerms.length;
+
+      const exercises = generateLessonExercises(lesson).map((ex, i) => ({
+        lesson_id: savedLesson.id,
+        term_id: ex.term ? (termIds.get(ex.term) ?? null) : null,
+        type: ex.type,
+        position: i + 1,
+        payload: ex.payload,
+        explanation_fr: ex.explanation_fr,
+      }));
+
+      check(
+        await supabase.from("exercises").delete().eq("lesson_id", savedLesson.id).select("id"),
+        `Nettoyage des exercices de « ${lesson.title_en} »`,
+      );
+      check(
+        await supabase.from("exercises").insert(exercises).select("id"),
+        `Exercices de « ${lesson.title_en} »`,
+      );
+      exerciseCount += exercises.length;
+      lessonCount++;
+    }
   }
 
-  console.log(`✔ ${course.field} : ${course.units.length} unités, ${lessonCount} leçons`);
+  console.log(
+    `✔ ${slug} : ${files.length} unités, ${lessonCount} leçons, ${termCount} termes, ${exerciseCount} exercices`,
+  );
 }

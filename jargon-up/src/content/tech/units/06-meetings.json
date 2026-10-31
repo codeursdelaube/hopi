@@ -1,0 +1,333 @@
+{
+  "level": "B2",
+  "title_en": "Meetings & interviews",
+  "title_fr": "Réunions et entretiens",
+  "lessons": [
+    {
+      "title_en": "The daily stand-up",
+      "terms": [
+        {
+          "term": "stand-up",
+          "pos": "noun",
+          "translation_fr": "réunion quotidienne",
+          "definition_en": "A short daily meeting where each person shares their progress.",
+          "explanation_fr": "Le « stand-up » (ou « daily ») est une réunion courte (15 minutes) où chacun dit ce qu'il a fait hier, ce qu'il fait aujourd'hui et ce qui le bloque.",
+          "example_en": "The stand-up starts at nine every morning.",
+          "example_fr": "La réunion quotidienne commence à neuf heures chaque matin.",
+          "ipa": "/ˈstænd ʌp/"
+        },
+        {
+          "term": "blocker",
+          "pos": "noun",
+          "translation_fr": "point bloquant",
+          "definition_en": "A problem that stops you from continuing your work.",
+          "explanation_fr": "Un « blocker » est un problème qui t'empêche d'avancer ; on le signale au stand-up pour obtenir de l'aide.",
+          "example_en": "I have one blocker: I can't access the server.",
+          "example_fr": "J'ai un point bloquant : je n'arrive pas à accéder au serveur.",
+          "ipa": "/ˈblɒkə/"
+        },
+        {
+          "term": "deadline",
+          "pos": "noun",
+          "translation_fr": "date limite",
+          "definition_en": "The date or time when work must be finished.",
+          "explanation_fr": "La « deadline » est la date limite pour rendre un travail.",
+          "example_en": "The deadline for this feature is Friday.",
+          "example_fr": "La date limite pour cette fonctionnalité est vendredi.",
+          "ipa": "/ˈdedlaɪn/"
+        },
+        {
+          "term": "task",
+          "pos": "noun",
+          "translation_fr": "tâche",
+          "definition_en": "A piece of work that needs to be done.",
+          "explanation_fr": "Une « task » est un travail précis à réaliser, souvent une carte dans Jira ou Trello.",
+          "example_en": "My task today is to fix the login page.",
+          "example_fr": "Ma tâche aujourd'hui est de corriger la page de connexion.",
+          "ipa": "/tɑːsk/"
+        },
+        {
+          "term": "sprint",
+          "pos": "noun",
+          "translation_fr": "sprint (cycle de travail)",
+          "definition_en": "A short period, often two weeks, to finish a set of tasks.",
+          "explanation_fr": "En méthode agile (Scrum), un « sprint » est une période courte (souvent 2 semaines) pendant laquelle l'équipe réalise un ensemble de tâches.",
+          "example_en": "We will finish this in the next sprint.",
+          "example_fr": "Nous terminerons cela au prochain sprint.",
+          "ipa": "/sprɪnt/"
+        },
+        {
+          "term": "estimate",
+          "pos": "verb",
+          "translation_fr": "estimer",
+          "definition_en": "To guess how much time or work something will take.",
+          "explanation_fr": "« To estimate » : évaluer le temps ou l'effort nécessaire. Le nom « an estimate » veut dire une estimation.",
+          "example_en": "Can you estimate how long it will take?",
+          "example_fr": "Peux-tu estimer combien de temps cela va prendre ?",
+          "ipa": "/ˈestɪmeɪt/"
+        },
+        {
+          "term": "priority",
+          "pos": "noun",
+          "translation_fr": "priorité",
+          "definition_en": "Something more important that must be done first.",
+          "explanation_fr": "Une « priority » est ce qu'il faut traiter en premier. « High priority » = priorité haute.",
+          "example_en": "Fixing payments is our top priority.",
+          "example_fr": "Corriger les paiements est notre priorité absolue.",
+          "ipa": "/praɪˈɒrəti/"
+        },
+        {
+          "term": "update",
+          "pos": "noun",
+          "translation_fr": "point d'avancement",
+          "definition_en": "New information about the progress of your work.",
+          "explanation_fr": "Un « update » est un point sur l'avancement : « to give an update » = faire un point. Le mot désigne aussi une mise à jour logicielle.",
+          "example_en": "Let me give you a quick update on the project.",
+          "example_fr": "Laisse-moi te faire un point rapide sur le projet.",
+          "ipa": "/ˈʌpdeɪt/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Yesterday I finished the login page",
+          "fr": "Hier j'ai terminé la page de connexion"
+        },
+        { "en": "Today I will work on the API", "fr": "Aujourd'hui je vais travailler sur l'API" }
+      ],
+      "dialogues": [
+        {
+          "context": "Daily stand-up",
+          "lines": [{ "speaker": "Scrum master", "text": "Any blockers today?" }],
+          "options": [
+            "Yes, I can't access the test server.",
+            "Yes, I blocked the door this morning.",
+            "No, I am the blocker."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Any blockers? » = « Des points bloquants ? ». On répond en décrivant ce qui empêche d'avancer : « I can't access the test server » = « Je n'arrive pas à accéder au serveur de test »."
+        }
+      ]
+    },
+    {
+      "title_en": "Code review",
+      "terms": [
+        {
+          "term": "refactor",
+          "pos": "verb",
+          "translation_fr": "remanier (le code)",
+          "definition_en": "To improve the structure of code without changing what it does.",
+          "explanation_fr": "« To refactor » : réorganiser le code pour le rendre plus propre et plus simple, sans changer son comportement.",
+          "example_en": "Let's refactor this function before adding more code.",
+          "example_fr": "Remanions cette fonction avant d'ajouter plus de code.",
+          "ipa": "/riːˈfæktə/"
+        },
+        {
+          "term": "readable",
+          "pos": "adjective",
+          "translation_fr": "lisible",
+          "definition_en": "Easy to read and understand.",
+          "explanation_fr": "Un code « readable » est facile à lire et à comprendre pour les autres développeurs.",
+          "example_en": "Short functions make the code more readable.",
+          "example_fr": "Des fonctions courtes rendent le code plus lisible.",
+          "ipa": "/ˈriːdəbəl/"
+        },
+        {
+          "term": "unit test",
+          "pos": "noun",
+          "translation_fr": "test unitaire",
+          "definition_en": "A small automatic test that checks one piece of code.",
+          "explanation_fr": "Un « unit test » vérifie automatiquement qu'une petite partie du code (une fonction) fonctionne comme prévu.",
+          "example_en": "Please add a unit test for this function.",
+          "example_fr": "Merci d'ajouter un test unitaire pour cette fonction.",
+          "ipa": "/ˈjuːnɪt test/"
+        },
+        {
+          "term": "edge case",
+          "pos": "noun",
+          "translation_fr": "cas limite",
+          "definition_en": "An unusual situation that can break the code.",
+          "explanation_fr": "Un « edge case » est une situation rare ou extrême (liste vide, nombre négatif…) qui peut faire planter le code.",
+          "example_en": "What happens in the edge case of an empty list?",
+          "example_fr": "Que se passe-t-il dans le cas limite d'une liste vide ?",
+          "ipa": "/ˈedʒ keɪs/"
+        },
+        {
+          "term": "technical debt",
+          "pos": "noun",
+          "translation_fr": "dette technique",
+          "definition_en": "Problems caused by quick solutions that must be fixed later.",
+          "explanation_fr": "La « technical debt » est le coût futur des raccourcis pris aujourd'hui : du code écrit trop vite qu'il faudra corriger plus tard.",
+          "example_en": "This shortcut adds technical debt to the project.",
+          "example_fr": "Ce raccourci ajoute de la dette technique au projet.",
+          "ipa": "/ˈteknɪkəl det/"
+        },
+        {
+          "term": "nitpick",
+          "pos": "noun",
+          "translation_fr": "détail mineur",
+          "definition_en": "A very small comment about style, not a real problem.",
+          "explanation_fr": "Un « nitpick » (souvent noté « nit: ») est une remarque sur un tout petit détail, comme un nom de variable ; ce n'est pas bloquant.",
+          "example_en": "This is just a nitpick, you can ignore it.",
+          "example_fr": "C'est juste un détail mineur, tu peux l'ignorer.",
+          "ipa": "/ˈnɪtpɪk/"
+        },
+        {
+          "term": "suggestion",
+          "pos": "noun",
+          "translation_fr": "suggestion",
+          "definition_en": "An idea to improve something.",
+          "explanation_fr": "Une « suggestion » est une proposition d'amélioration, souvent introduite par « What about…? » ou « Maybe we could… ».",
+          "example_en": "I have a suggestion to make this faster.",
+          "example_fr": "J'ai une suggestion pour rendre cela plus rapide.",
+          "ipa": "/səˈdʒestʃən/"
+        },
+        {
+          "term": "deploy",
+          "pos": "verb",
+          "translation_fr": "déployer",
+          "definition_en": "To put a new version of an application online.",
+          "explanation_fr": "« To deploy » : mettre en ligne une nouvelle version de l'application pour que les utilisateurs puissent l'utiliser.",
+          "example_en": "We deploy to production every Friday.",
+          "example_fr": "Nous déployons en production chaque vendredi.",
+          "ipa": "/dɪˈplɔɪ/"
+        }
+      ],
+      "sentences": [
+        { "en": "Please add a test for this case", "fr": "Merci d'ajouter un test pour ce cas" },
+        { "en": "This code is easy to read", "fr": "Ce code est facile à lire" }
+      ],
+      "dialogues": [
+        {
+          "context": "Code review",
+          "lines": [
+            {
+              "speaker": "Senior developer",
+              "text": "This function is too long. Could you split it?"
+            }
+          ],
+          "options": [
+            "Good point, I'll refactor it into smaller functions.",
+            "No, long functions are always better.",
+            "I will deploy it on Friday."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Could you split it? » = « Pourrais-tu la découper ? ». La bonne réponse accepte la remarque : « Good point, I'll refactor it into smaller functions » = « Bonne remarque, je vais la découper en fonctions plus petites »."
+        }
+      ]
+    },
+    {
+      "title_en": "The job interview",
+      "xp_reward": 15,
+      "terms": [
+        {
+          "term": "CV",
+          "pos": "noun",
+          "translation_fr": "CV",
+          "definition_en": "A document that lists your education, skills and work experience.",
+          "explanation_fr": "Le « CV » (en anglais américain « resume ») présente ta formation, tes compétences et ton expérience.",
+          "example_en": "Send your CV before Monday.",
+          "example_fr": "Envoie ton CV avant lundi.",
+          "ipa": "/ˌsiː ˈviː/"
+        },
+        {
+          "term": "skill",
+          "pos": "noun",
+          "translation_fr": "compétence",
+          "definition_en": "Something you are good at because you learned or practised it.",
+          "explanation_fr": "Un « skill » est une compétence. « Hard skills » = compétences techniques ; « soft skills » = qualités humaines (communication, travail en équipe).",
+          "example_en": "My main skill is building web applications.",
+          "example_fr": "Ma principale compétence est de créer des applications web.",
+          "ipa": "/skɪl/"
+        },
+        {
+          "term": "experience",
+          "pos": "noun",
+          "translation_fr": "expérience",
+          "definition_en": "Knowledge you get from doing a job or an activity.",
+          "explanation_fr": "L'« experience » désigne ce que tu as appris en travaillant. « Two years of experience » = deux ans d'expérience.",
+          "example_en": "I have two years of experience with JavaScript.",
+          "example_fr": "J'ai deux ans d'expérience avec JavaScript.",
+          "ipa": "/ɪkˈspɪəriəns/"
+        },
+        {
+          "term": "strength",
+          "pos": "noun",
+          "translation_fr": "point fort",
+          "definition_en": "A quality that makes you good at your job.",
+          "explanation_fr": "Une « strength » est un point fort. Question classique d'entretien : « What are your strengths? »",
+          "example_en": "My biggest strength is solving problems.",
+          "example_fr": "Mon plus grand point fort est de résoudre des problèmes.",
+          "ipa": "/streŋθ/"
+        },
+        {
+          "term": "weakness",
+          "pos": "noun",
+          "translation_fr": "point faible",
+          "definition_en": "Something you are not very good at yet.",
+          "explanation_fr": "Une « weakness » est un point faible. En entretien, cite un vrai point faible et explique ce que tu fais pour t'améliorer.",
+          "example_en": "My weakness is public speaking, but I am improving.",
+          "example_fr": "Mon point faible est la prise de parole en public, mais je progresse.",
+          "ipa": "/ˈwiːknəs/"
+        },
+        {
+          "term": "salary",
+          "pos": "noun",
+          "translation_fr": "salaire",
+          "definition_en": "The money you receive regularly for your work.",
+          "explanation_fr": "Le « salary » est le salaire. « Salary expectations » = prétentions salariales.",
+          "example_en": "What salary do you expect for this job?",
+          "example_fr": "Quel salaire attends-tu pour ce poste ?",
+          "ipa": "/ˈsæləri/"
+        },
+        {
+          "term": "team player",
+          "pos": "noun",
+          "translation_fr": "personne qui a l'esprit d'équipe",
+          "definition_en": "A person who works well with others.",
+          "explanation_fr": "Un « team player » est quelqu'un qui travaille bien en équipe ; c'est une qualité très recherchée.",
+          "example_en": "I am a team player and I like to help others.",
+          "example_fr": "J'ai l'esprit d'équipe et j'aime aider les autres.",
+          "ipa": "/ˈtiːm ˌpleɪə/"
+        },
+        {
+          "term": "remote work",
+          "pos": "noun",
+          "translation_fr": "télétravail",
+          "definition_en": "Working from home or from anywhere, not in the office.",
+          "explanation_fr": "Le « remote work » est le télétravail : travailler à distance, depuis chez soi ou ailleurs.",
+          "example_en": "This company allows remote work two days a week.",
+          "example_fr": "Cette entreprise autorise le télétravail deux jours par semaine.",
+          "ipa": "/rɪˌməʊt ˈwɜːk/"
+        }
+      ],
+      "sentences": [
+        { "en": "I have two years of experience", "fr": "J'ai deux ans d'expérience" },
+        { "en": "I am a good team player", "fr": "J'ai un bon esprit d'équipe" }
+      ],
+      "dialogues": [
+        {
+          "context": "Job interview",
+          "lines": [{ "speaker": "Recruiter", "text": "Why do you want to work with us?" }],
+          "options": [
+            "I like your products and I want to grow with your team.",
+            "Because I need a new computer.",
+            "I don't know, my friend told me to come."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "Montre ta motivation pour l'entreprise : « I like your products and I want to grow with your team » = « J'aime vos produits et je veux progresser avec votre équipe »."
+        },
+        {
+          "context": "Job interview",
+          "lines": [{ "speaker": "Recruiter", "text": "What is your biggest weakness?" }],
+          "options": [
+            "I sometimes spend too long on details, so now I set time limits.",
+            "I have no weaknesses at all.",
+            "My weakness is that I hate working."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "Cite un vrai point faible ET la solution que tu appliques : « so now I set time limits » = « donc maintenant je me fixe des limites de temps ». Dire « aucun point faible » sonne faux."
+        }
+      ]
+    }
+  ]
+}

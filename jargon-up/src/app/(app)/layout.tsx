@@ -1,47 +1,25 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import { requireProfile } from "@/lib/auth/session";
+import { BottomNav } from "@/components/BottomNav";
+import { StatsBar, StatsBarSkeleton } from "@/components/game/StatsBar";
 import { fr } from "@/lib/i18n/fr";
 
-/** Coquille des pages connectées. La barre XP / série arrive en Phase 4. */
+/** Coquille des pages connectées : barre de stats en haut, navigation en bas. */
 export default function AppLayout({ children }: LayoutProps<"/">) {
   return (
-    <div className="flex flex-1 flex-col">
-      <header className="navbar border-b-2 border-base-300 px-4">
-        <Link href="/learn" className="flex-1 font-display text-xl font-bold text-primary">
-          {fr.app.name}
-        </Link>
-        <Suspense fallback={<div className="size-9 skeleton rounded-full" />}>
-          <UserMenu />
-        </Suspense>
+    <div className="flex flex-1 flex-col pb-20">
+      <header className="sticky top-0 z-20 border-b-2 border-base-300 bg-base-100/95 backdrop-blur">
+        <div className="mx-auto flex h-14 max-w-md items-center justify-between px-4">
+          <Link href="/learn" className="font-display text-xl font-bold text-primary">
+            {fr.app.name}
+          </Link>
+          <Suspense fallback={<StatsBarSkeleton />}>
+            <StatsBar />
+          </Suspense>
+        </div>
       </header>
       {children}
-    </div>
-  );
-}
-
-async function UserMenu() {
-  const profile = await requireProfile();
-
-  return (
-    <div className="flex items-center gap-2">
-      {profile.avatar_url && (
-        // Avatar Google : petite image externe, next/image n'apporte rien ici.
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={profile.avatar_url}
-          alt=""
-          width={36}
-          height={36}
-          referrerPolicy="no-referrer"
-          className="rounded-full"
-        />
-      )}
-      <form action="/auth/signout" method="post">
-        <button type="submit" className="btn min-h-11 btn-ghost btn-sm">
-          {fr.auth.signOut}
-        </button>
-      </form>
+      <BottomNav />
     </div>
   );
 }
