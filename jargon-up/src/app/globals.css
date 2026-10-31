@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/* DaisyUI 5 : on désactive les thèmes intégrés et on n'utilise que les nôtres. */
+@plugin "daisyui" {
+  themes: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "hopi";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f6f3ff;
+  --color-base-300: #e9e3fa;
+  --color-base-content: #2b2240;
+  --color-primary: #6c4cf1;
+  --color-primary-content: #ffffff;
+  --color-secondary: #ff9f1c;
+  --color-secondary-content: #3a2200;
+  --color-accent: #12c2b4;
+  --color-accent-content: #04302c;
+  --color-neutral: #2b2240;
+  --color-neutral-content: #f6f3ff;
+  --color-info: #3ba7ff;
+  --color-info-content: #04243f;
+  --color-success: #3cc85a;
+  --color-success-content: #06300f;
+  --color-warning: #ffc93c;
+  --color-warning-content: #3d2b00;
+  --color-error: #ff5a5f;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 2px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "hopi-dark";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: #17132a;
+  --color-base-200: #1f1a38;
+  --color-base-300: #2c2550;
+  --color-base-content: #eee9ff;
+  --color-primary: #8b72ff;
+  --color-primary-content: #ffffff;
+  --color-secondary: #ffb347;
+  --color-secondary-content: #3a2200;
+  --color-accent: #2fd9c9;
+  --color-accent-content: #04302c;
+  --color-neutral: #0f0c1e;
+  --color-neutral-content: #eee9ff;
+  --color-info: #5cb8ff;
+  --color-info-content: #04243f;
+  --color-success: #4fd96c;
+  --color-success-content: #06300f;
+  --color-warning: #ffd25c;
+  --color-warning-content: #3d2b00;
+  --color-error: #ff6b70;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 2px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@theme inline {
+  --font-sans: var(--font-nunito), ui-rounded, system-ui, sans-serif;
+  --font-display: var(--font-fredoka), var(--font-nunito), ui-rounded, sans-serif;
+}
+
+/* Bouton « en relief » façon jeu : s'enfonce quand on appuie. */
+@utility btn-pop {
+  box-shadow: 0 5px 0 0 color-mix(in oklab, var(--btn-color, var(--color-base-300)) 65%, black);
+  transition:
+    transform 80ms ease-out,
+    box-shadow 80ms ease-out;
+
+  &:active:not(:disabled) {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 0 color-mix(in oklab, var(--btn-color, var(--color-base-300)) 65%, black);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
