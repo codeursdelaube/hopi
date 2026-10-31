@@ -71,8 +71,61 @@ export const fr = {
   },
   shell: {
     hello: (name: string) => `Salut ${name} !`,
-    learnPlaceholder: "Ton parcours arrive à la prochaine étape. Hopi s'échauffe 🥕",
-    onboardingPlaceholder: "Ici, tu choisiras bientôt ta filière, ton niveau et ton objectif.",
+  },
+  onboarding: {
+    title: "Personnalise ton parcours",
+    back: "Retour",
+    next: "Continuer",
+    finish: "C'est parti !",
+    saving: "Enregistrement…",
+    error: "Oups, l'enregistrement a échoué. Réessaie.",
+    stepOf: (step: number, total: number) => `Étape ${step} sur ${total}`,
+    steps: {
+      field: {
+        question: "Quelle est ta filière ?",
+        bubble: "Dis-moi dans quel domaine tu travailles ou étudies !",
+      },
+      level: {
+        question: "Quel est ton niveau d'anglais ?",
+        bubble: "Pas de stress, tu pourras le changer plus tard.",
+      },
+      goal: {
+        question: "Combien de temps par jour ?",
+        bubble: "Un peu chaque jour, c'est le secret ! 🥕",
+      },
+    },
+    levels: {
+      A2: { label: "Je me débrouille", hint: "Je comprends des phrases simples." },
+      B1: { label: "Intermédiaire", hint: "Je lis une doc technique avec un peu d'effort." },
+      B2: { label: "Avancé", hint: "Je suis à l'aise, je veux le vocabulaire pro." },
+    },
+    goals: {
+      10: { label: "Détente", hint: "≈ 5 min / jour" },
+      20: { label: "Normal", hint: "≈ 10 min / jour" },
+      30: { label: "Sérieux", hint: "≈ 15 min / jour" },
+      50: { label: "Intense", hint: "≈ 25 min / jour" },
+    },
+  },
+  learn: {
+    unit: (n: number) => `Unité ${n}`,
+    optional: "Facultatif",
+    start: "Commencer",
+    lessonsDone: (done: number, total: number) => `${done}/${total} leçons`,
+    continueWith: (title: string) => `On continue avec « ${title} » ?`,
+    allDone: "Tu as tout terminé ! Bravo, je suis fier de toi !",
+    states: {
+      completed: "terminée",
+      current: "à faire maintenant",
+      available: "disponible",
+      locked: "verrouillée",
+    },
+    lessonAria: (title: string, state: string) => `Leçon ${title}, ${state}`,
+    noContent: "Le parcours de cette filière est en préparation. Reviens bientôt !",
+    changeSettings: "Modifier mes choix",
+  },
+  lesson: {
+    placeholder: "Les exercices de cette leçon arrivent à la prochaine étape.",
+    backToPath: "Retour au parcours",
   },
   fields: [
     { slug: "tech", icon: "💻", name: "Informatique", published: true },

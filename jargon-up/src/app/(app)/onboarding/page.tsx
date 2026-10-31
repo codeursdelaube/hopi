@@ -1,16 +1,40 @@
 import { Suspense } from "react";
-import { Greeting, GreetingSkeleton } from "@/components/game/Greeting";
-import { Mascot } from "@/components/game/Mascot";
+import type { Metadata } from "next";
+import { OnboardingFlow } from "@/components/onboarding/OnboardingFlow";
+import { requireProfile } from "@/lib/auth/session";
+import { createClient } from "@/lib/supabase/server";
 import { fr } from "@/lib/i18n/fr";
+
+export const metadata: Metadata = { title: fr.onboarding.title };
 
 export default function OnboardingPage() {
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col items-center justify-center gap-4 px-4 py-10 text-center">
-      <Mascot mood="neutral" size={150} />
-      <Suspense fallback={<GreetingSkeleton />}>
-        <Greeting />
+    <main className="mx-auto flex w-full max-w-md flex-1 flex-col px-4 py-6">
+      <Suspense fallback={<div className="h-96 w-full skeleton" />}>
+        <OnboardingLoader />
       </Suspense>
-      <p className="text-base-content/70">{fr.shell.onboardingPlaceholder}</p>
     </main>
+  );
+}
+
+async function OnboardingLoader() {
+  const profile = await requireProfile();
+  const supabase = await createClient();
+  const { data: fields, error } = await supabase
+    .from("fields")
+    .select("id, name_fr, icon, is_published")
+    .order("is_published", { ascending: false })
+    .order("name_fr");
+  if (error) throw new Error(`Chargement des filières : ${error.message}`);
+
+  return (
+    <OnboardingFlow
+      fields={fields}
+      initial={{
+        fieldId: profile.field_id,
+        level: profile.level,
+        dailyGoal: profile.daily_goal_xp,
+      }}
+    />
   );
 }

@@ -3,19 +3,21 @@ import { cache } from "react";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { LOGIN_PATH } from "@/lib/auth/paths";
+import type { Row } from "@/types/database";
 
-export type Profile = {
-  id: string;
-  display_name: string | null;
-  avatar_url: string | null;
-  field_id: string | null;
-  level: string;
-  daily_goal_xp: number;
-  total_xp: number;
-  current_streak: number;
-  plan: "free" | "premium";
-  sound_enabled: boolean;
-};
+export type Profile = Pick<
+  Row<"profiles">,
+  | "id"
+  | "display_name"
+  | "avatar_url"
+  | "field_id"
+  | "level"
+  | "daily_goal_xp"
+  | "total_xp"
+  | "current_streak"
+  | "plan"
+  | "sound_enabled"
+>;
 
 /**
  * Profil de l'utilisateur connecté, ou redirection vers /login.
@@ -33,7 +35,7 @@ export const requireProfile = cache(async (): Promise<Profile> => {
       "id, display_name, avatar_url, field_id, level, daily_goal_xp, total_xp, current_streak, plan, sound_enabled",
     )
     .eq("id", userId)
-    .single<Profile>();
+    .single();
 
   if (error || !profile) {
     throw new Error(

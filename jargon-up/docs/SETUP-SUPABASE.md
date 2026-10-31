@@ -31,11 +31,13 @@ _Authentication_ → _Sign In / Providers_ → **Google** → activer, coller Cl
 
 _Authentication_ → _URL Configuration_ :
 
-- **Site URL** : `http://localhost:3000` (en production : l'URL Vercel ou le domaine).
+- **Site URL** : `https://hopigame.vercel.app`
 - **Redirect URLs** : ajouter
   - `http://localhost:3000/auth/callback`
-  - `https://<ton-domaine>/auth/callback` (production)
-  - `https://*-<ton-equipe>.vercel.app/auth/callback` (prévisualisations Vercel, optionnel)
+  - `https://hopigame.vercel.app/auth/callback`
+  - `https://hopigame-*.vercel.app/auth/callback` (prévisualisations Vercel, optionnel)
+
+Côté Google Cloud, **Authorized JavaScript origins** : `http://localhost:3000` et `https://hopigame.vercel.app`.
 
 ## 5. Tester
 
