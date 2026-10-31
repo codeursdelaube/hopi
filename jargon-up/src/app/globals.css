@@ -11,26 +11,28 @@
   prefersdark: false;
   color-scheme: light;
 
-  --color-base-100: #ffffff;
-  --color-base-200: #f6f3ff;
-  --color-base-300: #e9e3fa;
-  --color-base-content: #2b2240;
-  --color-primary: #6c4cf1;
-  --color-primary-content: #ffffff;
-  --color-secondary: #ff9f1c;
-  --color-secondary-content: #3a2200;
-  --color-accent: #12c2b4;
+  /* Clair « doux » : fond crème (pas de blanc pur), texte gris-violet (pas de noir),
+     couleurs un peu moins saturées. Contrastes texte ≥ 4.5:1 (WCAG AA). */
+  --color-base-100: #faf7f1;
+  --color-base-200: #f2ede4;
+  --color-base-300: #e4ddd0;
+  --color-base-content: #3a3348;
+  --color-primary: #5f4bd1;
+  --color-primary-content: #fdfcff;
+  --color-secondary: #f0a33f;
+  --color-secondary-content: #3a2400;
+  --color-accent: #2aa99d;
   --color-accent-content: #04302c;
-  --color-neutral: #2b2240;
-  --color-neutral-content: #f6f3ff;
-  --color-info: #3ba7ff;
+  --color-neutral: #3a3348;
+  --color-neutral-content: #f2ede4;
+  --color-info: #4a9be0;
   --color-info-content: #04243f;
-  --color-success: #3cc85a;
+  --color-success: #3fae5c;
   --color-success-content: #06300f;
-  --color-warning: #ffc93c;
+  --color-warning: #f2c14e;
   --color-warning-content: #3d2b00;
-  --color-error: #ff5a5f;
-  --color-error-content: #ffffff;
+  --color-error: #d64a45;
+  --color-error-content: #fffaf8;
 
   --radius-selector: 1rem;
   --radius-field: 1rem;

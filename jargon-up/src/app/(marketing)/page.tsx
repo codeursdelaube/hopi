@@ -1,12 +1,14 @@
 import Link from "next/link";
 import { HeroMascot } from "@/components/marketing/HeroMascot";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { fr } from "@/lib/i18n/fr";
 
 export default function Home() {
   const t = fr.landing;
 
   return (
-    <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-14 px-4 py-10 sm:py-16">
+    <main className="relative mx-auto flex w-full max-w-3xl flex-1 flex-col gap-14 px-4 py-10 sm:py-16">
+      <ThemeToggle className="absolute top-3 right-3" />
       <section className="flex flex-col items-center gap-6 text-center">
         <p className="font-display text-2xl font-semibold tracking-wide text-primary">
           {fr.app.name}

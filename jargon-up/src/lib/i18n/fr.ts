@@ -172,6 +172,8 @@ export const fr = {
     soundHint: "Petits sons pour les bonnes et mauvaises réponses.",
     theme: "Thème",
     themes: { system: "Comme le téléphone", light: "Clair", dark: "Sombre" },
+    toLight: "Passer en mode clair",
+    toDark: "Passer en mode sombre",
     field: "Filière",
     changeField: "Changer de filière",
     save: "Enregistrer",

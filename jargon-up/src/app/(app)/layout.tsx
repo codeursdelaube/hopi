@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { BottomNav } from "@/components/BottomNav";
 import { StatsBar, StatsBarSkeleton } from "@/components/game/StatsBar";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { fr } from "@/lib/i18n/fr";
 
 /** Coquille des pages connectées : barre de stats en haut, navigation en bas. */
@@ -13,9 +14,12 @@ export default function AppLayout({ children }: LayoutProps<"/">) {
           <Link href="/learn" className="font-display text-xl font-bold text-primary">
             {fr.app.name}
           </Link>
-          <Suspense fallback={<StatsBarSkeleton />}>
-            <StatsBar />
-          </Suspense>
+          <div className="flex items-center">
+            <Suspense fallback={<StatsBarSkeleton />}>
+              <StatsBar />
+            </Suspense>
+            <ThemeToggle className="btn-sm" />
+          </div>
         </div>
       </header>
       {children}
