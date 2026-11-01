@@ -1,7 +1,7 @@
 import "server-only";
 import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
-import { publicEnv } from "@/lib/env";
+import { getPublicEnv } from "@/lib/env";
 import type { Database } from "@/types/database";
 
 /**
@@ -15,7 +15,7 @@ export function createAdminClient() {
     .min(1)
     .parse(process.env.SUPABASE_SECRET_KEY);
 
-  return createClient<Database>(publicEnv.NEXT_PUBLIC_SUPABASE_URL, secretKey, {
+  return createClient<Database>(getPublicEnv().NEXT_PUBLIC_SUPABASE_URL, secretKey, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
 }

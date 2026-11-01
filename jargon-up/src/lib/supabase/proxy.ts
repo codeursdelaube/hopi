@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
-import { publicEnv } from "@/lib/env";
+import { getPublicEnv } from "@/lib/env";
 import { HOME_PATH, LOGIN_PATH, isPrivatePath } from "@/lib/auth/paths";
 
 /**
@@ -11,8 +11,8 @@ export async function updateSession(request: NextRequest) {
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient(
-    publicEnv.NEXT_PUBLIC_SUPABASE_URL,
-    publicEnv.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,
+    getPublicEnv().NEXT_PUBLIC_SUPABASE_URL,
+    getPublicEnv().NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,
     {
       cookies: {
         getAll() {
