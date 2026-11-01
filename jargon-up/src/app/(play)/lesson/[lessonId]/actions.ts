@@ -28,17 +28,29 @@ export async function completeLesson(lessonId: string, raw: FinishInput): Promis
 
   try {
     const profile = await requireProfile();
-    const path = await loadPath(profile);
+    const supabase = await createClient();
+    const admin = createAdminClient();
+
+    // Toutes les lectures en parallèle : sur un réseau serveur ↔ base à ~100 ms par
+    // aller-retour, les enchaîner ajoutait plus d'une seconde d'attente en fin de leçon.
+    const [path, exercisesRes, alreadyToday, previousRes] = await Promise.all([
+      loadPath(profile),
+      supabase
+        .from("exercises")
+        .select("id, type, payload, explanation_fr, term_id")
+        .eq("lesson_id", lessonId),
+      xpEarnedToday(profile.id, offsetMinutes, "lesson"),
+      admin
+        .from("lesson_progress")
+        .select("best_score, completed_at")
+        .eq("user_id", profile.id)
+        .eq("lesson_id", lessonId)
+        .maybeSingle(),
+    ]);
     const lesson = path.flatMap((u) => u.lessons).find((l) => l.id === lessonId);
     if (!lesson || lesson.state === "locked") return { ok: false };
-
-    const supabase = await createClient();
-    const { data: rows, error } = await supabase
-      .from("exercises")
-      .select("id, type, payload, explanation_fr, term_id")
-      .eq("lesson_id", lessonId);
-    if (error) throw new Error(error.message);
-    const exercises = toPlayable(rows);
+    if (exercisesRes.error) throw new Error(exercisesRes.error.message);
+    const exercises = toPlayable(exercisesRes.data);
 
     // Chaque exercice doit avoir une réponse.
     const byId = new Map(answers.map((a) => [a.exerciseId, a.answer]));
@@ -50,36 +62,31 @@ export async function completeLesson(lessonId: string, raw: FinishInput): Promis
 
     // Plafond quotidien d'XP de leçons (évite de « farmer » la même leçon).
     const earned = lessonXp(lesson.xp_reward, correct, total);
-    const alreadyToday = await xpEarnedToday(profile.id, offsetMinutes, "lesson");
     const allowed = Math.max(0, Math.min(earned, XP.lessonDailyCap - alreadyToday));
 
-    // Progression (meilleur score conservé).
-    const admin = createAdminClient();
-    const { data: previous } = await admin
-      .from("lesson_progress")
-      .select("best_score, completed_at")
-      .eq("user_id", profile.id)
-      .eq("lesson_id", lessonId)
-      .maybeSingle();
+    // Progression (meilleur score conservé) et répétition espacée, en parallèle.
+    const previous = previousRes.data;
     const score = scorePercent(correct, total);
-    const { error: progressError } = await admin.from("lesson_progress").upsert(
-      {
-        user_id: profile.id,
-        lesson_id: lessonId,
-        best_score: Math.max(score, previous?.best_score ?? 0),
-        completed_at: previous?.completed_at ?? new Date().toISOString(),
-      },
-      { onConflict: "user_id,lesson_id" },
-    );
+    const [{ error: progressError }] = await Promise.all([
+      admin.from("lesson_progress").upsert(
+        {
+          user_id: profile.id,
+          lesson_id: lessonId,
+          best_score: Math.max(score, previous?.best_score ?? 0),
+          completed_at: previous?.completed_at ?? new Date().toISOString(),
+        },
+        { onConflict: "user_id,lesson_id" },
+      ),
+      recordTermResults(
+        profile.id,
+        graded.flatMap((g) =>
+          g.exercise.termId ? [{ termId: g.exercise.termId, correct: g.correct }] : [],
+        ),
+      ),
+    ]);
     if (progressError) throw new Error(progressError.message);
 
-    await recordTermResults(
-      profile.id,
-      graded.flatMap((g) =>
-        g.exercise.termId ? [{ termId: g.exercise.termId, correct: g.correct }] : [],
-      ),
-    );
-
+    // Après l'écriture de la progression (le badge « première leçon » en dépend).
     const summary = await awardXp({
       userId: profile.id,
       amount: allowed,

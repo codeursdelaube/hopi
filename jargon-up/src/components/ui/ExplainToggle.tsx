@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import * as m from "motion/react-m";
+import { AnimatePresence } from "motion/react";
 import { fr } from "@/lib/i18n/fr";
 import { Languages } from "lucide-react";
 
@@ -22,14 +23,14 @@ export function ExplainToggle({ text }: { text: string }) {
       </button>
       <AnimatePresence initial={false}>
         {open && (
-          <motion.p
+          <m.p
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             className="overflow-hidden"
           >
             <span className="block rounded-box bg-secondary/10 p-3 leading-relaxed">{text}</span>
-          </motion.p>
+          </m.p>
         )}
       </AnimatePresence>
     </div>

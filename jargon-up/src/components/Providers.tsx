@@ -1,10 +1,17 @@
 "use client";
 
 import { useEffect } from "react";
-import { MotionConfig } from "motion/react";
+import { LazyMotion, MotionConfig } from "motion/react";
 import { applyStoredTheme } from "@/lib/theme";
 
-/** Fournisseurs globaux côté client. `reducedMotion="user"` suit le réglage système. */
+const loadMotionFeatures = () => import("@/lib/motion-features").then((mod) => mod.default);
+
+/**
+ * Fournisseurs globaux côté client.
+ * - LazyMotion : le moteur d'animation est téléchargé après l'affichage (`strict` interdit
+ *   les composants `motion.*` complets, qui l'embarqueraient dans le premier chargement).
+ * - `reducedMotion="user"` suit le réglage système.
+ */
 export function Providers({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Décalage horaire → cookie lu par le serveur (objectif du jour, série). Voir lib/tz.ts.
@@ -12,5 +19,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
     applyStoredTheme();
   }, []);
 
-  return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
+  return (
+    <LazyMotion features={loadMotionFeatures} strict>
+      <MotionConfig reducedMotion="user">{children}</MotionConfig>
+    </LazyMotion>
+  );
 }

@@ -55,7 +55,7 @@ src/
     lesson/               LessonPlayer (moteur de leçon) + LessonResults (écran de fin)
     game/                 Mascot (Hopi), Confetti, StatsBar
   content/
-    tech/units/*.json     contenu pédagogique (120 termes, 15 leçons)
+    <filière>/units/*.json contenu pédagogique (5 filières, 57 leçons, 456 termes)
     generate.ts           génération déterministe des exercices à partir des termes
   lib/
     gamification/         niveaux, série, dates locales, XP (fonctions pures testées)

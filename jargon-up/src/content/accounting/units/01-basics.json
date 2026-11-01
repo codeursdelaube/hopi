@@ -87,8 +87,14 @@
         }
       ],
       "sentences": [
-        { "en": "Please pay the invoice today", "fr": "Merci de payer la facture aujourd'hui" },
-        { "en": "Keep every receipt", "fr": "Garde chaque reçu" }
+        {
+          "en": "Please pay the invoice today",
+          "fr": "Merci de payer la facture aujourd'hui"
+        },
+        {
+          "en": "Keep every receipt",
+          "fr": "Garde chaque reçu"
+        }
       ]
     },
     {
@@ -176,8 +182,105 @@
         }
       ],
       "sentences": [
-        { "en": "Our sales are growing fast", "fr": "Nos ventes augmentent vite" },
-        { "en": "Rent is a fixed expense", "fr": "Le loyer est une dépense fixe" }
+        {
+          "en": "Our sales are growing fast",
+          "fr": "Nos ventes augmentent vite"
+        },
+        {
+          "en": "Rent is a fixed expense",
+          "fr": "Le loyer est une dépense fixe"
+        }
+      ]
+    },
+    {
+      "title_en": "Purchases & stock",
+      "terms": [
+        {
+          "term": "purchase order",
+          "pos": "noun",
+          "translation_fr": "bon de commande",
+          "definition_en": "A document a buyer sends to order goods.",
+          "explanation_fr": "Le « purchase order » (PO) est le bon de commande envoyé au fournisseur.",
+          "example_en": "Send the purchase order to the supplier today.",
+          "example_fr": "Envoie le bon de commande au fournisseur aujourd'hui."
+        },
+        {
+          "term": "quote",
+          "pos": "noun",
+          "translation_fr": "devis",
+          "definition_en": "A document that gives the price of work or goods before you buy.",
+          "explanation_fr": "Un « quote » (ou « quotation ») est un devis : le prix proposé avant la commande.",
+          "example_en": "Ask for a quote from three suppliers.",
+          "example_fr": "Demande un devis à trois fournisseurs.",
+          "ipa": "/kwəʊt/"
+        },
+        {
+          "term": "delivery note",
+          "pos": "noun",
+          "translation_fr": "bon de livraison",
+          "definition_en": "A document that comes with the goods and lists what was delivered.",
+          "explanation_fr": "Le « delivery note » accompagne la marchandise ; on le compare au bon de commande à la réception.",
+          "example_en": "Sign the delivery note when the boxes arrive.",
+          "example_fr": "Signe le bon de livraison quand les cartons arrivent."
+        },
+        {
+          "term": "inventory",
+          "pos": "noun",
+          "translation_fr": "stock (inventaire)",
+          "definition_en": "All the goods a company has in stock, or the counting of them.",
+          "explanation_fr": "L'« inventory » désigne le stock de marchandises, et aussi l'inventaire (le comptage physique).",
+          "example_en": "We count the inventory at the end of every month.",
+          "example_fr": "Nous comptons le stock à la fin de chaque mois.",
+          "ipa": "/ˈɪnvəntri/"
+        },
+        {
+          "term": "unit price",
+          "pos": "noun",
+          "translation_fr": "prix unitaire",
+          "definition_en": "The price of one item.",
+          "explanation_fr": "Le « unit price » est le prix d'une seule unité : prix total = prix unitaire × quantité.",
+          "example_en": "The unit price is 2,500 francs.",
+          "example_fr": "Le prix unitaire est de 2 500 francs."
+        },
+        {
+          "term": "quantity",
+          "pos": "noun",
+          "translation_fr": "quantité",
+          "definition_en": "How many items there are.",
+          "explanation_fr": "La « quantity » est la quantité commandée, livrée ou en stock.",
+          "example_en": "Check the quantity before you sign.",
+          "example_fr": "Vérifie la quantité avant de signer.",
+          "ipa": "/ˈkwɒntəti/"
+        },
+        {
+          "term": "warehouse",
+          "pos": "noun",
+          "translation_fr": "entrepôt",
+          "definition_en": "A large building where goods are stored.",
+          "explanation_fr": "Un « warehouse » est un entrepôt.",
+          "example_en": "The goods are stored in a warehouse near the port.",
+          "example_fr": "Les marchandises sont stockées dans un entrepôt près du port.",
+          "ipa": "/ˈweəhaʊs/"
+        },
+        {
+          "term": "out of stock",
+          "pos": "adjective",
+          "translation_fr": "en rupture de stock",
+          "definition_en": "Not available because all the items have been sold.",
+          "explanation_fr": "« Out of stock » = en rupture de stock ; « in stock » = disponible.",
+          "example_en": "Sorry, this model is out of stock.",
+          "example_fr": "Désolé, ce modèle est en rupture de stock."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Ask the supplier for a quote",
+          "fr": "Demande un devis au fournisseur"
+        },
+        {
+          "en": "This product is out of stock",
+          "fr": "Ce produit est en rupture de stock"
+        }
       ]
     }
   ]

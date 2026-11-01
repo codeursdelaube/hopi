@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { animate, motion } from "motion/react";
+import * as m from "motion/react-m";
+import { animate } from "motion/react";
 import { Confetti } from "@/components/game/Confetti";
 import { Mascot } from "@/components/game/Mascot";
 import type { FinishResult } from "@/lib/game/types";
@@ -71,13 +72,13 @@ export function LessonResults({ result, mode, onContinue }: Props) {
   return (
     <div className="flex flex-1 flex-col items-center gap-6 py-6 text-center">
       <Confetti />
-      <motion.div
+      <m.div
         initial={{ scale: 0.5, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: "spring", stiffness: 220, damping: 12 }}
       >
         <Mascot mood={accuracy >= 80 ? "proud" : "happy"} size={170} />
-      </motion.div>
+      </m.div>
 
       <h1 className="font-display text-3xl font-bold text-warning">
         {mode === "review" ? t.reviewTitle : t.title}
@@ -85,7 +86,7 @@ export function LessonResults({ result, mode, onContinue }: Props) {
 
       <div className="grid w-full grid-cols-3 gap-3">
         {stats.map((s, i) => (
-          <motion.div
+          <m.div
             key={s.label}
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -94,7 +95,7 @@ export function LessonResults({ result, mode, onContinue }: Props) {
           >
             <span className="bg-current/15 py-1 text-xs font-bold uppercase">{s.label}</span>
             <span className="py-3 font-display text-2xl font-bold">{s.value}</span>
-          </motion.div>
+          </m.div>
         ))}
       </div>
 
@@ -149,13 +150,13 @@ export function LessonResults({ result, mode, onContinue }: Props) {
 
 function Banner({ children }: { children: React.ReactNode }) {
   return (
-    <motion.p
+    <m.p
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 0.8, type: "spring" }}
       className="flex items-center justify-center gap-2 rounded-box bg-primary/10 px-4 py-2 font-semibold"
     >
       {children}
-    </motion.p>
+    </m.p>
   );
 }

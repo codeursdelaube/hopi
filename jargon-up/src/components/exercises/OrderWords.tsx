@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import type { z } from "zod";
 import type { orderWordsPayload } from "@/lib/exercises/schemas";
 import { fr } from "@/lib/i18n/fr";
@@ -44,7 +44,7 @@ export function OrderWords({ payload, onAnswer, status }: ExerciseProps<Payload>
         aria-label={fr.lesson.tapWords}
       >
         {picked.map((wordIndex, pos) => (
-          <motion.button
+          <m.button
             layoutId={`word-${wordIndex}`}
             key={wordIndex}
             type="button"
@@ -55,7 +55,7 @@ export function OrderWords({ payload, onAnswer, status }: ExerciseProps<Payload>
             aria-label={fr.lesson.removeWord(payload.words[wordIndex])}
           >
             {payload.words[wordIndex]}
-          </motion.button>
+          </m.button>
         ))}
       </div>
 
@@ -66,7 +66,7 @@ export function OrderWords({ payload, onAnswer, status }: ExerciseProps<Payload>
               {word}
             </span>
           ) : (
-            <motion.button
+            <m.button
               layoutId={`word-${i}`}
               key={i}
               type="button"
@@ -77,7 +77,7 @@ export function OrderWords({ payload, onAnswer, status }: ExerciseProps<Payload>
               aria-label={fr.lesson.addWord(word)}
             >
               {word}
-            </motion.button>
+            </m.button>
           ),
         )}
       </div>

@@ -2,7 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { AnimatePresence, motion } from "motion/react";
+import * as m from "motion/react-m";
+import { AnimatePresence } from "motion/react";
 import { Dialogue } from "@/components/exercises/Dialogue";
 import { FillBlank } from "@/components/exercises/FillBlank";
 import { ListenType } from "@/components/exercises/ListenType";
@@ -199,7 +200,7 @@ export function LessonPlayer({ exercises, finish, soundEnabled, mode = "lesson" 
           aria-valuemax={exercises.length}
           aria-valuenow={solved.size}
         >
-          <motion.div
+          <m.div
             className="h-full rounded-full bg-success"
             initial={false}
             animate={{ width: `${Math.max(progress * 100, 3)}%` }}
@@ -209,7 +210,7 @@ export function LessonPlayer({ exercises, finish, soundEnabled, mode = "lesson" 
       </div>
 
       <AnimatePresence mode="wait">
-        <motion.div
+        <m.div
           key={cursor}
           initial={{ opacity: 0, x: 40 }}
           animate={
@@ -243,7 +244,7 @@ export function LessonPlayer({ exercises, finish, soundEnabled, mode = "lesson" 
               }}
             />
           )}
-        </motion.div>
+        </m.div>
       </AnimatePresence>
 
       <FeedbackBar
@@ -299,14 +300,14 @@ function FeedbackBar({
         : "bg-base-100 border-base-300";
 
   return (
-    <motion.div
+    <m.div
       layout
       className={`fixed inset-x-0 bottom-0 z-30 border-t-2 ${tone} pb-[max(1rem,env(safe-area-inset-bottom))]`}
     >
       <div className="mx-auto flex max-w-md flex-col gap-3 px-4 pt-4">
         <AnimatePresence>
           {answered && (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="flex items-start gap-3"
@@ -340,20 +341,20 @@ function FeedbackBar({
                   </button>
                 )}
               </div>
-            </motion.div>
+            </m.div>
           )}
         </AnimatePresence>
 
         <AnimatePresence initial={false}>
           {answered && showExplanation && explanation && (
-            <motion.p
+            <m.p
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               className="overflow-hidden rounded-box bg-base-100 px-3 text-sm leading-relaxed"
             >
               <span className="block py-3">{explanation}</span>
-            </motion.p>
+            </m.p>
           )}
         </AnimatePresence>
 
@@ -379,6 +380,6 @@ function FeedbackBar({
           </button>
         )}
       </div>
-    </motion.div>
+    </m.div>
   );
 }

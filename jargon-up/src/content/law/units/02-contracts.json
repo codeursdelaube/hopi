@@ -87,8 +87,14 @@
         }
       ],
       "sentences": [
-        { "en": "Both parties signed the contract", "fr": "Les deux parties ont signé le contrat" },
-        { "en": "Please send me the new draft", "fr": "Envoie-moi le nouveau projet s'il te plaît" }
+        {
+          "en": "Both parties signed the contract",
+          "fr": "Les deux parties ont signé le contrat"
+        },
+        {
+          "en": "Please send me the new draft",
+          "fr": "Envoie-moi le nouveau projet s'il te plaît"
+        }
       ]
     },
     {
@@ -174,8 +180,14 @@
         }
       ],
       "sentences": [
-        { "en": "We want to avoid a long dispute", "fr": "Nous voulons éviter un long litige" },
-        { "en": "The notice period starts today", "fr": "Le préavis commence aujourd'hui" }
+        {
+          "en": "We want to avoid a long dispute",
+          "fr": "Nous voulons éviter un long litige"
+        },
+        {
+          "en": "The notice period starts today",
+          "fr": "Le préavis commence aujourd'hui"
+        }
       ],
       "dialogues": [
         {
@@ -193,6 +205,115 @@
           ],
           "answerIndex": 0,
           "explanation_fr": "On reconnaît le problème et on propose une solution : « Let's look at the penalty clause together » = « Regardons ensemble la clause de pénalité »."
+        }
+      ]
+    },
+    {
+      "title_en": "Employment law",
+      "terms": [
+        {
+          "term": "employee",
+          "pos": "noun",
+          "translation_fr": "salarié",
+          "definition_en": "A person who works for a company and receives a salary.",
+          "explanation_fr": "Un « employee » est un salarié. Astuce : employ-EE = celui qui est employé.",
+          "example_en": "Every employee must sign the contract.",
+          "example_fr": "Chaque salarié doit signer le contrat.",
+          "ipa": "/ɪmˈplɔɪiː/"
+        },
+        {
+          "term": "employer",
+          "pos": "noun",
+          "translation_fr": "employeur",
+          "definition_en": "A person or company that pays people to work.",
+          "explanation_fr": "L'« employer » est l'employeur. Astuce : employ-ER = celui qui emploie.",
+          "example_en": "The employer pays the salaries on the 30th.",
+          "example_fr": "L'employeur verse les salaires le 30.",
+          "ipa": "/ɪmˈplɔɪə/"
+        },
+        {
+          "term": "employment contract",
+          "pos": "noun",
+          "translation_fr": "contrat de travail",
+          "definition_en": "The contract between an employer and an employee.",
+          "explanation_fr": "L'« employment contract » est le contrat de travail. CDI = « permanent contract » ; CDD = « fixed-term contract ».",
+          "example_en": "Read your employment contract before the first day.",
+          "example_fr": "Lis ton contrat de travail avant le premier jour."
+        },
+        {
+          "term": "probation period",
+          "pos": "noun",
+          "translation_fr": "période d'essai",
+          "definition_en": "The first weeks of a job, when either side can end the contract more easily.",
+          "explanation_fr": "La « probation period » est la période d'essai, pendant laquelle l'employeur comme le salarié peuvent rompre le contrat plus facilement.",
+          "example_en": "The probation period lasts three months.",
+          "example_fr": "La période d'essai dure trois mois."
+        },
+        {
+          "term": "working hours",
+          "pos": "noun (plural)",
+          "translation_fr": "horaires de travail",
+          "definition_en": "The hours an employee must work.",
+          "explanation_fr": "Les « working hours » sont les heures de travail ; « overtime » = heures supplémentaires.",
+          "example_en": "Our working hours are from eight to five.",
+          "example_fr": "Nos horaires de travail vont de huit heures à dix-sept heures."
+        },
+        {
+          "term": "dismissal",
+          "pos": "noun",
+          "translation_fr": "licenciement",
+          "definition_en": "When an employer ends an employee's contract.",
+          "explanation_fr": "Le « dismissal » est le licenciement ; « unfair dismissal » = licenciement abusif.",
+          "example_en": "The court said the dismissal was unfair.",
+          "example_fr": "Le tribunal a jugé le licenciement abusif.",
+          "ipa": "/dɪsˈmɪsəl/"
+        },
+        {
+          "term": "resignation",
+          "pos": "noun",
+          "translation_fr": "démission",
+          "definition_en": "When an employee decides to leave their job.",
+          "explanation_fr": "La « resignation » est la démission ; « to resign » = démissionner.",
+          "example_en": "She handed in her resignation on Monday.",
+          "example_fr": "Elle a remis sa démission lundi.",
+          "ipa": "/ˌrezɪɡˈneɪʃən/"
+        },
+        {
+          "term": "severance pay",
+          "pos": "noun",
+          "translation_fr": "indemnité de licenciement",
+          "definition_en": "Money paid to an employee who loses their job.",
+          "explanation_fr": "La « severance pay » est l'indemnité versée au salarié licencié, selon la loi, la convention collective et son ancienneté.",
+          "example_en": "He received severance pay after ten years in the company.",
+          "example_fr": "Il a reçu une indemnité de licenciement après dix ans dans l'entreprise."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The probation period is over",
+          "fr": "La période d'essai est terminée"
+        },
+        {
+          "en": "I want to read my contract first",
+          "fr": "Je veux d'abord lire mon contrat"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Meeting with HR",
+          "lines": [
+            {
+              "speaker": "Employee",
+              "text": "If I resign, how much notice do I have to give?"
+            }
+          ],
+          "options": [
+            "It depends on your contract. Let's check the notice period clause.",
+            "You can leave today without telling anyone.",
+            "Resigning is against the law."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's check the notice period clause » = « Vérifions la clause de préavis ». La durée du préavis dépend du contrat et de la loi."
         }
       ]
     }

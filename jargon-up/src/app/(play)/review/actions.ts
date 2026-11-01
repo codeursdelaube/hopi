@@ -39,10 +39,12 @@ export async function completeReview(raw: FinishInput): Promise<FinishResult> {
     const graded = exercises.map((e) => ({ termId: e.id, correct: isCorrect(e, byId.get(e.id)!) }));
     const correct = graded.filter((g) => g.correct).length;
 
-    await recordTermResults(profile.id, graded);
-
+    // En parallèle : mise à jour SM-2 et lecture des XP de révision du jour.
+    const [, alreadyToday] = await Promise.all([
+      recordTermResults(profile.id, graded),
+      xpEarnedToday(profile.id, offsetMinutes, "review"),
+    ]);
     const earned = correct * XP.reviewPerTerm;
-    const alreadyToday = await xpEarnedToday(profile.id, offsetMinutes, "review");
     const allowed = Math.max(0, Math.min(earned, XP.reviewDailyCap - alreadyToday));
 
     const summary = await awardXp({

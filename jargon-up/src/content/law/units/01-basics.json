@@ -88,8 +88,14 @@
         }
       ],
       "sentences": [
-        { "en": "The judge will decide tomorrow", "fr": "Le juge décidera demain" },
-        { "en": "I need a good lawyer", "fr": "J'ai besoin d'un bon avocat" }
+        {
+          "en": "The judge will decide tomorrow",
+          "fr": "Le juge décidera demain"
+        },
+        {
+          "en": "I need a good lawyer",
+          "fr": "J'ai besoin d'un bon avocat"
+        }
       ]
     },
     {
@@ -181,7 +187,104 @@
           "en": "Every citizen has rights and duties",
           "fr": "Chaque citoyen a des droits et des devoirs"
         },
-        { "en": "We must respect the regulation", "fr": "Nous devons respecter la réglementation" }
+        {
+          "en": "We must respect the regulation",
+          "fr": "Nous devons respecter la réglementation"
+        }
+      ]
+    },
+    {
+      "title_en": "Crime & the police",
+      "terms": [
+        {
+          "term": "crime",
+          "pos": "noun",
+          "translation_fr": "infraction (crime)",
+          "definition_en": "An action that is against the law.",
+          "explanation_fr": "En anglais, « crime » désigne toute infraction (vol, fraude…), pas seulement un crime grave au sens du droit français. « Criminal » = auteur d'une infraction.",
+          "example_en": "Online crime is growing fast.",
+          "example_fr": "La criminalité en ligne augmente vite.",
+          "ipa": "/kraɪm/"
+        },
+        {
+          "term": "police officer",
+          "pos": "noun",
+          "translation_fr": "policier",
+          "definition_en": "A person whose job is to protect people and enforce the law.",
+          "explanation_fr": "Un « police officer » est un policier ou une policière (terme neutre). Le commissariat se dit « police station ».",
+          "example_en": "A police officer wrote down what we saw.",
+          "example_fr": "Un policier a noté ce que nous avons vu."
+        },
+        {
+          "term": "arrest",
+          "pos": "verb",
+          "translation_fr": "arrêter (interpeller)",
+          "definition_en": "To take someone to the police station because they may have broken the law.",
+          "explanation_fr": "« To arrest » = arrêter, interpeller ; « under arrest » = en état d'arrestation.",
+          "example_en": "The police can arrest a person caught stealing.",
+          "example_fr": "La police peut arrêter une personne prise en train de voler.",
+          "ipa": "/əˈrest/"
+        },
+        {
+          "term": "suspect",
+          "pos": "noun",
+          "translation_fr": "suspect",
+          "definition_en": "A person the police think may have committed a crime.",
+          "explanation_fr": "Un « suspect » est une personne soupçonnée ; elle reste présumée innocente tant qu'un tribunal ne l'a pas déclarée coupable.",
+          "example_en": "The suspect was released the next day.",
+          "example_fr": "Le suspect a été relâché le lendemain.",
+          "ipa": "/ˈsʌspekt/"
+        },
+        {
+          "term": "victim",
+          "pos": "noun",
+          "translation_fr": "victime",
+          "definition_en": "A person who is hurt or loses something because of a crime.",
+          "explanation_fr": "La « victim » est la personne qui subit l'infraction.",
+          "example_en": "The victim lost all her savings.",
+          "example_fr": "La victime a perdu toutes ses économies.",
+          "ipa": "/ˈvɪktɪm/"
+        },
+        {
+          "term": "theft",
+          "pos": "noun",
+          "translation_fr": "vol",
+          "definition_en": "The crime of taking something that belongs to someone else.",
+          "explanation_fr": "« Theft » = le vol ; « thief » = le voleur ; « to steal » = voler.",
+          "example_en": "He reported the theft of his phone.",
+          "example_fr": "Il a signalé le vol de son téléphone.",
+          "ipa": "/θeft/"
+        },
+        {
+          "term": "fraud",
+          "pos": "noun",
+          "translation_fr": "fraude (escroquerie)",
+          "definition_en": "Tricking people to get money or an advantage illegally.",
+          "explanation_fr": "La « fraud » est la fraude ou l'escroquerie : fausses factures, arnaques au mobile money, faux documents…",
+          "example_en": "Mobile money fraud is a real problem.",
+          "example_fr": "La fraude au mobile money est un vrai problème.",
+          "ipa": "/frɔːd/"
+        },
+        {
+          "term": "complaint",
+          "pos": "noun",
+          "translation_fr": "plainte",
+          "definition_en": "An official statement that you are the victim of a crime.",
+          "explanation_fr": "« To file a complaint » = porter plainte. Dans un contexte commercial, « complaint » veut aussi dire « réclamation ».",
+          "example_en": "She filed a complaint at the police station.",
+          "example_fr": "Elle a porté plainte au commissariat.",
+          "ipa": "/kəmˈpleɪnt/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The victim filed a complaint",
+          "fr": "La victime a porté plainte"
+        },
+        {
+          "en": "The police arrested the suspect",
+          "fr": "La police a arrêté le suspect"
+        }
       ]
     }
   ]

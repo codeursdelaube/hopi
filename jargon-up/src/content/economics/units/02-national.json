@@ -85,8 +85,14 @@
         }
       ],
       "sentences": [
-        { "en": "Growth creates new jobs", "fr": "La croissance crée de nouveaux emplois" },
-        { "en": "Unemployment is falling slowly", "fr": "Le chômage baisse lentement" }
+        {
+          "en": "Growth creates new jobs",
+          "fr": "La croissance crée de nouveaux emplois"
+        },
+        {
+          "en": "Unemployment is falling slowly",
+          "fr": "Le chômage baisse lentement"
+        }
       ]
     },
     {
@@ -172,7 +178,103 @@
           "en": "The central bank controls inflation",
           "fr": "La banque centrale contrôle l'inflation"
         },
-        { "en": "The state cut public spending", "fr": "L'État a réduit les dépenses publiques" }
+        {
+          "en": "The state cut public spending",
+          "fr": "L'État a réduit les dépenses publiques"
+        }
+      ]
+    },
+    {
+      "title_en": "Business & competition",
+      "terms": [
+        {
+          "term": "competition",
+          "pos": "noun",
+          "translation_fr": "concurrence",
+          "definition_en": "Rivalry between companies to win customers.",
+          "explanation_fr": "La « competition » est la concurrence ; « competitor » = concurrent.",
+          "example_en": "Competition keeps prices low.",
+          "example_fr": "La concurrence maintient les prix bas.",
+          "ipa": "/ˌkɒmpəˈtɪʃən/"
+        },
+        {
+          "term": "monopoly",
+          "pos": "noun",
+          "translation_fr": "monopole",
+          "definition_en": "When one company controls all of a market.",
+          "explanation_fr": "Un « monopoly » existe quand une seule entreprise contrôle un marché ; sans concurrence, les prix peuvent monter.",
+          "example_en": "The state company had a monopoly on electricity.",
+          "example_fr": "L'entreprise publique avait le monopole de l'électricité.",
+          "ipa": "/məˈnɒpəli/"
+        },
+        {
+          "term": "entrepreneur",
+          "pos": "noun",
+          "translation_fr": "entrepreneur",
+          "definition_en": "A person who starts and runs a business.",
+          "explanation_fr": "Un « entrepreneur » crée et dirige une entreprise ; le mot vient du français !",
+          "example_en": "She is a young entrepreneur from Kara.",
+          "example_fr": "C'est une jeune entrepreneuse de Kara.",
+          "ipa": "/ˌɒntrəprəˈnɜː/"
+        },
+        {
+          "term": "startup",
+          "pos": "noun",
+          "translation_fr": "start-up (jeune pousse)",
+          "definition_en": "A new company, often in technology, that wants to grow fast.",
+          "explanation_fr": "Une « startup » est une jeune entreprise innovante qui vise une forte croissance.",
+          "example_en": "The startup raised money from investors.",
+          "example_fr": "La start-up a levé des fonds auprès d'investisseurs.",
+          "ipa": "/ˈstɑːtʌp/"
+        },
+        {
+          "term": "SME",
+          "pos": "noun",
+          "translation_fr": "PME",
+          "definition_en": "A small or medium-sized company.",
+          "explanation_fr": "Une « SME » (Small and Medium-sized Enterprise) est une PME.",
+          "example_en": "Every SME needs access to credit.",
+          "example_fr": "Chaque PME a besoin d'accès au crédit.",
+          "ipa": "/ˌes em ˈiː/"
+        },
+        {
+          "term": "market share",
+          "pos": "noun",
+          "translation_fr": "part de marché",
+          "definition_en": "The percentage of a market that one company controls.",
+          "explanation_fr": "La « market share » est la part de marché d'une entreprise.",
+          "example_en": "Our market share grew to fifteen percent.",
+          "example_fr": "Notre part de marché est passée à quinze pour cent."
+        },
+        {
+          "term": "private sector",
+          "pos": "noun",
+          "translation_fr": "secteur privé",
+          "definition_en": "The part of the economy owned by private companies, not the state.",
+          "explanation_fr": "Le « private sector » regroupe les entreprises privées ; le « public sector » dépend de l'État.",
+          "example_en": "The private sector creates new jobs.",
+          "example_fr": "Le secteur privé crée de nouveaux emplois."
+        },
+        {
+          "term": "privatisation",
+          "pos": "noun",
+          "translation_fr": "privatisation",
+          "definition_en": "Selling a state company to private owners.",
+          "explanation_fr": "La « privatisation » (US : « privatization ») est la vente d'une entreprise publique à des investisseurs privés.",
+          "example_en": "The privatisation of the bank was approved.",
+          "example_fr": "La privatisation de la banque a été approuvée.",
+          "ipa": "/ˌpraɪvətaɪˈzeɪʃən/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Competition helps consumers",
+          "fr": "La concurrence aide les consommateurs"
+        },
+        {
+          "en": "She started her own business",
+          "fr": "Elle a créé sa propre entreprise"
+        }
       ]
     }
   ]

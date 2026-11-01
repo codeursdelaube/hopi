@@ -1,0 +1,299 @@
+{
+  "level": "A2",
+  "title_en": "Inside the computer",
+  "title_fr": "À l'intérieur de l'ordinateur",
+  "lessons": [
+    {
+      "title_en": "Main components",
+      "terms": [
+        {
+          "term": "hardware",
+          "pos": "noun",
+          "translation_fr": "matériel",
+          "definition_en": "The physical parts of a computer that you can touch.",
+          "explanation_fr": "Le « hardware » est le matériel informatique : tout ce qu'on peut toucher (écran, processeur, câbles). C'est un mot indénombrable : on ne dit pas « a hardware ».",
+          "example_en": "We need new hardware for the office.",
+          "example_fr": "Nous avons besoin de nouveau matériel pour le bureau.",
+          "ipa": "/ˈhɑːdweə/"
+        },
+        {
+          "term": "software",
+          "pos": "noun",
+          "translation_fr": "logiciel",
+          "definition_en": "The programs that run on a computer.",
+          "explanation_fr": "Le « software » désigne les logiciels et programmes. Indénombrable aussi : « a piece of software » = un logiciel.",
+          "example_en": "This software only works on Windows.",
+          "example_fr": "Ce logiciel ne fonctionne que sous Windows.",
+          "ipa": "/ˈsɒftweə/"
+        },
+        {
+          "term": "motherboard",
+          "pos": "noun",
+          "translation_fr": "carte mère",
+          "definition_en": "The main circuit board that connects all the parts of a computer.",
+          "explanation_fr": "La « motherboard » est la carte mère : la grande carte électronique sur laquelle se branchent le processeur, la mémoire et tous les autres composants.",
+          "example_en": "The processor is attached to the motherboard.",
+          "example_fr": "Le processeur est fixé sur la carte mère.",
+          "ipa": "/ˈmʌðəbɔːd/"
+        },
+        {
+          "term": "power supply",
+          "pos": "noun",
+          "translation_fr": "alimentation",
+          "definition_en": "The part that gives electricity to all the components.",
+          "explanation_fr": "La « power supply » (PSU) transforme le courant de la prise pour alimenter tous les composants. Une alimentation faible ou abîmée provoque des arrêts brutaux.",
+          "example_en": "The computer won't start because the power supply is broken.",
+          "example_fr": "L'ordinateur ne démarre pas parce que l'alimentation est en panne."
+        },
+        {
+          "term": "graphics card",
+          "pos": "noun",
+          "translation_fr": "carte graphique",
+          "definition_en": "A part that creates the images you see on the screen.",
+          "explanation_fr": "La « graphics card » (ou GPU) calcule les images ; elle est indispensable pour les jeux, le montage vidéo et l'intelligence artificielle.",
+          "example_en": "Video editing needs a powerful graphics card.",
+          "example_fr": "Le montage vidéo demande une carte graphique puissante."
+        },
+        {
+          "term": "fan",
+          "pos": "noun",
+          "translation_fr": "ventilateur",
+          "definition_en": "A small device that moves air to keep the computer cool.",
+          "explanation_fr": "Le « fan » est le ventilateur qui refroidit les composants. Un ventilateur très bruyant est souvent plein de poussière.",
+          "example_en": "The fan is very loud, so clean the dust inside.",
+          "example_fr": "Le ventilateur fait beaucoup de bruit, nettoie donc la poussière à l'intérieur.",
+          "ipa": "/fæn/"
+        },
+        {
+          "term": "chip",
+          "pos": "noun",
+          "translation_fr": "puce",
+          "definition_en": "A very small electronic circuit made of silicon.",
+          "explanation_fr": "Une « chip » est une puce électronique en silicium ; le processeur et la mémoire sont des puces.",
+          "example_en": "This chip is smaller than a fingernail.",
+          "example_fr": "Cette puce est plus petite qu'un ongle.",
+          "ipa": "/tʃɪp/"
+        },
+        {
+          "term": "component",
+          "pos": "noun",
+          "translation_fr": "composant",
+          "definition_en": "One part of a machine or of a system.",
+          "explanation_fr": "Un « component » est un composant : processeur, mémoire, disque… Le mot sert aussi pour les composants logiciels (par exemple les composants React).",
+          "example_en": "Each component has a two-year warranty.",
+          "example_fr": "Chaque composant a une garantie de deux ans.",
+          "ipa": "/kəmˈpəʊnənt/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The motherboard connects every component",
+          "fr": "La carte mère relie chaque composant"
+        },
+        { "en": "Clean the fan every month", "fr": "Nettoie le ventilateur chaque mois" }
+      ]
+    },
+    {
+      "title_en": "Memory & storage",
+      "terms": [
+        {
+          "term": "RAM",
+          "pos": "noun",
+          "translation_fr": "mémoire vive",
+          "definition_en": "Fast, temporary memory used by programs while they are running.",
+          "explanation_fr": "La « RAM » (Random Access Memory) est la mémoire vive : très rapide, mais elle s'efface quand on éteint l'ordinateur. Plus il y en a, plus on peut ouvrir de programmes en même temps.",
+          "example_en": "This laptop has 16 gigabytes of RAM.",
+          "example_fr": "Cet ordinateur portable a 16 gigaoctets de mémoire vive.",
+          "ipa": "/ræm/"
+        },
+        {
+          "term": "storage",
+          "pos": "noun",
+          "translation_fr": "stockage",
+          "definition_en": "The place where files are kept for a long time.",
+          "explanation_fr": "Le « storage » est l'espace de stockage permanent (disque dur, SSD, cloud) : les fichiers y restent même quand l'ordinateur est éteint. À ne pas confondre avec la RAM.",
+          "example_en": "My phone has no storage left for photos.",
+          "example_fr": "Mon téléphone n'a plus d'espace de stockage pour les photos.",
+          "ipa": "/ˈstɔːrɪdʒ/"
+        },
+        {
+          "term": "hard drive",
+          "pos": "noun",
+          "translation_fr": "disque dur",
+          "definition_en": "A storage device that keeps data on spinning magnetic disks.",
+          "explanation_fr": "Le « hard drive » (HDD) est un disque dur mécanique : grande capacité et prix bas, mais plus lent et plus fragile qu'un SSD.",
+          "example_en": "The old hard drive makes a strange noise.",
+          "example_fr": "Le vieux disque dur fait un bruit étrange."
+        },
+        {
+          "term": "SSD",
+          "pos": "noun",
+          "translation_fr": "disque SSD",
+          "definition_en": "A fast storage device with no moving parts.",
+          "explanation_fr": "Un « SSD » (Solid State Drive) stocke les données sur des puces : il est beaucoup plus rapide et plus résistant aux chocs qu'un disque dur classique.",
+          "example_en": "With an SSD, the computer starts in ten seconds.",
+          "example_fr": "Avec un SSD, l'ordinateur démarre en dix secondes.",
+          "ipa": "/ˌes es ˈdiː/"
+        },
+        {
+          "term": "gigabyte",
+          "pos": "noun",
+          "translation_fr": "gigaoctet",
+          "definition_en": "A unit of data equal to about one billion bytes.",
+          "explanation_fr": "Un « gigabyte » (Go en français, GB en anglais) vaut environ un milliard d'octets. Attention : en anglais « byte » = octet et « bit » = bit.",
+          "example_en": "One gigabyte of mobile data is cheaper than before.",
+          "example_fr": "Un gigaoctet de données mobiles coûte moins cher qu'avant.",
+          "ipa": "/ˈɡɪɡəbaɪt/"
+        },
+        {
+          "term": "USB flash drive",
+          "pos": "noun",
+          "translation_fr": "clé USB",
+          "definition_en": "A small portable device to store and carry files.",
+          "explanation_fr": "Une « USB flash drive » (ou « USB stick ») est une clé USB.",
+          "example_en": "Copy the files to a USB flash drive.",
+          "example_fr": "Copie les fichiers sur une clé USB."
+        },
+        {
+          "term": "boot",
+          "pos": "verb",
+          "translation_fr": "démarrer (l'ordinateur)",
+          "definition_en": "To start a computer and load its operating system.",
+          "explanation_fr": "« To boot » = démarrer l'ordinateur ; « reboot » = redémarrer. Le « boot » est toute la phase de démarrage.",
+          "example_en": "The laptop takes a long time to boot.",
+          "example_fr": "L'ordinateur portable met beaucoup de temps à démarrer.",
+          "ipa": "/buːt/"
+        },
+        {
+          "term": "BIOS",
+          "pos": "noun",
+          "translation_fr": "BIOS",
+          "definition_en": "Basic software on the motherboard that starts the computer.",
+          "explanation_fr": "Le « BIOS » (ou UEFI sur les machines récentes) est le petit programme de la carte mère qui vérifie le matériel et lance le système au démarrage.",
+          "example_en": "Press F2 to open the BIOS settings.",
+          "example_fr": "Appuie sur F2 pour ouvrir les réglages du BIOS.",
+          "ipa": "/ˈbaɪɒs/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "My computer needs more RAM",
+          "fr": "Mon ordinateur a besoin de plus de mémoire vive"
+        },
+        {
+          "en": "An SSD is faster than a hard drive",
+          "fr": "Un SSD est plus rapide qu'un disque dur"
+        }
+      ]
+    },
+    {
+      "title_en": "Peripherals & connections",
+      "terms": [
+        {
+          "term": "peripheral",
+          "pos": "noun",
+          "translation_fr": "périphérique",
+          "definition_en": "A device you connect to a computer, like a mouse or a printer.",
+          "explanation_fr": "Un « peripheral » est un périphérique externe : souris, clavier, imprimante, webcam, écran…",
+          "example_en": "The mouse is the most common peripheral.",
+          "example_fr": "La souris est le périphérique le plus courant.",
+          "ipa": "/pəˈrɪfərəl/"
+        },
+        {
+          "term": "monitor",
+          "pos": "noun",
+          "translation_fr": "écran (moniteur)",
+          "definition_en": "A screen that shows what the computer is doing.",
+          "explanation_fr": "Un « monitor » est un écran d'ordinateur. Le verbe « to monitor » veut dire surveiller (« to monitor a server »).",
+          "example_en": "I connected a second monitor to my laptop.",
+          "example_fr": "J'ai branché un deuxième écran à mon ordinateur portable.",
+          "ipa": "/ˈmɒnɪtə/"
+        },
+        {
+          "term": "printer",
+          "pos": "noun",
+          "translation_fr": "imprimante",
+          "definition_en": "A machine that puts text and images on paper.",
+          "explanation_fr": "Une « printer » est une imprimante (laser ou jet d'encre).",
+          "example_en": "The printer is out of paper.",
+          "example_fr": "L'imprimante n'a plus de papier.",
+          "ipa": "/ˈprɪntə/"
+        },
+        {
+          "term": "USB port",
+          "pos": "noun",
+          "translation_fr": "port USB",
+          "definition_en": "A small socket where you plug in USB cables and devices.",
+          "explanation_fr": "Un « USB port » est une prise USB ; les plus récentes sont au format USB-C, réversible.",
+          "example_en": "This laptop has only one USB port.",
+          "example_fr": "Cet ordinateur portable n'a qu'un seul port USB."
+        },
+        {
+          "term": "cable",
+          "pos": "noun",
+          "translation_fr": "câble",
+          "definition_en": "A wire that connects two devices.",
+          "explanation_fr": "Un « cable » est un câble (HDMI, réseau, alimentation…).",
+          "example_en": "Use an HDMI cable to connect the projector.",
+          "example_fr": "Utilise un câble HDMI pour brancher le projecteur.",
+          "ipa": "/ˈkeɪbəl/"
+        },
+        {
+          "term": "driver",
+          "pos": "noun",
+          "translation_fr": "pilote",
+          "definition_en": "Software that lets the computer control a piece of hardware.",
+          "explanation_fr": "Un « driver » est un pilote : le petit logiciel qui permet au système de faire fonctionner une imprimante, une carte graphique… Attention : « driver » veut aussi dire « conducteur ».",
+          "example_en": "Install the latest driver for the graphics card.",
+          "example_fr": "Installe le dernier pilote de la carte graphique.",
+          "ipa": "/ˈdraɪvə/"
+        },
+        {
+          "term": "charger",
+          "pos": "noun",
+          "translation_fr": "chargeur",
+          "definition_en": "A device that puts electricity into a battery.",
+          "explanation_fr": "Un « charger » est un chargeur. « To charge » = charger une batterie.",
+          "example_en": "I forgot my laptop charger at home.",
+          "example_fr": "J'ai oublié le chargeur de mon ordinateur portable à la maison.",
+          "ipa": "/ˈtʃɑːdʒə/"
+        },
+        {
+          "term": "battery",
+          "pos": "noun",
+          "translation_fr": "batterie",
+          "definition_en": "A part that stores electricity so a device can work without a cable.",
+          "explanation_fr": "La « battery » est la batterie ; « battery life » = l'autonomie.",
+          "example_en": "The battery lasts six hours.",
+          "example_fr": "La batterie tient six heures.",
+          "ipa": "/ˈbætəri/"
+        }
+      ],
+      "sentences": [
+        { "en": "Plug the cable into the USB port", "fr": "Branche le câble dans le port USB" },
+        {
+          "en": "The printer driver is not installed",
+          "fr": "Le pilote de l'imprimante n'est pas installé"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "IT help desk",
+          "lines": [
+            {
+              "speaker": "Colleague",
+              "text": "My new printer doesn't work. What should I check first?"
+            }
+          ],
+          "options": [
+            "Check the cable, then install the right driver.",
+            "Buy a new computer.",
+            "Turn off the internet for the whole office."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Check the cable, then install the right driver » = « Vérifie le câble, puis installe le bon pilote ». C'est la démarche classique du support informatique : du plus simple au plus compliqué."
+        }
+      ]
+    }
+  ]
+}

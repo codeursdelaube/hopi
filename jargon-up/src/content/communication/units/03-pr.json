@@ -198,13 +198,24 @@
         }
       ],
       "sentences": [
-        { "en": "One idea per slide please", "fr": "Une idée par diapositive s'il te plaît" },
-        { "en": "I will rehearse my pitch tonight", "fr": "Je vais répéter mon pitch ce soir" }
+        {
+          "en": "One idea per slide please",
+          "fr": "Une idée par diapositive s'il te plaît"
+        },
+        {
+          "en": "I will rehearse my pitch tonight",
+          "fr": "Je vais répéter mon pitch ce soir"
+        }
       ],
       "dialogues": [
         {
           "context": "Pitch to investors",
-          "lines": [{ "speaker": "Investor", "text": "Why should we invest in your project?" }],
+          "lines": [
+            {
+              "speaker": "Investor",
+              "text": "Why should we invest in your project?"
+            }
+          ],
           "options": [
             "Because we already solve a real problem for 10,000 users.",
             "Because I really need the money.",
@@ -212,6 +223,119 @@
           ],
           "answerIndex": 0,
           "explanation_fr": "Un bon pitch s'appuie sur des preuves : « we already solve a real problem for 10,000 users » = « nous résolvons déjà un vrai problème pour 10 000 utilisateurs »."
+        }
+      ]
+    },
+    {
+      "title_en": "Events & conferences",
+      "terms": [
+        {
+          "term": "event",
+          "pos": "noun",
+          "translation_fr": "événement",
+          "definition_en": "A planned public or social occasion.",
+          "explanation_fr": "Un « event » est un événement : salon, lancement de produit, conférence, gala.",
+          "example_en": "The event starts at seven in the evening.",
+          "example_fr": "L'événement commence à dix-neuf heures.",
+          "ipa": "/ɪˈvent/"
+        },
+        {
+          "term": "venue",
+          "pos": "noun",
+          "translation_fr": "lieu (de l'événement)",
+          "definition_en": "The place where an event happens.",
+          "explanation_fr": "La « venue » est le lieu choisi pour l'événement (hôtel, salle, plein air).",
+          "example_en": "The venue can hold three hundred guests.",
+          "example_fr": "Le lieu peut accueillir trois cents invités.",
+          "ipa": "/ˈvenjuː/"
+        },
+        {
+          "term": "agenda",
+          "pos": "noun",
+          "translation_fr": "ordre du jour (programme)",
+          "definition_en": "The list of topics or activities planned for a meeting or an event.",
+          "explanation_fr": "L'« agenda » est l'ordre du jour ou le programme. Faux ami : un agenda (carnet) se dit « diary » ou « planner ».",
+          "example_en": "Send the agenda before the meeting.",
+          "example_fr": "Envoie l'ordre du jour avant la réunion.",
+          "ipa": "/əˈdʒendə/"
+        },
+        {
+          "term": "minutes",
+          "pos": "noun (plural)",
+          "translation_fr": "compte rendu (de réunion)",
+          "definition_en": "The written summary of what was said and decided in a meeting.",
+          "explanation_fr": "Les « minutes » sont le compte rendu officiel d'une réunion (rien à voir avec les minutes de l'heure).",
+          "example_en": "Who will take the minutes today?",
+          "example_fr": "Qui va rédiger le compte rendu aujourd'hui ?",
+          "ipa": "/ˈmɪnɪts/"
+        },
+        {
+          "term": "moderator",
+          "pos": "noun",
+          "translation_fr": "modérateur (animateur)",
+          "definition_en": "The person who leads a discussion or a panel.",
+          "explanation_fr": "Le « moderator » anime le débat, donne la parole et gère le temps.",
+          "example_en": "The moderator asked each speaker one question.",
+          "example_fr": "Le modérateur a posé une question à chaque intervenant.",
+          "ipa": "/ˈmɒdəreɪtə/"
+        },
+        {
+          "term": "keynote",
+          "pos": "noun",
+          "translation_fr": "discours d'ouverture",
+          "definition_en": "The main speech of a conference.",
+          "explanation_fr": "Le « keynote » (ou « keynote speech ») est le discours principal, souvent en ouverture d'une conférence.",
+          "example_en": "The CEO will give the keynote.",
+          "example_fr": "Le PDG prononcera le discours d'ouverture.",
+          "ipa": "/ˈkiːnəʊt/"
+        },
+        {
+          "term": "networking",
+          "pos": "noun",
+          "translation_fr": "réseautage",
+          "definition_en": "Meeting people to build useful professional relationships.",
+          "explanation_fr": "Le « networking » consiste à rencontrer des gens pour développer son réseau professionnel.",
+          "example_en": "The coffee break is perfect for networking.",
+          "example_fr": "La pause café est parfaite pour le réseautage.",
+          "ipa": "/ˈnetwɜːkɪŋ/"
+        },
+        {
+          "term": "RSVP",
+          "pos": "verb",
+          "translation_fr": "confirmer sa présence",
+          "definition_en": "To tell the host if you will come to an event.",
+          "explanation_fr": "« RSVP » vient du français « Répondez, s'il vous plaît » : on demande de confirmer sa présence.",
+          "example_en": "Please RSVP before the 10th.",
+          "example_fr": "Merci de confirmer ta présence avant le 10.",
+          "ipa": "/ˌɑːr es viː ˈpiː/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Send the agenda to all guests",
+          "fr": "Envoie le programme à tous les invités"
+        },
+        {
+          "en": "The venue is ready for the event",
+          "fr": "Le lieu est prêt pour l'événement"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Conference",
+          "lines": [
+            {
+              "speaker": "Guest",
+              "text": "Hello! I loved your keynote. Can we stay in touch?"
+            }
+          ],
+          "options": [
+            "Thank you! Here is my card, let's connect on LinkedIn.",
+            "No, I don't talk to people.",
+            "My keynote was boring, sorry."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "Le networking, c'est saisir l'occasion : « Here is my card, let's connect on LinkedIn » = « Voici ma carte, restons en contact sur LinkedIn »."
         }
       ]
     }

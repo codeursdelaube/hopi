@@ -22,7 +22,7 @@
 ## Supabase
 
 - [ ] Migrations appliquées (`supabase/migrations/`, dans l'ordre).
-- [ ] Contenu importé : `npm run seed` → « tech : 6 unités, 15 leçons, 120 termes, 188 exercices ».
+- [ ] Contenu importé : `npm run seed` → « tech : 8 unités, 21 leçons, 168 termes, 262 exercices » (+ 4 filières à 9 leçons).
 - [ ] Table Editor : toutes les tables affichent **RLS enabled**.
 - [ ] Advisors (Database → Advisors) : aucune alerte de sécurité.
 - [ ] Test RLS à deux comptes : le compte B ne voit ni la progression, ni les XP, ni les révisions du compte A.

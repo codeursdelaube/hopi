@@ -85,13 +85,24 @@
         }
       ],
       "sentences": [
-        { "en": "We want to export more products", "fr": "Nous voulons exporter plus de produits" },
-        { "en": "The goods are at customs", "fr": "Les marchandises sont à la douane" }
+        {
+          "en": "We want to export more products",
+          "fr": "Nous voulons exporter plus de produits"
+        },
+        {
+          "en": "The goods are at customs",
+          "fr": "Les marchandises sont à la douane"
+        }
       ],
       "dialogues": [
         {
           "context": "Meeting with an exporter",
-          "lines": [{ "speaker": "Exporter", "text": "Why should we start selling in Ghana now?" }],
+          "lines": [
+            {
+              "speaker": "Exporter",
+              "text": "Why should we start selling in Ghana now?"
+            }
+          ],
           "options": [
             "The free trade area reduces tariffs, so our products become cheaper there.",
             "Because Ghana has no customs at all.",
@@ -184,10 +195,123 @@
         }
       ],
       "sentences": [
-        { "en": "Education reduces poverty", "fr": "L'éducation réduit la pauvreté" },
+        {
+          "en": "Education reduces poverty",
+          "fr": "L'éducation réduit la pauvreté"
+        },
         {
           "en": "Investors like good infrastructure",
           "fr": "Les investisseurs aiment les bonnes infrastructures"
+        }
+      ]
+    },
+    {
+      "title_en": "Agriculture & commodities",
+      "terms": [
+        {
+          "term": "commodity",
+          "pos": "noun",
+          "translation_fr": "produit de base",
+          "definition_en": "A basic product like coffee, oil or gold that is bought and sold in large amounts.",
+          "explanation_fr": "Une « commodity » est un produit de base échangé en grande quantité sur les marchés mondiaux (cacao, café, coton, pétrole, or).",
+          "example_en": "Cocoa is an important commodity for the region.",
+          "example_fr": "Le cacao est un produit de base important pour la région.",
+          "ipa": "/kəˈmɒdəti/"
+        },
+        {
+          "term": "raw material",
+          "pos": "noun",
+          "translation_fr": "matière première",
+          "definition_en": "A natural material used to make products.",
+          "explanation_fr": "Une « raw material » est une matière première non transformée (bois, coton brut, minerai).",
+          "example_en": "Cotton is the raw material for clothes.",
+          "example_fr": "Le coton est la matière première des vêtements."
+        },
+        {
+          "term": "cash crop",
+          "pos": "noun",
+          "translation_fr": "culture de rente",
+          "definition_en": "A crop grown to sell, not to eat.",
+          "explanation_fr": "Une « cash crop » est une culture de rente, cultivée pour être vendue ou exportée (café, cacao, coton au Togo).",
+          "example_en": "Coffee is a cash crop in the Plateaux region.",
+          "example_fr": "Le café est une culture de rente dans la région des Plateaux."
+        },
+        {
+          "term": "harvest",
+          "pos": "noun",
+          "translation_fr": "récolte",
+          "definition_en": "The time when crops are collected, or the crops themselves.",
+          "explanation_fr": "La « harvest » est la récolte ; « to harvest » = récolter.",
+          "example_en": "The harvest was good this year.",
+          "example_fr": "La récolte a été bonne cette année.",
+          "ipa": "/ˈhɑːvɪst/"
+        },
+        {
+          "term": "yield",
+          "pos": "noun",
+          "translation_fr": "rendement",
+          "definition_en": "The amount of crop produced on a piece of land.",
+          "explanation_fr": "Le « yield » est le rendement (par exemple en tonnes par hectare) ; en finance, c'est aussi le rendement d'un placement.",
+          "example_en": "Better seeds can double the yield.",
+          "example_fr": "De meilleures semences peuvent doubler le rendement.",
+          "ipa": "/jiːld/"
+        },
+        {
+          "term": "food security",
+          "pos": "noun",
+          "translation_fr": "sécurité alimentaire",
+          "definition_en": "When everyone has enough safe and healthy food.",
+          "explanation_fr": "La « food security » est la sécurité alimentaire : un accès suffisant et régulier à une nourriture saine.",
+          "example_en": "Food security is a priority for the government.",
+          "example_fr": "La sécurité alimentaire est une priorité du gouvernement."
+        },
+        {
+          "term": "volatility",
+          "pos": "noun",
+          "translation_fr": "volatilité",
+          "definition_en": "How quickly and how much prices go up and down.",
+          "explanation_fr": "La « volatility » mesure l'ampleur des variations de prix ; les cours du cacao et du café sont très volatils.",
+          "example_en": "Price volatility makes planning difficult for farmers.",
+          "example_fr": "La volatilité des prix complique la planification pour les agriculteurs.",
+          "ipa": "/ˌvɒləˈtɪləti/"
+        },
+        {
+          "term": "agribusiness",
+          "pos": "noun",
+          "translation_fr": "agro-industrie",
+          "definition_en": "Farming and food production run as a business.",
+          "explanation_fr": "L'« agribusiness » regroupe les activités agricoles et agroalimentaires gérées comme des entreprises : production, transformation, distribution.",
+          "example_en": "Agribusiness creates jobs for young people.",
+          "example_fr": "L'agro-industrie crée des emplois pour les jeunes.",
+          "ipa": "/ˈæɡrɪbɪznɪs/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The harvest was very good",
+          "fr": "La récolte a été très bonne"
+        },
+        {
+          "en": "Coffee prices go up and down",
+          "fr": "Les prix du café montent et descendent"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Meeting with a farmers' cooperative",
+          "lines": [
+            {
+              "speaker": "Farmer",
+              "text": "Cocoa prices change every week. How can we protect our income?"
+            }
+          ],
+          "options": [
+            "Process part of the harvest locally and sign contracts with fixed prices.",
+            "Stop growing anything.",
+            "Sell everything on one day without checking prices."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Process part of the harvest locally and sign contracts with fixed prices » = « Transformer une partie de la récolte sur place et signer des contrats à prix fixe »."
         }
       ]
     }

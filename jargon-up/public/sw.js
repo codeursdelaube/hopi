@@ -1,12 +1,13 @@
 /*
  * Service worker de Hopi (écrit à la main, sans dépendance).
  * - Fichiers statiques (/_next/static, /icons) : cache d'abord (ils sont versionnés).
- * - Pages : réseau d'abord, copie en cache ; hors ligne → dernière copie, sinon /offline.
+ * - Pages : réseau d'abord, copie en cache ; réseau trop lent (> 3,5 s) ou coupé → dernière
+ *   copie, sinon /offline.
  *   Les leçons récemment ouvertes restent donc consultables sans connexion.
  * - Déconnexion : les pages en cache (données personnelles) sont effacées.
  * - Notifications push : rappel du mot du jour et des révisions (voir /api/cron/notifications).
  */
-const VERSION = "hopi-v2";
+const VERSION = "hopi-v3";
 const STATIC_CACHE = `${VERSION}-static`;
 const PAGES_CACHE = `${VERSION}-pages`;
 const OFFLINE_URL = "/offline";
@@ -68,22 +69,38 @@ self.addEventListener("fetch", (event) => {
   }
 
   if (request.mode === "navigate") {
-    event.respondWith(
-      fetch(request)
-        .then((response) => {
-          if (response.ok && !response.redirected) {
-            const copy = response.clone();
-            caches
-              .open(PAGES_CACHE)
-              .then((cache) => cache.put(request, copy))
-              .then(() => trimCache(PAGES_CACHE, MAX_PAGES));
-          }
-          return response;
-        })
-        .catch(async () => (await caches.match(request)) || caches.match(OFFLINE_URL)),
-    );
+    event.respondWith(navigate(request, event));
   }
 });
+
+/**
+ * Pages : réseau d'abord, MAIS si le réseau traîne (3G faible) et qu'on a une copie en cache,
+ * on affiche la copie après NAVIGATION_TIMEOUT ; la réponse du réseau met le cache à jour ensuite.
+ */
+const NAVIGATION_TIMEOUT = 3500;
+
+async function navigate(request, event) {
+  const network = fetch(request).then((response) => {
+    if (response.ok && !response.redirected) {
+      const copy = response.clone();
+      event.waitUntil(
+        caches
+          .open(PAGES_CACHE)
+          .then((cache) => cache.put(request, copy))
+          .then(() => trimCache(PAGES_CACHE, MAX_PAGES)),
+      );
+    }
+    return response;
+  });
+
+  const cached = await caches.match(request);
+  if (!cached) {
+    return network.catch(async () => (await caches.match(OFFLINE_URL)) || Response.error());
+  }
+
+  const slow = new Promise((resolve) => setTimeout(() => resolve(cached), NAVIGATION_TIMEOUT));
+  return Promise.race([network.catch(() => cached), slow]);
+}
 
 self.addEventListener("push", (event) => {
   let data = { title: "Hopi", body: "", url: "/learn", tag: "hopi" };

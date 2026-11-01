@@ -2,8 +2,8 @@
  * Importe le contenu de src/content/<filière>/units/*.json dans Supabase :
  * unités, leçons, termes et exercices (générés par src/content/generate.ts).
  *
- * Idempotent : relancer met à jour sans dupliquer (upsert sur les positions et les termes ;
- * les exercices de chaque leçon sont remplacés).
+ * Idempotent : relancer met à jour sans dupliquer. Unités et leçons sont reconnues par leur
+ * titre anglais (renommer un titre = nouvelle leçon) ; les exercices de chaque leçon sont remplacés.
  *
  * Usage : npm run seed  (Node exécute le TypeScript directement ; variables lues dans .env.local)
  */
@@ -31,6 +31,66 @@ function check<T>(result: { data: T | null; error: { message: string } | null },
   return result.data;
 }
 
+/**
+ * Synchronise des lignes ordonnées (unités d'une filière, leçons d'une unité) en les
+ * reconnaissant par leur TITRE anglais : les id sont conservés même si l'ordre change ou si
+ * on insère du contenu au milieu, donc la progression des utilisateurs reste sur les bonnes leçons.
+ * Ce qui n'existe plus dans les fichiers est supprimé. Renvoie les id dans l'ordre des fichiers.
+ */
+async function syncOrdered(
+  table: "units" | "lessons",
+  parentKey: "field_id" | "unit_id",
+  parentId: string,
+  rows: ({ title_en: string } & Record<string, unknown>)[],
+): Promise<string[]> {
+  const existing = check(
+    await supabase.from(table).select("id, title_en, position").eq(parentKey, parentId),
+    `Lecture de ${table}`,
+  ) as { id: string; title_en: string; position: number }[];
+
+  // Libère les positions (contrainte unique parent + position) avant de réordonner.
+  for (const row of existing) {
+    check(
+      await supabase
+        .from(table)
+        .update({ position: 10000 + row.position })
+        .eq("id", row.id)
+        .select("id"),
+      `Décalage de ${table}`,
+    );
+  }
+
+  const ids: string[] = [];
+  for (const [i, row] of rows.entries()) {
+    const found = existing.find((e) => e.title_en === row.title_en);
+    const values = { ...row, [parentKey]: parentId, position: i + 1 };
+    const saved = check(
+      found
+        ? await supabase.from(table).update(values).eq("id", found.id).select("id").single()
+        : await supabase.from(table).insert(values).select("id").single(),
+      `Enregistrement de « ${row.title_en} » (${table})`,
+    ) as { id: string };
+    ids.push(saved.id);
+  }
+
+  const stale = existing.filter((e) => !ids.includes(e.id));
+  if (stale.length > 0) {
+    console.warn(`  ⚠ Supprimé (absent des fichiers) : ${stale.map((e) => e.title_en).join(", ")}`);
+    check(
+      await supabase
+        .from(table)
+        .delete()
+        .in(
+          "id",
+          stale.map((e) => e.id),
+        )
+        .select("id"),
+      `Suppression dans ${table}`,
+    );
+  }
+  return ids;
+}
+
 const fieldDirs = (await readdir(contentDir, { withFileTypes: true })).filter((d) =>
   d.isDirectory(),
 );
@@ -49,44 +109,28 @@ for (const fieldDir of fieldDirs) {
   let termCount = 0;
   let exerciseCount = 0;
 
-  for (const [unitIndex, file] of files.entries()) {
-    const unit = unitSchema.parse(JSON.parse(await readFile(join(unitsDir, file), "utf8")));
+  const units = await Promise.all(
+    files.map(async (file) =>
+      unitSchema.parse(JSON.parse(await readFile(join(unitsDir, file), "utf8"))),
+    ),
+  );
+  const unitIds = await syncOrdered(
+    "units",
+    "field_id",
+    field.id,
+    units.map((u) => ({ title_en: u.title_en, title_fr: u.title_fr, level: u.level })),
+  );
 
-    const savedUnit = check(
-      await supabase
-        .from("units")
-        .upsert(
-          {
-            field_id: field.id,
-            position: unitIndex + 1,
-            level: unit.level,
-            title_en: unit.title_en,
-            title_fr: unit.title_fr,
-          },
-          { onConflict: "field_id,position" },
-        )
-        .select("id")
-        .single(),
-      `Unité ${file}`,
-    ) as { id: string };
+  for (const [unitIndex, unit] of units.entries()) {
+    const lessonIds = await syncOrdered(
+      "lessons",
+      "unit_id",
+      unitIds[unitIndex],
+      unit.lessons.map((l) => ({ title_en: l.title_en, xp_reward: l.xp_reward })),
+    );
 
     for (const [lessonIndex, lesson] of unit.lessons.entries()) {
-      const savedLesson = check(
-        await supabase
-          .from("lessons")
-          .upsert(
-            {
-              unit_id: savedUnit.id,
-              position: lessonIndex + 1,
-              title_en: lesson.title_en,
-              xp_reward: lesson.xp_reward,
-            },
-            { onConflict: "unit_id,position" },
-          )
-          .select("id")
-          .single(),
-        `Leçon « ${lesson.title_en} »`,
-      ) as { id: string };
+      const savedLesson = { id: lessonIds[lessonIndex] };
 
       const savedTerms = check(
         await supabase

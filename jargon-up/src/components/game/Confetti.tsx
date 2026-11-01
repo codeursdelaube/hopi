@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import * as m from "motion/react-m";
+import { useReducedMotion } from "motion/react";
 
 const COLORS = ["#6c4cf1", "#ff9f1c", "#12c2b4", "#ffc93c", "#ff5a5f", "#3cc85a"];
 
@@ -34,7 +35,7 @@ export function Confetti({ count = 60 }: { count?: number }) {
   return (
     <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden>
       {pieces.map((p, i) => (
-        <motion.span
+        <m.span
           key={i}
           className="absolute top-0 block rounded-[2px]"
           style={{ left: `${p.x}%`, width: p.size, height: p.size * 0.6, backgroundColor: p.color }}

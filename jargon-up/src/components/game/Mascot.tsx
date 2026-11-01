@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useReducedMotion, type Transition } from "motion/react";
+import * as m from "motion/react-m";
+import { useReducedMotion, type Transition } from "motion/react";
 import { fr } from "@/lib/i18n/fr";
 
 export type MascotMood = "neutral" | "happy" | "sad" | "proud";
@@ -56,7 +57,7 @@ export function Mascot({ mood = "neutral", size = 160, className, label }: Masco
   }
 
   return (
-    <motion.svg
+    <m.svg
       viewBox={`-20 0 ${VIEW_W} ${VIEW_H}`}
       width={size}
       height={Math.round((size * VIEW_H) / VIEW_W)}
@@ -68,7 +69,7 @@ export function Mascot({ mood = "neutral", size = 160, className, label }: Masco
       {/* Ombre au sol */}
       <ellipse cx="100" cy="224" rx="52" ry="6" fill={INK} opacity="0.12" />
 
-      <motion.g
+      <m.g
         animate={reduce ? undefined : { y: excited ? [0, -10, 0] : [0, -4, 0] }}
         transition={{
           duration: excited ? 0.7 : 2.6,
@@ -77,7 +78,7 @@ export function Mascot({ mood = "neutral", size = 160, className, label }: Masco
         }}
       >
         {/* Oreilles (derrière la tête), pivot à leur base */}
-        <motion.g
+        <m.g
           style={{ originX: 0.5, originY: 1 }}
           initial={false}
           animate={{ rotate: leftEar }}
@@ -85,8 +86,8 @@ export function Mascot({ mood = "neutral", size = 160, className, label }: Masco
         >
           <ellipse cx="74" cy="58" rx="19" ry="50" fill={FUR} {...outline} />
           <ellipse cx="74" cy="62" rx="9" ry="36" fill={INNER_EAR} />
-        </motion.g>
-        <motion.g
+        </m.g>
+        <m.g
           style={{ originX: 0.5, originY: 1 }}
           initial={false}
           animate={{ rotate: rightEar }}
@@ -94,7 +95,7 @@ export function Mascot({ mood = "neutral", size = 160, className, label }: Masco
         >
           <ellipse cx="126" cy="58" rx="19" ry="50" fill={FUR} {...outline} />
           <ellipse cx="126" cy="62" rx="9" ry="36" fill={INNER_EAR} />
-        </motion.g>
+        </m.g>
 
         {/* Corps */}
         <ellipse cx="100" cy="188" rx="50" ry="34" fill={FUR} {...outline} />
@@ -105,20 +106,20 @@ export function Mascot({ mood = "neutral", size = 160, className, label }: Masco
         <ellipse cx="126" cy="217" rx="19" ry="9" fill={FUR} {...outline} />
 
         {/* Pattes avant : elles se lèvent quand Hopi est content */}
-        <motion.g
+        <m.g
           initial={false}
           animate={{ y: excited ? -18 : 0, rotate: excited ? -25 : 0 }}
           transition={spring}
         >
           <ellipse cx="58" cy="196" rx="11" ry="15" fill={FUR} {...outline} />
-        </motion.g>
-        <motion.g
+        </m.g>
+        <m.g
           initial={false}
           animate={{ y: excited ? -18 : 0, rotate: excited ? 25 : 0 }}
           transition={spring}
         >
           <ellipse cx="142" cy="196" rx="11" ry="15" fill={FUR} {...outline} />
-        </motion.g>
+        </m.g>
 
         {/* Tête */}
         <ellipse cx="100" cy="118" rx="64" ry="56" fill={FUR} {...outline} />
@@ -131,7 +132,7 @@ export function Mascot({ mood = "neutral", size = 160, className, label }: Masco
         <path d="M126 182 L140 204 L127 205 L118 186 Z" fill={SCARF_DARK} {...outline} />
 
         {/* Visage : réapparaît avec un petit « pop » à chaque changement d'humeur */}
-        <motion.g
+        <m.g
           key={mood}
           style={{ originX: 0.5, originY: 0.5 }}
           initial={reduce || !moodChanged ? false : { scale: 0.85, opacity: 0.4 }}
@@ -139,7 +140,7 @@ export function Mascot({ mood = "neutral", size = 160, className, label }: Masco
           transition={spring}
         >
           {eyesOpen ? (
-            <motion.g
+            <m.g
               style={{ originX: 0.5, originY: 0.5 }}
               animate={reduce ? undefined : { scaleY: [1, 1, 0.1, 1] }}
               transition={{
@@ -150,7 +151,7 @@ export function Mascot({ mood = "neutral", size = 160, className, label }: Masco
             >
               <OpenEye cx={78} cy={mood === "sad" ? 115 : 112} small={mood === "sad"} />
               <OpenEye cx={122} cy={mood === "sad" ? 115 : 112} small={mood === "sad"} />
-            </motion.g>
+            </m.g>
           ) : (
             <g fill="none" stroke={INK} strokeWidth="4.5" strokeLinecap="round">
               <path d="M67 115 Q78 102 89 115" />
@@ -183,7 +184,7 @@ export function Mascot({ mood = "neutral", size = 160, className, label }: Masco
           />
 
           <Mouth mood={mood} />
-        </motion.g>
+        </m.g>
 
         {mood === "proud" && (
           <>
@@ -199,8 +200,8 @@ export function Mascot({ mood = "neutral", size = 160, className, label }: Masco
             <Sparkle x={178} y={128} delay={0.6} reduce={reduce} />
           </>
         )}
-      </motion.g>
-    </motion.svg>
+      </m.g>
+    </m.svg>
   );
 }
 
@@ -279,7 +280,7 @@ function Sparkle({
   reduce: boolean | null;
 }) {
   return (
-    <motion.path
+    <m.path
       d={`M${x} ${y - 10} Q${x + 2} ${y - 2} ${x + 10} ${y} Q${x + 2} ${y + 2} ${x} ${y + 10} Q${x - 2} ${y + 2} ${x - 10} ${y} Q${x - 2} ${y - 2} ${x} ${y - 10} Z`}
       fill={GOLD}
       stroke={INK}

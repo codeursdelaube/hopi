@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import * as m from "motion/react-m";
+import { AnimatePresence } from "motion/react";
 import { Mascot, type MascotMood } from "@/components/game/Mascot";
 import { fr } from "@/lib/i18n/fr";
 
@@ -15,8 +16,9 @@ export function HeroMascot() {
   return (
     <div className="flex flex-col items-center gap-3">
       <div className="chat-start chat max-w-xs self-center">
-        <AnimatePresence mode="wait">
-          <motion.div
+        {/* initial={false} : la bulle est visible dès le HTML serveur, sans attendre le JavaScript. */}
+        <AnimatePresence mode="wait" initial={false}>
+          <m.div
             key={mood}
             className="chat-bubble chat-bubble-primary text-base font-semibold"
             initial={{ opacity: 0, y: 8, scale: 0.95 }}
@@ -26,11 +28,11 @@ export function HeroMascot() {
             aria-live="polite"
           >
             {fr.mascot.bubbles[mood]}
-          </motion.div>
+          </m.div>
         </AnimatePresence>
       </div>
 
-      <motion.button
+      <m.button
         type="button"
         onClick={() => setIndex((i) => (i + 1) % CYCLE.length)}
         whileTap={{ scale: 0.92 }}
@@ -38,7 +40,7 @@ export function HeroMascot() {
         aria-label={fr.mascot.tapHint}
       >
         <Mascot mood={mood} size={190} />
-      </motion.button>
+      </m.button>
       <p className="text-sm text-base-content/60">{fr.mascot.tapHint}</p>
     </div>
   );

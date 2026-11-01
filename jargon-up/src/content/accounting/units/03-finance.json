@@ -85,8 +85,14 @@
         }
       ],
       "sentences": [
-        { "en": "The audit went very well", "fr": "L'audit s'est très bien passé" },
-        { "en": "We need a better cash flow", "fr": "Nous avons besoin d'une meilleure trésorerie" }
+        {
+          "en": "The audit went very well",
+          "fr": "L'audit s'est très bien passé"
+        },
+        {
+          "en": "We need a better cash flow",
+          "fr": "Nous avons besoin d'une meilleure trésorerie"
+        }
       ]
     },
     {
@@ -170,7 +176,10 @@
         }
       ],
       "sentences": [
-        { "en": "Our forecast is too optimistic", "fr": "Notre prévision est trop optimiste" },
+        {
+          "en": "Our forecast is too optimistic",
+          "fr": "Notre prévision est trop optimiste"
+        },
         {
           "en": "Cut the overheads by ten percent",
           "fr": "Réduis les frais généraux de dix pour cent"
@@ -179,7 +188,12 @@
       "dialogues": [
         {
           "context": "Budget meeting",
-          "lines": [{ "speaker": "CEO", "text": "Can we buy the new machine this year?" }],
+          "lines": [
+            {
+              "speaker": "CEO",
+              "text": "Can we buy the new machine this year?"
+            }
+          ],
           "options": [
             "Yes, the forecast shows a return on investment in 18 months.",
             "Yes, we don't need to check the numbers.",
@@ -187,6 +201,98 @@
           ],
           "answerIndex": 0,
           "explanation_fr": "On justifie une décision avec des chiffres : « the forecast shows a return on investment in 18 months » = « la prévision montre un retour sur investissement en 18 mois »."
+        }
+      ]
+    },
+    {
+      "title_en": "Reporting & analysis",
+      "terms": [
+        {
+          "term": "financial ratio",
+          "pos": "noun",
+          "translation_fr": "ratio financier",
+          "definition_en": "A comparison between two numbers from the accounts.",
+          "explanation_fr": "Un « financial ratio » compare deux chiffres des comptes (dettes / capitaux propres, marge / chiffre d'affaires) pour juger la santé de l'entreprise.",
+          "example_en": "This financial ratio shows that debt is too high.",
+          "example_fr": "Ce ratio financier montre que l'endettement est trop élevé."
+        },
+        {
+          "term": "liquidity",
+          "pos": "noun",
+          "translation_fr": "liquidité",
+          "definition_en": "How easily a company can pay its short-term debts with available cash.",
+          "explanation_fr": "La « liquidity » mesure la capacité à payer les dettes à court terme avec l'argent disponible.",
+          "example_en": "Good liquidity helps us pay suppliers on time.",
+          "example_fr": "Une bonne liquidité nous aide à payer les fournisseurs à temps.",
+          "ipa": "/lɪˈkwɪdəti/"
+        },
+        {
+          "term": "solvency",
+          "pos": "noun",
+          "translation_fr": "solvabilité",
+          "definition_en": "The ability to pay all debts in the long term.",
+          "explanation_fr": "La « solvency » est la solvabilité : la capacité à rembourser toutes ses dettes sur le long terme.",
+          "example_en": "The bank checked our solvency before the loan.",
+          "example_fr": "La banque a vérifié notre solvabilité avant le prêt.",
+          "ipa": "/ˈsɒlvənsi/"
+        },
+        {
+          "term": "profitability",
+          "pos": "noun",
+          "translation_fr": "rentabilité",
+          "definition_en": "How much profit a business makes compared with its size or costs.",
+          "explanation_fr": "La « profitability » est la rentabilité : le bénéfice rapporté au chiffre d'affaires ou aux capitaux investis.",
+          "example_en": "The profitability of the new shop is very good.",
+          "example_fr": "La rentabilité de la nouvelle boutique est très bonne.",
+          "ipa": "/ˌprɒfɪtəˈbɪləti/"
+        },
+        {
+          "term": "annual report",
+          "pos": "noun",
+          "translation_fr": "rapport annuel",
+          "definition_en": "A document that presents a company's results and activities for the year.",
+          "explanation_fr": "L'« annual report » présente chaque année les comptes, les résultats et les projets de l'entreprise.",
+          "example_en": "The annual report will be published in June.",
+          "example_fr": "Le rapport annuel sera publié en juin."
+        },
+        {
+          "term": "year-end closing",
+          "pos": "noun",
+          "translation_fr": "clôture des comptes",
+          "definition_en": "Finishing and checking all the accounts at the end of the financial year.",
+          "explanation_fr": "La « year-end closing » est la clôture de l'exercice : on arrête et vérifie tous les comptes de l'année.",
+          "example_en": "The team works late during the year-end closing.",
+          "example_fr": "L'équipe travaille tard pendant la clôture des comptes."
+        },
+        {
+          "term": "variance",
+          "pos": "noun",
+          "translation_fr": "écart",
+          "definition_en": "The difference between the planned amount and the real amount.",
+          "explanation_fr": "Une « variance » est l'écart entre le budget prévu et le réalisé ; on analyse les écarts pour comprendre ce qui s'est passé.",
+          "example_en": "Explain the variance between the budget and the real costs.",
+          "example_fr": "Explique l'écart entre le budget et les coûts réels.",
+          "ipa": "/ˈveəriəns/"
+        },
+        {
+          "term": "dashboard",
+          "pos": "noun",
+          "translation_fr": "tableau de bord",
+          "definition_en": "A screen or report that shows key numbers at a glance.",
+          "explanation_fr": "Un « dashboard » est un tableau de bord qui affiche les indicateurs clés en un coup d'œil.",
+          "example_en": "The dashboard shows sales and cash every day.",
+          "example_fr": "Le tableau de bord affiche les ventes et la trésorerie chaque jour.",
+          "ipa": "/ˈdæʃbɔːd/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The annual report is ready",
+          "fr": "Le rapport annuel est prêt"
+        },
+        {
+          "en": "Explain this variance please",
+          "fr": "Explique cet écart s'il te plaît"
         }
       ]
     }

@@ -88,8 +88,14 @@
         }
       ],
       "sentences": [
-        { "en": "The campaign starts next month", "fr": "La campagne commence le mois prochain" },
-        { "en": "We need a clear brief", "fr": "Nous avons besoin d'un brief clair" }
+        {
+          "en": "The campaign starts next month",
+          "fr": "La campagne commence le mois prochain"
+        },
+        {
+          "en": "We need a clear brief",
+          "fr": "Nous avons besoin d'un brief clair"
+        }
       ]
     },
     {
@@ -175,8 +181,105 @@
         }
       ],
       "sentences": [
-        { "en": "Click here to buy now", "fr": "Clique ici pour acheter maintenant" },
-        { "en": "The billboard is near the market", "fr": "Le panneau est près du marché" }
+        {
+          "en": "Click here to buy now",
+          "fr": "Clique ici pour acheter maintenant"
+        },
+        {
+          "en": "The billboard is near the market",
+          "fr": "Le panneau est près du marché"
+        }
+      ]
+    },
+    {
+      "title_en": "Digital marketing",
+      "terms": [
+        {
+          "term": "SEO",
+          "pos": "noun",
+          "translation_fr": "référencement naturel",
+          "definition_en": "Improving a website so it appears higher in search results.",
+          "explanation_fr": "Le « SEO » (Search Engine Optimization) est le référencement naturel : apparaître plus haut sur Google sans payer de publicité.",
+          "example_en": "Good SEO brings free visitors every day.",
+          "example_fr": "Un bon référencement apporte des visiteurs gratuits chaque jour.",
+          "ipa": "/ˌes iː ˈəʊ/"
+        },
+        {
+          "term": "search engine",
+          "pos": "noun",
+          "translation_fr": "moteur de recherche",
+          "definition_en": "A website like Google that helps you find pages on the internet.",
+          "explanation_fr": "Un « search engine » est un moteur de recherche (Google, Bing…).",
+          "example_en": "Most customers find us through a search engine.",
+          "example_fr": "La plupart des clients nous trouvent grâce à un moteur de recherche."
+        },
+        {
+          "term": "keyword",
+          "pos": "noun",
+          "translation_fr": "mot-clé",
+          "definition_en": "A word or phrase people type when they search online.",
+          "explanation_fr": "Un « keyword » est un mot-clé : les mots que tes clients tapent dans un moteur de recherche.",
+          "example_en": "Use the main keyword in your title.",
+          "example_fr": "Utilise le mot-clé principal dans ton titre.",
+          "ipa": "/ˈkiːwɜːd/"
+        },
+        {
+          "term": "click-through rate",
+          "pos": "noun",
+          "translation_fr": "taux de clic",
+          "definition_en": "The percentage of people who click after seeing an ad or a link.",
+          "explanation_fr": "Le « click-through rate » (CTR) est le taux de clic : nombre de clics ÷ nombre d'affichages.",
+          "example_en": "The new image doubled our click-through rate.",
+          "example_fr": "La nouvelle image a doublé notre taux de clic."
+        },
+        {
+          "term": "analytics",
+          "pos": "noun (plural)",
+          "translation_fr": "statistiques d'audience",
+          "definition_en": "Data and tools that show how people use your site or content.",
+          "explanation_fr": "Les « analytics » sont les statistiques d'audience (Google Analytics, statistiques Facebook…) qui aident à mesurer et à décider.",
+          "example_en": "Check the analytics every Monday.",
+          "example_fr": "Consulte les statistiques chaque lundi.",
+          "ipa": "/ˌænəˈlɪtɪks/"
+        },
+        {
+          "term": "A/B test",
+          "pos": "noun",
+          "translation_fr": "test A/B",
+          "definition_en": "Comparing two versions to see which one works better.",
+          "explanation_fr": "Un « A/B test » montre deux versions (A et B) à des publics différents pour garder la plus efficace.",
+          "example_en": "We ran an A/B test on two subject lines.",
+          "example_fr": "Nous avons fait un test A/B sur deux objets d'e-mail."
+        },
+        {
+          "term": "retargeting",
+          "pos": "noun",
+          "translation_fr": "reciblage",
+          "definition_en": "Showing ads to people who already visited your website.",
+          "explanation_fr": "Le « retargeting » montre des publicités aux personnes qui ont déjà visité ton site sans acheter.",
+          "example_en": "Retargeting reminds visitors about the products they saw.",
+          "example_fr": "Le reciblage rappelle aux visiteurs les produits qu'ils ont vus.",
+          "ipa": "/riːˈtɑːɡɪtɪŋ/"
+        },
+        {
+          "term": "organic traffic",
+          "pos": "noun",
+          "translation_fr": "trafic naturel",
+          "definition_en": "Visitors who come from search results, not from paid ads.",
+          "explanation_fr": "L'« organic traffic » est le trafic gratuit venu des moteurs de recherche, par opposition au trafic payant (« paid traffic »).",
+          "example_en": "Our organic traffic grew after we improved the blog.",
+          "example_fr": "Notre trafic naturel a augmenté après l'amélioration du blog."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Choose the right keyword",
+          "fr": "Choisis le bon mot-clé"
+        },
+        {
+          "en": "Check the analytics every week",
+          "fr": "Consulte les statistiques chaque semaine"
+        }
       ]
     }
   ]

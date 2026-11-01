@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import type { z } from "zod";
 import type { matchPairsPayload } from "@/lib/exercises/schemas";
 import { seededRandom, shuffle } from "@/lib/random";
@@ -60,7 +60,7 @@ export function MatchPairs({ payload, onAnswer, seed, onMistake, onMatch }: Prop
     const isWrong = wrong?.[side] === index;
 
     return (
-      <motion.button
+      <m.button
         key={`${side}-${index}`}
         type="button"
         lang={side === "left" ? "en" : "fr"}
@@ -80,7 +80,7 @@ export function MatchPairs({ payload, onAnswer, seed, onMistake, onMatch }: Prop
         }`}
       >
         {text}
-      </motion.button>
+      </m.button>
     );
   }
 

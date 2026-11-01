@@ -46,22 +46,19 @@ export async function awardXp(input: AwardInput): Promise<GameSummary> {
   const now = new Date();
   const today = localDate(now, input.offsetMinutes);
 
-  const { data: profile, error } = await admin
-    .from("profiles")
-    .select("total_xp, daily_goal_xp, current_streak, longest_streak, last_activity_date")
-    .eq("id", input.userId)
-    .single();
+  // Lectures en parallèle (chaque aller-retour vers la base coûte ~100 ms).
+  const [{ data: profile, error }, xpBefore] = await Promise.all([
+    admin
+      .from("profiles")
+      .select("total_xp, daily_goal_xp, current_streak, longest_streak, last_activity_date")
+      .eq("id", input.userId)
+      .single(),
+    xpEarnedToday(input.userId, input.offsetMinutes),
+  ]);
   if (error) throw new Error(`Lecture du profil : ${error.message}`);
 
   const amount = Math.max(0, Math.round(input.amount));
-  if (amount > 0) {
-    const { error: insertError } = await admin
-      .from("xp_events")
-      .insert({ user_id: input.userId, amount, source: input.source });
-    if (insertError) throw new Error(`Enregistrement des XP : ${insertError.message}`);
-  }
-
-  const todayXp = await xpEarnedToday(input.userId, input.offsetMinutes);
+  const todayXp = xpBefore + amount;
   const totalXp = profile.total_xp + amount;
 
   let streak = {
@@ -76,16 +73,23 @@ export async function awardXp(input: AwardInput): Promise<GameSummary> {
     streak = next;
   }
 
-  const { error: updateError } = await admin
-    .from("profiles")
-    .update({
-      total_xp: totalXp,
-      current_streak: streak.currentStreak,
-      longest_streak: streak.longestStreak,
-      last_activity_date: streak.lastActivityDate,
-    })
-    .eq("id", input.userId);
-  if (updateError) throw new Error(`Mise à jour du profil : ${updateError.message}`);
+  // Écritures en parallèle : journal d'XP + profil.
+  const [insertResult, updateResult] = await Promise.all([
+    amount > 0
+      ? admin.from("xp_events").insert({ user_id: input.userId, amount, source: input.source })
+      : Promise.resolve({ error: null }),
+    admin
+      .from("profiles")
+      .update({
+        total_xp: totalXp,
+        current_streak: streak.currentStreak,
+        longest_streak: streak.longestStreak,
+        last_activity_date: streak.lastActivityDate,
+      })
+      .eq("id", input.userId),
+  ]);
+  if (insertResult.error) throw new Error(`Enregistrement des XP : ${insertResult.error.message}`);
+  if (updateResult.error) throw new Error(`Mise à jour du profil : ${updateResult.error.message}`);
 
   const newBadges = await grantBadges(input.userId, {
     totalXp,

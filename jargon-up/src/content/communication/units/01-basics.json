@@ -88,8 +88,14 @@
         }
       ],
       "sentences": [
-        { "en": "Know your audience first", "fr": "Connais d'abord ton public" },
-        { "en": "Our message must be simple", "fr": "Notre message doit être simple" }
+        {
+          "en": "Know your audience first",
+          "fr": "Connais d'abord ton public"
+        },
+        {
+          "en": "Our message must be simple",
+          "fr": "Notre message doit être simple"
+        }
       ]
     },
     {
@@ -177,8 +183,126 @@
         }
       ],
       "sentences": [
-        { "en": "Our video went viral", "fr": "Notre vidéo est devenue virale" },
-        { "en": "Post every day at six", "fr": "Publie tous les jours à six heures" }
+        {
+          "en": "Our video went viral",
+          "fr": "Notre vidéo est devenue virale"
+        },
+        {
+          "en": "Post every day at six",
+          "fr": "Publie tous les jours à six heures"
+        }
+      ]
+    },
+    {
+      "title_en": "Professional emails",
+      "terms": [
+        {
+          "term": "subject line",
+          "pos": "noun",
+          "translation_fr": "objet (d'un e-mail)",
+          "definition_en": "The short title of an email.",
+          "explanation_fr": "La « subject line » est l'objet de l'e-mail : courte et précise, elle donne envie d'ouvrir le message.",
+          "example_en": "Write a clear subject line for every email.",
+          "example_fr": "Écris un objet clair pour chaque e-mail."
+        },
+        {
+          "term": "recipient",
+          "pos": "noun",
+          "translation_fr": "destinataire",
+          "definition_en": "The person who receives a message.",
+          "explanation_fr": "Le « recipient » est le destinataire ; « sender » = l'expéditeur.",
+          "example_en": "Check the recipient before you click send.",
+          "example_fr": "Vérifie le destinataire avant de cliquer sur envoyer.",
+          "ipa": "/rɪˈsɪpiənt/"
+        },
+        {
+          "term": "attachment",
+          "pos": "noun",
+          "translation_fr": "pièce jointe",
+          "definition_en": "A file sent with an email.",
+          "explanation_fr": "Une « attachment » est une pièce jointe ; « please find attached » = « veuillez trouver ci-joint ».",
+          "example_en": "The contract is in the attachment.",
+          "example_fr": "Le contrat est en pièce jointe.",
+          "ipa": "/əˈtætʃmənt/"
+        },
+        {
+          "term": "reply",
+          "pos": "verb / noun",
+          "translation_fr": "répondre (réponse)",
+          "definition_en": "To answer a message, or the answer itself.",
+          "explanation_fr": "« To reply » = répondre ; « reply all » = répondre à tous, à utiliser avec prudence.",
+          "example_en": "Please reply before Friday.",
+          "example_fr": "Merci de répondre avant vendredi.",
+          "ipa": "/rɪˈplaɪ/"
+        },
+        {
+          "term": "forward",
+          "pos": "verb",
+          "translation_fr": "transférer",
+          "definition_en": "To send a message you received to another person.",
+          "explanation_fr": "« To forward » = transférer un message à quelqu'un d'autre.",
+          "example_en": "Can you forward me the client's email?",
+          "example_fr": "Peux-tu me transférer l'e-mail du client ?",
+          "ipa": "/ˈfɔːwəd/"
+        },
+        {
+          "term": "CC",
+          "pos": "verb / noun",
+          "translation_fr": "mettre en copie",
+          "definition_en": "To send a copy of an email to another person.",
+          "explanation_fr": "« CC » (carbon copy) met une personne en copie visible ; « BCC » = copie cachée.",
+          "example_en": "Please CC my manager on your reply.",
+          "example_fr": "Merci de mettre mon responsable en copie de ta réponse.",
+          "ipa": "/ˌsiː ˈsiː/"
+        },
+        {
+          "term": "follow-up",
+          "pos": "noun",
+          "translation_fr": "relance (suivi)",
+          "definition_en": "A message sent later to check on or continue a conversation.",
+          "explanation_fr": "Un « follow-up » est une relance ou un message de suivi ; le verbe est « to follow up ».",
+          "example_en": "Send a follow-up if they don't answer in three days.",
+          "example_fr": "Envoie une relance s'ils ne répondent pas dans trois jours.",
+          "ipa": "/ˈfɒləʊ ʌp/"
+        },
+        {
+          "term": "tone",
+          "pos": "noun",
+          "translation_fr": "ton",
+          "definition_en": "The feeling or attitude a message shows.",
+          "explanation_fr": "Le « tone » est le ton : formel, amical, sec… Dans un e-mail professionnel, reste poli et clair, même en cas de problème.",
+          "example_en": "Keep a friendly tone, even when you complain.",
+          "example_fr": "Garde un ton amical, même quand tu te plains.",
+          "ipa": "/təʊn/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Please find the file attached",
+          "fr": "Veuillez trouver le fichier ci-joint"
+        },
+        {
+          "en": "Thank you for your quick reply",
+          "fr": "Merci pour ta réponse rapide"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Email to a client",
+          "lines": [
+            {
+              "speaker": "Colleague",
+              "text": "The client didn't answer our proposal. What should we do?"
+            }
+          ],
+          "options": [
+            "Send a short, polite follow-up and ask if they have questions.",
+            "Send ten emails today.",
+            "Forget the client, they don't care."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Send a short, polite follow-up and ask if they have questions » = « Envoie une relance courte et polie et demande s'ils ont des questions »."
+        }
       ]
     }
   ]

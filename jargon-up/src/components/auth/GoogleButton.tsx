@@ -1,55 +1,37 @@
 "use client";
 
-import { useState } from "react";
-import { NEXT_COOKIE } from "@/lib/auth/paths";
-import { createClient } from "@/lib/supabase/client";
+import { useFormStatus } from "react-dom";
+import { signInWithGoogle } from "@/app/(auth)/login/actions";
 import { fr } from "@/lib/i18n/fr";
 
+/**
+ * Formulaire qui appelle une Server Action : aucune bibliothèque Supabase côté navigateur,
+ * et le bouton fonctionne avant même le chargement du JavaScript (réseau lent).
+ */
 export function GoogleButton({ next }: { next: string }) {
-  const [loading, setLoading] = useState(false);
-  const [failed, setFailed] = useState(false);
-
-  async function signIn() {
-    setLoading(true);
-    setFailed(false);
-    // L'URL de retour doit correspondre EXACTEMENT à une « Redirect URL » autorisée dans Supabase,
-    // sinon Supabase renvoie vers la « Site URL ». On ne met donc aucun paramètre dedans :
-    // la page à rouvrir après connexion passe par un cookie de courte durée.
-    document.cookie = `${NEXT_COOKIE}=${encodeURIComponent(next)}; path=/; max-age=600; samesite=lax`;
-    const redirectTo = `${window.location.origin}/auth/callback`;
-
-    const { error } = await createClient().auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo },
-    });
-    // En cas de succès, le navigateur part vers Google : on ne revient ici qu'en cas d'erreur.
-    if (error) {
-      setLoading(false);
-      setFailed(true);
-    }
-  }
-
   return (
-    <div className="flex w-full flex-col gap-3">
-      <button
-        type="button"
-        onClick={signIn}
-        disabled={loading}
-        className="btn w-full btn-pop border-base-300 bg-base-100 font-display text-lg btn-lg"
-      >
-        {loading ? (
-          <span className="loading loading-md loading-spinner" aria-hidden />
-        ) : (
-          <GoogleLogo />
-        )}
-        {loading ? fr.auth.redirecting : fr.auth.google}
-      </button>
-      {failed && (
-        <p role="alert" className="text-center text-sm text-error">
-          {fr.auth.errors.oauth}
-        </p>
+    <form action={signInWithGoogle} className="flex w-full flex-col gap-3">
+      <input type="hidden" name="next" value={next} />
+      <SubmitButton />
+    </form>
+  );
+}
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <button
+      type="submit"
+      disabled={pending}
+      className="btn w-full btn-pop border-base-300 bg-base-100 font-display text-lg btn-lg"
+    >
+      {pending ? (
+        <span className="loading loading-md loading-spinner" aria-hidden />
+      ) : (
+        <GoogleLogo />
       )}
-    </div>
+      {pending ? fr.auth.redirecting : fr.auth.google}
+    </button>
   );
 }
 

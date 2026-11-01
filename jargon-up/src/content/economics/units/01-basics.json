@@ -92,7 +92,10 @@
           "en": "Prices go up when demand grows",
           "fr": "Les prix montent quand la demande augmente"
         },
-        { "en": "Supply is low this month", "fr": "L'offre est faible ce mois-ci" }
+        {
+          "en": "Supply is low this month",
+          "fr": "L'offre est faible ce mois-ci"
+        }
       ]
     },
     {
@@ -177,8 +180,106 @@
         }
       ],
       "sentences": [
-        { "en": "I pay with mobile money", "fr": "Je paie avec le mobile money" },
-        { "en": "Inflation is rising this year", "fr": "L'inflation augmente cette année" }
+        {
+          "en": "I pay with mobile money",
+          "fr": "Je paie avec le mobile money"
+        },
+        {
+          "en": "Inflation is rising this year",
+          "fr": "L'inflation augmente cette année"
+        }
+      ]
+    },
+    {
+      "title_en": "Work & income",
+      "terms": [
+        {
+          "term": "wage",
+          "pos": "noun",
+          "translation_fr": "salaire (paie)",
+          "definition_en": "Money paid for work, often by the hour, day or week.",
+          "explanation_fr": "Un « wage » est la paie, souvent pour un travail payé à l'heure ou à la journée ; « salary » désigne plutôt un salaire mensuel fixe.",
+          "example_en": "The daily wage on the farm went up.",
+          "example_fr": "Le salaire journalier à la ferme a augmenté.",
+          "ipa": "/weɪdʒ/"
+        },
+        {
+          "term": "income",
+          "pos": "noun",
+          "translation_fr": "revenu",
+          "definition_en": "All the money a person or a family receives.",
+          "explanation_fr": "L'« income » est le revenu : salaires, commerce, loyers, transferts d'argent…",
+          "example_en": "Her income comes from two small businesses.",
+          "example_fr": "Son revenu provient de deux petites entreprises.",
+          "ipa": "/ˈɪnkʌm/"
+        },
+        {
+          "term": "minimum wage",
+          "pos": "noun",
+          "translation_fr": "salaire minimum",
+          "definition_en": "The lowest pay that the law allows.",
+          "explanation_fr": "Le « minimum wage » est le salaire minimum légal (au Togo, le SMIG).",
+          "example_en": "The government raised the minimum wage.",
+          "example_fr": "Le gouvernement a augmenté le salaire minimum."
+        },
+        {
+          "term": "purchasing power",
+          "pos": "noun",
+          "translation_fr": "pouvoir d'achat",
+          "definition_en": "How much you can buy with your money.",
+          "explanation_fr": "Le « purchasing power » est le pouvoir d'achat : si les prix montent plus vite que les revenus, il baisse.",
+          "example_en": "Inflation reduces purchasing power.",
+          "example_fr": "L'inflation réduit le pouvoir d'achat."
+        },
+        {
+          "term": "cost of living",
+          "pos": "noun",
+          "translation_fr": "coût de la vie",
+          "definition_en": "The money needed for basic needs like food, rent and transport.",
+          "explanation_fr": "Le « cost of living » est le coût de la vie : nourriture, loyer, transport, santé.",
+          "example_en": "The cost of living is higher in the capital.",
+          "example_fr": "Le coût de la vie est plus élevé dans la capitale."
+        },
+        {
+          "term": "household",
+          "pos": "noun",
+          "translation_fr": "ménage (foyer)",
+          "definition_en": "All the people who live together in one home.",
+          "explanation_fr": "Un « household » est un ménage, un foyer ; les statistiques mesurent souvent le revenu par ménage.",
+          "example_en": "Each household spends a lot on food.",
+          "example_fr": "Chaque ménage dépense beaucoup pour la nourriture.",
+          "ipa": "/ˈhaʊshəʊld/"
+        },
+        {
+          "term": "debt",
+          "pos": "noun",
+          "translation_fr": "dette",
+          "definition_en": "Money that you owe to someone.",
+          "explanation_fr": "Une « debt » est une dette ; le « b » ne se prononce pas.",
+          "example_en": "He paid back his debt in six months.",
+          "example_fr": "Il a remboursé sa dette en six mois.",
+          "ipa": "/det/"
+        },
+        {
+          "term": "consumption",
+          "pos": "noun",
+          "translation_fr": "consommation",
+          "definition_en": "The use of goods and services by people.",
+          "explanation_fr": "La « consumption » est la consommation des ménages, un grand moteur de la croissance.",
+          "example_en": "Strong consumption supports growth.",
+          "example_fr": "Une consommation forte soutient la croissance.",
+          "ipa": "/kənˈsʌmpʃən/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Prices rise faster than wages",
+          "fr": "Les prix montent plus vite que les salaires"
+        },
+        {
+          "en": "The cost of living is high",
+          "fr": "Le coût de la vie est élevé"
+        }
       ]
     }
   ]

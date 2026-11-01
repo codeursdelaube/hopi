@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import { Mascot } from "@/components/game/Mascot";
 import { CheckIcon, LockIcon, StarIcon } from "@/components/ui/icons";
 import type { LessonState, PathLesson, PathUnit } from "@/lib/learn/path";
@@ -90,20 +90,20 @@ function LessonNode({ lesson }: { lesson: PathLesson }) {
     );
 
   return (
-    <motion.div
+    <m.div
       className="relative flex flex-col items-center"
       whileHover={lesson.state === "locked" ? undefined : { scale: 1.06 }}
       whileTap={lesson.state === "locked" ? undefined : { scale: 0.94 }}
     >
       {lesson.state === "current" && (
-        <motion.span
+        <m.span
           className="absolute -top-11 rounded-field border-2 border-base-300 bg-base-100 px-3 py-1 font-display font-bold whitespace-nowrap text-primary"
           animate={{ y: [0, -5, 0] }}
           transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
           aria-hidden
         >
           {t.start}
-        </motion.span>
+        </m.span>
       )}
 
       {lesson.state === "locked" ? (
@@ -129,6 +129,6 @@ function LessonNode({ lesson }: { lesson: PathLesson }) {
       >
         {lesson.title_en}
       </span>
-    </motion.div>
+    </m.div>
   );
 }

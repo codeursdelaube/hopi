@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import * as m from "motion/react-m";
+import { AnimatePresence } from "motion/react";
 import { claimWordOfDay } from "@/app/(app)/word-of-the-day/actions";
 import { Confetti } from "@/components/game/Confetti";
 import { playSound } from "@/lib/sound";
@@ -37,14 +38,14 @@ export function ClaimWordButton({
         <p className="btn btn-disabled w-full btn-lg">{fr.word.claimed}</p>
         <AnimatePresence>
           {gained !== null && (
-            <motion.p
+            <m.p
               initial={{ scale: 0.6, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               className="font-display text-xl font-bold text-warning"
               role="status"
             >
               {fr.word.claimSuccess(gained)}
-            </motion.p>
+            </m.p>
           )}
         </AnimatePresence>
       </div>

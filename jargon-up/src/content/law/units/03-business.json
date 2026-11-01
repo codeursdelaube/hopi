@@ -88,7 +88,10 @@
           "en": "The shareholders approved the merger",
           "fr": "Les actionnaires ont approuvé la fusion"
         },
-        { "en": "Protect your brand with a trademark", "fr": "Protège ta marque en la déposant" }
+        {
+          "en": "Protect your brand with a trademark",
+          "fr": "Protège ta marque en la déposant"
+        }
       ]
     },
     {
@@ -175,8 +178,14 @@
         }
       ],
       "sentences": [
-        { "en": "The hearing starts at nine", "fr": "L'audience commence à neuf heures" },
-        { "en": "We will appeal the decision", "fr": "Nous allons faire appel de la décision" }
+        {
+          "en": "The hearing starts at nine",
+          "fr": "L'audience commence à neuf heures"
+        },
+        {
+          "en": "We will appeal the decision",
+          "fr": "Nous allons faire appel de la décision"
+        }
       ],
       "dialogues": [
         {
@@ -194,6 +203,99 @@
           ],
           "answerIndex": 0,
           "explanation_fr": "Un juriste reste prudent : « We have strong evidence, but there is always a risk » = « Nous avons des preuves solides, mais il y a toujours un risque »."
+        }
+      ]
+    },
+    {
+      "title_en": "Legal documents & procedures",
+      "terms": [
+        {
+          "term": "notary",
+          "pos": "noun",
+          "translation_fr": "notaire",
+          "definition_en": "A legal officer who writes and certifies official documents.",
+          "explanation_fr": "Le « notary » (ou « notary public ») est le notaire : il rédige et authentifie des actes (vente d'un terrain, succession, création de société).",
+          "example_en": "We signed the sale of the land at the notary's office.",
+          "example_fr": "Nous avons signé la vente du terrain chez le notaire.",
+          "ipa": "/ˈnəʊtəri/"
+        },
+        {
+          "term": "deed",
+          "pos": "noun",
+          "translation_fr": "acte (titre de propriété)",
+          "definition_en": "An official legal document, especially about owning property.",
+          "explanation_fr": "Un « deed » est un acte juridique officiel, notamment un titre de propriété.",
+          "example_en": "Keep the deed of the house in a safe place.",
+          "example_fr": "Garde l'acte de propriété de la maison en lieu sûr.",
+          "ipa": "/diːd/"
+        },
+        {
+          "term": "lease",
+          "pos": "noun",
+          "translation_fr": "bail",
+          "definition_en": "A contract to rent a house, an office or land.",
+          "explanation_fr": "Un « lease » est un bail ; « tenant » = locataire, « landlord » = propriétaire bailleur.",
+          "example_en": "The lease for the shop ends in December.",
+          "example_fr": "Le bail de la boutique se termine en décembre.",
+          "ipa": "/liːs/"
+        },
+        {
+          "term": "power of attorney",
+          "pos": "noun",
+          "translation_fr": "procuration",
+          "definition_en": "A document that lets someone act legally for you.",
+          "explanation_fr": "Une « power of attorney » est une procuration : elle autorise une personne à signer ou agir en ton nom.",
+          "example_en": "She gave her brother power of attorney while she was abroad.",
+          "example_fr": "Elle a donné procuration à son frère pendant qu'elle était à l'étranger."
+        },
+        {
+          "term": "jurisdiction",
+          "pos": "noun",
+          "translation_fr": "compétence (d'un tribunal)",
+          "definition_en": "The official power of a court to decide a case.",
+          "explanation_fr": "La « jurisdiction » est la compétence d'un tribunal ou d'un pays pour juger une affaire. Les contrats internationaux précisent toujours la juridiction compétente.",
+          "example_en": "This court has no jurisdiction over the case.",
+          "example_fr": "Ce tribunal n'est pas compétent pour cette affaire.",
+          "ipa": "/ˌdʒʊərɪsˈdɪkʃən/"
+        },
+        {
+          "term": "statute of limitations",
+          "pos": "noun",
+          "translation_fr": "délai de prescription",
+          "definition_en": "The time limit for starting a legal case.",
+          "explanation_fr": "Le « statute of limitations » fixe le délai de prescription : une fois ce délai passé, on ne peut plus agir en justice.",
+          "example_en": "The statute of limitations for this claim is five years.",
+          "example_fr": "Le délai de prescription pour cette réclamation est de cinq ans."
+        },
+        {
+          "term": "summons",
+          "pos": "noun",
+          "translation_fr": "citation à comparaître",
+          "definition_en": "An official order to appear in court.",
+          "explanation_fr": "Une « summons » est une convocation officielle devant le tribunal. Le mot garde son « s » même au singulier.",
+          "example_en": "He received a summons to appear in court.",
+          "example_fr": "Il a reçu une citation à comparaître devant le tribunal.",
+          "ipa": "/ˈsʌmənz/"
+        },
+        {
+          "term": "bailiff",
+          "pos": "noun",
+          "translation_fr": "huissier de justice",
+          "definition_en": "An officer who delivers court documents and enforces decisions.",
+          "explanation_fr": "Le « bailiff » correspond à l'huissier (aujourd'hui commissaire de justice) : il signifie les actes et fait exécuter les décisions.",
+          "example_en": "The bailiff delivered the documents this morning.",
+          "example_fr": "L'huissier a remis les documents ce matin.",
+          "ipa": "/ˈbeɪlɪf/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Sign the lease at the notary",
+          "fr": "Signe le bail chez le notaire"
+        },
+        {
+          "en": "Keep a copy of every deed",
+          "fr": "Garde une copie de chaque acte"
         }
       ]
     }

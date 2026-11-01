@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import * as m from "motion/react-m";
+import { AnimatePresence } from "motion/react";
 import { Mascot } from "@/components/game/Mascot";
 import { ArrowLeftIcon, FieldIcon } from "@/components/ui/icons";
 import { completeOnboarding } from "@/app/(play)/onboarding/actions";
@@ -88,7 +89,7 @@ export function OnboardingFlow({ fields, initial }: Props) {
       </div>
 
       <AnimatePresence mode="wait" custom={direction}>
-        <motion.fieldset
+        <m.fieldset
           key={stepKey}
           custom={direction}
           initial={{ opacity: 0, x: direction * 40 }}
@@ -140,7 +141,7 @@ export function OnboardingFlow({ fields, initial }: Props) {
                 hint={`${t.goals[g].hint} · ${g} XP`}
               />
             ))}
-        </motion.fieldset>
+        </m.fieldset>
       </AnimatePresence>
 
       <div className="mt-auto flex flex-col gap-2 pt-4">

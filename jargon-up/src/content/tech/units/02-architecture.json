@@ -1,0 +1,294 @@
+{
+  "level": "B1",
+  "title_en": "Computer architecture",
+  "title_fr": "Architecture de l'ordinateur",
+  "lessons": [
+    {
+      "title_en": "The processor",
+      "terms": [
+        {
+          "term": "CPU",
+          "pos": "noun",
+          "translation_fr": "processeur",
+          "definition_en": "The main chip that runs the instructions of programs.",
+          "explanation_fr": "Le « CPU » (Central Processing Unit) est le processeur, le « cerveau » de l'ordinateur : il exécute une à une les instructions des programmes.",
+          "example_en": "The CPU is at 100 percent, so the computer is slow.",
+          "example_fr": "Le processeur est à 100 %, donc l'ordinateur est lent.",
+          "ipa": "/ˌsiː piː ˈjuː/"
+        },
+        {
+          "term": "core",
+          "pos": "noun",
+          "translation_fr": "cœur",
+          "definition_en": "One processing unit inside a CPU.",
+          "explanation_fr": "Un « core » est un cœur du processeur. Un processeur à 8 cœurs peut faire plusieurs calculs vraiment en même temps.",
+          "example_en": "Each core can run its own task.",
+          "example_fr": "Chaque cœur peut exécuter sa propre tâche.",
+          "ipa": "/kɔː/"
+        },
+        {
+          "term": "clock speed",
+          "pos": "noun",
+          "translation_fr": "fréquence d'horloge",
+          "definition_en": "How many cycles a processor does per second.",
+          "explanation_fr": "La « clock speed » est la fréquence du processeur, mesurée en gigahertz : à architecture égale, plus elle est élevée, plus il traite d'instructions par seconde.",
+          "example_en": "A higher clock speed usually means a faster processor.",
+          "example_fr": "Une fréquence plus élevée signifie en général un processeur plus rapide."
+        },
+        {
+          "term": "gigahertz",
+          "pos": "noun",
+          "translation_fr": "gigahertz",
+          "definition_en": "A unit of frequency: one billion cycles per second.",
+          "explanation_fr": "Le « gigahertz » (GHz) mesure la fréquence d'un processeur : 3 GHz = 3 milliards de cycles par seconde.",
+          "example_en": "The processor runs at 3.5 gigahertz.",
+          "example_fr": "Le processeur tourne à 3,5 gigahertz.",
+          "ipa": "/ˈɡɪɡəhɜːts/"
+        },
+        {
+          "term": "thread",
+          "pos": "noun",
+          "translation_fr": "fil d'exécution (thread)",
+          "definition_en": "A sequence of instructions that can run in parallel with others.",
+          "explanation_fr": "Un « thread » est un fil d'exécution ; un programme peut en lancer plusieurs pour travailler en parallèle sur plusieurs cœurs.",
+          "example_en": "The app uses one thread for the interface.",
+          "example_fr": "L'appli utilise un fil d'exécution pour l'interface.",
+          "ipa": "/θred/"
+        },
+        {
+          "term": "instruction",
+          "pos": "noun",
+          "translation_fr": "instruction",
+          "definition_en": "A basic command that the processor can execute, like add or compare.",
+          "explanation_fr": "Une « instruction » est une opération élémentaire du processeur : additionner, comparer, copier une valeur, sauter à une autre partie du programme.",
+          "example_en": "Each instruction takes a few clock cycles.",
+          "example_fr": "Chaque instruction prend quelques cycles d'horloge.",
+          "ipa": "/ɪnˈstrʌkʃən/"
+        },
+        {
+          "term": "register",
+          "pos": "noun",
+          "translation_fr": "registre",
+          "definition_en": "A tiny, very fast memory inside the processor.",
+          "explanation_fr": "Un « register » est une minuscule mémoire ultra-rapide à l'intérieur du processeur, où il garde les valeurs qu'il est en train de calculer.",
+          "example_en": "The value is stored in a register before the addition.",
+          "example_fr": "La valeur est stockée dans un registre avant l'addition.",
+          "ipa": "/ˈredʒɪstə/"
+        },
+        {
+          "term": "overheating",
+          "pos": "noun",
+          "translation_fr": "surchauffe",
+          "definition_en": "When a component becomes too hot and may slow down or stop.",
+          "explanation_fr": "L'« overheating » est la surchauffe : pour se protéger, le processeur ralentit (« thermal throttling ») ou l'ordinateur s'éteint. Fréquent par forte chaleur si les ventilateurs sont sales.",
+          "example_en": "Overheating can damage the processor.",
+          "example_fr": "La surchauffe peut endommager le processeur.",
+          "ipa": "/ˌəʊvəˈhiːtɪŋ/"
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The CPU runs every instruction",
+          "fr": "Le processeur exécute chaque instruction"
+        },
+        {
+          "en": "This laptop has a fast processor",
+          "fr": "Cet ordinateur portable a un processeur rapide"
+        }
+      ]
+    },
+    {
+      "title_en": "Data & memory",
+      "terms": [
+        {
+          "term": "bit",
+          "pos": "noun",
+          "translation_fr": "bit",
+          "definition_en": "The smallest unit of data: a 0 or a 1.",
+          "explanation_fr": "Un « bit » (binary digit) vaut 0 ou 1 : c'est la plus petite unité d'information. Les débits internet se mesurent en bits par seconde (Mbit/s).",
+          "example_en": "Each bit is either zero or one.",
+          "example_fr": "Chaque bit vaut soit zéro, soit un.",
+          "ipa": "/bɪt/"
+        },
+        {
+          "term": "byte",
+          "pos": "noun",
+          "translation_fr": "octet",
+          "definition_en": "A group of eight bits.",
+          "explanation_fr": "Un « byte » est un octet, soit 8 bits ; il peut représenter un caractère comme une lettre. Attention au faux ami : « byte » n'est pas « bit ».",
+          "example_en": "One letter usually takes one byte.",
+          "example_fr": "Une lettre occupe en général un octet.",
+          "ipa": "/baɪt/"
+        },
+        {
+          "term": "binary",
+          "pos": "noun / adjective",
+          "translation_fr": "binaire",
+          "definition_en": "A number system that uses only 0 and 1.",
+          "explanation_fr": "Le « binary » (système binaire) n'utilise que 0 et 1 ; c'est le langage de base de tous les ordinateurs. En binaire, 5 s'écrit 101.",
+          "example_en": "Computers store everything in binary.",
+          "example_fr": "Les ordinateurs stockent tout en binaire.",
+          "ipa": "/ˈbaɪnəri/"
+        },
+        {
+          "term": "cache",
+          "pos": "noun",
+          "translation_fr": "mémoire cache",
+          "definition_en": "A small, fast memory that keeps data the processor uses often.",
+          "explanation_fr": "Le « cache » garde à portée de main les données souvent utilisées, pour éviter d'aller les chercher dans la RAM, plus lente. Il se prononce comme « cash ».",
+          "example_en": "The data is already in the cache, so it loads instantly.",
+          "example_fr": "Les données sont déjà dans le cache, elles se chargent donc instantanément.",
+          "ipa": "/kæʃ/"
+        },
+        {
+          "term": "bus",
+          "pos": "noun",
+          "translation_fr": "bus (de données)",
+          "definition_en": "The set of connections that carries data between components.",
+          "explanation_fr": "Un « bus » est l'ensemble des « routes » électroniques qui transportent les données entre le processeur, la mémoire et les périphériques.",
+          "example_en": "The data travels on the bus between the CPU and the memory.",
+          "example_fr": "Les données circulent sur le bus entre le processeur et la mémoire.",
+          "ipa": "/bʌs/"
+        },
+        {
+          "term": "memory address",
+          "pos": "noun",
+          "translation_fr": "adresse mémoire",
+          "definition_en": "A number that shows where a piece of data is stored in memory.",
+          "explanation_fr": "Une « memory address » indique l'emplacement exact d'une donnée dans la mémoire, comme le numéro d'une maison dans une rue.",
+          "example_en": "Each memory address points to one byte.",
+          "example_fr": "Chaque adresse mémoire désigne un octet."
+        },
+        {
+          "term": "virtual memory",
+          "pos": "noun",
+          "translation_fr": "mémoire virtuelle",
+          "definition_en": "Disk space used as extra memory when the RAM is full.",
+          "explanation_fr": "La « virtual memory » utilise une partie du disque comme mémoire supplémentaire quand la RAM est pleine ; ça évite le plantage, mais c'est beaucoup plus lent.",
+          "example_en": "When the RAM is full, the system uses virtual memory.",
+          "example_fr": "Quand la mémoire vive est pleine, le système utilise la mémoire virtuelle."
+        },
+        {
+          "term": "memory hierarchy",
+          "pos": "noun",
+          "translation_fr": "hiérarchie mémoire",
+          "definition_en": "The levels of memory, from small and fast to big and slow.",
+          "explanation_fr": "La « memory hierarchy » classe les mémoires : registres, cache, RAM, puis disque. Plus on descend, plus c'est grand et bon marché… mais lent.",
+          "example_en": "Registers are at the top of the memory hierarchy.",
+          "example_fr": "Les registres sont tout en haut de la hiérarchie mémoire."
+        }
+      ],
+      "sentences": [
+        { "en": "Eight bits make one byte", "fr": "Huit bits font un octet" },
+        {
+          "en": "The cache is faster than the RAM",
+          "fr": "Le cache est plus rapide que la mémoire vive"
+        }
+      ]
+    },
+    {
+      "title_en": "Architecture & performance",
+      "terms": [
+        {
+          "term": "architecture",
+          "pos": "noun",
+          "translation_fr": "architecture",
+          "definition_en": "The design and organisation of a computer system.",
+          "explanation_fr": "L'« architecture » décrit l'organisation d'un ordinateur ou d'un logiciel : ses composants et la façon dont ils communiquent. Les grandes familles de processeurs sont x86 (PC) et ARM (téléphones).",
+          "example_en": "Most phones use the ARM architecture.",
+          "example_fr": "La plupart des téléphones utilisent l'architecture ARM.",
+          "ipa": "/ˈɑːkɪtektʃə/"
+        },
+        {
+          "term": "instruction set",
+          "pos": "noun",
+          "translation_fr": "jeu d'instructions",
+          "definition_en": "The list of all instructions a processor can understand.",
+          "explanation_fr": "L'« instruction set » est le jeu d'instructions d'un processeur ; un programme compilé pour x86 ne tourne pas directement sur un processeur ARM.",
+          "example_en": "ARM and x86 use a different instruction set.",
+          "example_fr": "ARM et x86 utilisent un jeu d'instructions différent."
+        },
+        {
+          "term": "64-bit",
+          "pos": "adjective",
+          "translation_fr": "64 bits",
+          "definition_en": "Processing data in blocks of 64 bits.",
+          "explanation_fr": "Un système « 64-bit » manipule les données par blocs de 64 bits et peut utiliser bien plus de 4 Go de RAM, contrairement au 32 bits.",
+          "example_en": "This program only runs on a 64-bit system.",
+          "example_fr": "Ce programme ne fonctionne que sur un système 64 bits."
+        },
+        {
+          "term": "firmware",
+          "pos": "noun",
+          "translation_fr": "micrologiciel (firmware)",
+          "definition_en": "Software built into a device to control its hardware.",
+          "explanation_fr": "Le « firmware » est le logiciel intégré à un appareil (routeur, imprimante, téléphone) ; on le met à jour pour corriger des bugs ou des failles de sécurité.",
+          "example_en": "Update the router firmware every few months.",
+          "example_fr": "Mets à jour le firmware du routeur tous les quelques mois.",
+          "ipa": "/ˈfɜːmweə/"
+        },
+        {
+          "term": "benchmark",
+          "pos": "noun",
+          "translation_fr": "test de performance",
+          "definition_en": "A test that measures how fast a computer or a program is.",
+          "explanation_fr": "Un « benchmark » mesure et compare des performances (vitesse du processeur, du disque, d'un site web…).",
+          "example_en": "The benchmark shows that the new laptop is twice as fast.",
+          "example_fr": "Le test de performance montre que le nouvel ordinateur est deux fois plus rapide.",
+          "ipa": "/ˈbentʃmɑːk/"
+        },
+        {
+          "term": "bottleneck",
+          "pos": "noun",
+          "translation_fr": "goulot d'étranglement",
+          "definition_en": "The slowest part that limits the speed of the whole system.",
+          "explanation_fr": "Un « bottleneck » est le maillon le plus lent, qui freine tout le reste : par exemple un vieux disque dur dans un ordinateur au processeur rapide.",
+          "example_en": "The old hard drive is the bottleneck of this computer.",
+          "example_fr": "Le vieux disque dur est le goulot d'étranglement de cet ordinateur.",
+          "ipa": "/ˈbɒtəlnek/"
+        },
+        {
+          "term": "upgrade",
+          "pos": "verb / noun",
+          "translation_fr": "améliorer (mettre à niveau)",
+          "definition_en": "To replace a part with a better one, or to move to a better version.",
+          "explanation_fr": "« To upgrade » = améliorer, mettre à niveau (ajouter de la RAM, passer à une offre supérieure). À ne pas confondre avec « update » (mise à jour).",
+          "example_en": "We can upgrade the RAM to 32 gigabytes.",
+          "example_fr": "Nous pouvons passer la mémoire vive à 32 gigaoctets.",
+          "ipa": "/ˌʌpˈɡreɪd/"
+        },
+        {
+          "term": "embedded system",
+          "pos": "noun",
+          "translation_fr": "système embarqué",
+          "definition_en": "A small computer built into another device, like a car or a payment terminal.",
+          "explanation_fr": "Un « embedded system » est un ordinateur intégré dans un objet (voiture, terminal de paiement, compteur électrique) pour une tâche précise.",
+          "example_en": "A smart electricity meter is an embedded system.",
+          "example_fr": "Un compteur électrique intelligent est un système embarqué."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Upgrade the RAM before buying a new laptop",
+          "fr": "Augmente la mémoire vive avant d'acheter un nouvel ordinateur"
+        },
+        { "en": "Update the firmware today", "fr": "Mets à jour le firmware aujourd'hui" }
+      ],
+      "dialogues": [
+        {
+          "context": "Buying computers for the team",
+          "lines": [
+            { "speaker": "Manager", "text": "Our laptops are very slow. Should we buy new ones?" }
+          ],
+          "options": [
+            "Not yet. The benchmark shows the hard drive is the bottleneck, so an SSD upgrade is enough.",
+            "Yes, let's buy the most expensive ones.",
+            "No, slow computers help us concentrate."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« An SSD upgrade is enough » = « Passer à un SSD suffit ». On identifie d'abord le goulot d'étranglement avant de dépenser de l'argent."
+        }
+      ]
+    }
+  ]
+}

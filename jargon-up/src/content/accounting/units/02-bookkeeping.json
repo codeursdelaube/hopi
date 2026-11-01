@@ -91,7 +91,10 @@
           "en": "Record every payment in the ledger",
           "fr": "Enregistre chaque paiement au grand livre"
         },
-        { "en": "The accounts must balance", "fr": "Les comptes doivent être équilibrés" }
+        {
+          "en": "The accounts must balance",
+          "fr": "Les comptes doivent être équilibrés"
+        }
       ]
     },
     {
@@ -175,8 +178,14 @@
         }
       ],
       "sentences": [
-        { "en": "The price includes all taxes", "fr": "Le prix comprend toutes les taxes" },
-        { "en": "Payroll is ready for this month", "fr": "La paie de ce mois est prête" }
+        {
+          "en": "The price includes all taxes",
+          "fr": "Le prix comprend toutes les taxes"
+        },
+        {
+          "en": "Payroll is ready for this month",
+          "fr": "La paie de ce mois est prête"
+        }
       ],
       "dialogues": [
         {
@@ -194,6 +203,117 @@
           ],
           "answerIndex": 0,
           "explanation_fr": "« Let's do a bank reconciliation line by line » = « Faisons un rapprochement bancaire ligne par ligne ». On ne modifie jamais un relevé bancaire !"
+        }
+      ]
+    },
+    {
+      "title_en": "Banking & financing",
+      "terms": [
+        {
+          "term": "bank transfer",
+          "pos": "noun",
+          "translation_fr": "virement bancaire",
+          "definition_en": "Moving money from one bank account to another.",
+          "explanation_fr": "Un « bank transfer » est un virement bancaire.",
+          "example_en": "We paid the supplier by bank transfer.",
+          "example_fr": "Nous avons payé le fournisseur par virement bancaire."
+        },
+        {
+          "term": "overdraft",
+          "pos": "noun",
+          "translation_fr": "découvert",
+          "definition_en": "When you spend more money than you have in your account.",
+          "explanation_fr": "Un « overdraft » est un découvert bancaire, généralement avec des frais ou des intérêts.",
+          "example_en": "The company used its overdraft to pay salaries.",
+          "example_fr": "L'entreprise a utilisé son découvert pour payer les salaires.",
+          "ipa": "/ˈəʊvədrɑːft/"
+        },
+        {
+          "term": "loan",
+          "pos": "noun",
+          "translation_fr": "prêt (emprunt)",
+          "definition_en": "Money borrowed from a bank that must be paid back.",
+          "explanation_fr": "Un « loan » est un prêt ou un emprunt, remboursé avec des intérêts.",
+          "example_en": "The bank approved a loan for the new truck.",
+          "example_fr": "La banque a accordé un prêt pour le nouveau camion.",
+          "ipa": "/ləʊn/"
+        },
+        {
+          "term": "interest",
+          "pos": "noun",
+          "translation_fr": "intérêts",
+          "definition_en": "The extra money you pay for borrowing, or receive for saving.",
+          "explanation_fr": "Les « interest » sont les intérêts : le coût d'un emprunt, ou ce que rapporte une épargne.",
+          "example_en": "We pay interest every month.",
+          "example_fr": "Nous payons des intérêts chaque mois.",
+          "ipa": "/ˈɪntrəst/"
+        },
+        {
+          "term": "instalment",
+          "pos": "noun",
+          "translation_fr": "échéance (mensualité)",
+          "definition_en": "One of several payments to pay back a debt.",
+          "explanation_fr": "Une « instalment » (US : « installment ») est une échéance de remboursement ; « to pay in instalments » = payer en plusieurs fois.",
+          "example_en": "The next instalment is due on the 5th.",
+          "example_fr": "La prochaine échéance est due le 5.",
+          "ipa": "/ɪnˈstɔːlmənt/"
+        },
+        {
+          "term": "collateral",
+          "pos": "noun",
+          "translation_fr": "garantie (sûreté)",
+          "definition_en": "Something you promise to the bank in case you cannot repay a loan.",
+          "explanation_fr": "Le « collateral » est la garantie (terrain, matériel) que la banque peut saisir si le prêt n'est pas remboursé.",
+          "example_en": "The bank asked for the land as collateral.",
+          "example_fr": "La banque a demandé le terrain en garantie.",
+          "ipa": "/kəˈlætərəl/"
+        },
+        {
+          "term": "cheque",
+          "pos": "noun",
+          "translation_fr": "chèque",
+          "definition_en": "A written order to a bank to pay money from your account.",
+          "explanation_fr": "Un « cheque » (US : « check ») est un chèque ; il se prononce comme « check ».",
+          "example_en": "The client paid by cheque.",
+          "example_fr": "Le client a payé par chèque.",
+          "ipa": "/tʃek/"
+        },
+        {
+          "term": "bank fees",
+          "pos": "noun (plural)",
+          "translation_fr": "frais bancaires",
+          "definition_en": "Money the bank charges for its services.",
+          "explanation_fr": "Les « bank fees » sont les frais bancaires (tenue de compte, virements, cartes).",
+          "example_en": "Compare the bank fees before you open an account.",
+          "example_fr": "Compare les frais bancaires avant d'ouvrir un compte."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "We paid by bank transfer",
+          "fr": "Nous avons payé par virement"
+        },
+        {
+          "en": "The loan has twelve instalments",
+          "fr": "Le prêt a douze échéances"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Call with the bank",
+          "lines": [
+            {
+              "speaker": "Banker",
+              "text": "Your account is in overdraft again. How can we help?"
+            }
+          ],
+          "options": [
+            "Can we discuss a short-term loan to cover our cash flow?",
+            "Please delete the overdraft from your system.",
+            "We will never pay it back."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Can we discuss a short-term loan to cover our cash flow? » = « Pouvons-nous parler d'un prêt à court terme pour couvrir notre trésorerie ? »"
         }
       ]
     }
