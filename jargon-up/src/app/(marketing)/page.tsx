@@ -1,7 +1,16 @@
 import Link from "next/link";
 import { HeroMascot } from "@/components/marketing/HeroMascot";
+import { Brain, Languages, Target, Zap, type LucideProps } from "lucide-react";
+import { FieldIcon } from "@/components/ui/icons";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { fr } from "@/lib/i18n/fr";
+
+const FEATURE_ICONS = { target: Target, zap: Zap, languages: Languages, brain: Brain };
+
+function FeatureIcon({ name, ...props }: { name: keyof typeof FEATURE_ICONS } & LucideProps) {
+  const Icon = FEATURE_ICONS[name];
+  return <Icon aria-hidden {...props} />;
+}
 
 export default function Home() {
   const t = fr.landing;
@@ -39,8 +48,8 @@ export default function Home() {
           {t.features.map((f) => (
             <li key={f.title} className="card border-2 border-base-300 bg-base-200">
               <div className="card-body gap-2 p-5">
-                <span className="text-3xl" aria-hidden>
-                  {f.icon}
+                <span className="flex size-12 items-center justify-center rounded-field bg-primary/10 text-primary">
+                  <FeatureIcon name={f.icon} className="size-7" />
                 </span>
                 <h3 className="card-title font-display text-lg">{f.title}</h3>
                 <p className="text-base-content/70">{f.text}</p>
@@ -64,7 +73,7 @@ export default function Home() {
                   : "border-base-300 text-base-content/50"
               }`}
             >
-              <span aria-hidden>{field.icon}</span>
+              <FieldIcon slug={field.slug} className="size-5" />
               {field.name}
               <span
                 className={`badge badge-sm ${field.published ? "badge-success" : "badge-ghost"}`}

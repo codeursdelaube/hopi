@@ -3,7 +3,7 @@
 import { useState, useTransition } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Mascot } from "@/components/game/Mascot";
-import { ArrowLeftIcon } from "@/components/ui/icons";
+import { ArrowLeftIcon, FieldIcon } from "@/components/ui/icons";
 import { completeOnboarding } from "@/app/(play)/onboarding/actions";
 import { DAILY_GOALS, LEVELS, type DailyGoal } from "@/lib/learn/options";
 import { fr } from "@/lib/i18n/fr";
@@ -11,8 +11,8 @@ import type { Level } from "@/types/database";
 
 export type FieldOption = {
   id: string;
+  slug: string;
   name_fr: string;
-  icon: string | null;
   is_published: boolean;
 };
 
@@ -109,7 +109,7 @@ export function OnboardingFlow({ fields, initial }: Props) {
                 checked={fieldId === f.id}
                 disabled={!f.is_published}
                 onChange={() => setFieldId(f.id)}
-                icon={f.icon}
+                icon={<FieldIcon slug={f.slug} className="size-6" />}
                 label={f.name_fr}
                 badge={f.is_published ? undefined : fr.landing.comingSoon}
               />
@@ -168,7 +168,7 @@ type ChoiceProps = {
   checked: boolean;
   disabled?: boolean;
   onChange: () => void;
-  icon: string | null;
+  icon: React.ReactNode;
   label: string;
   hint?: string;
   badge?: string;

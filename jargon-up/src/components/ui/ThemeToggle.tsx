@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getStoredTheme, setTheme } from "@/lib/theme";
 import { fr } from "@/lib/i18n/fr";
+import { Moon, Sun } from "lucide-react";
 
 function systemIsDark() {
   return window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? false;
@@ -30,9 +31,9 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
       }}
       aria-label={label}
       title={label}
-      className={`btn btn-circle btn-ghost text-xl ${dark === null ? "invisible" : ""} ${className}`}
+      className={`btn btn-circle btn-ghost ${dark === null ? "invisible" : ""} ${className}`}
     >
-      {dark ? "☀️" : "🌙"}
+      {dark ? <Sun className="size-5" aria-hidden /> : <Moon className="size-5" aria-hidden />}
     </button>
   );
 }

@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { fr } from "@/lib/i18n/fr";
+import { Brain, House, Trophy, UserRound } from "lucide-react";
 
 const ITEMS = [
-  { href: "/learn", icon: "🏠", label: fr.shell.nav.learn },
-  { href: "/review", icon: "🧠", label: fr.shell.nav.review },
-  { href: "/leaderboard", icon: "🏆", label: fr.shell.nav.leaderboard },
-  { href: "/profile", icon: "🐰", label: fr.shell.nav.profile },
+  { href: "/learn", icon: House, label: fr.shell.nav.learn },
+  { href: "/review", icon: Brain, label: fr.shell.nav.review },
+  { href: "/leaderboard", icon: Trophy, label: fr.shell.nav.leaderboard },
+  { href: "/profile", icon: UserRound, label: fr.shell.nav.profile },
 ] as const;
 
 /** Barre de navigation du bas (zones tactiles ≥ 44 px). */
@@ -34,9 +35,7 @@ export function BottomNav() {
                     : "border-transparent text-base-content/60 hover:bg-base-200"
                 }`}
               >
-                <span className="text-xl" aria-hidden>
-                  {item.icon}
-                </span>
+                <item.icon className="size-6" strokeWidth={active ? 2.5 : 2} aria-hidden />
                 {item.label}
               </Link>
             </li>

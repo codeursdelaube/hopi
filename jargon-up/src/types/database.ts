@@ -94,6 +94,8 @@ export type Database = {
           last_activity_date: string | null;
           plan: Plan;
           sound_enabled: boolean;
+          notify_word_of_day: boolean;
+          notify_reviews: boolean;
           created_at: string;
         },
         "id"
@@ -122,6 +124,17 @@ export type Database = {
       xp_events: Table<
         { id: number; user_id: string; amount: number; source: XpSource; created_at: string },
         "user_id" | "amount" | "source"
+      >;
+      push_subscriptions: Table<
+        {
+          id: number;
+          user_id: string;
+          endpoint: string;
+          p256dh: string;
+          auth: string;
+          created_at: string;
+        },
+        "user_id" | "endpoint" | "p256dh" | "auth"
       >;
       user_badges: Table<
         { user_id: string; badge_id: string; earned_at: string },

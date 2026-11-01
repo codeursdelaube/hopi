@@ -1,7 +1,8 @@
 import "server-only";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
-import type { Row } from "@/types/database";
+import type { SupabaseClient } from "@supabase/supabase-js";
+import type { Database, Row } from "@/types/database";
 
 export type DailyTerm = Pick<
   Row<"terms">,
@@ -34,8 +35,12 @@ export function dayIndex(day: string, count: number): number {
  * Mot du jour d'une filière. S'il n'a pas encore été tiré aujourd'hui, on le choisit
  * et on l'enregistre dans `daily_words` (avec la clé secrète : table en lecture seule pour les utilisateurs).
  */
-export async function getWordOfDay(fieldId: string): Promise<DailyTerm | null> {
-  const supabase = await createClient();
+export async function getWordOfDay(
+  fieldId: string,
+  /** Client à utiliser (par défaut : session de l'utilisateur ; client admin pour la tâche planifiée). */
+  db?: SupabaseClient<Database>,
+): Promise<DailyTerm | null> {
+  const supabase = db ?? (await createClient());
   const day = wordDay();
 
   const { data: existing } = await supabase

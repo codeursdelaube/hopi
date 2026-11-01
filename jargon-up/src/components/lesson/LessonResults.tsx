@@ -7,6 +7,8 @@ import { Mascot } from "@/components/game/Mascot";
 import type { FinishResult } from "@/lib/game/types";
 import { scorePercent } from "@/lib/gamification/xp";
 import { fr } from "@/lib/i18n/fr";
+import { Flame, Star, Target } from "lucide-react";
+import { BadgeIcon } from "@/components/ui/icons";
 
 const t = fr.lesson.results;
 
@@ -55,7 +57,15 @@ export function LessonResults({ result, mode, onContinue }: Props) {
       ),
       tone: "border-success text-success",
     },
-    { label: t.streak, value: <>🔥 {summary.streak}</>, tone: "border-secondary text-secondary" },
+    {
+      label: t.streak,
+      value: (
+        <span className="inline-flex items-center gap-1">
+          <Flame className="size-6" aria-hidden /> {summary.streak}
+        </span>
+      ),
+      tone: "border-secondary text-secondary",
+    },
   ];
 
   return (
@@ -89,17 +99,33 @@ export function LessonResults({ result, mode, onContinue }: Props) {
       </div>
 
       <div className="flex w-full flex-col gap-2">
-        {summary.streakIncreased && <Banner>{t.streakUp}</Banner>}
-        {leveledUp && <Banner>⭐ {t.levelUp(summary.levelAfter)}</Banner>}
+        {summary.streakIncreased && (
+          <Banner>
+            <Flame className="size-5 text-secondary" aria-hidden /> {t.streakUp}
+          </Banner>
+        )}
+        {leveledUp && (
+          <Banner>
+            <Star className="size-5 text-warning" fill="currentColor" aria-hidden />{" "}
+            {t.levelUp(summary.levelAfter)}
+          </Banner>
+        )}
         {summary.newBadges.map((b) => (
           <Banner key={b.slug}>
-            {b.icon} {t.newBadge} <strong>{b.name_fr}</strong>
+            <BadgeIcon slug={b.slug} className="size-5 text-warning" /> {t.newBadge}{" "}
+            <strong>{b.name_fr}</strong>
           </Banner>
         ))}
         {result.capped && <p className="text-sm text-base-content/60">{t.capReached}</p>}
         <div className="flex flex-col gap-1 pt-2">
           <p className="text-sm font-semibold">
-            {goalReached ? `🎯 ${t.goalReached}` : t.goal(summary.todayXp, summary.dailyGoal)}
+            {goalReached ? (
+              <span className="inline-flex items-center gap-1">
+                <Target className="size-4 text-warning" aria-hidden /> {t.goalReached}
+              </span>
+            ) : (
+              t.goal(summary.todayXp, summary.dailyGoal)
+            )}
           </p>
           <progress
             className="progress h-3 w-full progress-warning"
@@ -127,7 +153,7 @@ function Banner({ children }: { children: React.ReactNode }) {
       initial={{ scale: 0.8, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 0.8, type: "spring" }}
-      className="rounded-box bg-primary/10 px-4 py-2 font-semibold"
+      className="flex items-center justify-center gap-2 rounded-box bg-primary/10 px-4 py-2 font-semibold"
     >
       {children}
     </motion.p>

@@ -22,7 +22,7 @@ async function OnboardingLoader() {
   const supabase = await createClient();
   const { data: fields, error } = await supabase
     .from("fields")
-    .select("id, name_fr, icon, is_published")
+    .select("id, slug, name_fr, is_published")
     .order("is_published", { ascending: false })
     .order("name_fr");
   if (error) throw new Error(`Chargement des filières : ${error.message}`);

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { fr } from "@/lib/i18n/fr";
+import { Languages } from "lucide-react";
 
 /** Bouton « Explication en français » qui révèle un texte avec une animation douce. */
 export function ExplainToggle({ text }: { text: string }) {
@@ -16,7 +17,8 @@ export function ExplainToggle({ text }: { text: string }) {
         aria-expanded={open}
         className="btn self-start btn-soft btn-secondary btn-sm"
       >
-        🇫🇷 {open ? fr.lesson.hideExplain : fr.lesson.explain}
+        <Languages className="size-4" aria-hidden />
+        {open ? fr.lesson.hideExplain : fr.lesson.explain}
       </button>
       <AnimatePresence initial={false}>
         {open && (

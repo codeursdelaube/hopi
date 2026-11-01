@@ -1,6 +1,7 @@
 "use client";
 
 import { speak } from "@/lib/speech";
+import { Volume2 } from "lucide-react";
 
 /** Bouton « haut-parleur » qui prononce un texte en anglais. */
 export function SpeakButton({
@@ -19,7 +20,7 @@ export function SpeakButton({
       aria-label={label}
       className={`btn btn-pop ${className}`}
     >
-      🔊
+      <Volume2 className="size-[55%]" aria-hidden />
     </button>
   );
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { requireProfile } from "@/lib/auth/session";
 import { getHeaderStats } from "@/lib/game/stats";
 import { fr } from "@/lib/i18n/fr";
+import { Flame, Star, Target } from "lucide-react";
 
 const t = fr.shell;
 
@@ -20,7 +21,12 @@ export async function StatsBar() {
         title={t.streak(stats.streak)}
         aria-label={t.streak(stats.streak)}
       >
-        🔥 {stats.streak}
+        <Flame
+          className="size-5"
+          fill={stats.goalDoneToday ? "currentColor" : "none"}
+          aria-hidden
+        />
+        {stats.streak}
       </span>
 
       <span
@@ -38,7 +44,7 @@ export async function StatsBar() {
         aria-label={t.goal(stats.todayXp, stats.dailyGoal)}
         title={t.goal(stats.todayXp, stats.dailyGoal)}
       >
-        🎯
+        <Target className="size-4" aria-hidden />
       </span>
 
       <Link
@@ -47,7 +53,8 @@ export async function StatsBar() {
         aria-label={`${t.level(stats.level.level)}, ${t.xp(stats.totalXp)}`}
         title={`${t.level(stats.level.level)} · ${t.xp(stats.totalXp)}`}
       >
-        ⭐ {stats.totalXp}
+        <Star className="size-5" fill="currentColor" aria-hidden />
+        {stats.totalXp}
       </Link>
 
       {profile.avatar_url && (

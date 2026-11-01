@@ -9,6 +9,16 @@
 - [ ] Domaine personnalisé (si besoin) : l'ajouter dans Vercel, puis dans Supabase (Site URL + Redirect URLs)
       et dans Google Cloud (Authorized JavaScript origins).
 
+## Notifications push
+
+- [ ] Migration `20261101090000_push_notifications.sql` exécutée dans le SQL Editor.
+- [ ] `npm run setup:push` lancé une fois (génère les clés dans `.env.local`).
+- [ ] Vercel → Environment Variables : `NEXT_PUBLIC_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `CRON_SECRET`
+      (mêmes valeurs que `.env.local`), puis redéployer.
+- [ ] Vercel → Settings → Cron Jobs : la tâche `/api/cron/notifications` apparaît (tous les jours à 18 h UTC).
+- [ ] Sur le téléphone : Réglages → Notifications → « Activer les rappels », puis « Envoyer une notification de test ».
+      Sur iPhone : installer d'abord Hopi sur l'écran d'accueil (iOS 16.4 minimum).
+
 ## Supabase
 
 - [ ] Migrations appliquées (`supabase/migrations/`, dans l'ordre).
@@ -38,6 +48,6 @@
 
 ## Plus tard (hors périmètre actuel)
 
-- Notifications du mot du jour (web push ou e-mail).
+- Rappel à l'heure choisie par chaque utilisateur (nécessite une tâche toutes les heures : offre Vercel Pro ou pg_cron).
 - Paiement Premium (mobile money + carte) : activer via `src/lib/features.ts` et `profiles.plan`.
 - Nouvelles filières : contenu dans `src/content/<slug>/units/`, puis `is_published = true`.

@@ -16,7 +16,9 @@ import { correctAnswerText, isCorrect } from "@/lib/exercises/grade";
 import type { Answer, PlayableExercise } from "@/lib/exercises/schemas";
 import type { FinishInput, FinishResult, FirstTryAnswer } from "@/lib/game/types";
 import { playSound } from "@/lib/sound";
+import { speak, unlockSpeech, warmUpSpeech } from "@/lib/speech";
 import { fr } from "@/lib/i18n/fr";
+import { Languages, X } from "lucide-react";
 
 const t = fr.lesson;
 
@@ -92,11 +94,22 @@ export function LessonPlayer({ exercises, finish, soundEnabled, mode = "lesson" 
       void save();
       return;
     }
+    // Exercice d'écoute suivant : on lance le mot PENDANT le toucher (sinon iOS/Android
+    // peuvent bloquer ou retarder la lecture automatique).
+    const upcoming = exercises[queue[cursor + 1]];
+    if (upcoming.type === "listen_type") speak(upcoming.payload.text);
     setCursor((c) => c + 1);
     setAnswer(null);
     setStatus("answering");
     setShowExplanation(false);
-  }, [cursor, queue.length, save]);
+  }, [cursor, exercises, queue, save]);
+
+  // Voix chargées dès l'ouverture ; synthèse vocale débloquée au premier toucher.
+  useEffect(() => {
+    warmUpSpeech();
+    window.addEventListener("pointerdown", unlockSpeech, { once: true });
+    return () => window.removeEventListener("pointerdown", unlockSpeech);
+  }, []);
 
   // Clavier : Entrée = vérifier / continuer ; 1-4 = choisir une option.
   useEffect(() => {
@@ -171,13 +184,13 @@ export function LessonPlayer({ exercises, finish, soundEnabled, mode = "lesson" 
       <div className="flex items-center gap-3 py-2">
         <button
           type="button"
-          className="btn btn-circle btn-ghost text-2xl"
+          className="btn btn-circle btn-ghost"
           aria-label={t.quit}
           onClick={() => {
             if (window.confirm(t.quitConfirm)) router.push("/learn");
           }}
         >
-          ✕
+          <X className="size-7" strokeWidth={2.5} aria-hidden />
         </button>
         <div
           className="h-4 flex-1 overflow-hidden rounded-full bg-base-300"
@@ -322,7 +335,8 @@ function FeedbackBar({
                     aria-expanded={showExplanation}
                     className="link self-start text-sm font-semibold link-hover"
                   >
-                    🇫🇷 {showExplanation ? t.hideExplain : t.explain}
+                    <Languages className="mr-1 inline size-4" aria-hidden />
+                    {showExplanation ? t.hideExplain : t.explain}
                   </button>
                 )}
               </div>

@@ -1,7 +1,9 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BookOpen, Flame, Medal, MessageSquareText, Settings, Star } from "lucide-react";
 import { Mascot } from "@/components/game/Mascot";
+import { BadgeIcon } from "@/components/ui/icons";
 import { requireProfile } from "@/lib/auth/session";
 import { getHeaderStats } from "@/lib/game/stats";
 import { createClient } from "@/lib/supabase/server";
@@ -49,11 +51,21 @@ async function ProfileContent() {
     : null;
 
   const tiles = [
-    { label: t.stats.totalXp, value: `⭐ ${stats.totalXp}` },
-    { label: t.stats.streak, value: `🔥 ${stats.streak}` },
-    { label: t.stats.longest, value: `🏅 ${full.data?.longest_streak ?? 0}` },
-    { label: t.stats.lessons, value: `📘 ${lessons.count ?? 0}` },
-    { label: t.stats.words, value: `💬 ${words.count ?? 0}` },
+    { label: t.stats.totalXp, value: stats.totalXp, Icon: Star, tone: "text-warning" },
+    { label: t.stats.streak, value: stats.streak, Icon: Flame, tone: "text-secondary" },
+    {
+      label: t.stats.longest,
+      value: full.data?.longest_streak ?? 0,
+      Icon: Medal,
+      tone: "text-accent",
+    },
+    { label: t.stats.lessons, value: lessons.count ?? 0, Icon: BookOpen, tone: "text-primary" },
+    {
+      label: t.stats.words,
+      value: words.count ?? 0,
+      Icon: MessageSquareText,
+      tone: "text-success",
+    },
   ];
 
   return (
@@ -81,8 +93,8 @@ async function ProfileContent() {
       </section>
 
       <section className="flex flex-col gap-1 rounded-box border-2 border-warning/50 p-4">
-        <p className="font-display text-xl font-bold text-warning">
-          ⭐ {t.level(stats.level.level)}
+        <p className="flex items-center gap-2 font-display text-xl font-bold text-warning">
+          <Star className="size-6" fill="currentColor" aria-hidden /> {t.level(stats.level.level)}
         </p>
         <progress
           className="progress h-3 w-full progress-warning"
@@ -97,7 +109,10 @@ async function ProfileContent() {
       <section className="grid grid-cols-2 gap-3">
         {tiles.map((tile) => (
           <div key={tile.label} className="rounded-box border-2 border-base-300 p-3">
-            <p className="font-display text-2xl font-bold">{tile.value}</p>
+            <p className="flex items-center gap-2 font-display text-2xl font-bold">
+              <tile.Icon className={`size-6 ${tile.tone}`} aria-hidden />
+              {tile.value}
+            </p>
             <p className="text-sm text-base-content/60">{tile.label}</p>
           </div>
         ))}
@@ -115,9 +130,10 @@ async function ProfileContent() {
                   earned ? "border-warning bg-warning/10" : "border-base-300 opacity-50 grayscale"
                 }`}
               >
-                <span className="text-4xl" aria-hidden>
-                  {b.icon}
-                </span>
+                <BadgeIcon
+                  slug={b.slug}
+                  className={`size-10 ${earned ? "text-warning" : "text-base-content/50"}`}
+                />
                 <span className="font-semibold">{b.name_fr}</span>
                 <span className="text-xs text-base-content/70">
                   {earned ? b.description_fr : `${t.locked} · ${b.description_fr}`}
@@ -129,7 +145,7 @@ async function ProfileContent() {
       </section>
 
       <Link href="/settings" className="btn btn-pop btn-lg">
-        ⚙️ {t.settings}
+        <Settings className="size-5" aria-hidden /> {t.settings}
       </Link>
     </>
   );

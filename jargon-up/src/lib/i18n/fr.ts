@@ -19,7 +19,7 @@ export const fr = {
     },
     bubbles: {
       neutral: "Salut ! Moi c'est Hopi. Prêt·e à parler tech en anglais ?",
-      happy: "Yes! Bonne réponse ! 🎉",
+      happy: "Yes! Bonne réponse !",
       sad: "Oups… pas grave, on réessaie ensemble.",
       proud: "Leçon terminée ! Je suis trop fier de toi !",
     },
@@ -31,22 +31,22 @@ export const fr = {
     featuresTitle: "Pourquoi ça marche",
     features: [
       {
-        icon: "🎯",
+        icon: "target",
         title: "Le vocabulaire de TON métier",
         text: "Deploy, merge, endpoint, firewall… les mots que tu croises vraiment au travail.",
       },
       {
-        icon: "⚡",
+        icon: "zap",
         title: "5 minutes par jour",
         text: "Des exercices courts et animés. Une série quotidienne pour garder le rythme.",
       },
       {
-        icon: "💬",
+        icon: "languages",
         title: "Explication en français",
         text: "Un doute ? Un bouton t'explique chaque mot et chaque réponse en français.",
       },
       {
-        icon: "🧠",
+        icon: "brain",
         title: "Tu n'oublies plus",
         text: "Les mots ratés reviennent au bon moment grâce à la répétition espacée.",
       },
@@ -104,7 +104,7 @@ export const fr = {
       },
       goal: {
         question: "Combien de temps par jour ?",
-        bubble: "Un peu chaque jour, c'est le secret ! 🥕",
+        bubble: "Un peu chaque jour, c'est le secret !",
       },
     },
     levels: {
@@ -177,12 +177,36 @@ export const fr = {
     field: "Filière",
     changeField: "Changer de filière",
     save: "Enregistrer",
-    saved: "Réglages enregistrés ✓",
+    saved: "Réglages enregistrés",
     error: "L'enregistrement a échoué. Vérifie les champs et réessaie.",
     premium: "Hopi Premium",
     premiumText: "Des fonctionnalités en plus arrivent bientôt. Tout reste gratuit en attendant !",
     premiumCta: "En savoir plus",
     account: "Compte",
+  },
+  notifications: {
+    title: "Notifications",
+    intro: "Un petit rappel chaque soir pour le mot du jour et tes révisions.",
+    enable: "Activer les rappels",
+    disable: "Désactiver sur cet appareil",
+    enabled: "Rappels activés sur cet appareil",
+    word: "Mot du jour",
+    reviews: "Mots à réviser",
+    test: "Envoyer une notification de test",
+    testSent: "Notification envoyée ! Elle arrive dans quelques secondes.",
+    testTitle: "Coucou, c'est Hopi !",
+    testBody: "Les notifications fonctionnent. À ce soir pour ton mot du jour !",
+    error: "Impossible d'activer les notifications. Réessaie.",
+    denied:
+      "Les notifications sont bloquées pour Hopi. Autorise-les dans les réglages du navigateur, puis réessaie.",
+    unsupported: "Ce navigateur ne permet pas les notifications.",
+    iosInstall:
+      "Sur iPhone : installe d'abord Hopi sur l'écran d'accueil (Partager → « Sur l'écran d'accueil »), puis ouvre-le depuis l'icône.",
+    notConfigured: "Les notifications ne sont pas encore configurées sur le serveur.",
+    unavailable:
+      "Les réglages des notifications seront disponibles une fois la mise à jour de la base appliquée.",
+    schedule:
+      "Envoyé chaque jour vers 18 h (heure de Lomé), seulement s'il y a quelque chose à faire.",
   },
   upgrade: {
     title: "Hopi Premium",
@@ -218,7 +242,7 @@ export const fr = {
     definition: "Définition",
     example: "Exemple",
     claim: "J'ai appris ce mot ! +3 XP",
-    claimed: "Mot du jour validé ✓",
+    claimed: "Mot du jour validé",
     claimError: "Oups, la validation a échoué. Réessaie.",
     claimSuccess: (xp: number) => `+${xp} XP ! À demain pour un nouveau mot.`,
     none: "Pas encore de mot du jour pour ta filière.",
@@ -262,7 +286,7 @@ export const fr = {
       xp: "XP gagnés",
       accuracy: "Précision",
       streak: "Série",
-      streakUp: "Ta série continue ! 🔥",
+      streakUp: "Ta série continue !",
       goal: (today: number, goal: number) =>
         `Objectif du jour : ${Math.min(today, goal)} / ${goal} XP`,
       goalReached: "Objectif du jour atteint !",
@@ -273,10 +297,10 @@ export const fr = {
     },
   },
   fields: [
-    { slug: "tech", icon: "💻", name: "Informatique", published: true },
-    { slug: "law", icon: "⚖️", name: "Droit", published: true },
-    { slug: "communication", icon: "📣", name: "Communication", published: true },
-    { slug: "accounting", icon: "📊", name: "Compta / Gestion", published: true },
-    { slug: "economics", icon: "📈", name: "Économie", published: true },
+    { slug: "tech", name: "Informatique", published: true },
+    { slug: "law", name: "Droit", published: true },
+    { slug: "communication", name: "Communication", published: true },
+    { slug: "accounting", name: "Compta / Gestion", published: true },
+    { slug: "economics", name: "Économie", published: true },
   ],
 } as const;

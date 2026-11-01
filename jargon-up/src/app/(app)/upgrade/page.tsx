@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Mascot } from "@/components/game/Mascot";
 import { fr } from "@/lib/i18n/fr";
+import { Sparkles } from "lucide-react";
 
 const t = fr.upgrade;
 
@@ -22,7 +23,7 @@ export default function UpgradePage() {
             key={perk}
             className="flex items-center gap-3 rounded-box border-2 border-base-300 p-3"
           >
-            <span aria-hidden>✨</span>
+            <Sparkles className="size-5 shrink-0 text-warning" aria-hidden />
             {perk}
           </li>
         ))}

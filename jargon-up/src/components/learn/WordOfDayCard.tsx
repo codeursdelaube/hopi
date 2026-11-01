@@ -3,6 +3,7 @@ import { SpeakButton } from "@/components/ui/SpeakButton";
 import { requireProfile } from "@/lib/auth/session";
 import { getWordOfDay, hasClaimedWordOfDay } from "@/lib/words/daily";
 import { fr } from "@/lib/i18n/fr";
+import { Check } from "lucide-react";
 
 /** Widget « Mot du jour » en haut du parcours (à placer sous <Suspense>). */
 export async function WordOfDayCard() {
@@ -27,7 +28,8 @@ export async function WordOfDayCard() {
       />
       <div className="flex min-w-0 flex-1 flex-col">
         <span className="text-xs font-bold text-accent uppercase">
-          {fr.word.title} {claimed && "✓"}
+          {fr.word.title}{" "}
+          {claimed && <Check className="inline size-3.5" strokeWidth={3} aria-label="validé" />}
         </span>
         <span lang="en" className="truncate font-display text-xl font-bold">
           {word.term}

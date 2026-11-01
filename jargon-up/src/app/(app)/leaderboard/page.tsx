@@ -4,9 +4,11 @@ import { Mascot } from "@/components/game/Mascot";
 import { requireProfile } from "@/lib/auth/session";
 import { createClient } from "@/lib/supabase/server";
 import { fr } from "@/lib/i18n/fr";
+import { Medal, Rabbit, Trophy } from "lucide-react";
 
 const t = fr.leaderboard;
-const MEDALS = ["🥇", "🥈", "🥉"];
+/** Couleurs des médailles : or, argent, bronze. */
+const MEDALS = ["text-warning", "text-base-content/50", "text-secondary"];
 
 export const metadata: Metadata = { title: fr.shell.nav.leaderboard };
 
@@ -14,9 +16,7 @@ export default function LeaderboardPage() {
   return (
     <main className="mx-auto flex w-full max-w-md flex-1 flex-col gap-4 px-4 py-6">
       <div className="flex items-center gap-3">
-        <span className="text-5xl" aria-hidden>
-          🏆
-        </span>
+        <Trophy className="size-12 shrink-0 text-warning" aria-hidden />
         <div>
           <h1 className="font-display text-2xl font-bold">{t.title}</h1>
           <p className="text-sm text-base-content/60">{t.subtitle}</p>
@@ -63,7 +63,7 @@ async function Ranking() {
           }`}
         >
           <span className="w-8 text-center font-display text-lg font-bold" aria-hidden>
-            {MEDALS[i] ?? i + 1}
+            {MEDALS[i] ? <Medal className={`mx-auto size-7 ${MEDALS[i]}`} /> : i + 1}
           </span>
           {row.avatar_url ? (
             // eslint-disable-next-line @next/next/no-img-element
@@ -77,7 +77,7 @@ async function Ranking() {
             />
           ) : (
             <span className="flex size-10 items-center justify-center rounded-full bg-base-300">
-              🐰
+              <Rabbit className="size-5 text-base-content/60" aria-hidden />
             </span>
           )}
           <span className="flex-1 truncate font-semibold" aria-hidden>

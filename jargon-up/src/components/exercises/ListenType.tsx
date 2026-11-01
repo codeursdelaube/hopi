@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { z } from "zod";
 import type { listenTypePayload } from "@/lib/exercises/schemas";
+import { Snail, Volume2 } from "lucide-react";
 import { canSpeak, speak } from "@/lib/speech";
 import { fr } from "@/lib/i18n/fr";
 import type { ExerciseProps } from "./types";
@@ -20,6 +21,8 @@ export function ListenType({ payload, answer, onAnswer, status }: ExerciseProps<
 
   useEffect(() => {
     // Détection côté client uniquement (pas de synthèse vocale pendant le rendu serveur).
+    // Le mot est en général déjà lancé au toucher sur « Continuer » (voir LessonPlayer) ;
+    // speak() ignore alors ce second appel.
     const ok = canSpeak();
     // eslint-disable-next-line react-hooks/set-state-in-effect -- dépend d'une API du navigateur
     setAudioOk(ok);
@@ -35,18 +38,18 @@ export function ListenType({ payload, answer, onAnswer, status }: ExerciseProps<
           <button
             type="button"
             onClick={() => speak(payload.text)}
-            className="btn btn-circle size-24 btn-pop text-4xl btn-primary"
+            className="btn btn-circle size-24 btn-pop btn-primary"
             aria-label={fr.lesson.listen}
           >
-            🔊
+            <Volume2 className="size-11" aria-hidden />
           </button>
           <button
             type="button"
             onClick={() => speak(payload.text, { slow: true })}
-            className="btn btn-circle size-16 btn-pop text-2xl btn-secondary"
+            className="btn btn-circle size-16 btn-pop btn-secondary"
             aria-label={fr.lesson.listenSlow}
           >
-            🐢
+            <Snail className="size-8" aria-hidden />
           </button>
         </div>
       ) : (
