@@ -85,7 +85,17 @@ export default function Home() {
         </ul>
       </section>
 
-      <footer className="mt-auto text-center text-sm text-base-content/50">{t.footer}</footer>
+      <footer className="mt-auto flex flex-col items-center gap-2 text-center text-sm text-base-content/60">
+        <p>{t.footer}</p>
+        <nav className="flex gap-4">
+          <Link href="/cgu" className="link link-hover">
+            {fr.legal.terms}
+          </Link>
+          <Link href="/confidentialite" className="link link-hover">
+            {fr.legal.privacy}
+          </Link>
+        </nav>
+      </footer>
     </main>
   );
 }

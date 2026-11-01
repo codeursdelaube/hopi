@@ -186,12 +186,15 @@ export const fr = {
   },
   notifications: {
     title: "Notifications",
-    intro: "Un petit rappel chaque soir pour le mot du jour et tes révisions.",
+    intro: "Choisis tes heures de révision : Hopi t'envoie un rappel au bon moment.",
     enable: "Activer les rappels",
     disable: "Désactiver sur cet appareil",
     enabled: "Rappels activés sur cet appareil",
     word: "Mot du jour",
-    reviews: "Mots à réviser",
+    reviews: "Rappels de révision",
+    hours: "Heures de révision",
+    hourLabel: (h: number) => `${h} h`,
+    maxHours: (n: number) => `${n} heures au maximum.`,
     test: "Envoyer une notification de test",
     testSent: "Notification envoyée ! Elle arrive dans quelques secondes.",
     testTitle: "Coucou, c'est Hopi !",
@@ -206,7 +209,51 @@ export const fr = {
     unavailable:
       "Les réglages des notifications seront disponibles une fois la mise à jour de la base appliquée.",
     schedule:
-      "Envoyé chaque jour vers 18 h (heure de Lomé), seulement s'il y a quelque chose à faire.",
+      "Un rappel à chaque heure choisie, à l'heure de ton téléphone. Touche une heure pour l'ajouter ou la retirer.",
+  },
+  account: {
+    delete: "Supprimer mon compte",
+    confirmTitle: "Supprimer définitivement ton compte ?",
+    confirmText:
+      "Ta progression, tes XP, ta série, tes badges et tes mots appris seront effacés pour toujours. Cette action est irréversible.",
+    confirm: "Oui, supprimer mon compte",
+    cancel: "Annuler",
+    error: "La suppression a échoué. Réessaie ou contacte-nous.",
+  },
+  legal: {
+    terms: "Conditions d'utilisation",
+    privacy: "Confidentialité",
+    acceptPrefix: "En continuant, tu acceptes nos",
+    acceptTerms: "conditions d'utilisation",
+    acceptAnd: "et notre",
+    acceptPrivacy: "politique de confidentialité",
+  },
+  pwa: {
+    installTitle: "Installe Hopi sur ton téléphone",
+    installIntro: "Comme une vraie appli, sans passer par le Play Store :",
+    perks: [
+      "Hopi s'ouvre en un toucher depuis ton écran d'accueil",
+      "Plus rapide, même avec une connexion faible",
+      "Reçois tes rappels de révision",
+    ],
+    install: "Installer l'appli",
+    preparing: "Préparation…",
+    openInChrome: "Ouvrir dans Chrome pour installer",
+    iosInApp: "Ouvre d'abord cette page dans Safari (menu ··· → « Ouvrir dans Safari »), puis :",
+    later: "Plus tard",
+    close: "Fermer",
+    iosSteps: "Sur iPhone, Apple demande de le faire en 2 étapes :",
+    iosStep1: "Touche le bouton Partager en bas de Safari",
+    iosStep2: "Choisis « Sur l'écran d'accueil »",
+    otherSteps:
+      "Ouvre le menu de ton navigateur (⋮) puis choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».",
+    installed: "Hopi est installé !",
+    settingsButton: "Installer Hopi sur ce téléphone",
+    updateTitle: "Nouvelle version de Hopi !",
+    updateText:
+      "Une mise à jour est disponible, avec des améliorations et des corrections. Elle s'installe en quelques secondes.",
+    update: "Installer la mise à jour",
+    updating: "Mise à jour…",
   },
   upgrade: {
     title: "Hopi Premium",
@@ -229,9 +276,11 @@ export const fr = {
   review: {
     title: "Révision",
     loading: "Préparation de ta révision…",
-    nothingTitle: "Rien à réviser pour l'instant !",
+    nothingTitle: "Aucun mot appris pour l'instant",
     nothingText:
-      "Les mots que tu apprends reviennent ici au bon moment pour ne pas les oublier. Fais une leçon et reviens plus tard.",
+      "Termine une leçon : ses mots arriveront ici et reviendront au bon moment pour que tu ne les oublies pas.",
+    practiceNote:
+      "Aucun mot n'est à réviser aujourd'hui : entraînement libre sur les mots que tu as appris.",
     due: (n: number) => (n > 1 ? `${n} mots à réviser` : `${n} mot à réviser`),
     start: "Réviser",
   },

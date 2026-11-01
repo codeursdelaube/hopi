@@ -7,7 +7,7 @@ import { answerSchema } from "@/lib/exercises/schemas";
 import { awardXp, recordTermResults, xpEarnedToday } from "@/lib/game/engine";
 import type { FinishInput, FinishResult } from "@/lib/game/types";
 import { XP } from "@/lib/gamification/xp";
-import { REVIEW_SESSION_SIZE, buildReview } from "@/lib/review/build";
+import { REVIEW_SESSION_SIZE, buildReviewForTerms } from "@/lib/review/build";
 
 const inputSchema = z.object({
   answers: z
@@ -28,7 +28,7 @@ export async function completeReview(raw: FinishInput): Promise<FinishResult> {
     if (!profile.field_id) return { ok: false };
 
     // L'id d'un exercice de révision = l'id du terme ; on reconstruit les mêmes exercices.
-    const exercises = await buildReview(
+    const exercises = await buildReviewForTerms(
       profile.id,
       profile.field_id,
       answers.map((a) => a.exerciseId),

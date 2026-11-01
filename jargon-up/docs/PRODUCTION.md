@@ -15,9 +15,18 @@
 - [ ] `npm run setup:push` lancé une fois (génère les clés dans `.env.local`).
 - [ ] Vercel → Environment Variables : `NEXT_PUBLIC_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `CRON_SECRET`
       (mêmes valeurs que `.env.local`), puis redéployer.
-- [ ] Vercel → Settings → Cron Jobs : la tâche `/api/cron/notifications` apparaît (tous les jours à 18 h UTC).
+- [ ] Migration `20261102090000_reminder_hours.sql` exécutée (heures de rappel choisies par l'utilisateur).
+- [ ] **Rappels à l'heure choisie** : exécuter `supabase/setup/hourly-reminders.sql` dans le SQL Editor
+      après y avoir collé la valeur de `CRON_SECRET` (Supabase appelle Hopi toutes les heures).
+      Vérifier ensuite : `select * from cron.job_run_details order by start_time desc limit 5;`
+- [ ] Vercel → Settings → Cron Jobs : la tâche de secours `/api/cron/notifications` (18 h UTC) apparaît.
 - [ ] Sur le téléphone : Réglages → Notifications → « Activer les rappels », puis « Envoyer une notification de test ».
       Sur iPhone : installer d'abord Hopi sur l'écran d'accueil (iOS 16.4 minimum).
+
+## Pages légales
+
+- [ ] Compléter `src/lib/legal.ts` (nom de l'éditeur, e-mail de contact) avant la mise en ligne.
+- [ ] Relire `/cgu` et `/confidentialite` (idéalement avec un juriste).
 
 ## Supabase
 
@@ -48,6 +57,5 @@
 
 ## Plus tard (hors périmètre actuel)
 
-- Rappel à l'heure choisie par chaque utilisateur (nécessite une tâche toutes les heures : offre Vercel Pro ou pg_cron).
 - Paiement Premium (mobile money + carte) : activer via `src/lib/features.ts` et `profiles.plan`.
 - Nouvelles filières : contenu dans `src/content/<slug>/units/`, puis `is_published = true`.

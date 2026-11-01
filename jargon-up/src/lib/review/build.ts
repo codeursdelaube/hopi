@@ -60,35 +60,28 @@ function buildExercise(term: ReviewTerm, repetitions: number, pool: ReviewTerm[]
   };
 }
 
-/**
- * Exercices de révision pour des termes donnés (ou, par défaut, les termes à réviser maintenant).
- * L'id de chaque exercice est l'id du terme.
- */
-export async function buildReview(
-  userId: string,
-  fieldId: string,
-  termIds?: string[],
-): Promise<PlayableExercise[]> {
+export type ReviewSession = {
+  exercises: PlayableExercise[];
+  /** « due » : mots à réviser maintenant ; « practice » : entraînement libre (rien n'était dû). */
+  mode: "due" | "practice";
+};
+
+/** Termes de la filière (sert aussi de réserve de distracteurs). */
+async function fieldTerms(fieldId: string): Promise<ReviewTerm[]> {
   const supabase = await createClient();
+  const { data, error } = await supabase
+    .from("terms")
+    .select(TERM_COLUMNS)
+    .eq("field_id", fieldId)
+    .order("term");
+  if (error) throw new Error(`Chargement des termes : ${error.message}`);
+  return data;
+}
 
-  let reviewsQuery = supabase
-    .from("term_reviews")
-    .select("term_id, repetitions")
-    .eq("user_id", userId);
-  reviewsQuery = termIds
-    ? reviewsQuery.in("term_id", termIds)
-    : reviewsQuery
-        .lte("next_review_at", new Date().toISOString())
-        .order("next_review_at")
-        .limit(REVIEW_SESSION_SIZE);
-
-  const [{ data: reviews, error }, { data: pool, error: poolError }] = await Promise.all([
-    reviewsQuery,
-    supabase.from("terms").select(TERM_COLUMNS).eq("field_id", fieldId).order("term"),
-  ]);
-  if (error) throw new Error(`Chargement des révisions : ${error.message}`);
-  if (poolError) throw new Error(`Chargement des termes : ${poolError.message}`);
-
+function toExercises(
+  reviews: { term_id: string; repetitions: number }[],
+  pool: ReviewTerm[],
+): PlayableExercise[] {
   const termsById = new Map(pool.map((t) => [t.id, t]));
   return reviews.flatMap((r) => {
     const term = termsById.get(r.term_id);
@@ -104,13 +97,72 @@ export async function buildReview(
   });
 }
 
-/** Nombre de termes à réviser maintenant. */
-export async function countDueReviews(userId: string): Promise<number> {
+/**
+ * Séance de révision de la filière actuelle :
+ * - les mots dont la date de révision est passée (SM-2) ;
+ * - sinon, un entraînement libre sur les mots déjà appris, en commençant par ceux qui
+ *   reviendront le plus tôt (pour que « Réviser » marche aussi juste après une leçon).
+ * Seuls les mots de la filière actuelle sont pris (utile après un changement de filière).
+ */
+export async function buildReviewSession(userId: string, fieldId: string): Promise<ReviewSession> {
   const supabase = await createClient();
+  const pool = await fieldTerms(fieldId);
+  if (pool.length === 0) return { exercises: [], mode: "due" };
+  const poolIds = pool.map((t) => t.id);
+
+  const base = () =>
+    supabase
+      .from("term_reviews")
+      .select("term_id, repetitions")
+      .eq("user_id", userId)
+      .in("term_id", poolIds)
+      .order("next_review_at")
+      .limit(REVIEW_SESSION_SIZE);
+
+  const { data: due, error } = await base().lte("next_review_at", new Date().toISOString());
+  if (error) throw new Error(`Chargement des révisions : ${error.message}`);
+  if (due.length > 0) return { exercises: toExercises(due, pool), mode: "due" };
+
+  const { data: learned, error: learnedError } = await base();
+  if (learnedError) throw new Error(`Chargement des révisions : ${learnedError.message}`);
+  return { exercises: toExercises(learned, pool), mode: "practice" };
+}
+
+/**
+ * Reconstruit à l'identique les exercices de termes donnés (pour corriger côté serveur).
+ * L'id de chaque exercice est l'id du terme.
+ */
+export async function buildReviewForTerms(
+  userId: string,
+  fieldId: string,
+  termIds: string[],
+): Promise<PlayableExercise[]> {
+  const supabase = await createClient();
+  const [pool, { data: reviews, error }] = await Promise.all([
+    fieldTerms(fieldId),
+    supabase
+      .from("term_reviews")
+      .select("term_id, repetitions")
+      .eq("user_id", userId)
+      .in("term_id", termIds),
+  ]);
+  if (error) throw new Error(`Chargement des révisions : ${error.message}`);
+  return toExercises(reviews, pool);
+}
+
+/** Nombre de mots de la filière actuelle à réviser maintenant. */
+export async function countDueReviews(userId: string, fieldId: string): Promise<number> {
+  const supabase = await createClient();
+  const pool = await fieldTerms(fieldId);
+  if (pool.length === 0) return 0;
   const { count } = await supabase
     .from("term_reviews")
     .select("term_id", { count: "exact", head: true })
     .eq("user_id", userId)
+    .in(
+      "term_id",
+      pool.map((t) => t.id),
+    )
     .lte("next_review_at", new Date().toISOString());
   return count ?? 0;
 }

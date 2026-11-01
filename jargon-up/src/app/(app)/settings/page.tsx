@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { InstallButton } from "@/components/pwa/InstallButton";
+import { DeleteAccount } from "@/components/settings/DeleteAccount";
 import { NotificationSettings } from "@/components/settings/NotificationSettings";
 import { SettingsForm } from "@/components/settings/SettingsForm";
 import { requireProfile } from "@/lib/auth/session";
@@ -35,6 +37,8 @@ export default function SettingsPage() {
         </Link>
       </section>
 
+      <InstallButton />
+
       <section className="flex flex-col gap-2 rounded-box border-2 border-warning bg-warning/10 p-4">
         <h2 className="font-display text-xl font-bold">
           <Sparkles className="mr-1 inline size-5 text-warning" aria-hidden />
@@ -53,6 +57,15 @@ export default function SettingsPage() {
             {fr.auth.signOut}
           </button>
         </form>
+        <DeleteAccount />
+        <nav className="flex justify-center gap-4 pt-2 text-sm">
+          <Link href="/cgu" className="link link-hover">
+            {fr.legal.terms}
+          </Link>
+          <Link href="/confidentialite" className="link link-hover">
+            {fr.legal.privacy}
+          </Link>
+        </nav>
       </section>
     </main>
   );
@@ -79,18 +92,24 @@ async function SettingsLoader() {
 async function NotificationsLoader() {
   const profile = await requireProfile();
   const supabase = await createClient();
-  // Si la migration « push_notifications » n'est pas encore appliquée, les colonnes n'existent
+  // Si les migrations des notifications ne sont pas encore appliquées, les colonnes n'existent
   // pas : on affiche un message au lieu de casser la page.
   const { data, error } = await supabase
     .from("profiles")
-    .select("notify_word_of_day, notify_reviews")
+    .select("notify_word_of_day, notify_reviews, reminder_hours")
     .eq("id", profile.id)
     .single();
 
   return (
     <NotificationSettings
       initialPrefs={
-        error || !data ? null : { word: data.notify_word_of_day, reviews: data.notify_reviews }
+        error || !data
+          ? null
+          : {
+              word: data.notify_word_of_day,
+              reviews: data.notify_reviews,
+              hours: data.reminder_hours,
+            }
       }
     />
   );

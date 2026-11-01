@@ -1,8 +1,12 @@
+import { Suspense } from "react";
 import type { Metadata, Viewport } from "next";
 import { Fredoka, Nunito } from "next/font/google";
 import { Providers } from "@/components/Providers";
+import { InstallPrompt } from "@/components/pwa/InstallPrompt";
+import { UpdatePrompt } from "@/components/pwa/UpdatePrompt";
 import { ServiceWorker } from "@/components/ServiceWorker";
 import { SITE_URL } from "@/lib/site";
+import { installCaptureScript } from "@/lib/pwa-install";
 import { themeInitScript } from "@/lib/theme";
 import { fr } from "@/lib/i18n/fr";
 import "./globals.css";
@@ -62,9 +66,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         {/* Applique le thème choisi avant l'affichage (évite un flash clair/sombre). */}
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        {/* Capte l'événement d'installation Android dès le début (voir lib/pwa-install.ts). */}
+        <script dangerouslySetInnerHTML={{ __html: installCaptureScript }} />
       </head>
       <body className="flex min-h-full flex-col bg-base-100 font-sans text-base-content">
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          {/* Lisent l'adresse de la page : sous Suspense pour ne pas bloquer le prérendu. */}
+          <Suspense fallback={null}>
+            <InstallPrompt />
+            <UpdatePrompt />
+          </Suspense>
+        </Providers>
         <ServiceWorker />
       </body>
     </html>

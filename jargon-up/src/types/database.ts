@@ -96,6 +96,9 @@ export type Database = {
           sound_enabled: boolean;
           notify_word_of_day: boolean;
           notify_reviews: boolean;
+          reminder_hours: number[];
+          tz_offset_minutes: number;
+          last_reminder_at: string | null;
           created_at: string;
         },
         "id"

@@ -7,7 +7,8 @@ import { Brain } from "lucide-react";
 /** Rappel des mots à réviser (affiché seulement s'il y en a). À placer sous <Suspense>. */
 export async function ReviewCard() {
   const profile = await requireProfile();
-  const due = await countDueReviews(profile.id);
+  if (!profile.field_id) return null;
+  const due = await countDueReviews(profile.id, profile.field_id);
   if (due === 0) return null;
 
   return (

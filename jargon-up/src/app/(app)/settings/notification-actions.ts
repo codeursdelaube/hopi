@@ -2,6 +2,7 @@
 
 import { z } from "zod";
 import { requireProfile } from "@/lib/auth/session";
+import { MAX_REMINDER_HOURS } from "@/lib/push/reminder";
 import { sendPush } from "@/lib/push/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
@@ -45,9 +46,16 @@ export async function unsubscribePush(endpoint: string): Promise<{ ok: boolean }
   return { ok: !error };
 }
 
-const prefsSchema = z.object({ word: z.boolean(), reviews: z.boolean() });
+const prefsSchema = z.object({
+  word: z.boolean(),
+  reviews: z.boolean(),
+  /** Heures locales des rappels (au moins une, au plus MAX_REMINDER_HOURS). */
+  hours: z.array(z.number().int().min(0).max(23)).min(1).max(MAX_REMINDER_HOURS),
+  /** Décalage horaire du téléphone (getTimezoneOffset), pour envoyer à l'heure LOCALE. */
+  offsetMinutes: z.number().int().min(-840).max(720),
+});
 
-/** Quels rappels recevoir (droits par colonne : l'utilisateur ne modifie que ces champs). */
+/** Rappels : lesquels et à quelles heures (droits par colonne : seuls ces champs sont modifiables). */
 export async function saveNotificationPrefs(
   input: z.infer<typeof prefsSchema>,
 ): Promise<{ ok: boolean }> {
@@ -57,7 +65,12 @@ export async function saveNotificationPrefs(
   const supabase = await createClient();
   const { error } = await supabase
     .from("profiles")
-    .update({ notify_word_of_day: parsed.data.word, notify_reviews: parsed.data.reviews })
+    .update({
+      notify_word_of_day: parsed.data.word,
+      notify_reviews: parsed.data.reviews,
+      reminder_hours: [...new Set(parsed.data.hours)].sort((x, y) => x - y),
+      tz_offset_minutes: parsed.data.offsetMinutes,
+    })
     .eq("id", profile.id);
   return { ok: !error };
 }

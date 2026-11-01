@@ -1,14 +1,18 @@
 "use client";
 
 import { useEffect, useState, useTransition } from "react";
-import { Bell, BellOff, BellRing, Send } from "lucide-react";
+import { Bell, BellOff, BellRing, Clock, Send } from "lucide-react";
 import {
   saveNotificationPrefs,
   sendTestNotification,
   subscribePush,
   unsubscribePush,
 } from "@/app/(app)/settings/notification-actions";
+import { MAX_REMINDER_HOURS, REMINDER_HOUR_CHOICES } from "@/lib/push/reminder";
 import { fr } from "@/lib/i18n/fr";
+
+type Prefs = { word: boolean; reviews: boolean; hours: number[] };
+const DEFAULT_PREFS: Prefs = { word: true, reviews: true, hours: [18] };
 
 const t = fr.notifications;
 
@@ -50,12 +54,12 @@ export function NotificationSettings({
   initialPrefs,
 }: {
   /** null : migration pas encore appliquée (colonnes absentes). */
-  initialPrefs: { word: boolean; reviews: boolean } | null;
+  initialPrefs: Prefs | null;
 }) {
   const publicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
   const [support, setSupport] = useState<Support>("checking");
   const [subscribed, setSubscribed] = useState(false);
-  const [prefs, setPrefs] = useState(initialPrefs ?? { word: true, reviews: true });
+  const [prefs, setPrefs] = useState<Prefs>(initialPrefs ?? DEFAULT_PREFS);
   const [message, setMessage] = useState<{ tone: "ok" | "error"; text: string } | null>(null);
   const [pending, startTransition] = useTransition();
 
@@ -94,6 +98,8 @@ export function NotificationSettings({
           keys: { p256dh: json.keys?.p256dh ?? "", auth: json.keys?.auth ?? "" },
         });
         if (!result.ok) throw new Error("save");
+        // Enregistre aussi le fuseau horaire de ce téléphone (rappels à l'heure locale).
+        await saveNotificationPrefs({ ...prefs, offsetMinutes: new Date().getTimezoneOffset() });
         setSubscribed(true);
         setMessage({ tone: "ok", text: t.enabled });
       } catch (e) {
@@ -116,12 +122,27 @@ export function NotificationSettings({
     });
   }
 
-  function updatePrefs(next: typeof prefs) {
+  function updatePrefs(next: Prefs) {
     setPrefs(next);
     startTransition(async () => {
-      const result = await saveNotificationPrefs(next);
+      const result = await saveNotificationPrefs({
+        ...next,
+        offsetMinutes: new Date().getTimezoneOffset(),
+      });
       if (!result.ok) setMessage({ tone: "error", text: fr.settings.error });
     });
+  }
+
+  function toggleHour(hour: number) {
+    const has = prefs.hours.includes(hour);
+    if (has && prefs.hours.length === 1) return; // au moins une heure
+    if (!has && prefs.hours.length >= MAX_REMINDER_HOURS) {
+      setMessage({ tone: "error", text: t.maxHours(MAX_REMINDER_HOURS) });
+      return;
+    }
+    setMessage(null);
+    const hours = has ? prefs.hours.filter((h) => h !== hour) : [...prefs.hours, hour];
+    updatePrefs({ ...prefs, hours: hours.sort((a, b) => a - b) });
   }
 
   function test() {
@@ -174,7 +195,29 @@ export function NotificationSettings({
               onChange={(e) => updatePrefs({ ...prefs, reviews: e.target.checked })}
             />
           </label>
-          <p className="text-xs text-base-content/60">{t.schedule}</p>
+          <fieldset className="flex flex-col gap-2">
+            <legend className="mb-2 flex items-center gap-2 font-semibold">
+              <Clock className="size-4 text-primary" aria-hidden /> {t.hours}
+            </legend>
+            <div className="flex flex-wrap gap-2">
+              {REMINDER_HOUR_CHOICES.map((hour) => {
+                const on = prefs.hours.includes(hour);
+                return (
+                  <button
+                    key={hour}
+                    type="button"
+                    aria-pressed={on}
+                    disabled={pending}
+                    onClick={() => toggleHour(hour)}
+                    className={`btn min-h-11 btn-sm ${on ? "btn-primary" : "btn-outline"}`}
+                  >
+                    {t.hourLabel(hour)}
+                  </button>
+                );
+              })}
+            </div>
+            <p className="text-xs text-base-content/60">{t.schedule}</p>
+          </fieldset>
           <div className="flex flex-wrap gap-2">
             <button type="button" onClick={test} disabled={pending} className="btn btn-sm">
               <Send className="size-4" aria-hidden /> {t.test}

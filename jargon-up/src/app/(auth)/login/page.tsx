@@ -14,7 +14,17 @@ export default function LoginPage({ searchParams }: PageProps<"/login">) {
       <Suspense fallback={<LoginActionsSkeleton />}>
         <LoginActions searchParams={searchParams} />
       </Suspense>
-      <p className="text-xs text-base-content/50">{fr.auth.terms}</p>
+      <p className="text-xs text-base-content/60">
+        {fr.legal.acceptPrefix}{" "}
+        <Link href="/cgu" className="link">
+          {fr.legal.acceptTerms}
+        </Link>{" "}
+        {fr.legal.acceptAnd}{" "}
+        <Link href="/confidentialite" className="link">
+          {fr.legal.acceptPrivacy}
+        </Link>
+        .
+      </p>
       <Link href="/" className="link text-sm link-hover">
         {fr.auth.backHome}
       </Link>
