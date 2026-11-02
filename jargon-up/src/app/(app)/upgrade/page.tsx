@@ -11,13 +11,13 @@ export const metadata: Metadata = { title: t.title };
 /** Emplacement réservé à l'offre Premium : aucun paiement pour l'instant. */
 export default function UpgradePage() {
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col items-center gap-6 px-4 py-8 text-center">
+    <main className="mx-auto flex w-full app-width flex-1 flex-col items-center gap-6 px-4 py-8 text-center">
       <Mascot mood="proud" size={140} />
       <h1 className="font-display text-3xl font-bold">
         {t.title} <span className="badge align-middle badge-lg badge-warning">{t.soon}</span>
       </h1>
       <p className="text-base-content/70">{t.intro}</p>
-      <ul className="flex w-full flex-col gap-2 text-left">
+      <ul className="grid w-full gap-2 text-left md:grid-cols-2">
         {t.perks.map((perk) => (
           <li
             key={perk}

@@ -12,7 +12,7 @@ export const metadata: Metadata = { title: fr.word.title };
 
 export default function WordOfTheDayPage() {
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col gap-6 px-4 py-6">
+    <main className="mx-auto flex w-full app-width flex-1 flex-col gap-6 px-4 py-6">
       <h1 className="font-display text-3xl font-bold">{fr.word.title}</h1>
       <Suspense fallback={<div className="h-96 w-full skeleton" />}>
         <WordLoader />

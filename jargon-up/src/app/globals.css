@@ -99,6 +99,30 @@
   }
 }
 
+/*
+ * Largeur des écrans, pensée « téléphone d'abord » puis élargie sur tablette :
+ * - app-width : pages connectées (parcours, profil, classement…) et leur barre du haut / du bas ;
+ * - play-width : écrans de jeu (leçon, révision, onboarding), plus étroits pour rester lisibles.
+ */
+@utility app-width {
+  max-width: var(--container-md);
+
+  @media (width >= 48rem) {
+    max-width: var(--container-2xl);
+  }
+  @media (width >= 64rem) {
+    max-width: var(--container-4xl);
+  }
+}
+
+@utility play-width {
+  max-width: var(--container-md);
+
+  @media (width >= 48rem) {
+    max-width: var(--container-2xl);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

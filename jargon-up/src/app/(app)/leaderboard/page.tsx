@@ -20,7 +20,7 @@ export const metadata: Metadata = { title: fr.shell.nav.leaderboard };
 
 export default function LeaderboardPage() {
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col gap-4 px-4 py-6">
+    <main className="mx-auto flex w-full app-width flex-1 flex-col gap-4 px-4 py-6">
       <div className="flex items-center gap-3">
         <Trophy className="size-12 shrink-0 text-warning" aria-hidden />
         <div>
@@ -28,27 +28,30 @@ export default function LeaderboardPage() {
           <p className="text-sm text-base-content/60">{t.subtitle}</p>
         </div>
       </div>
-      <section className="flex flex-col gap-3 rounded-box border-2 border-secondary/50 bg-secondary/5 p-4">
-        <h2 className="flex items-center gap-2 font-display text-xl font-bold">
-          <Swords className="size-6 text-secondary" aria-hidden /> {c.cardTitle}
-        </h2>
-        <p className="text-sm text-base-content/70">{c.cardText}</p>
-        <LaunchChallengeButton />
-        <Suspense fallback={null}>
-          <ActiveChallenges />
+      {/* Grande tablette : défis à gauche (restent visibles), classement à droite. */}
+      <div className="flex flex-col gap-4 lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:items-start lg:gap-6">
+        <section className="flex flex-col gap-3 rounded-box border-2 border-secondary/50 bg-secondary/5 p-4 lg:sticky lg:top-20">
+          <h2 className="flex items-center gap-2 font-display text-xl font-bold">
+            <Swords className="size-6 text-secondary" aria-hidden /> {c.cardTitle}
+          </h2>
+          <p className="text-sm text-base-content/70">{c.cardText}</p>
+          <LaunchChallengeButton />
+          <Suspense fallback={null}>
+            <ActiveChallenges />
+          </Suspense>
+        </section>
+        <Suspense
+          fallback={
+            <div className="flex flex-col gap-2">
+              {[0, 1, 2, 3, 4].map((i) => (
+                <div key={i} className="h-16 w-full skeleton" />
+              ))}
+            </div>
+          }
+        >
+          <Ranking />
         </Suspense>
-      </section>
-      <Suspense
-        fallback={
-          <div className="flex flex-col gap-2">
-            {[0, 1, 2, 3, 4].map((i) => (
-              <div key={i} className="h-16 w-full skeleton" />
-            ))}
-          </div>
-        }
-      >
-        <Ranking />
-      </Suspense>
+      </div>
     </main>
   );
 }

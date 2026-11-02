@@ -17,7 +17,7 @@ export const metadata: Metadata = { title: t.title };
 
 export default function ProfilePage() {
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col gap-6 px-4 py-6">
+    <main className="mx-auto flex w-full app-width flex-1 flex-col gap-6 px-4 py-6">
       <Suspense fallback={<div className="h-[32rem] w-full skeleton" />}>
         <ProfileContent />
       </Suspense>
@@ -78,43 +78,46 @@ async function ProfileContent() {
 
   return (
     <>
-      <section className="flex items-center gap-4">
-        {profile.avatar_url ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={profile.avatar_url}
-            alt=""
-            width={80}
-            height={80}
-            referrerPolicy="no-referrer"
-            className="rounded-full border-4 border-primary/30"
-          />
-        ) : (
-          <Mascot mood="happy" size={80} />
-        )}
-        <div className="flex min-w-0 flex-col">
-          <h1 className="truncate font-display text-2xl font-bold">{profile.display_name}</h1>
-          {memberSince && (
-            <p className="text-sm text-base-content/60">{t.memberSince(memberSince)}</p>
+      {/* Tablette : identité et niveau côte à côte. */}
+      <div className="flex flex-col gap-6 md:grid md:grid-cols-2 md:items-center">
+        <section className="flex items-center gap-4">
+          {profile.avatar_url ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={profile.avatar_url}
+              alt=""
+              width={80}
+              height={80}
+              referrerPolicy="no-referrer"
+              className="rounded-full border-4 border-primary/30"
+            />
+          ) : (
+            <Mascot mood="happy" size={80} />
           )}
-        </div>
-      </section>
+          <div className="flex min-w-0 flex-col">
+            <h1 className="truncate font-display text-2xl font-bold">{profile.display_name}</h1>
+            {memberSince && (
+              <p className="text-sm text-base-content/60">{t.memberSince(memberSince)}</p>
+            )}
+          </div>
+        </section>
 
-      <section className="flex flex-col gap-1 rounded-box border-2 border-warning/50 p-4">
-        <p className="flex items-center gap-2 font-display text-xl font-bold text-warning">
-          <Star className="size-6" fill="currentColor" aria-hidden /> {t.level(stats.level.level)}
-        </p>
-        <progress
-          className="progress h-3 w-full progress-warning"
-          value={stats.level.current}
-          max={stats.level.needed}
-        />
-        <p className="text-sm text-base-content/60">
-          {t.nextLevel(stats.level.current, stats.level.needed)}
-        </p>
-      </section>
+        <section className="flex flex-col gap-1 rounded-box border-2 border-warning/50 p-4">
+          <p className="flex items-center gap-2 font-display text-xl font-bold text-warning">
+            <Star className="size-6" fill="currentColor" aria-hidden /> {t.level(stats.level.level)}
+          </p>
+          <progress
+            className="progress h-3 w-full progress-warning"
+            value={stats.level.current}
+            max={stats.level.needed}
+          />
+          <p className="text-sm text-base-content/60">
+            {t.nextLevel(stats.level.current, stats.level.needed)}
+          </p>
+        </section>
+      </div>
 
-      <section className="grid grid-cols-2 gap-3">
+      <section className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-5">
         {tiles.map((tile) => (
           <div key={tile.label} className="rounded-box border-2 border-base-300 p-3">
             <p className="flex items-center gap-2 font-display text-2xl font-bold">
@@ -128,7 +131,7 @@ async function ProfileContent() {
 
       <section className="flex flex-col gap-3">
         <h2 className="font-display text-xl font-bold">{t.badges}</h2>
-        <ul className="grid grid-cols-2 gap-3">
+        <ul className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
           {(badges.data ?? []).map((b) => {
             const earned = ownedIds.has(b.id);
             // Badge Premium hors de portée de cette offre : cadenas, lien vers l'offre.

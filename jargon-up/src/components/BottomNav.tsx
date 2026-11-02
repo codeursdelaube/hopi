@@ -21,7 +21,7 @@ export function BottomNav() {
       aria-label={fr.shell.mainNav}
       className="fixed inset-x-0 bottom-0 z-20 border-t-2 border-base-300 bg-base-100 pb-[env(safe-area-inset-bottom)]"
     >
-      <ul className="mx-auto flex max-w-md justify-around">
+      <ul className="mx-auto flex app-width justify-around">
         {ITEMS.map((item) => {
           const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
           return (

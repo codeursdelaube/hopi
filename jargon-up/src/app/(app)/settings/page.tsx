@@ -17,7 +17,7 @@ export const metadata: Metadata = { title: t.title };
 
 export default function SettingsPage() {
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col gap-8 px-4 py-6">
+    <main className="mx-auto flex w-full max-w-md flex-1 flex-col gap-8 px-4 py-6 md:max-w-xl">
       <h1 className="flex items-center gap-2 font-display text-3xl font-bold">
         <Settings className="size-8 text-primary" aria-hidden /> {t.title}
       </h1>

@@ -11,13 +11,16 @@ import { fr } from "@/lib/i18n/fr";
 
 export default function LearnPage() {
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col gap-6 px-4 py-6">
-      <Suspense fallback={<div className="h-24 w-full skeleton" />}>
-        <WordOfDayCard />
-      </Suspense>
-      <Suspense fallback={null}>
-        <ReviewCard />
-      </Suspense>
+    <main className="mx-auto flex w-full app-width flex-1 flex-col gap-6 px-4 py-6">
+      {/* Tablette : mot du jour et révision côte à côte (la carte de révision peut être absente). */}
+      <div className="flex flex-col gap-6 md:flex-row md:items-stretch md:*:flex-1">
+        <Suspense fallback={<div className="h-24 w-full skeleton" />}>
+          <WordOfDayCard />
+        </Suspense>
+        <Suspense fallback={null}>
+          <ReviewCard />
+        </Suspense>
+      </div>
       <Suspense fallback={<PathSkeleton />}>
         <PathLoader />
       </Suspense>

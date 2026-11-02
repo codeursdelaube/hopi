@@ -12,7 +12,7 @@ export default function AppLayout({ children }: LayoutProps<"/">) {
   return (
     <div className="flex flex-1 flex-col pb-20">
       <header className="sticky top-0 z-20 border-b-2 border-base-300 bg-base-100/95 backdrop-blur">
-        <div className="mx-auto flex h-14 max-w-md items-center justify-between px-4">
+        <div className="mx-auto flex h-14 app-width items-center justify-between px-4">
           <Link href="/learn" className="font-display text-xl font-bold text-primary">
             {fr.app.name}
           </Link>

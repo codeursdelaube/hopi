@@ -10,7 +10,7 @@ export const metadata: Metadata = { title: "Connexion" };
 
 export default function LoginPage({ searchParams }: PageProps<"/login">) {
   return (
-    <main className="mx-auto flex w-full max-w-sm flex-1 flex-col items-center justify-center gap-6 px-4 py-10 text-center">
+    <main className="mx-auto flex w-full max-w-sm flex-1 flex-col items-center justify-center gap-6 px-4 py-10 text-center md:max-w-md">
       <Suspense fallback={<LoginActionsSkeleton />}>
         <LoginActions searchParams={searchParams} />
       </Suspense>

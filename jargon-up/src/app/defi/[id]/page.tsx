@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps<"/defi/[id]">): Pro
 /** Page publique d'un défi : les amis invités n'ont pas besoin d'être connectés pour la voir. */
 export default function ChallengePage({ params }: PageProps<"/defi/[id]">) {
   return (
-    <main className="mx-auto flex w-full max-w-md flex-1 flex-col items-center gap-6 px-4 py-8 text-center">
+    <main className="mx-auto flex w-full max-w-md flex-1 flex-col items-center gap-6 px-4 py-8 text-center md:max-w-xl">
       <Suspense fallback={<div className="h-96 w-full skeleton" />}>
         <ChallengeContent params={params} />
       </Suspense>

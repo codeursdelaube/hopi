@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps<"/badge/[slug]">): 
 /** Page publique d'un badge partagé : invite à découvrir et installer Hopi. */
 export default function BadgePage({ params }: PageProps<"/badge/[slug]">) {
   return (
-    <main className="mx-auto flex w-full max-w-sm flex-1 flex-col items-center justify-center gap-6 px-4 py-10 text-center">
+    <main className="mx-auto flex w-full max-w-sm flex-1 flex-col items-center justify-center gap-6 px-4 py-10 text-center md:max-w-md">
       <Suspense fallback={<div className="h-96 w-full skeleton" />}>
         <BadgeContent params={params} />
       </Suspense>

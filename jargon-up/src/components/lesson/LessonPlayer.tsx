@@ -304,7 +304,7 @@ function FeedbackBar({
       layout
       className={`fixed inset-x-0 bottom-0 z-30 border-t-2 ${tone} pb-[max(1rem,env(safe-area-inset-bottom))]`}
     >
-      <div className="mx-auto flex max-w-md flex-col gap-3 px-4 pt-4">
+      <div className="mx-auto flex play-width flex-col gap-3 px-4 pt-4">
         <AnimatePresence>
           {answered && (
             <m.div
