@@ -12,9 +12,20 @@ create extension if not exists pg_cron;
 create extension if not exists pg_net;
 
 -- Le secret est rangé dans le coffre-fort de Supabase (Vault), pas en clair dans la tâche.
-select vault.create_secret('COLLE_ICI_TON_CRON_SECRET', 'hopi_cron_secret');
+-- Rejouable : crée le secret s'il n'existe pas, sinon le met à jour.
+do $$
+declare
+  existing uuid := (select id from vault.secrets where name = 'hopi_cron_secret');
+begin
+  if existing is null then
+    perform vault.create_secret('COLLE_ICI_TON_CRON_SECRET', 'hopi_cron_secret');
+  else
+    perform vault.update_secret(existing, 'COLLE_ICI_TON_CRON_SECRET');
+  end if;
+end
+$$;
 
--- Toutes les heures, à la minute 0.
+-- Toutes les heures, à la minute 0 (relancer le script met simplement la tâche à jour).
 select cron.schedule(
   'hopi-hourly-reminders',
   '0 * * * *',
