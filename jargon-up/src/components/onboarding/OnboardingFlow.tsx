@@ -20,12 +20,14 @@ export type FieldOption = {
 type Props = {
   fields: FieldOption[];
   initial: { fieldId: string | null; level: Level; dailyGoal: number };
+  /** Page ouverte à la fin (par défaut le parcours). */
+  next: string;
 };
 
 const STEPS = ["field", "level", "goal"] as const;
 const t = fr.onboarding;
 
-export function OnboardingFlow({ fields, initial }: Props) {
+export function OnboardingFlow({ fields, initial, next }: Props) {
   const [step, setStep] = useState(0);
   const [direction, setDirection] = useState(1);
   const [fieldId, setFieldId] = useState(
@@ -53,8 +55,8 @@ export function OnboardingFlow({ fields, initial }: Props) {
     if (!fieldId) return;
     setFailed(false);
     startTransition(async () => {
-      // En cas de succès, l'action redirige vers /learn et ne revient pas ici.
-      const result = await completeOnboarding({ fieldId, level, dailyGoal });
+      // En cas de succès, l'action redirige (vers /learn ou `next`) et ne revient pas ici.
+      const result = await completeOnboarding({ fieldId, level, dailyGoal, next });
       if (!result.ok) setFailed(true);
     });
   }

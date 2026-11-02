@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { z } from "zod";
+import { safeNextPath } from "@/lib/auth/paths";
 import { createClient } from "@/lib/supabase/server";
 import { DAILY_GOALS, LEVELS } from "@/lib/learn/options";
 
@@ -9,6 +10,8 @@ const onboardingSchema = z.object({
   fieldId: z.uuid(),
   level: z.enum(LEVELS),
   dailyGoal: z.union(DAILY_GOALS.map((g) => z.literal(g))),
+  /** Page à ouvrir ensuite (ex. le défi d'un ami) ; uniquement un chemin interne. */
+  next: z.string().max(200).optional(),
 });
 
 export type OnboardingInput = z.infer<typeof onboardingSchema>;
@@ -44,5 +47,5 @@ export async function completeOnboarding(input: OnboardingInput): Promise<Onboar
     .eq("id", userId);
   if (error) return { ok: false };
 
-  redirect("/learn");
+  redirect(safeNextPath(parsed.data.next));
 }

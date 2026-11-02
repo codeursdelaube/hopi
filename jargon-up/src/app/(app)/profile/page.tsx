@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpen, Flame, Medal, MessageSquareText, Settings, Star } from "lucide-react";
 import { Mascot } from "@/components/game/Mascot";
-import { BadgeIcon } from "@/components/ui/icons";
+import { ShareButton } from "@/components/share/ShareDialog";
+import { BadgeIcon, LockIcon } from "@/components/ui/icons";
 import { requireProfile } from "@/lib/auth/session";
+import { can } from "@/lib/features";
 import { getHeaderStats } from "@/lib/game/stats";
 import { createClient } from "@/lib/supabase/server";
 import { fr } from "@/lib/i18n/fr";
@@ -39,11 +41,17 @@ async function ProfileContent() {
       .from("term_reviews")
       .select("term_id", { count: "exact", head: true })
       .eq("user_id", profile.id),
-    supabase.from("badges").select("id, slug, name_fr, description_fr, icon").order("slug"),
+    // Badges classiques d'abord, puis les badges Premium.
+    supabase
+      .from("badges")
+      .select("id, slug, name_fr, description_fr, icon, premium")
+      .order("premium")
+      .order("slug"),
     supabase.from("user_badges").select("badge_id").eq("user_id", profile.id),
   ]);
 
   const ownedIds = new Set((owned.data ?? []).map((b) => b.badge_id));
+  const premiumBadges = can(profile.plan, "premium_badges");
   const memberSince = full.data
     ? new Intl.DateTimeFormat("fr-FR", { month: "long", year: "numeric" }).format(
         new Date(full.data.created_at),
@@ -123,6 +131,25 @@ async function ProfileContent() {
         <ul className="grid grid-cols-2 gap-3">
           {(badges.data ?? []).map((b) => {
             const earned = ownedIds.has(b.id);
+            // Badge Premium hors de portée de cette offre : cadenas, lien vers l'offre.
+            if (b.premium && !earned && !premiumBadges) {
+              return (
+                <li key={b.id}>
+                  <Link
+                    href="/upgrade"
+                    aria-label={t.premiumLocked(b.name_fr)}
+                    className="relative flex h-full flex-col items-center gap-1 rounded-box border-2 border-dashed border-warning/60 p-3 text-center"
+                  >
+                    <span className="absolute top-2 right-2 badge gap-1 badge-sm badge-warning">
+                      <LockIcon className="size-3" /> {t.premiumBadge}
+                    </span>
+                    <BadgeIcon slug={b.slug} className="size-10 text-base-content/30" />
+                    <span className="font-semibold text-base-content/70">{b.name_fr}</span>
+                    <span className="text-xs text-base-content/60">{b.description_fr}</span>
+                  </Link>
+                </li>
+              );
+            }
             return (
               <li
                 key={b.id}
@@ -138,6 +165,14 @@ async function ProfileContent() {
                 <span className="text-xs text-base-content/70">
                   {earned ? b.description_fr : `${t.locked} · ${b.description_fr}`}
                 </span>
+                {earned && (
+                  <ShareButton
+                    title={fr.share.badgeTitle(b.name_fr)}
+                    text={fr.share.badgeText(b.name_fr)}
+                    path={`/badge/${b.slug}`}
+                    className="btn mt-1 btn-ghost btn-xs"
+                  />
+                )}
               </li>
             );
           })}

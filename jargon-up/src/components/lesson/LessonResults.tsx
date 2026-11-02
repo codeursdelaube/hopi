@@ -10,6 +10,7 @@ import { scorePercent } from "@/lib/gamification/xp";
 import { fr } from "@/lib/i18n/fr";
 import { Flame, Star, Target } from "lucide-react";
 import { BadgeIcon } from "@/components/ui/icons";
+import { ShareButton } from "@/components/share/ShareDialog";
 
 const t = fr.lesson.results;
 
@@ -115,6 +116,12 @@ export function LessonResults({ result, mode, onContinue }: Props) {
           <Banner key={b.slug}>
             <BadgeIcon slug={b.slug} className="size-5 text-warning" /> {t.newBadge}{" "}
             <strong>{b.name_fr}</strong>
+            <ShareButton
+              title={fr.share.badgeTitle(b.name_fr)}
+              text={fr.share.badgeText(b.name_fr)}
+              path={`/badge/${b.slug}`}
+              className="btn ml-1 btn-secondary btn-xs"
+            />
           </Banner>
         ))}
         {result.capped && <p className="text-sm text-base-content/60">{t.capReached}</p>}

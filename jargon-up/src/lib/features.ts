@@ -2,14 +2,16 @@ import type { Plan } from "@/types/database";
 
 /**
  * Droits par offre, centralisés ici pour préparer Hopi Premium.
- * Aujourd'hui TOUT est gratuit : chaque fonctionnalité est ouverte à l'offre « free ».
- * Pour réserver une fonctionnalité au Premium plus tard, passer sa valeur à `false`.
+ * Valeur `true` : ouverte à l'offre « free » ; `false` : réservée au Premium.
+ * Seuls les badges Premium sont réservés pour l'instant, tout le reste est gratuit.
  */
 export const FEATURES = {
   all_fields: true,
   unlimited_hearts: true,
   offline_mode: true,
   advanced_review: true,
+  /** Badges difficiles (`badges.premium`), affichés avec un cadenas sur les comptes gratuits. */
+  premium_badges: false,
 } as const satisfies Record<string, boolean>;
 
 export type Feature = keyof typeof FEATURES;

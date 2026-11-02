@@ -1,12 +1,18 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
+import Link from "next/link";
+import { LaunchChallengeButton } from "@/components/challenges/ChallengeButtons";
 import { Mascot } from "@/components/game/Mascot";
 import { requireProfile } from "@/lib/auth/session";
+import { daysLeft } from "@/lib/challenges/challenge";
+import { loadActiveChallenges } from "@/lib/challenges/load";
+import { firstName } from "@/lib/push/reminder";
 import { createClient } from "@/lib/supabase/server";
 import { fr } from "@/lib/i18n/fr";
-import { Medal, Rabbit, Trophy } from "lucide-react";
+import { Medal, Rabbit, Swords, Trophy } from "lucide-react";
 
 const t = fr.leaderboard;
+const c = fr.challenge;
 /** Couleurs des médailles : or, argent, bronze. */
 const MEDALS = ["text-warning", "text-base-content/50", "text-secondary"];
 
@@ -22,6 +28,16 @@ export default function LeaderboardPage() {
           <p className="text-sm text-base-content/60">{t.subtitle}</p>
         </div>
       </div>
+      <section className="flex flex-col gap-3 rounded-box border-2 border-secondary/50 bg-secondary/5 p-4">
+        <h2 className="flex items-center gap-2 font-display text-xl font-bold">
+          <Swords className="size-6 text-secondary" aria-hidden /> {c.cardTitle}
+        </h2>
+        <p className="text-sm text-base-content/70">{c.cardText}</p>
+        <LaunchChallengeButton />
+        <Suspense fallback={null}>
+          <ActiveChallenges />
+        </Suspense>
+      </section>
       <Suspense
         fallback={
           <div className="flex flex-col gap-2">
@@ -34,6 +50,37 @@ export default function LeaderboardPage() {
         <Ranking />
       </Suspense>
     </main>
+  );
+}
+
+/** Défis en cours de l'utilisateur, avec un lien vers chacun. */
+async function ActiveChallenges() {
+  const profile = await requireProfile();
+  const challenges = await loadActiveChallenges(profile.id);
+  if (challenges.length === 0) return null;
+  const now = new Date();
+
+  return (
+    <div className="flex flex-col gap-2">
+      <h3 className="text-sm font-bold text-base-content/70">{c.active}</h3>
+      <ul className="flex flex-col gap-2">
+        {challenges.map((ch) => (
+          <li key={ch.id}>
+            <Link
+              href={`/defi/${ch.id}`}
+              className="flex items-center justify-between gap-2 rounded-box border-2 border-base-300 bg-base-100 px-3 py-2"
+            >
+              <span className="truncate font-semibold">
+                {ch.mine ? c.itemMine : c.item(firstName(ch.creatorName))}
+              </span>
+              <span className="badge shrink-0 badge-sm badge-warning">
+                {c.daysLeft(daysLeft(ch.endsAt, now))}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

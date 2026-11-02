@@ -77,7 +77,15 @@ export type Database = {
         "field_id" | "day" | "term_id"
       >;
       badges: Table<
-        { id: string; slug: string; name_fr: string; description_fr: string; icon: string | null },
+        {
+          id: string;
+          slug: string;
+          name_fr: string;
+          description_fr: string;
+          icon: string | null;
+          /** Badge réservé à l'offre Premium (cadenas pour les autres). */
+          premium: boolean;
+        },
         "slug" | "name_fr" | "description_fr"
       >;
       profiles: Table<
@@ -146,6 +154,14 @@ export type Database = {
         { user_id: string; badge_id: string; earned_at: string },
         "user_id" | "badge_id"
       >;
+      challenges: Table<
+        { id: string; creator_id: string; created_at: string; ends_at: string },
+        "creator_id" | "ends_at"
+      >;
+      challenge_participants: Table<
+        { challenge_id: string; user_id: string; joined_at: string },
+        "challenge_id" | "user_id"
+      >;
     };
     Views: Record<never, never>;
     Functions: {
@@ -156,6 +172,16 @@ export type Database = {
           avatar_url: string | null;
           weekly_xp: number;
           is_me: boolean;
+        }[];
+      };
+      challenge_scores: {
+        Args: { p_challenge_id: string };
+        Returns: {
+          user_id: string;
+          display_name: string | null;
+          avatar_url: string | null;
+          xp: number;
+          joined_at: string;
         }[];
       };
     };

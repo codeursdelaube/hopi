@@ -145,6 +145,56 @@ export const fr = {
     xp: (n: number) => `${n} XP`,
     rank: (n: number) => `${n}e place`,
   },
+  share: {
+    button: "Partager",
+    copy: "Copier le lien",
+    copied: "Lien copié !",
+    more: "Autres applis",
+    close: "Fermer",
+    badgeTitle: (name: string) => `Partager le badge « ${name} »`,
+    badgeText: (name: string) =>
+      `J'ai débloqué le badge « ${name} » sur Hopi ! J'apprends l'anglais de mon métier en jouant, 5 minutes par jour. Installe l'appli gratuitement et viens me rejoindre :`,
+    challengeText:
+      "Je te lance un défi sur Hopi ! On verra qui gagne le plus d'XP en 7 jours en apprenant l'anglais de son métier. Installe l'appli gratuitement et relève le défi :",
+  },
+  challenge: {
+    cardTitle: "Défie tes amis",
+    cardText:
+      "Lance un défi de 7 jours : la personne qui gagne le plus d'XP l'emporte. Partage le lien sur WhatsApp, Facebook…",
+    launch: "Lancer un défi",
+    shareTitle: "Envoie ton défi à tes amis",
+    limit: (max: number) =>
+      `Tu as déjà ${max} défis en cours. Attends qu'un défi se termine pour en lancer un autre.`,
+    error: "Le défi n'a pas pu être créé. Réessaie.",
+    active: "Mes défis en cours",
+    itemMine: "Ton défi",
+    item: (name: string | null) => `Défi de ${name ?? "ton ami"}`,
+    daysLeft: (n: number) =>
+      n > 1 ? `${n} jours restants` : n === 1 ? "Dernier jour !" : "Terminé",
+    pageTitle: "Défi Hopi",
+    invite: (name: string | null) => `${name ?? "Un ami"} te lance un défi !`,
+    rules:
+      "Qui gagnera le plus d'XP en 7 jours ? Leçons, révisions et mot du jour : chaque XP compte.",
+    accept: "Relever le défi",
+    newcomer: "Pas encore sur Hopi ? C'est gratuit : connecte-toi avec Google en un clic.",
+    joined: "Tu participes à ce défi",
+    inviteMore: "Inviter d'autres amis",
+    goLearn: "Gagner des XP",
+    over: "Ce défi est terminé.",
+    winner: (name: string) => `${name} remporte le défi !`,
+    noWinner: "Pas de gagnant cette fois : égalité en tête.",
+    full: "Ce défi est complet.",
+    joinError: "Impossible de rejoindre le défi. Réessaie.",
+    notFound: "Ce défi n'existe pas ou a été supprimé.",
+    launchOwn: "Lancer mon propre défi",
+    ranking: "Classement du défi",
+  },
+  badgePage: {
+    invite: "Un ami a débloqué ce badge sur Hopi",
+    text: "Hopi t'apprend l'anglais de ton métier comme un jeu : XP, séries et badges. 5 minutes par jour suffisent.",
+    cta: "Commencer gratuitement",
+    notFound: "Ce badge n'existe pas.",
+  },
   profile: {
     title: "Profil",
     memberSince: (date: string) => `Membre depuis ${date}`,
@@ -160,6 +210,8 @@ export const fr = {
     },
     badges: "Badges",
     locked: "À débloquer",
+    premiumBadge: "Premium",
+    premiumLocked: (name: string) => `Badge « ${name} » réservé à Hopi Premium`,
     settings: "Réglages",
   },
   settings: {
@@ -281,6 +333,7 @@ export const fr = {
       "Toutes les filières : droit, communication, compta/gestion, économie",
       "Mode hors-ligne avancé",
       "Révisions personnalisées",
+      "Badges exclusifs, réservés aux plus motivés",
       "Paiement par mobile money ou carte",
     ],
     back: "Retour aux réglages",

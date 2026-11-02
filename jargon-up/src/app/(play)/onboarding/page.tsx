@@ -1,23 +1,25 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { OnboardingFlow } from "@/components/onboarding/OnboardingFlow";
+import { safeNextPath } from "@/lib/auth/paths";
 import { requireProfile } from "@/lib/auth/session";
 import { createClient } from "@/lib/supabase/server";
 import { fr } from "@/lib/i18n/fr";
 
 export const metadata: Metadata = { title: fr.onboarding.title };
 
-export default function OnboardingPage() {
+export default function OnboardingPage({ searchParams }: PageProps<"/onboarding">) {
   return (
     <div className="flex flex-1 flex-col py-6">
       <Suspense fallback={<div className="h-96 w-full skeleton" />}>
-        <OnboardingLoader />
+        <OnboardingLoader searchParams={searchParams} />
       </Suspense>
     </div>
   );
 }
 
-async function OnboardingLoader() {
+async function OnboardingLoader({ searchParams }: Pick<PageProps<"/onboarding">, "searchParams">) {
+  const { next } = await searchParams;
   const profile = await requireProfile();
   const supabase = await createClient();
   const { data: fields, error } = await supabase
@@ -35,6 +37,7 @@ async function OnboardingLoader() {
         level: profile.level,
         dailyGoal: profile.daily_goal_xp,
       }}
+      next={safeNextPath(typeof next === "string" ? next : null)}
     />
   );
 }

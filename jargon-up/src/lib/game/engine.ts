@@ -5,7 +5,8 @@ import { levelFromXp } from "@/lib/gamification/levels";
 import { registerGoalReached } from "@/lib/gamification/streak";
 import { INITIAL_REVIEW_STATE, nextReviewAt, qualityFromResult, sm2 } from "@/lib/srs/sm2";
 import type { EarnedBadge, GameSummary } from "@/lib/game/types";
-import type { XpSource } from "@/types/database";
+import { can } from "@/lib/features";
+import type { Plan, XpSource } from "@/types/database";
 
 /**
  * Toutes les écritures « de jeu » (XP, série, badges, révisions) passent par ici,
@@ -50,7 +51,9 @@ export async function awardXp(input: AwardInput): Promise<GameSummary> {
   const [{ data: profile, error }, xpBefore] = await Promise.all([
     admin
       .from("profiles")
-      .select("total_xp, daily_goal_xp, current_streak, longest_streak, last_activity_date")
+      .select(
+        "total_xp, daily_goal_xp, current_streak, longest_streak, last_activity_date, plan, field_id",
+      )
       .eq("id", input.userId)
       .single(),
     xpEarnedToday(input.userId, input.offsetMinutes),
@@ -95,6 +98,8 @@ export async function awardXp(input: AwardInput): Promise<GameSummary> {
     totalXp,
     streak: streak.currentStreak,
     perfectLesson: input.perfectLesson ?? false,
+    plan: profile.plan,
+    fieldId: profile.field_id,
   });
 
   return {
@@ -113,13 +118,20 @@ export async function awardXp(input: AwardInput): Promise<GameSummary> {
 /** Attribue les badges mérités et pas encore obtenus. */
 async function grantBadges(
   userId: string,
-  facts: { totalXp: number; streak: number; perfectLesson: boolean },
+  facts: {
+    totalXp: number;
+    streak: number;
+    perfectLesson: boolean;
+    plan: Plan;
+    fieldId: string | null;
+  },
 ): Promise<EarnedBadge[]> {
   const admin = createAdminClient();
+  const premium = can(facts.plan, "premium_badges");
 
-  const [{ data: badges }, { data: owned }, { count: lessonsDone }, { data: reviewEvents }] =
+  const [{ data: badges }, { data: owned }, { count: lessonsDone }, { data: reviewEvents }, hard] =
     await Promise.all([
-      admin.from("badges").select("id, slug, name_fr, icon"),
+      admin.from("badges").select("id, slug, name_fr, icon, premium"),
       admin.from("user_badges").select("badge_id").eq("user_id", userId),
       admin
         .from("lesson_progress")
@@ -127,6 +139,8 @@ async function grantBadges(
         .eq("user_id", userId)
         .not("completed_at", "is", null),
       admin.from("xp_events").select("amount").eq("user_id", userId).eq("source", "review"),
+      // Requêtes en plus seulement pour les comptes qui peuvent obtenir les badges Premium.
+      premium ? premiumBadgeFacts(userId, facts.fieldId) : null,
     ]);
   if (!badges) return [];
 
@@ -140,10 +154,18 @@ async function grantBadges(
     streak_7: facts.streak >= 7,
     streak_30: facts.streak >= 30,
     reviewer: reviewedTerms >= 50,
+    // Badges Premium (difficiles).
+    streak_100: facts.streak >= 100,
+    xp_5000: facts.totalXp >= 5000,
+    perfect_10: (hard?.perfectLessons ?? 0) >= 10,
+    field_master: hard?.fieldCompleted ?? false,
+    reviewer_500: reviewedTerms >= 500,
   };
 
   const ownedIds = new Set((owned ?? []).map((o) => o.badge_id));
-  const toGrant = badges.filter((b) => earned[b.slug] && !ownedIds.has(b.id));
+  const toGrant = badges.filter(
+    (b) => earned[b.slug] && !ownedIds.has(b.id) && (premium || !b.premium),
+  );
   if (toGrant.length === 0) return [];
 
   const { error } = await admin.from("user_badges").upsert(
@@ -152,6 +174,44 @@ async function grantBadges(
   );
   if (error) throw new Error(`Attribution des badges : ${error.message}`);
   return toGrant.map(({ slug, name_fr, icon }) => ({ slug, name_fr, icon }));
+}
+
+/** Critères des badges Premium : leçons sans faute, filière terminée. */
+async function premiumBadgeFacts(
+  userId: string,
+  fieldId: string | null,
+): Promise<{ perfectLessons: number; fieldCompleted: boolean }> {
+  const admin = createAdminClient();
+  const [{ count: perfectLessons }, { data: units }, { data: done }] = await Promise.all([
+    admin
+      .from("lesson_progress")
+      .select("lesson_id", { count: "exact", head: true })
+      .eq("user_id", userId)
+      .eq("best_score", 100),
+    fieldId
+      ? admin.from("units").select("id").eq("field_id", fieldId)
+      : Promise.resolve({ data: [] }),
+    admin
+      .from("lesson_progress")
+      .select("lesson_id")
+      .eq("user_id", userId)
+      .not("completed_at", "is", null),
+  ]);
+
+  let fieldCompleted = false;
+  if (units && units.length > 0) {
+    const { data: lessons } = await admin
+      .from("lessons")
+      .select("id")
+      .in(
+        "unit_id",
+        units.map((u) => u.id),
+      );
+    const doneIds = new Set((done ?? []).map((d) => d.lesson_id));
+    fieldCompleted = (lessons ?? []).length > 0 && (lessons ?? []).every((l) => doneIds.has(l.id));
+  }
+
+  return { perfectLessons: perfectLessons ?? 0, fieldCompleted };
 }
 
 /** Met à jour la répétition espacée (SM-2) de plusieurs termes. */
