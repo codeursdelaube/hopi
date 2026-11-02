@@ -16,6 +16,7 @@
 - [ ] Vercel → Environment Variables : `NEXT_PUBLIC_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `CRON_SECRET`
       (mêmes valeurs que `.env.local`), puis redéployer.
 - [ ] Migration `20261102090000_reminder_hours.sql` exécutée (heures de rappel choisies par l'utilisateur).
+- [ ] Migration `20261103090000_inactivity_nudges.sql` exécutée (relance après 3 jours d'absence).
 - [ ] **Rappels à l'heure choisie** : exécuter `supabase/setup/hourly-reminders.sql` dans le SQL Editor
       après y avoir collé la valeur de `CRON_SECRET` (Supabase appelle Hopi toutes les heures).
       Vérifier ensuite : `select * from cron.job_run_details order by start_time desc limit 5;`

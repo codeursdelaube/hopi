@@ -5,9 +5,14 @@ import { Bell, BellOff, BellRing, Clock, Send } from "lucide-react";
 import {
   saveNotificationPrefs,
   sendTestNotification,
-  subscribePush,
   unsubscribePush,
 } from "@/app/(app)/settings/notification-actions";
+import {
+  detectPushSupport,
+  enablePushOnThisDevice,
+  isSubscribedOnThisDevice,
+  type PushSupport,
+} from "@/lib/push/client";
 import { MAX_REMINDER_HOURS, REMINDER_HOUR_CHOICES } from "@/lib/push/reminder";
 import { fr } from "@/lib/i18n/fr";
 
@@ -16,39 +21,7 @@ const DEFAULT_PREFS: Prefs = { word: true, reviews: true, hours: [18] };
 
 const t = fr.notifications;
 
-type Support = "checking" | "ok" | "unsupported" | "ios-install" | "denied";
-
-/** Clé publique VAPID (base64url) → format attendu par pushManager.subscribe. */
-function toUint8Array(base64: string) {
-  const padded = (base64 + "=".repeat((4 - (base64.length % 4)) % 4))
-    .replace(/-/g, "+")
-    .replace(/_/g, "/");
-  return Uint8Array.from(atob(padded), (c) => c.charCodeAt(0));
-}
-
-async function getRegistration() {
-  // En développement le service worker n'est pas enregistré au démarrage : on le fait ici.
-  return (
-    (await navigator.serviceWorker.getRegistration()) ??
-    (await navigator.serviceWorker.register("/sw.js"))
-  );
-}
-
-function detectSupport(): Support {
-  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-  const standalone =
-    window.matchMedia("(display-mode: standalone)").matches ||
-    ("standalone" in navigator && (navigator as { standalone?: boolean }).standalone === true);
-  if (
-    !("serviceWorker" in navigator) ||
-    !("PushManager" in window) ||
-    !("Notification" in window)
-  ) {
-    return isIOS && !standalone ? "ios-install" : "unsupported";
-  }
-  if (Notification.permission === "denied") return "denied";
-  return "ok";
-}
+type Support = "checking" | PushSupport;
 
 export function NotificationSettings({
   initialPrefs,
@@ -56,7 +29,6 @@ export function NotificationSettings({
   /** null : migration pas encore appliquée (colonnes absentes). */
   initialPrefs: Prefs | null;
 }) {
-  const publicKey = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY;
   const [support, setSupport] = useState<Support>("checking");
   const [subscribed, setSubscribed] = useState(false);
   const [prefs, setPrefs] = useState<Prefs>(initialPrefs ?? DEFAULT_PREFS);
@@ -64,48 +36,27 @@ export function NotificationSettings({
   const [pending, startTransition] = useTransition();
 
   useEffect(() => {
-    const s = detectSupport();
+    const s = detectPushSupport();
     // eslint-disable-next-line react-hooks/set-state-in-effect -- APIs du navigateur (client uniquement)
     setSupport(s);
     if (s !== "ok") return;
-    void navigator.serviceWorker
-      .getRegistration()
-      .then((reg) => reg?.pushManager.getSubscription())
-      .then((sub) => setSubscribed(Boolean(sub)));
+    void isSubscribedOnThisDevice().then(setSubscribed);
   }, []);
 
   function enable() {
     setMessage(null);
     startTransition(async () => {
-      try {
-        if (!publicKey) throw new Error("no-key");
-        const permission = await Notification.requestPermission();
-        if (permission !== "granted") {
-          setSupport(permission === "denied" ? "denied" : "ok");
-          return;
-        }
-        const reg = await getRegistration();
-        await navigator.serviceWorker.ready;
-        const sub =
-          (await reg.pushManager.getSubscription()) ??
-          (await reg.pushManager.subscribe({
-            userVisibleOnly: true,
-            applicationServerKey: toUint8Array(publicKey),
-          }));
-        const json = sub.toJSON();
-        const result = await subscribePush({
-          endpoint: sub.endpoint,
-          keys: { p256dh: json.keys?.p256dh ?? "", auth: json.keys?.auth ?? "" },
-        });
-        if (!result.ok) throw new Error("save");
-        // Enregistre aussi le fuseau horaire de ce téléphone (rappels à l'heure locale).
-        await saveNotificationPrefs({ ...prefs, offsetMinutes: new Date().getTimezoneOffset() });
-        setSubscribed(true);
-        setMessage({ tone: "ok", text: t.enabled });
-      } catch (e) {
-        const noKey = e instanceof Error && e.message === "no-key";
-        setMessage({ tone: "error", text: noKey ? t.notConfigured : t.error });
+      const result = await enablePushOnThisDevice();
+      if (result === "denied") return setSupport("denied");
+      if (result === "dismissed") return;
+      if (result !== "ok") {
+        setMessage({ tone: "error", text: result === "no-key" ? t.notConfigured : t.error });
+        return;
       }
+      // Enregistre aussi les préférences affichées (heures, types de rappels).
+      await saveNotificationPrefs({ ...prefs, offsetMinutes: new Date().getTimezoneOffset() });
+      setSubscribed(true);
+      setMessage({ tone: "ok", text: t.enabled });
     });
   }
 

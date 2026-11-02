@@ -88,3 +88,118 @@ export function buildReminder(input: ReminderInput): PushMessage | null {
     tag: TAG,
   };
 }
+
+/* ------------------------------------------------------------------------------------------
+ * Relance après une absence
+ * ---------------------------------------------------------------------------------------- */
+
+/** Jours sans visite avant une relance, puis entre deux relances. */
+export const INACTIVITY_DAYS = 3;
+/** Au-delà, on arrête de relancer (pas de harcèlement) jusqu'au retour de l'utilisateur. */
+export const MAX_INACTIVITY_PUSHES = 6;
+
+const DAY = 86_400_000;
+
+/**
+ * Faut-il relancer cet utilisateur absent ?
+ * - pas venu depuis au moins 3 jours ;
+ * - pas déjà relancé dans les 3 derniers jours pendant cette absence ;
+ * - moins de MAX_INACTIVITY_PUSHES relances depuis sa dernière visite.
+ */
+export function isInactivityDue(input: {
+  lastSeenAt: Date;
+  lastInactivityPushAt: Date | null;
+  pushCount: number;
+  now: Date;
+}): boolean {
+  const { lastSeenAt, lastInactivityPushAt, pushCount, now } = input;
+  if (now.getTime() - lastSeenAt.getTime() < INACTIVITY_DAYS * DAY) return false;
+  if (pushCount >= MAX_INACTIVITY_PUSHES) return false;
+  const pushedDuringThisAbsence =
+    lastInactivityPushAt !== null && lastInactivityPushAt.getTime() > lastSeenAt.getTime();
+  if (
+    pushedDuringThisAbsence &&
+    now.getTime() - lastInactivityPushAt.getTime() < INACTIVITY_DAYS * DAY
+  ) {
+    return false;
+  }
+  return true;
+}
+
+type InactivityContext = { name: string | null; daysAway: number; dueReviews: number };
+
+/** Messages de relance : un différent à chaque relance (dans l'ordre, puis on recommence). */
+const INACTIVITY_MESSAGES: ((c: InactivityContext) => {
+  title: string;
+  body: string;
+  url: string;
+})[] = [
+  (c) => ({
+    title: `Ça fait ${c.daysAway} jours${c.name ? `, ${c.name}` : ""} !`,
+    body:
+      c.dueReviews > 0
+        ? `Tu n'as pas révisé depuis ${c.daysAway} jours : ${c.dueReviews} mots t'attendent. 5 minutes suffisent.`
+        : `Tu n'as pas révisé depuis ${c.daysAway} jours. Une petite séance pour garder le rythme ?`,
+    url: "/review",
+  }),
+  () => ({
+    title: "Tes mots commencent à s'envoler…",
+    body: "Sans révision, on oublie vite. Viens les rattraper en quelques minutes aujourd'hui.",
+    url: "/review",
+  }),
+  (c) => ({
+    title: "Hopi a gardé ta place au chaud",
+    body: `${c.name ? `${c.name}, une` : "Une"} petite leçon pour reprendre le rythme ? Hopi t'attend.`,
+    url: "/learn",
+  }),
+  (c) => ({
+    title: `Pas vu depuis ${c.daysAway} jours !`,
+    body: "Ton vocabulaire pro n'attend que toi. On s'y remet ensemble ?",
+    url: "/learn",
+  }),
+  () => ({
+    title: "Ta série peut repartir aujourd'hui",
+    body: "Gagne tes premiers XP de la semaine en 5 minutes et relance ta série.",
+    url: "/learn",
+  }),
+  () => ({
+    title: "Le classement bouge sans toi",
+    body: "Les autres apprenants avancent. Une leçon pour revenir dans la course ?",
+    url: "/leaderboard",
+  }),
+  () => ({
+    title: "Un mot par jour, c'est déjà beaucoup",
+    body: "Découvre le mot du jour de ta filière et gagne 3 XP en 30 secondes.",
+    url: "/word-of-the-day",
+  }),
+  (c) => ({
+    title: "Hopi ne lâche pas l'affaire",
+    body:
+      c.dueReviews > 0
+        ? `${c.dueReviews} mots sont prêts à être révisés. Reviens quand tu veux, on reprend où tu t'étais arrêté.`
+        : "Reviens quand tu veux : tes leçons t'attendent là où tu t'étais arrêté.",
+    url: "/review",
+  }),
+];
+
+/**
+ * Message de la n-ième relance (n = relances déjà envoyées pendant cette absence).
+ * `rotation` décale le point de départ (ex. jour de la dernière visite) : une nouvelle
+ * absence ne recommence pas toujours par le même message.
+ */
+export function buildInactivityMessage(
+  pushCount: number,
+  context: InactivityContext,
+  rotation = 0,
+): PushMessage {
+  const index = (pushCount + rotation) % INACTIVITY_MESSAGES.length;
+  const message = INACTIVITY_MESSAGES[index](context);
+  // Prénom seulement (et pas de nom complet) dans la notification.
+  return { ...message, tag: "hopi-comeback" };
+}
+
+/** Prénom à afficher dans une notification (premier mot du nom affiché). */
+export function firstName(displayName: string | null): string | null {
+  const first = displayName?.trim().split(/\s+/)[0];
+  return first ? first.slice(0, 20) : null;
+}

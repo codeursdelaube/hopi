@@ -228,6 +228,23 @@ export const fr = {
     acceptAnd: "et notre",
     acceptPrivacy: "politique de confidentialité",
   },
+  notifPrompt: {
+    title: "Active tes rappels de révision",
+    text: "Hopi t'envoie un petit rappel à l'heure de ta révision et te présente le mot du jour. Tu choisis tes heures dans les Réglages.",
+    perks: [
+      "Un rappel à l'heure que tu choisis (18 h par défaut)",
+      "Le mot du jour de ta filière",
+      "Jamais de publicité, désactivable à tout moment",
+    ],
+    enable: "Activer les notifications",
+    later: "Plus tard",
+    done: "C'est activé ! Change tes heures de rappel quand tu veux dans les Réglages.",
+    denied:
+      "Les notifications sont bloquées. Tu peux les autoriser dans les réglages de ton navigateur, puis dans Réglages → Notifications.",
+    error:
+      "Impossible d'activer les notifications pour le moment. Réessaie depuis Réglages → Notifications.",
+    close: "Fermer",
+  },
   pwa: {
     installTitle: "Installe Hopi sur ton téléphone",
     installIntro: "Comme une vraie appli, sans passer par le Play Store :",

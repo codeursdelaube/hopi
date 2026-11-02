@@ -99,6 +99,9 @@ export type Database = {
           reminder_hours: number[];
           tz_offset_minutes: number;
           last_reminder_at: string | null;
+          last_seen_at: string;
+          last_inactivity_push_at: string | null;
+          inactivity_push_count: number;
           created_at: string;
         },
         "id"

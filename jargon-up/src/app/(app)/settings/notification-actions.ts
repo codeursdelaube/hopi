@@ -11,6 +11,8 @@ import { fr } from "@/lib/i18n/fr";
 const subscriptionSchema = z.object({
   endpoint: z.url().max(1000),
   keys: z.object({ p256dh: z.string().min(1).max(200), auth: z.string().min(1).max(100) }),
+  /** Décalage horaire du téléphone (rappels à l'heure locale). */
+  offsetMinutes: z.number().int().min(-840).max(720).optional(),
 });
 
 export type PushSubscriptionInput = z.infer<typeof subscriptionSchema>;
@@ -31,6 +33,14 @@ export async function subscribePush(input: PushSubscriptionInput): Promise<{ ok:
     { onConflict: "endpoint" },
   );
   if (error) console.error("subscribePush :", error.message);
+
+  if (!error && parsed.data.offsetMinutes !== undefined) {
+    // Sans conséquence si la migration des heures de rappel n'est pas encore appliquée.
+    await createAdminClient()
+      .from("profiles")
+      .update({ tz_offset_minutes: parsed.data.offsetMinutes })
+      .eq("id", profile.id);
+  }
   return { ok: !error };
 }
 

@@ -1,5 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { buildReminder, isReminderDue } from "./reminder";
+import {
+  MAX_INACTIVITY_PUSHES,
+  buildInactivityMessage,
+  buildReminder,
+  firstName,
+  isInactivityDue,
+  isReminderDue,
+} from "./reminder";
 
 describe("isReminderDue", () => {
   const at = (iso: string) => new Date(iso);
@@ -104,5 +111,82 @@ describe("buildReminder", () => {
   it("tout coupé → rien", () => {
     expect(buildReminder({ ...base, notifyWord: false, notifyReviews: false })).toBeNull();
     expect(buildReminder({ ...base, notifyReviews: false, wordClaimed: true })).toBeNull();
+  });
+});
+
+describe("relance après 3 jours d'absence", () => {
+  const now = new Date("2026-11-10T18:00:00Z");
+  const daysAgo = (d: number) => new Date(now.getTime() - d * 86_400_000);
+
+  it("pas de relance avant 3 jours", () => {
+    expect(
+      isInactivityDue({ lastSeenAt: daysAgo(2), lastInactivityPushAt: null, pushCount: 0, now }),
+    ).toBe(false);
+  });
+
+  it("relance au bout de 3 jours", () => {
+    expect(
+      isInactivityDue({ lastSeenAt: daysAgo(3), lastInactivityPushAt: null, pushCount: 0, now }),
+    ).toBe(true);
+  });
+
+  it("pas deux relances en moins de 3 jours pendant la même absence", () => {
+    expect(
+      isInactivityDue({
+        lastSeenAt: daysAgo(5),
+        lastInactivityPushAt: daysAgo(2),
+        pushCount: 1,
+        now,
+      }),
+    ).toBe(false);
+  });
+
+  it("nouvelle relance 3 jours après la précédente", () => {
+    expect(
+      isInactivityDue({
+        lastSeenAt: daysAgo(6),
+        lastInactivityPushAt: daysAgo(3),
+        pushCount: 1,
+        now,
+      }),
+    ).toBe(true);
+  });
+
+  it("une relance d'une absence passée n'empêche pas la nouvelle", () => {
+    expect(
+      isInactivityDue({
+        lastSeenAt: daysAgo(3),
+        lastInactivityPushAt: daysAgo(10),
+        pushCount: 0,
+        now,
+      }),
+    ).toBe(true);
+  });
+
+  it(`arrêt après ${MAX_INACTIVITY_PUSHES} relances`, () => {
+    expect(
+      isInactivityDue({
+        lastSeenAt: daysAgo(30),
+        lastInactivityPushAt: daysAgo(4),
+        pushCount: MAX_INACTIVITY_PUSHES,
+        now,
+      }),
+    ).toBe(false);
+  });
+
+  it("le message change d'une relance à l'autre", () => {
+    const ctx = { name: "Koffi", daysAway: 3, dueReviews: 4 };
+    const titles = new Set(
+      Array.from({ length: MAX_INACTIVITY_PUSHES }, (_, i) => buildInactivityMessage(i, ctx).title),
+    );
+    expect(titles.size).toBe(MAX_INACTIVITY_PUSHES);
+    expect(buildInactivityMessage(0, ctx).title).toBe("Ça fait 3 jours, Koffi !");
+    expect(buildInactivityMessage(0, ctx).body).toContain("4 mots");
+  });
+
+  it("prénom seulement", () => {
+    expect(firstName("Eric Adokou")).toBe("Eric");
+    expect(firstName(null)).toBeNull();
+    expect(firstName("   ")).toBeNull();
   });
 });

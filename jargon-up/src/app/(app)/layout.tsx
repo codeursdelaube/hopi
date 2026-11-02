@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { BottomNav } from "@/components/BottomNav";
+import { PresencePing } from "@/components/PresencePing";
+import { NotificationPrompt } from "@/components/pwa/NotificationPrompt";
 import { StatsBar, StatsBarSkeleton } from "@/components/game/StatsBar";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { fr } from "@/lib/i18n/fr";
@@ -24,6 +26,8 @@ export default function AppLayout({ children }: LayoutProps<"/">) {
       </header>
       {children}
       <BottomNav />
+      <PresencePing />
+      <NotificationPrompt />
     </div>
   );
 }
