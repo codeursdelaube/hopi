@@ -87,7 +87,12 @@ export function CreateRoomButton() {
           title={t.shareTitle}
           text={t.shareText}
           path={`/salle/${roomId}`}
-          onClose={() => router.push(`/salle/${roomId}`)}
+          onClose={() => {
+            // Fermer AVANT de naviguer : Next garde la page quittée montée (masquée), et une
+            // fenêtre restée ouverte bloquerait le défilement de la page suivante.
+            setRoomId(null);
+            router.push(`/salle/${roomId}`);
+          }}
         />
       )}
     </div>

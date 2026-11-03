@@ -225,7 +225,7 @@ function MyResult({ room }: { room: RoomView }) {
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex flex-col items-center gap-1 rounded-box bg-base-100 p-2">
-      <span className="font-display text-xl font-bold">{value}</span>
+      <span className="font-display text-lg font-bold whitespace-nowrap sm:text-xl">{value}</span>
       <span className="text-xs text-base-content/60">{label}</span>
     </div>
   );
