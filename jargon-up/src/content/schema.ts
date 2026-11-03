@@ -18,6 +18,8 @@ export const termSchema = z.object({
   example_en: z.string().min(1),
   example_fr: z.string().min(1),
   ipa: z.string().optional(),
+  /** Autres orthographes acceptées à la dictée (homophones, variante US : « cheque » → « check »). */
+  accept: z.array(z.string().min(1)).optional(),
 });
 
 export const sentenceSchema = z.object({ en: z.string().min(1), fr: z.string().min(1) });

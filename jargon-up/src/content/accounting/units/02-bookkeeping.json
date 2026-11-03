@@ -276,7 +276,8 @@
           "explanation_fr": "Un « cheque » (US : « check ») est un chèque ; il se prononce comme « check ».",
           "example_en": "The client paid by cheque.",
           "example_fr": "Le client a payé par chèque.",
-          "ipa": "/tʃek/"
+          "ipa": "/tʃek/",
+          "accept": ["check"]
         },
         {
           "term": "bank fees",

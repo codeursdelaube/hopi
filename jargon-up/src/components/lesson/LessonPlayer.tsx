@@ -13,7 +13,7 @@ import { OrderWords } from "@/components/exercises/OrderWords";
 import type { CheckStatus } from "@/components/exercises/types";
 import { Mascot } from "@/components/game/Mascot";
 import { LessonResults } from "@/components/lesson/LessonResults";
-import { correctAnswerText, isCorrect } from "@/lib/exercises/grade";
+import { correctAnswerText, isCorrect, isTypo } from "@/lib/exercises/grade";
 import type { Answer, PlayableExercise } from "@/lib/exercises/schemas";
 import type { FinishInput, FinishResult, FirstTryAnswer } from "@/lib/game/types";
 import { playSound } from "@/lib/sound";
@@ -86,6 +86,8 @@ export function LessonPlayer({ exercises, finish, soundEnabled, mode = "lesson" 
       if (ok) setSolved((s) => new Set(s).add(exercise.id));
       // Exercice raté : il revient à la fin de la file.
       else setQueue((q) => [...q, index]);
+      // Dictée ratée : on réentend le mot en lisant la correction.
+      if (!ok && exercise.type === "listen_type") speak(exercise.payload.text);
     },
     [answer, exercise, index, soundEnabled, status],
   );
@@ -252,7 +254,13 @@ export function LessonPlayer({ exercises, finish, soundEnabled, mode = "lesson" 
         canCheck={answer !== null && exercise.type !== "match_pairs"}
         onCheck={() => check()}
         onContinue={next}
-        correction={status === "wrong" ? correctAnswerText(exercise) : null}
+        correction={
+          status === "wrong" ||
+          (status === "correct" && answer !== null && isTypo(exercise, answer))
+            ? correctAnswerText(exercise)
+            : null
+        }
+        correctionLabel={status === "wrong" ? t.correctAnswer : t.typo}
         explanation={exercise.explanation_fr}
         showExplanation={showExplanation}
         onToggleExplanation={() => setShowExplanation((s) => !s)}
@@ -270,6 +278,7 @@ type FeedbackProps = {
   onCheck: () => void;
   onContinue: () => void;
   correction: string | null;
+  correctionLabel: string;
   explanation: string | null;
   showExplanation: boolean;
   onToggleExplanation: () => void;
@@ -284,6 +293,7 @@ function FeedbackBar({
   onCheck,
   onContinue,
   correction,
+  correctionLabel,
   explanation,
   showExplanation,
   onToggleExplanation,
@@ -325,7 +335,7 @@ function FeedbackBar({
                 </p>
                 {correction && (
                   <p>
-                    <span className="font-semibold">{t.correctAnswer}</span>{" "}
+                    <span className="font-semibold">{correctionLabel}</span>{" "}
                     <span lang="en">{correction}</span>
                   </p>
                 )}

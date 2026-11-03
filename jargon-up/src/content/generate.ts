@@ -139,7 +139,7 @@ export function generateLessonExercises(lesson: ContentLesson): GeneratedExercis
     withTerm(t[5], definitionQuestion(t[5], t, random)),
     withTerm(t[6], {
       type: "listen_type",
-      payload: { text: t[6].term, accept: [t[6].term] },
+      payload: { text: t[6].term, accept: [t[6].term, ...(t[6].accept ?? [])] },
     }),
     {
       ...matchPairs(t.slice(4, 8), random),

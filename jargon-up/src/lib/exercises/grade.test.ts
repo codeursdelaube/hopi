@@ -1,5 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { correctAnswerText, isCorrect, normalizeText } from "./grade";
+import {
+  correctAnswerText,
+  editDistance,
+  isCorrect,
+  isTypo,
+  matchListen,
+  normalizeText,
+} from "./grade";
 import type { ExerciseContent } from "./schemas";
 
 const mc: ExerciseContent = {
@@ -49,7 +56,62 @@ describe("isCorrect", () => {
     };
     expect(isCorrect(ex, { type: "listen_type", text: " Repository. " })).toBe(true);
     expect(isCorrect(ex, { type: "listen_type", text: "repo" })).toBe(true);
-    expect(isCorrect(ex, { type: "listen_type", text: "repositry" })).toBe(false);
+    expect(isCorrect(ex, { type: "listen_type", text: "depository" })).toBe(false);
+  });
+
+  it("dictée : espaces, tirets et apostrophes ignorés", () => {
+    const backend: ExerciseContent = {
+      type: "listen_type",
+      payload: { text: "backend", accept: ["backend"] },
+    };
+    const followUp: ExerciseContent = {
+      type: "listen_type",
+      payload: { text: "follow-up", accept: ["follow-up"] },
+    };
+    expect(isCorrect(backend, { type: "listen_type", text: "back-end" })).toBe(true);
+    expect(isCorrect(backend, { type: "listen_type", text: "Back end" })).toBe(true);
+    expect(isCorrect(followUp, { type: "listen_type", text: "follow up" })).toBe(true);
+    expect(isCorrect(followUp, { type: "listen_type", text: "followup" })).toBe(true);
+  });
+});
+
+describe("dictée : fautes de frappe sur les mots longs", () => {
+  const ex = (text: string): ExerciseContent => ({
+    type: "listen_type",
+    payload: { text, accept: [text] },
+  });
+
+  it("tolère une faute sur un mot moyen, deux sur un mot long", () => {
+    expect(matchListen(["repository"], "repositry")).toBe("typo");
+    expect(matchListen(["load balancer"], "load balancr")).toBe("typo");
+    expect(matchListen(["monetary policy"], "monitary polcy")).toBe("typo");
+    expect(isCorrect(ex("depreciation"), { type: "listen_type", text: "depreciasion" })).toBe(true);
+  });
+
+  it("aucune faute tolérée sur les mots courts", () => {
+    expect(matchListen(["fork"], "form")).toBe("wrong");
+    expect(matchListen(["debt"], "det")).toBe("wrong");
+  });
+
+  it("refuse un autre mot (première lettre différente ou trop d'écarts)", () => {
+    expect(matchListen(["depreciation"], "appreciation")).toBe("wrong");
+    expect(matchListen(["latency"], "agency")).toBe("wrong");
+    expect(matchListen(["variance"], "variable")).toBe("wrong");
+  });
+
+  it("réponse exacte ou vide", () => {
+    expect(matchListen(["tax return"], "Tax return")).toBe("exact");
+    expect(matchListen(["tax return"], "   ")).toBe("wrong");
+  });
+
+  it("signale la faute pour afficher la bonne orthographe", () => {
+    expect(isTypo(ex("warehouse"), { type: "listen_type", text: "warehose" })).toBe(true);
+    expect(isTypo(ex("warehouse"), { type: "listen_type", text: "warehouse" })).toBe(false);
+  });
+
+  it("distance d'édition", () => {
+    expect(editDistance("kitten", "sitting")).toBe(3);
+    expect(editDistance("", "abc")).toBe(3);
   });
 
   it("paires : correct seulement sans erreur", () => {
