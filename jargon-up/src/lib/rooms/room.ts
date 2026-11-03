@@ -26,7 +26,7 @@ export function isTimeLimit(value: number): value is TimeLimit {
   return (ROOM.timeLimits as readonly number[]).includes(value);
 }
 
-/** Barème : 2 XP par terme bien rangé, +5 si tout est juste. Plafond quotidien anti-abus. */
+/** Barème : 2 XP par terme bien classé, +5 si tout est juste. Plafond quotidien anti-abus. */
 export const ROOM_XP = { perCorrect: 2, perfectBonus: 5, dailyCap: 60 } as const;
 
 export const puzzleSchema = z.object({
@@ -73,7 +73,7 @@ export function buildPuzzle(
   };
 }
 
-/** Correction : un terme est juste s'il est rangé dans son concept. Un terme non rangé est faux. */
+/** Correction : un terme est juste s'il est classé dans son concept. Un terme non classé est faux. */
 export function gradePlacements(
   puzzle: Puzzle,
   placements: Readonly<Record<string, string>>,

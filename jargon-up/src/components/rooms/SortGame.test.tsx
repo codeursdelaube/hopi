@@ -17,6 +17,7 @@ const puzzle: PublicPuzzle = {
   terms: [
     { id: "t1", term: "commit" },
     { id: "t2", term: "endpoint" },
+    { id: "t3", term: "branch" },
   ],
 };
 
@@ -32,73 +33,83 @@ function renderGame(startedAt = new Date()) {
   );
 }
 
-describe("SortGame", () => {
+const category = (label: string) => screen.getByRole("button", { name: new RegExp(label) });
+
+describe("SortGame (un mot à la fois)", () => {
   beforeEach(() => {
     submitRoom.mockReset();
     refresh.mockReset();
+    submitRoom.mockResolvedValue({
+      ok: true,
+      correct: 3,
+      total: 3,
+      xp: 11,
+      capped: false,
+      late: false,
+    });
   });
 
-  it("range un terme dans un thème, puis le retire", () => {
+  it("affiche un seul mot, qui disparaît dès qu'on choisit sa catégorie", async () => {
     renderGame();
-    fireEvent.click(screen.getByRole("button", { name: "commit" }));
-    fireEvent.click(screen.getAllByRole("button", { name: "Ranger « commit » ici" })[0]);
-    expect(screen.getByText("1/2 rangés")).toBeTruthy();
-    fireEvent.click(screen.getByRole("button", { name: "Retirer « commit »" }));
-    expect(screen.getByText("0/2 rangés")).toBeTruthy();
+    expect(screen.getByText("commit")).toBeTruthy();
+    expect(screen.queryByText("endpoint")).toBeNull();
+    expect(screen.getByText("Mot 1/3")).toBeTruthy();
+
+    fireEvent.click(category("Git"));
+    expect(await screen.findByText("endpoint")).toBeTruthy();
+    await waitFor(() => expect(screen.queryByText("commit")).toBeNull());
+    expect(screen.getByText("Mot 2/3")).toBeTruthy();
   });
 
-  it("validation possible seulement quand tout est rangé, avec les bons placements", async () => {
-    submitRoom.mockResolvedValue({ ok: true, correct: 2, total: 2, xp: 9, capped: false });
+  it("après le dernier mot, envoi automatique de toutes les réponses", async () => {
     renderGame();
-    const submit = screen.getByRole("button", { name: "Valider" });
-    expect((submit as HTMLButtonElement).disabled).toBe(true);
+    fireEvent.click(category("Git"));
+    fireEvent.click(category("Web"));
+    fireEvent.click(category("Git"));
 
-    fireEvent.click(screen.getByRole("button", { name: "commit" }));
-    fireEvent.click(screen.getAllByRole("button", { name: "Ranger « commit » ici" })[0]);
-    fireEvent.click(screen.getByRole("button", { name: "endpoint" }));
-    fireEvent.click(screen.getAllByRole("button", { name: "Ranger « endpoint » ici" })[1]);
-
-    expect((submit as HTMLButtonElement).disabled).toBe(false);
-    fireEvent.click(submit);
     await waitFor(() => expect(refresh).toHaveBeenCalled());
+    expect(submitRoom).toHaveBeenCalledTimes(1);
     expect(submitRoom).toHaveBeenCalledWith("room-1", {
       placements: [
         { termId: "t1", conceptId: "git" },
         { termId: "t2", conceptId: "web" },
+        { termId: "t3", conceptId: "git" },
       ],
       offsetMinutes: expect.any(Number),
     });
   });
 
-  it("temps écoulé : envoi automatique de ce qui est rangé, plus rien ne bouge", async () => {
-    submitRoom.mockResolvedValue({
-      ok: true,
-      correct: 0,
-      total: 2,
-      xp: 0,
-      capped: false,
-      late: false,
-    });
-    renderGame(new Date(Date.now() - 61_000));
+  it("clavier : touches 1 et 2 = catégories", async () => {
+    renderGame();
+    fireEvent.keyDown(window, { key: "2" });
+    fireEvent.keyDown(window, { key: "1" });
+    fireEvent.keyDown(window, { key: "2" });
     await waitFor(() => expect(submitRoom).toHaveBeenCalledTimes(1));
-    expect(submitRoom).toHaveBeenCalledWith("room-1", {
-      placements: [],
-      offsetMinutes: expect.any(Number),
-    });
-    expect(screen.getByText("Temps écoulé !")).toBeTruthy();
-    const term = screen.getByRole("button", { name: "commit" }) as HTMLButtonElement;
-    expect(term.disabled).toBe(true);
+    expect(submitRoom.mock.calls[0][1].placements).toEqual([
+      { termId: "t1", conceptId: "web" },
+      { termId: "t2", conceptId: "git" },
+      { termId: "t3", conceptId: "web" },
+    ]);
   });
 
-  it("affiche une erreur si l'envoi échoue", async () => {
-    submitRoom.mockResolvedValue({ ok: false, reason: "error" });
+  it("temps écoulé : envoi de ce qui est classé, catégories bloquées", async () => {
+    renderGame(new Date(Date.now() - 61_000));
+    await waitFor(() => expect(submitRoom).toHaveBeenCalledTimes(1));
+    expect(submitRoom.mock.calls[0][1].placements).toEqual([]);
+    expect((category("Git") as HTMLButtonElement).disabled).toBe(true);
+  });
+
+  it("erreur d'envoi : message et bouton pour réessayer", async () => {
+    submitRoom.mockResolvedValueOnce({ ok: false, reason: "error" });
     renderGame();
-    fireEvent.click(screen.getByRole("button", { name: "commit" }));
-    fireEvent.click(screen.getAllByRole("button", { name: "Ranger « commit » ici" })[0]);
-    fireEvent.click(screen.getByRole("button", { name: "endpoint" }));
-    fireEvent.click(screen.getAllByRole("button", { name: "Ranger « endpoint » ici" })[0]);
-    fireEvent.click(screen.getByRole("button", { name: "Valider" }));
+    fireEvent.click(category("Git"));
+    fireEvent.click(category("Git"));
+    fireEvent.click(category("Git"));
     expect(await screen.findByRole("alert")).toBeTruthy();
     expect(refresh).not.toHaveBeenCalled();
+
+    fireEvent.click(screen.getByRole("button", { name: /Réessayer/ }));
+    await waitFor(() => expect(refresh).toHaveBeenCalled());
+    expect(submitRoom).toHaveBeenCalledTimes(2);
   });
 });

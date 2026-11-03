@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
   },
+  // Ancien défi de 7 jours (remplacé par les salles Tri express) : les liens déjà partagés
+  // mènent à l'accueil plutôt qu'à une page introuvable.
+  async redirects() {
+    return [{ source: "/defi/:path*", destination: "/", permanent: false }];
+  },
   cacheComponents: true,
   partialPrefetching: true,
   turbopack: {

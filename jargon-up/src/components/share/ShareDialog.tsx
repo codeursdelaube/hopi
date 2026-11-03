@@ -23,7 +23,7 @@ type ShareProps = {
   title: string;
   /** Message d'invitation ; le lien est ajouté à la fin. */
   text: string;
-  /** Chemin de la page partagée (ex. `/defi/…`), complété avec l'adresse du site. */
+  /** Chemin de la page partagée (ex. `/salle/…`), complété avec l'adresse du site. */
   path: string;
 };
 
