@@ -166,6 +166,10 @@ export type Database = {
         },
         "creator_id" | "field_id" | "puzzle" | "ends_at"
       >;
+      challenge_room_hidden: Table<
+        { user_id: string; room_id: string; hidden_at: string },
+        "user_id" | "room_id"
+      >;
       challenge_room_players: Table<
         {
           room_id: string;

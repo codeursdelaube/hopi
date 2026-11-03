@@ -5,7 +5,10 @@ import {
   buildPuzzle,
   formatDuration,
   formatLimit,
-  hoursLeft,
+  isOpenDuration,
+  isRoomOpen,
+  minutesLeft,
+  rankOf,
   isTimeLimit,
   timedScore,
   gradePlacements,
@@ -104,11 +107,26 @@ describe("classement", () => {
     expect(ranked.map((x) => x.userId)).toEqual(["rapide", "lent", "faux"]);
   });
 
-  it("heures restantes (arrondi supérieur, au moins 1)", () => {
+  it("minutes restantes (arrondi supérieur, au moins 1) et salle ouverte", () => {
     const now = new Date("2026-11-03T10:00:00Z");
-    expect(hoursLeft(new Date("2026-11-06T10:00:00Z"), now)).toBe(72);
-    expect(hoursLeft(new Date("2026-11-03T10:20:00Z"), now)).toBe(1);
-    expect(hoursLeft(new Date("2026-11-03T09:00:00Z"), now)).toBe(1);
+    expect(minutesLeft(new Date("2026-11-03T10:15:00Z"), now)).toBe(15);
+    expect(minutesLeft(new Date("2026-11-03T10:00:20Z"), now)).toBe(1);
+    expect(minutesLeft(new Date("2026-11-06T10:00:00Z"), now)).toBe(4320);
+    expect(isRoomOpen(new Date("2026-11-03T10:00:01Z"), now)).toBe(true);
+    expect(isRoomOpen(now, now)).toBe(false);
+  });
+
+  it("rang d'un joueur dans le classement", () => {
+    const ranked = rankResults([r("a", 12, 50_000), r("b", 12, 30_000), r("c", 5, 20_000)]);
+    expect(rankOf(ranked, "b")).toBe(1);
+    expect(rankOf(ranked, "c")).toBe(3);
+    expect(rankOf(ranked, "z")).toBeNull();
+  });
+
+  it("durées d'ouverture proposées à l'hôte", () => {
+    expect(isOpenDuration(15)).toBe(true);
+    expect(isOpenDuration(4320)).toBe(true);
+    expect(isOpenDuration(7)).toBe(false);
   });
 
   it("durée lisible", () => {

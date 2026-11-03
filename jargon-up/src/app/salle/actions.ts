@@ -4,12 +4,13 @@ import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { requireProfile } from "@/lib/auth/session";
 import { awardXp, xpEarnedToday } from "@/lib/game/engine";
-import { lessonsWithTerms } from "@/lib/rooms/load";
+import { historyRoomIds, lessonsWithTerms } from "@/lib/rooms/load";
 import {
   ROOM,
   ROOM_XP,
   buildPuzzle,
   gradePlacements,
+  isOpenDuration,
   isTimeLimit,
   puzzleSchema,
   roomXp,
@@ -17,18 +18,21 @@ import {
 } from "@/lib/rooms/room";
 import { createAdminClient } from "@/lib/supabase/admin";
 
-/** Délai de grâce après la fermeture pour valider une partie déjà commencée. */
-const GRACE_MS = 60 * 60 * 1000;
-
 export type CreateRoomResult =
   { ok: true; id: string } | { ok: false; reason: "limit" | "no_field" | "no_content" | "error" };
 
 /**
- * Crée une salle « Tri express » avec un puzzle tiré dans la filière du créateur, et le temps
- * limite choisi par l'hôte (parmi les durées proposées).
+ * Crée une salle « Tri express » avec un puzzle tiré dans la filière du créateur. L'hôte
+ * choisit le temps limite de jeu et la durée d'ouverture de la salle (parmi les valeurs
+ * proposées) ; une fois fermée, la salle ne se joue plus et reste visible dans l'historique.
  */
-export async function createRoom(timeLimit: number): Promise<CreateRoomResult> {
-  if (!isTimeLimit(timeLimit)) return { ok: false, reason: "error" };
+export async function createRoom(
+  timeLimit: number,
+  openMinutes: number = ROOM.defaultOpenDuration,
+): Promise<CreateRoomResult> {
+  if (!isTimeLimit(timeLimit) || !isOpenDuration(openMinutes)) {
+    return { ok: false, reason: "error" };
+  }
   try {
     const profile = await requireProfile();
     if (!profile.field_id) return { ok: false, reason: "no_field" };
@@ -53,7 +57,7 @@ export async function createRoom(timeLimit: number): Promise<CreateRoomResult> {
         field_id: profile.field_id,
         puzzle,
         time_limit_seconds: timeLimit,
-        ends_at: new Date(now.getTime() + ROOM.hours * 3_600_000).toISOString(),
+        ends_at: new Date(now.getTime() + openMinutes * 60_000).toISOString(),
       })
       .select("id")
       .single();
@@ -112,7 +116,7 @@ const submitSchema = z.object({
 
 export type SubmitRoomResult =
   | { ok: true; correct: number; total: number; xp: number; capped: boolean; late: boolean }
-  | { ok: false; reason: "not_started" | "already" | "over" | "error" };
+  | { ok: false; reason: "not_started" | "already" | "error" };
 
 /** Fin de partie : correction et chronomètre côté serveur, XP plafonnés, une seule soumission. */
 export async function submitRoom(id: string, raw: unknown): Promise<SubmitRoomResult> {
@@ -122,11 +126,7 @@ export async function submitRoom(id: string, raw: unknown): Promise<SubmitRoomRe
     const profile = await requireProfile();
     const admin = createAdminClient();
     const [{ data: room, error }, { data: player, error: playerError }] = await Promise.all([
-      admin
-        .from("challenge_rooms")
-        .select("puzzle, ends_at, time_limit_seconds")
-        .eq("id", id)
-        .maybeSingle(),
+      admin.from("challenge_rooms").select("puzzle, time_limit_seconds").eq("id", id).maybeSingle(),
       admin
         .from("challenge_room_players")
         .select("started_at, finished_at")
@@ -140,10 +140,10 @@ export async function submitRoom(id: string, raw: unknown): Promise<SubmitRoomRe
     if (!player) return { ok: false, reason: "not_started" };
     if (player.finished_at) return { ok: false, reason: "already" };
 
+    // Pas de contrôle de fermeture ici : on ne peut commencer qu'une salle ouverte (startRoom),
+    // et le temps de jeu est vérifié par timedScore. Une partie commencée juste avant la
+    // fermeture peut donc être terminée, sans dépasser son temps limite.
     const now = new Date();
-    if (now.getTime() > new Date(room.ends_at).getTime() + GRACE_MS) {
-      return { ok: false, reason: "over" };
-    }
 
     const puzzle = puzzleSchema.parse(room.puzzle);
     const placements = Object.fromEntries(
@@ -195,5 +195,30 @@ export async function submitRoom(id: string, raw: unknown): Promise<SubmitRoomRe
   } catch (e) {
     console.error("submitRoom :", e);
     return { ok: false, reason: "error" };
+  }
+}
+
+/**
+ * Vide l'historique des défis de l'utilisateur : les salles sont masquées POUR LUI SEUL
+ * (scores et classements restent visibles pour les autres joueurs, les XP sont conservés).
+ */
+export async function clearRoomHistory(): Promise<{ ok: boolean }> {
+  try {
+    const profile = await requireProfile();
+    const ids = await historyRoomIds(profile.id);
+    if (ids.length > 0) {
+      const { error } = await createAdminClient()
+        .from("challenge_room_hidden")
+        .upsert(
+          ids.map((roomId) => ({ user_id: profile.id, room_id: roomId })),
+          { onConflict: "user_id,room_id", ignoreDuplicates: true },
+        );
+      if (error) throw new Error(error.message);
+    }
+    revalidatePath("/profile");
+    return { ok: true };
+  } catch (e) {
+    console.error("clearRoomHistory :", e);
+    return { ok: false };
   }
 }

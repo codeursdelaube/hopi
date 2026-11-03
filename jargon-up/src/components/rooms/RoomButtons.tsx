@@ -5,18 +5,19 @@ import { useRouter } from "next/navigation";
 import { Play, Shuffle } from "lucide-react";
 import { createRoom, startRoom } from "@/app/salle/actions";
 import { ShareDialog } from "@/components/share/ShareDialog";
-import { ROOM, formatLimit, type TimeLimit } from "@/lib/rooms/room";
+import { ROOM, formatLimit, type OpenDuration, type TimeLimit } from "@/lib/rooms/room";
 import { fr } from "@/lib/i18n/fr";
 
 const t = fr.room;
 
 /**
- * L'hôte choisit le temps limite, crée la salle, partage le lien, puis arrive dans la salle
- * pour jouer.
+ * L'hôte choisit le temps limite de jeu et la durée d'ouverture de la salle, crée la salle,
+ * partage le lien, puis arrive dans la salle pour jouer.
  */
 export function CreateRoomButton() {
   const router = useRouter();
   const [timeLimit, setTimeLimit] = useState<TimeLimit>(ROOM.defaultTimeLimit);
+  const [openMinutes, setOpenMinutes] = useState<OpenDuration>(ROOM.defaultOpenDuration);
   const [roomId, setRoomId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
@@ -24,7 +25,7 @@ export function CreateRoomButton() {
   function create() {
     setError(null);
     startTransition(async () => {
-      const result = await createRoom(timeLimit);
+      const result = await createRoom(timeLimit, openMinutes);
       if (result.ok) {
         setRoomId(result.id);
         return;
@@ -60,6 +61,27 @@ export function CreateRoomButton() {
                 className="sr-only"
               />
               {formatLimit(seconds)}
+            </label>
+          ))}
+        </div>
+      </fieldset>
+      <fieldset className="flex flex-col gap-1">
+        <legend className="mb-1 text-sm font-bold">{t.openDuration}</legend>
+        <div className="grid grid-cols-4 gap-2">
+          {ROOM.openDurations.map((minutes) => (
+            <label
+              key={minutes}
+              className={`btn btn-sm ${openMinutes === minutes ? "btn-accent" : "btn-outline"}`}
+            >
+              <input
+                type="radio"
+                name="room-open-duration"
+                value={minutes}
+                checked={openMinutes === minutes}
+                onChange={() => setOpenMinutes(minutes)}
+                className="sr-only"
+              />
+              {t.openDurations[minutes]}
             </label>
           ))}
         </div>

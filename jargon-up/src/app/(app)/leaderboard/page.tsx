@@ -5,7 +5,7 @@ import { CreateRoomButton } from "@/components/rooms/RoomButtons";
 import { Mascot } from "@/components/game/Mascot";
 import { requireProfile } from "@/lib/auth/session";
 import { loadActiveRooms } from "@/lib/rooms/load";
-import { hoursLeft } from "@/lib/rooms/room";
+import { minutesLeft } from "@/lib/rooms/room";
 import { firstName } from "@/lib/push/reminder";
 import { createClient } from "@/lib/supabase/server";
 import { fr } from "@/lib/i18n/fr";
@@ -77,7 +77,7 @@ async function ActiveRooms() {
                 {room.mine ? r.itemMine : r.item(firstName(room.creatorName))}
               </span>
               <span className="badge shrink-0 badge-sm badge-warning">
-                {r.hoursLeft(hoursLeft(room.endsAt, now))}
+                {r.timeLeft(minutesLeft(room.endsAt, now))}
               </span>
             </Link>
           </li>

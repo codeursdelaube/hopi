@@ -3,6 +3,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 import {
   puzzleSchema,
+  rankOf,
   rankResults,
   type LessonTerms,
   type Puzzle,
@@ -195,4 +196,109 @@ export async function loadActiveRooms(userId: string): Promise<ActiveRoom[]> {
     endsAt: new Date(r.ends_at),
     mine: r.creator_id === userId,
   }));
+}
+
+export type RoomHistoryItem = {
+  id: string;
+  creatorName: string | null;
+  mine: boolean;
+  createdAt: Date;
+  endsAt: Date;
+  /** Joueurs ayant terminé. */
+  players: number;
+  /** Partie de l'utilisateur (null s'il n'a pas joué, ex. sa propre salle). */
+  result: { correct: number; total: number; xp: number; durationMs: number; rank: number } | null;
+};
+
+/** Salles créées ou jouées par l'utilisateur (identifiants). */
+export async function historyRoomIds(userId: string): Promise<string[]> {
+  const admin = createAdminClient();
+  const [{ data: created, error }, { data: played, error: playedError }] = await Promise.all([
+    admin.from("challenge_rooms").select("id").eq("creator_id", userId),
+    admin.from("challenge_room_players").select("room_id").eq("user_id", userId),
+  ]);
+  if (error) throw new Error(`Chargement de l'historique : ${error.message}`);
+  if (playedError) throw new Error(`Chargement de l'historique : ${playedError.message}`);
+  return [...new Set([...created.map((r) => r.id), ...played.map((p) => p.room_id)])];
+}
+
+/**
+ * Historique des défis : salles créées ou jouées par l'utilisateur (ouvertes ou fermées),
+ * les plus récentes d'abord, avec son score et son rang. Les salles qu'il a masquées
+ * (« Vider l'historique ») n'y figurent plus.
+ */
+export async function loadRoomHistory(userId: string, limit = 20): Promise<RoomHistoryItem[]> {
+  const admin = createAdminClient();
+  const [all, { data: hidden, error: hiddenError }] = await Promise.all([
+    historyRoomIds(userId),
+    admin.from("challenge_room_hidden").select("room_id").eq("user_id", userId),
+  ]);
+  if (hiddenError) throw new Error(`Chargement de l'historique : ${hiddenError.message}`);
+  const hiddenIds = new Set(hidden.map((h) => h.room_id));
+  const ids = all.filter((id) => !hiddenIds.has(id));
+  if (ids.length === 0) return [];
+
+  const { data: rooms, error: roomsError } = await admin
+    .from("challenge_rooms")
+    .select("id, creator_id, created_at, ends_at")
+    .in("id", ids)
+    .order("created_at", { ascending: false })
+    .limit(limit);
+  if (roomsError) throw new Error(`Chargement de l'historique : ${roomsError.message}`);
+  if (rooms.length === 0) return [];
+
+  const roomIds = rooms.map((r) => r.id);
+  const [{ data: players, error: playersError }, { data: creators }] = await Promise.all([
+    admin
+      .from("challenge_room_players")
+      .select("room_id, user_id, correct, total, duration_ms, xp")
+      .in("room_id", roomIds)
+      .not("finished_at", "is", null),
+    admin
+      .from("profiles")
+      .select("id, display_name")
+      .in("id", [...new Set(rooms.map((r) => r.creator_id))]),
+  ]);
+  if (playersError) throw new Error(`Chargement de l'historique : ${playersError.message}`);
+  const names = new Map((creators ?? []).map((p) => [p.id, p.display_name]));
+
+  return rooms.map((room) => {
+    const ranking = rankResults(
+      players.flatMap((p) =>
+        p.room_id === room.id && p.correct !== null && p.total !== null && p.duration_ms !== null
+          ? [
+              {
+                userId: p.user_id,
+                name: null,
+                avatarUrl: null,
+                correct: p.correct,
+                total: p.total,
+                durationMs: p.duration_ms,
+                xp: p.xp ?? 0,
+              },
+            ]
+          : [],
+      ),
+    );
+    const rank = rankOf(ranking, userId);
+    const mineResult = rank ? ranking[rank - 1] : null;
+    return {
+      id: room.id,
+      creatorName: names.get(room.creator_id) ?? null,
+      mine: room.creator_id === userId,
+      createdAt: new Date(room.created_at),
+      endsAt: new Date(room.ends_at),
+      players: ranking.length,
+      result:
+        mineResult && rank
+          ? {
+              correct: mineResult.correct,
+              total: mineResult.total,
+              xp: mineResult.xp,
+              durationMs: mineResult.durationMs,
+              rank,
+            }
+          : null,
+    };
+  });
 }

@@ -8,8 +8,9 @@ import { shuffle } from "@/lib/random";
 export const ROOM = {
   concepts: 4,
   termsPerConcept: 3,
-  /** Durée d'ouverture d'une salle. */
-  hours: 72,
+  /** Durées d'ouverture que l'hôte peut choisir (minutes) : 15 min, 1 h, 24 h, 3 jours. */
+  openDurations: [15, 60, 1440, 4320],
+  defaultOpenDuration: 60,
   /** Salles ouvertes en même temps par créateur (anti-abus). */
   maxActive: 5,
   maxPlayers: 30,
@@ -21,6 +22,11 @@ export const ROOM = {
 } as const;
 
 export type TimeLimit = (typeof ROOM.timeLimits)[number];
+export type OpenDuration = (typeof ROOM.openDurations)[number];
+
+export function isOpenDuration(value: number): value is OpenDuration {
+  return (ROOM.openDurations as readonly number[]).includes(value);
+}
 
 export function isTimeLimit(value: number): value is TimeLimit {
   return (ROOM.timeLimits as readonly number[]).includes(value);
@@ -118,9 +124,19 @@ export function rankResults(results: RoomResult[]): RoomResult[] {
   return [...results].sort((a, b) => b.correct - a.correct || a.durationMs - b.durationMs);
 }
 
-/** Heures restantes avant la fermeture, arrondies à l'heure supérieure (au moins 1). */
-export function hoursLeft(endsAt: Date, now: Date): number {
-  return Math.max(1, Math.ceil((endsAt.getTime() - now.getTime()) / 3_600_000));
+/** Minutes restantes avant la fermeture, arrondies à la minute supérieure (au moins 1). */
+export function minutesLeft(endsAt: Date, now: Date): number {
+  return Math.max(1, Math.ceil((endsAt.getTime() - now.getTime()) / 60_000));
+}
+
+export function isRoomOpen(endsAt: Date, now: Date): boolean {
+  return now.getTime() < endsAt.getTime();
+}
+
+/** Rang (1 = premier) d'un joueur dans un classement déjà trié, ou null s'il n'y figure pas. */
+export function rankOf(ranked: readonly RoomResult[], userId: string): number | null {
+  const index = ranked.findIndex((r) => r.userId === userId);
+  return index === -1 ? null : index + 1;
 }
 
 /** Temps limite en format court : « 1 min », « 1 min 30 », « 45 s ». */

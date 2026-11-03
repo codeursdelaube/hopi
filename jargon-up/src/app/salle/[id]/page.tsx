@@ -11,7 +11,14 @@ import { ShareButton } from "@/components/share/ShareDialog";
 import { requireProfile } from "@/lib/auth/session";
 import { firstName } from "@/lib/push/reminder";
 import { loadRoom, type RoomView } from "@/lib/rooms/load";
-import { ROOM, formatDuration, formatLimit, hoursLeft, publicPuzzle } from "@/lib/rooms/room";
+import {
+  ROOM,
+  formatDuration,
+  formatLimit,
+  isRoomOpen,
+  minutesLeft,
+  publicPuzzle,
+} from "@/lib/rooms/room";
 import { createClient } from "@/lib/supabase/server";
 import { fr } from "@/lib/i18n/fr";
 
@@ -63,8 +70,8 @@ async function RoomContent({ params }: Pick<PageProps<"/salle/[id]">, "params">)
   }
 
   const now = new Date();
-  const open = now < room.endsAt;
-  const remaining = hoursLeft(room.endsAt, now);
+  const open = isRoomOpen(room.endsAt, now);
+  const remaining = minutesLeft(room.endsAt, now);
   const playing = room.me && !room.me.finishedAt;
   const finished = room.me?.finishedAt;
 
@@ -98,7 +105,7 @@ async function RoomContent({ params }: Pick<PageProps<"/salle/[id]">, "params">)
         <p className="text-base-content/70">{t.rules}</p>
         <div className="flex flex-wrap justify-center gap-2">
           <span className="badge gap-1 badge-lg badge-warning">
-            <Clock className="size-4" aria-hidden /> {open ? t.hoursLeft(remaining) : t.over}
+            <Clock className="size-4" aria-hidden /> {open ? t.timeLeft(remaining) : t.closed}
           </span>
           <span className="badge gap-1 badge-lg badge-accent">
             <Timer className="size-4" aria-hidden />{" "}

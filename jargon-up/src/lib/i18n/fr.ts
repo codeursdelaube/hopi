@@ -162,6 +162,11 @@ export const fr = {
       "Crée une salle : 12 mots anglais défilent un par un, classe-les vite dans leur catégorie. Le plus juste et le plus rapide gagne !",
     create: "Créer une salle",
     timeLimit: "Temps limite pour trier",
+    openDuration: "Salle ouverte pendant",
+    openDurations: { 15: "15 min", 60: "1 h", 1440: "24 h", 4320: "3 jours" } as Record<
+      number,
+      string
+    >,
     timeLimitBadge: (limit: string) => `${limit} pour trier`,
     hurry: "Vite, le temps file !",
     timeUp: "Temps écoulé !",
@@ -177,8 +182,12 @@ export const fr = {
     active: "Mes salles ouvertes",
     itemMine: "Ta salle",
     item: (name: string | null) => `Salle de ${name ?? "ton ami"}`,
-    hoursLeft: (h: number) =>
-      h >= 24 ? `${Math.ceil(h / 24)} j restants` : h > 1 ? `${h} h restantes` : "Dernière heure !",
+    timeLeft: (minutes: number) =>
+      minutes < 60
+        ? `${minutes} min restantes`
+        : minutes < 1440
+          ? `${Math.ceil(minutes / 60)} h restantes`
+          : `${Math.ceil(minutes / 1440)} j restants`,
     invite: (name: string | null) => `${name ?? "Un ami"} t'invite au Tri express !`,
     rules:
       "Les mots anglais arrivent un par un : touche vite la catégorie de chacun. Le classement se fait au nombre de bonnes réponses, puis au temps.",
@@ -189,7 +198,8 @@ export const fr = {
     login: "Rejoindre la salle",
     newcomer: "Pas encore sur Hopi ? C'est gratuit : connecte-toi avec Google en un clic.",
     full: "Cette salle est complète.",
-    over: "Cette salle est fermée.",
+    over: "Cette salle est fermée : on ne peut plus y jouer.",
+    closed: "Fermée",
     startError: "Impossible de lancer la partie. Réessaie.",
     submitting: "Correction…",
     wordCount: (n: number, total: number) => `Mot ${n}/${total}`,
@@ -206,6 +216,22 @@ export const fr = {
     inviteMore: "Inviter d'autres amis",
     createOwn: "Créer ma salle",
     notFound: "Cette salle n'existe pas ou a été supprimée.",
+    history: "Historique de mes défis",
+    historyEmpty:
+      "Aucun défi pour l'instant. Crée une salle depuis le Classement et invite tes amis !",
+    historyHost: (name: string | null, mine: boolean) =>
+      mine ? "Ta salle" : `Salle de ${name ?? "ton ami"}`,
+    historyRank: (rank: number, players: number) =>
+      `${rank}${rank === 1 ? "er" : "e"} sur ${players}`,
+    historyNotPlayed: "Pas joué",
+    historyOpen: "Ouverte",
+    historyDate: (date: string) => `Le ${date}`,
+    clearHistory: "Vider l'historique",
+    clearConfirm:
+      "Vider ton historique ? Les salles disparaissent de ta liste, mais tes XP restent et les autres joueurs gardent leurs résultats.",
+    clearYes: "Oui, vider",
+    clearNo: "Annuler",
+    clearError: "L'historique n'a pas pu être vidé. Réessaie.",
   },
   badgePage: {
     invite: "Un ami a débloqué ce badge sur Hopi",

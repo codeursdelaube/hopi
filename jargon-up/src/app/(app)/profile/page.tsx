@@ -1,13 +1,17 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BookOpen, Flame, Medal, MessageSquareText, Settings, Star } from "lucide-react";
+import { BookOpen, Flame, History, Medal, MessageSquareText, Settings, Star } from "lucide-react";
 import { Mascot } from "@/components/game/Mascot";
+import { ClearHistoryButton } from "@/components/rooms/ClearHistoryButton";
 import { ShareButton } from "@/components/share/ShareDialog";
 import { BadgeIcon, LockIcon } from "@/components/ui/icons";
 import { requireProfile } from "@/lib/auth/session";
 import { can } from "@/lib/features";
 import { getHeaderStats } from "@/lib/game/stats";
+import { firstName } from "@/lib/push/reminder";
+import { loadRoomHistory } from "@/lib/rooms/load";
+import { isRoomOpen } from "@/lib/rooms/room";
 import { createClient } from "@/lib/supabase/server";
 import { fr } from "@/lib/i18n/fr";
 
@@ -182,9 +186,73 @@ async function ProfileContent() {
         </ul>
       </section>
 
+      <Suspense fallback={<div className="h-32 w-full skeleton" />}>
+        <RoomHistory userId={profile.id} />
+      </Suspense>
+
       <Link href="/settings" className="btn btn-pop btn-lg">
         <Settings className="size-5" aria-hidden /> {t.settings}
       </Link>
     </>
+  );
+}
+
+/** Historique des défis (salles Tri express créées ou jouées), avec possibilité de le vider. */
+async function RoomHistory({ userId }: { userId: string }) {
+  const history = await loadRoomHistory(userId);
+  const now = new Date();
+  const date = new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long" });
+  const r = fr.room;
+
+  return (
+    <section className="flex flex-col gap-3">
+      <h2 className="flex items-center gap-2 font-display text-xl font-bold">
+        <History className="size-6 text-secondary" aria-hidden /> {r.history}
+      </h2>
+      {history.length === 0 ? (
+        <p className="text-sm text-base-content/60">{r.historyEmpty}</p>
+      ) : (
+        <>
+          <ul className="flex flex-col gap-2">
+            {history.map((item) => {
+              const open = isRoomOpen(item.endsAt, now);
+              return (
+                <li key={item.id}>
+                  <Link
+                    href={`/salle/${item.id}`}
+                    className="flex items-center justify-between gap-3 rounded-box border-2 border-base-300 px-3 py-2 hover:bg-base-200"
+                  >
+                    <span className="flex min-w-0 flex-col">
+                      <span className="truncate font-semibold">
+                        {r.historyHost(firstName(item.creatorName), item.mine)}
+                      </span>
+                      <span className="text-xs text-base-content/60">
+                        {r.historyDate(date.format(item.createdAt))} ·{" "}
+                        {open ? r.historyOpen : r.closed}
+                      </span>
+                    </span>
+                    {item.result ? (
+                      <span className="flex shrink-0 flex-col items-end text-sm">
+                        <span className="font-display font-bold">
+                          {item.result.correct}/{item.result.total} ·{" "}
+                          {r.historyRank(item.result.rank, item.players)}
+                        </span>
+                        <span className="flex items-center gap-1 font-bold text-warning">
+                          <Star className="size-3.5" fill="currentColor" aria-hidden />{" "}
+                          {r.xpWon(item.result.xp)}
+                        </span>
+                      </span>
+                    ) : (
+                      <span className="badge shrink-0 badge-ghost">{r.historyNotPlayed}</span>
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <ClearHistoryButton />
+        </>
+      )}
+    </section>
   );
 }
