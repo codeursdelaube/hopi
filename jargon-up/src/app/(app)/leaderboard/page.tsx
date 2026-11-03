@@ -2,17 +2,21 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LaunchChallengeButton } from "@/components/challenges/ChallengeButtons";
+import { CreateRoomButton } from "@/components/rooms/RoomButtons";
 import { Mascot } from "@/components/game/Mascot";
 import { requireProfile } from "@/lib/auth/session";
 import { daysLeft } from "@/lib/challenges/challenge";
 import { loadActiveChallenges } from "@/lib/challenges/load";
+import { loadActiveRooms } from "@/lib/rooms/load";
+import { hoursLeft } from "@/lib/rooms/room";
 import { firstName } from "@/lib/push/reminder";
 import { createClient } from "@/lib/supabase/server";
 import { fr } from "@/lib/i18n/fr";
-import { Medal, Rabbit, Swords, Trophy } from "lucide-react";
+import { Medal, Rabbit, Shuffle, Swords, Trophy } from "lucide-react";
 
 const t = fr.leaderboard;
 const c = fr.challenge;
+const r = fr.room;
 /** Couleurs des médailles : or, argent, bronze. */
 const MEDALS = ["text-warning", "text-base-content/50", "text-secondary"];
 
@@ -30,16 +34,28 @@ export default function LeaderboardPage() {
       </div>
       {/* Grande tablette : défis à gauche (restent visibles), classement à droite. */}
       <div className="flex flex-col gap-4 lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:items-start lg:gap-6">
-        <section className="flex flex-col gap-3 rounded-box border-2 border-secondary/50 bg-secondary/5 p-4 lg:sticky lg:top-20">
-          <h2 className="flex items-center gap-2 font-display text-xl font-bold">
-            <Swords className="size-6 text-secondary" aria-hidden /> {c.cardTitle}
-          </h2>
-          <p className="text-sm text-base-content/70">{c.cardText}</p>
-          <LaunchChallengeButton />
-          <Suspense fallback={null}>
-            <ActiveChallenges />
-          </Suspense>
-        </section>
+        <div className="flex flex-col gap-4 lg:sticky lg:top-20">
+          <section className="flex flex-col gap-3 rounded-box border-2 border-secondary/50 bg-secondary/5 p-4">
+            <h2 className="flex items-center gap-2 font-display text-xl font-bold">
+              <Swords className="size-6 text-secondary" aria-hidden /> {c.cardTitle}
+            </h2>
+            <p className="text-sm text-base-content/70">{c.cardText}</p>
+            <LaunchChallengeButton />
+            <Suspense fallback={null}>
+              <ActiveChallenges />
+            </Suspense>
+          </section>
+          <section className="flex flex-col gap-3 rounded-box border-2 border-accent/50 bg-accent/5 p-4">
+            <h2 className="flex items-center gap-2 font-display text-xl font-bold">
+              <Shuffle className="size-6 text-accent" aria-hidden /> {r.cardTitle}
+            </h2>
+            <p className="text-sm text-base-content/70">{r.cardText}</p>
+            <CreateRoomButton />
+            <Suspense fallback={null}>
+              <ActiveRooms />
+            </Suspense>
+          </section>
+        </div>
         <Suspense
           fallback={
             <div className="flex flex-col gap-2">
@@ -53,6 +69,37 @@ export default function LeaderboardPage() {
         </Suspense>
       </div>
     </main>
+  );
+}
+
+/** Salles « Tri express » encore ouvertes de l'utilisateur. */
+async function ActiveRooms() {
+  const profile = await requireProfile();
+  const rooms = await loadActiveRooms(profile.id);
+  if (rooms.length === 0) return null;
+  const now = new Date();
+
+  return (
+    <div className="flex flex-col gap-2">
+      <h3 className="text-sm font-bold text-base-content/70">{r.active}</h3>
+      <ul className="flex flex-col gap-2">
+        {rooms.map((room) => (
+          <li key={room.id}>
+            <Link
+              href={`/salle/${room.id}`}
+              className="flex items-center justify-between gap-2 rounded-box border-2 border-base-300 bg-base-100 px-3 py-2"
+            >
+              <span className="truncate font-semibold">
+                {room.mine ? r.itemMine : r.item(firstName(room.creatorName))}
+              </span>
+              <span className="badge shrink-0 badge-sm badge-warning">
+                {r.hoursLeft(hoursLeft(room.endsAt, now))}
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

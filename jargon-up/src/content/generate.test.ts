@@ -26,7 +26,7 @@ describe("seededRandom / shuffle", () => {
 
 /** Valide TOUT le contenu réel : un terme mal écrit fait échouer les tests. */
 describe("contenu des filières", () => {
-  const contentDir = join(__dirname);
+  const contentDir = join(import.meta.dirname);
   const fields = readdirSync(contentDir, { withFileTypes: true }).filter((d) => d.isDirectory());
 
   for (const field of fields) {

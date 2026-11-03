@@ -7,7 +7,7 @@ export type Level = "A2" | "B1" | "B2";
 export type Plan = "free" | "premium";
 export type ExerciseType =
   "multiple_choice" | "match_pairs" | "fill_blank" | "order_words" | "listen_type" | "dialogue";
-export type XpSource = "lesson" | "review" | "word_of_day" | "streak_bonus";
+export type XpSource = "lesson" | "review" | "word_of_day" | "streak_bonus" | "challenge";
 
 type Table<Row, Required extends keyof Row = never> = {
   Row: Row;
@@ -157,6 +157,32 @@ export type Database = {
       challenges: Table<
         { id: string; creator_id: string; created_at: string; ends_at: string },
         "creator_id" | "ends_at"
+      >;
+      challenge_rooms: Table<
+        {
+          id: string;
+          creator_id: string;
+          field_id: string;
+          puzzle: unknown;
+          time_limit_seconds: number;
+          created_at: string;
+          ends_at: string;
+        },
+        "creator_id" | "field_id" | "puzzle" | "ends_at"
+      >;
+      challenge_room_players: Table<
+        {
+          room_id: string;
+          user_id: string;
+          started_at: string;
+          finished_at: string | null;
+          correct: number | null;
+          total: number | null;
+          duration_ms: number | null;
+          xp: number | null;
+          placements: Record<string, string> | null;
+        },
+        "room_id" | "user_id"
       >;
       challenge_participants: Table<
         { challenge_id: string; user_id: string; joined_at: string },
