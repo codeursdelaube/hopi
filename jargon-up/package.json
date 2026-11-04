@@ -14,7 +14,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "seed": "node --env-file=.env.local scripts/seed-content.ts",
-    "setup:push": "node scripts/setup-push.mjs"
+    "setup:push": "node scripts/setup-push.mjs",
+    "apple:secret": "node scripts/apple-client-secret.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",

@@ -1,37 +1,67 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useFormStatus } from "react-dom";
 import { signInWithGoogle } from "@/app/(auth)/login/actions";
 import { fr } from "@/lib/i18n/fr";
 
 /**
- * Formulaire qui appelle une Server Action : aucune bibliothèque Supabase côté navigateur,
- * et le bouton fonctionne avant même le chargement du JavaScript (réseau lent).
+ * Boutons de connexion. Chaque bouton est un formulaire qui appelle une Server Action :
+ * aucune bibliothèque Supabase côté navigateur, et le bouton fonctionne avant même le
+ * chargement du JavaScript (réseau lent).
  */
-export function GoogleButton({ next }: { next: string }) {
+function ProviderForm({
+  action,
+  next,
+  label,
+  icon,
+  className,
+}: {
+  action: (formData: FormData) => Promise<void>;
+  next: string;
+  label: string;
+  icon: ReactNode;
+  className: string;
+}) {
   return (
-    <form action={signInWithGoogle} className="flex w-full flex-col gap-3">
+    <form action={action} className="flex w-full flex-col gap-3">
       <input type="hidden" name="next" value={next} />
-      <SubmitButton />
+      <SubmitButton label={label} icon={icon} className={className} />
     </form>
   );
 }
 
-function SubmitButton() {
+function SubmitButton({
+  label,
+  icon,
+  className,
+}: {
+  label: string;
+  icon: ReactNode;
+  className: string;
+}) {
   const { pending } = useFormStatus();
   return (
     <button
       type="submit"
       disabled={pending}
-      className="btn w-full btn-pop border-base-300 bg-base-100 font-display text-lg btn-lg"
+      className={`btn w-full btn-pop font-display text-lg btn-lg ${className}`}
     >
-      {pending ? (
-        <span className="loading loading-md loading-spinner" aria-hidden />
-      ) : (
-        <GoogleLogo />
-      )}
-      {pending ? fr.auth.redirecting : fr.auth.google}
+      {pending ? <span className="loading loading-md loading-spinner" aria-hidden /> : icon}
+      {pending ? fr.auth.redirecting : label}
     </button>
+  );
+}
+
+export function GoogleButton({ next }: { next: string }) {
+  return (
+    <ProviderForm
+      action={signInWithGoogle}
+      next={next}
+      label={fr.auth.google}
+      icon={<GoogleLogo />}
+      className="border-base-300 bg-base-100"
+    />
   );
 }
 

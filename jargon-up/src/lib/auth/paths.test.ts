@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isPrivatePath, safeNextPath } from "./paths";
+import { afterLoginPath, isPrivatePath, safeNextPath } from "./paths";
 
 describe("isPrivatePath", () => {
   it.each(["/learn", "/learn/", "/lesson/abc", "/settings", "/onboarding"])("%s est privée", (p) =>
@@ -24,5 +24,17 @@ describe("safeNextPath", () => {
 
   it("utilise le repli fourni", () => {
     expect(safeNextPath(null, "/onboarding")).toBe("/onboarding");
+  });
+});
+
+describe("afterLoginPath", () => {
+  it("compte avec filière : la page demandée", () => {
+    expect(afterLoginPath(true, "/salle/abc")).toBe("/salle/abc");
+    expect(afterLoginPath(true, "/learn")).toBe("/learn");
+  });
+
+  it("nouveau compte : l'onboarding, en gardant la page demandée pour après", () => {
+    expect(afterLoginPath(false, "/learn")).toBe("/onboarding");
+    expect(afterLoginPath(false, "/salle/abc")).toBe("/onboarding?next=%2Fsalle%2Fabc");
   });
 });

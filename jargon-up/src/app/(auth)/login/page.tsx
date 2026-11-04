@@ -1,8 +1,10 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GoogleButton } from "@/components/auth/GoogleButton";
+import { EmailLogin } from "@/components/auth/EmailLogin";
+import { GoogleButton } from "@/components/auth/OAuthButtons";
 import { Mascot } from "@/components/game/Mascot";
+import { isEmailLoginEnabled } from "@/lib/auth/email-login";
 import { safeNextPath } from "@/lib/auth/paths";
 import { fr } from "@/lib/i18n/fr";
 
@@ -55,7 +57,16 @@ async function LoginActions({ searchParams }: Pick<PageProps<"/login">, "searchP
           {fr.auth.errors[errorKey]}
         </div>
       )}
-      <GoogleButton next={next} />
+      <div className="flex w-full flex-col gap-3">
+        <GoogleButton next={next} />
+        {/* Connexion par code e-mail : visible seulement une fois l'envoi d'e-mails configuré. */}
+        {isEmailLoginEnabled() && (
+          <>
+            <div className="divider my-1 text-sm text-base-content/60">{fr.auth.or}</div>
+            <EmailLogin next={next} />
+          </>
+        )}
+      </div>
     </>
   );
 }
@@ -65,6 +76,7 @@ function LoginActionsSkeleton() {
     <>
       <Mascot mood="happy" size={150} />
       <LoginHeading />
+      <div className="h-14 w-full skeleton rounded-field" />
       <div className="h-14 w-full skeleton rounded-field" />
     </>
   );

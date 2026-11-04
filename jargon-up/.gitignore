@@ -23,6 +23,8 @@
 # misc
 .DS_Store
 *.pem
+# Clé privée « Sign in with Apple » (voir scripts/apple-client-secret.ts)
+*.p8
 
 # debug
 npm-debug.log*

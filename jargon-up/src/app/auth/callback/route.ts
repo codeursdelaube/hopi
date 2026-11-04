@@ -1,9 +1,9 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createClient } from "@/lib/supabase/server";
-import { HOME_PATH, LOGIN_PATH, NEXT_COOKIE, safeNextPath } from "@/lib/auth/paths";
+import { LOGIN_PATH, NEXT_COOKIE, afterLoginPath, safeNextPath } from "@/lib/auth/paths";
 
 /**
- * Retour de Google (via Supabase) : échange le `code` contre une session,
+ * Retour de la connexion Google (via Supabase) : échange le `code` contre une session,
  * puis envoie vers l'onboarding si le profil n'est pas complété.
  */
 export async function GET(request: NextRequest) {
@@ -42,9 +42,5 @@ export async function GET(request: NextRequest) {
     .eq("id", data.user.id)
     .maybeSingle();
 
-  if (profile?.field_id) return redirectTo(next);
-  // Nouveau compte : onboarding d'abord, puis la page demandée (ex. le défi d'un ami).
-  return redirectTo(
-    next === HOME_PATH ? "/onboarding" : `/onboarding?next=${encodeURIComponent(next)}`,
-  );
+  return redirectTo(afterLoginPath(Boolean(profile?.field_id), next));
 }

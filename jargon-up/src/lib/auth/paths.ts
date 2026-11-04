@@ -31,3 +31,13 @@ export function safeNextPath(next: string | null | undefined, fallback = HOME_PA
   }
   return next;
 }
+
+/**
+ * Page à ouvrir juste après la connexion (Google ou code e-mail) : l'onboarding pour un
+ * nouveau compte (sans filière), en gardant la page demandée pour après (ex. une salle
+ * d'ami) ; sinon directement la page demandée.
+ */
+export function afterLoginPath(hasField: boolean, next: string): string {
+  if (hasField) return next;
+  return next === HOME_PATH ? "/onboarding" : `/onboarding?next=${encodeURIComponent(next)}`;
+}
