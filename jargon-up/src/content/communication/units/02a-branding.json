@@ -1,0 +1,308 @@
+{
+  "level": "B1",
+  "title_en": "Branding & market research",
+  "title_fr": "Image de marque et études de marché",
+  "lessons": [
+    {
+      "title_en": "Brand identity",
+      "terms": [
+        {
+          "term": "brand identity",
+          "pos": "noun",
+          "translation_fr": "identité de marque",
+          "definition_en": "How a brand presents itself: name, logo, colours, voice.",
+          "explanation_fr": "La « brand identity » est l'ensemble des signes qui rendent une marque reconnaissable : nom, logo, couleurs, ton.",
+          "example_en": "Our brand identity must be the same on every channel.",
+          "example_fr": "Notre identité de marque doit être la même sur chaque canal."
+        },
+        {
+          "term": "brand values",
+          "pos": "noun (plural)",
+          "translation_fr": "valeurs de la marque",
+          "definition_en": "The beliefs that guide a brand.",
+          "explanation_fr": "Les « brand values » sont les convictions de la marque : proximité, qualité, innovation…",
+          "example_en": "Respect and simplicity are our brand values.",
+          "example_fr": "Le respect et la simplicité sont nos valeurs de marque."
+        },
+        {
+          "term": "mission",
+          "pos": "noun",
+          "translation_fr": "mission",
+          "definition_en": "What an organisation does and why, today.",
+          "explanation_fr": "La « mission » dit ce que fait l'organisation et pour qui, aujourd'hui.",
+          "example_en": "Our mission is to help students find jobs.",
+          "example_fr": "Notre mission est d'aider les étudiants à trouver un emploi."
+        },
+        {
+          "term": "vision",
+          "pos": "noun",
+          "translation_fr": "vision",
+          "definition_en": "What an organisation wants to achieve in the future.",
+          "explanation_fr": "La « vision » décrit l'avenir que l'organisation veut construire.",
+          "example_en": "The vision is a connected Africa.",
+          "example_fr": "La vision est une Afrique connectée."
+        },
+        {
+          "term": "positioning",
+          "pos": "noun",
+          "translation_fr": "positionnement",
+          "definition_en": "The place a brand wants to have in customers' minds.",
+          "explanation_fr": "Le « positioning » est l'image que la marque veut occuper face aux concurrents (moins cher, plus premium, plus local…).",
+          "example_en": "Our positioning is quality at a fair price.",
+          "example_fr": "Notre positionnement est la qualité à prix juste."
+        },
+        {
+          "term": "tagline",
+          "pos": "noun",
+          "translation_fr": "signature (accroche de marque)",
+          "definition_en": "A short phrase that sums up a brand.",
+          "explanation_fr": "La « tagline » est la phrase courte qui accompagne la marque partout, comme un slogan durable.",
+          "example_en": "The new tagline is easy to remember.",
+          "example_fr": "La nouvelle signature est facile à retenir."
+        },
+        {
+          "term": "brand guidelines",
+          "pos": "noun (plural)",
+          "translation_fr": "charte graphique",
+          "definition_en": "Rules on how to use the logo, colours and tone.",
+          "explanation_fr": "Les « brand guidelines » (charte graphique) fixent l'usage du logo, des couleurs, des polices et du ton.",
+          "example_en": "Follow the brand guidelines for every poster.",
+          "example_fr": "Respecte la charte graphique pour chaque affiche."
+        },
+        {
+          "term": "tone of voice",
+          "pos": "noun",
+          "translation_fr": "ton de la marque",
+          "definition_en": "The style of language a brand uses.",
+          "explanation_fr": "Le « tone of voice » est la façon de parler de la marque : chaleureuse, sérieuse, drôle…",
+          "example_en": "Our tone of voice is friendly and simple.",
+          "example_fr": "Le ton de notre marque est chaleureux et simple."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Our logo must always look the same",
+          "fr": "Notre logo doit toujours avoir le même aspect"
+        },
+        {
+          "en": "Every post follows the brand rules",
+          "fr": "Chaque publication suit les règles de la marque"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Agency meeting",
+          "lines": [
+            { "speaker": "Client", "text": "Each of our shops uses a different logo and colours." }
+          ],
+          "options": [
+            "Let's create brand guidelines so every shop uses the same identity.",
+            "That's fine, variety is good.",
+            "Let's add even more logos."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's create brand guidelines so every shop uses the same identity » = « Créons une charte graphique pour que chaque boutique ait la même identité ». La cohérence rend la marque reconnaissable."
+        }
+      ]
+    },
+    {
+      "title_en": "Brand image & trust",
+      "terms": [
+        {
+          "term": "brand awareness",
+          "pos": "noun",
+          "translation_fr": "notoriété de la marque",
+          "definition_en": "How many people know a brand.",
+          "explanation_fr": "La « brand awareness » mesure combien de personnes connaissent la marque.",
+          "example_en": "The campaign increased brand awareness in Lomé.",
+          "example_fr": "La campagne a augmenté la notoriété de la marque à Lomé."
+        },
+        {
+          "term": "brand image",
+          "pos": "noun",
+          "translation_fr": "image de marque",
+          "definition_en": "What people think and feel about a brand.",
+          "explanation_fr": "La « brand image » est ce que les gens pensent réellement de la marque.",
+          "example_en": "Slow delivery hurts our brand image.",
+          "example_fr": "Les livraisons lentes nuisent à notre image de marque."
+        },
+        {
+          "term": "brand loyalty",
+          "pos": "noun",
+          "translation_fr": "fidélité à la marque",
+          "definition_en": "When customers keep buying the same brand.",
+          "explanation_fr": "La « brand loyalty » est la fidélité des clients qui reviennent toujours vers la marque.",
+          "example_en": "Good service builds brand loyalty.",
+          "example_fr": "Un bon service crée la fidélité à la marque."
+        },
+        {
+          "term": "word of mouth",
+          "pos": "noun",
+          "translation_fr": "bouche-à-oreille",
+          "definition_en": "When people tell others about a product.",
+          "explanation_fr": "Le « word of mouth » est le bouche-à-oreille, souvent la publicité la plus efficace.",
+          "example_en": "Most new clients come by word of mouth.",
+          "example_fr": "La plupart des nouveaux clients viennent par le bouche-à-oreille."
+        },
+        {
+          "term": "testimonial",
+          "pos": "noun",
+          "translation_fr": "témoignage (client)",
+          "definition_en": "A statement from a happy customer about a product.",
+          "explanation_fr": "Un « testimonial » est un témoignage de client satisfait, utilisé pour rassurer les autres.",
+          "example_en": "Add a customer testimonial to the website.",
+          "example_fr": "Ajoute un témoignage client sur le site."
+        },
+        {
+          "term": "brand ambassador",
+          "pos": "noun",
+          "translation_fr": "ambassadeur de marque",
+          "definition_en": "A person paid or chosen to represent a brand.",
+          "explanation_fr": "Un « brand ambassador » représente la marque (sportif, artiste, ou client fidèle).",
+          "example_en": "The singer became our brand ambassador.",
+          "example_fr": "Le chanteur est devenu notre ambassadeur de marque."
+        },
+        {
+          "term": "perception",
+          "pos": "noun",
+          "translation_fr": "perception",
+          "definition_en": "The way people see and understand something.",
+          "explanation_fr": "La « perception » est la manière dont le public voit la marque ; elle compte autant que la réalité.",
+          "example_en": "Customer perception changed after the scandal.",
+          "example_fr": "La perception des clients a changé après le scandale."
+        },
+        {
+          "term": "trust",
+          "pos": "noun",
+          "translation_fr": "confiance",
+          "definition_en": "The belief that someone is honest and reliable.",
+          "explanation_fr": "La « trust » est la confiance ; elle se gagne lentement et se perd vite.",
+          "example_en": "Trust is hard to win back.",
+          "example_fr": "La confiance est difficile à regagner."
+        }
+      ],
+      "sentences": [
+        { "en": "Happy clients talk about us", "fr": "Les clients satisfaits parlent de nous" },
+        {
+          "en": "People trust brands that keep promises",
+          "fr": "Les gens font confiance aux marques qui tiennent leurs promesses"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Marketing meeting",
+          "lines": [{ "speaker": "Director", "text": "We have no money for big ads this year." }],
+          "options": [
+            "Let's use customer testimonials and word of mouth, they're cheap and powerful.",
+            "Then nobody will ever know us.",
+            "Let's lie about our results."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's use customer testimonials and word of mouth » = « Misons sur les témoignages clients et le bouche-à-oreille ». Gratuit et très crédible."
+        }
+      ]
+    },
+    {
+      "title_en": "Market research",
+      "terms": [
+        {
+          "term": "market research",
+          "pos": "noun",
+          "translation_fr": "étude de marché",
+          "definition_en": "Collecting information about customers and competitors.",
+          "explanation_fr": "La « market research » étudie les clients, leurs besoins et la concurrence avant de décider.",
+          "example_en": "Do market research before you launch the product.",
+          "example_fr": "Fais une étude de marché avant de lancer le produit."
+        },
+        {
+          "term": "survey",
+          "pos": "noun",
+          "translation_fr": "enquête (sondage)",
+          "definition_en": "A set of questions asked to many people.",
+          "explanation_fr": "Un « survey » est une enquête posée à beaucoup de personnes (en ligne, dans la rue).",
+          "example_en": "Five hundred people answered the survey.",
+          "example_fr": "Cinq cents personnes ont répondu à l'enquête."
+        },
+        {
+          "term": "focus group",
+          "pos": "noun",
+          "translation_fr": "groupe de discussion",
+          "definition_en": "A small group asked to discuss a product in depth.",
+          "explanation_fr": "Un « focus group » réunit quelques personnes pour discuter en profondeur d'un produit ou d'une idée.",
+          "example_en": "The focus group did not like the packaging.",
+          "example_fr": "Le groupe de discussion n'a pas aimé l'emballage."
+        },
+        {
+          "term": "questionnaire",
+          "pos": "noun",
+          "translation_fr": "questionnaire",
+          "definition_en": "A written list of questions.",
+          "explanation_fr": "Le « questionnaire » est la liste écrite des questions de l'enquête.",
+          "example_en": "Keep the questionnaire under ten questions.",
+          "example_fr": "Garde le questionnaire sous les dix questions."
+        },
+        {
+          "term": "respondent",
+          "pos": "noun",
+          "translation_fr": "répondant",
+          "definition_en": "A person who answers a survey.",
+          "explanation_fr": "Un « respondent » est une personne qui répond à l'enquête.",
+          "example_en": "Each respondent received a small gift.",
+          "example_fr": "Chaque répondant a reçu un petit cadeau."
+        },
+        {
+          "term": "persona",
+          "pos": "noun",
+          "translation_fr": "persona (client type)",
+          "definition_en": "An imaginary typical customer used to guide decisions.",
+          "explanation_fr": "Un « persona » est un client type imaginé (âge, métier, besoins) pour mieux cibler la communication.",
+          "example_en": "Our main persona is a 22-year-old student.",
+          "example_fr": "Notre persona principal est un étudiant de 22 ans."
+        },
+        {
+          "term": "insight",
+          "pos": "noun",
+          "translation_fr": "enseignement clé (insight)",
+          "definition_en": "A useful new understanding about customers.",
+          "explanation_fr": "Un « insight » est une découverte utile sur les clients, qui change la stratégie.",
+          "example_en": "The key insight is that clients want delivery at night.",
+          "example_fr": "L'enseignement clé est que les clients veulent être livrés le soir."
+        },
+        {
+          "term": "competitor",
+          "pos": "noun",
+          "translation_fr": "concurrent",
+          "definition_en": "A company that sells similar products.",
+          "explanation_fr": "Un « competitor » est une entreprise qui vend des produits semblables aux nôtres.",
+          "example_en": "Our main competitor lowered its prices.",
+          "example_fr": "Notre principal concurrent a baissé ses prix."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "We asked customers what they need",
+          "fr": "Nous avons demandé aux clients ce dont ils ont besoin"
+        },
+        { "en": "The survey results are ready", "fr": "Les résultats de l'enquête sont prêts" }
+      ],
+      "dialogues": [
+        {
+          "context": "Product meeting",
+          "lines": [
+            {
+              "speaker": "Founder",
+              "text": "I'm sure everyone will love this product. Let's launch it next week."
+            }
+          ],
+          "options": [
+            "Let's test it first with a small survey and a focus group.",
+            "Yes, our opinion is enough.",
+            "Let's copy our competitor exactly."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's test it first with a small survey and a focus group » = « Testons-le d'abord avec une petite enquête et un groupe de discussion ». On vérifie avant d'investir."
+        }
+      ]
+    }
+  ]
+}

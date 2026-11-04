@@ -1,0 +1,304 @@
+{
+  "level": "A2",
+  "title_en": "In the finance office",
+  "title_fr": "Au bureau comptable",
+  "lessons": [
+    {
+      "title_en": "Numbers & documents",
+      "terms": [
+        {
+          "term": "amount",
+          "pos": "noun",
+          "translation_fr": "montant",
+          "definition_en": "A quantity of money.",
+          "explanation_fr": "L'« amount » est un montant d'argent : « the total amount » = le montant total.",
+          "example_en": "Check the amount before you pay.",
+          "example_fr": "Vérifie le montant avant de payer."
+        },
+        {
+          "term": "total",
+          "pos": "noun / adjective",
+          "translation_fr": "total",
+          "definition_en": "The result when you add all the numbers.",
+          "explanation_fr": "Le « total » est la somme de tous les montants.",
+          "example_en": "The total is at the bottom of the invoice.",
+          "example_fr": "Le total est en bas de la facture."
+        },
+        {
+          "term": "percentage",
+          "pos": "noun",
+          "translation_fr": "pourcentage",
+          "definition_en": "A number out of one hundred, written with %.",
+          "explanation_fr": "Un « percentage » est une part sur cent : 18 % de TVA.",
+          "example_en": "What percentage of our sales is online?",
+          "example_fr": "Quel pourcentage de nos ventes se fait en ligne ?"
+        },
+        {
+          "term": "figure",
+          "pos": "noun",
+          "translation_fr": "chiffre",
+          "definition_en": "A number, especially in a report.",
+          "explanation_fr": "En anglais des affaires, « figure » veut dire chiffre : « sales figures » = chiffres de vente (et non une figure de géométrie).",
+          "example_en": "The sales figure for May is good.",
+          "example_fr": "Le chiffre de vente de mai est bon."
+        },
+        {
+          "term": "calculation",
+          "pos": "noun",
+          "translation_fr": "calcul",
+          "definition_en": "The act of working out a number.",
+          "explanation_fr": "Un « calculation » est un calcul ; « to calculate » = calculer.",
+          "example_en": "There is an error in the calculation.",
+          "example_fr": "Il y a une erreur dans le calcul."
+        },
+        {
+          "term": "document",
+          "pos": "noun",
+          "translation_fr": "document (pièce)",
+          "definition_en": "A paper or file that gives official information.",
+          "explanation_fr": "En comptabilité, chaque écriture doit s'appuyer sur un « document » (une pièce) : facture, reçu, contrat…",
+          "example_en": "Keep every document for ten years.",
+          "example_fr": "Conserve chaque document pendant dix ans."
+        },
+        {
+          "term": "copy",
+          "pos": "noun",
+          "translation_fr": "copie (exemplaire)",
+          "definition_en": "A second version of a document.",
+          "explanation_fr": "Une « copy » est un exemplaire ou une copie d'un document.",
+          "example_en": "Send a copy to the client.",
+          "example_fr": "Envoie une copie au client."
+        },
+        {
+          "term": "filing",
+          "pos": "noun",
+          "translation_fr": "classement (archivage)",
+          "definition_en": "Putting documents in order so you can find them later.",
+          "explanation_fr": "Le « filing » est le classement des documents pour les retrouver facilement.",
+          "example_en": "Good filing saves time during the audit.",
+          "example_fr": "Un bon classement fait gagner du temps pendant l'audit."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The total amount is five thousand francs",
+          "fr": "Le montant total est de cinq mille francs"
+        },
+        {
+          "en": "Please file this document in the folder",
+          "fr": "Merci de classer ce document dans le dossier"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Finance office",
+          "lines": [
+            {
+              "speaker": "Colleague",
+              "text": "I paid the taxi but I lost the receipt. Can I still be refunded?"
+            }
+          ],
+          "options": [
+            "We need a document for every payment. Can you ask the driver for a new receipt?",
+            "Yes, just tell me a number.",
+            "Throw away all receipts, we don't need them."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« We need a document for every payment » = « Il nous faut une pièce pour chaque paiement ». Sans justificatif, pas de remboursement."
+        }
+      ]
+    },
+    {
+      "title_en": "Customers & suppliers",
+      "terms": [
+        {
+          "term": "customer account",
+          "pos": "noun",
+          "translation_fr": "compte client",
+          "definition_en": "The record of what a customer has bought and paid.",
+          "explanation_fr": "Le « customer account » suit ce qu'un client a acheté, payé et doit encore.",
+          "example_en": "This customer account shows two unpaid invoices.",
+          "example_fr": "Ce compte client montre deux factures impayées."
+        },
+        {
+          "term": "credit note",
+          "pos": "noun",
+          "translation_fr": "avoir (note de crédit)",
+          "definition_en": "A document that reduces what a customer owes.",
+          "explanation_fr": "Un « credit note » est un avoir : il annule tout ou partie d'une facture (produit rendu, erreur de prix).",
+          "example_en": "We sent a credit note for the damaged boxes.",
+          "example_fr": "Nous avons envoyé un avoir pour les cartons abîmés."
+        },
+        {
+          "term": "late payment",
+          "pos": "noun",
+          "translation_fr": "retard de paiement",
+          "definition_en": "A payment made after the due date.",
+          "explanation_fr": "Un « late payment » est un paiement reçu après l'échéance ; il peut entraîner des pénalités.",
+          "example_en": "Late payment causes cash problems for small firms.",
+          "example_fr": "Les retards de paiement causent des problèmes de trésorerie aux petites entreprises."
+        },
+        {
+          "term": "reminder",
+          "pos": "noun",
+          "translation_fr": "relance",
+          "definition_en": "A message asking a customer to pay.",
+          "explanation_fr": "Une « reminder » est une relance envoyée au client qui n'a pas payé à temps.",
+          "example_en": "Send a polite reminder after seven days.",
+          "example_fr": "Envoie une relance polie après sept jours."
+        },
+        {
+          "term": "deposit",
+          "pos": "noun",
+          "translation_fr": "acompte (dépôt)",
+          "definition_en": "A part of the price paid in advance.",
+          "explanation_fr": "Un « deposit » est un acompte versé à l'avance ; c'est aussi un dépôt d'argent à la banque.",
+          "example_en": "The client paid a deposit of thirty percent.",
+          "example_fr": "Le client a versé un acompte de trente pour cent."
+        },
+        {
+          "term": "statement of account",
+          "pos": "noun",
+          "translation_fr": "relevé de compte (client)",
+          "definition_en": "A list of all invoices and payments for one customer.",
+          "explanation_fr": "Le « statement of account » récapitule pour un client toutes ses factures, paiements et le solde dû.",
+          "example_en": "Attach the statement of account to the email.",
+          "example_fr": "Joins le relevé de compte à l'e-mail."
+        },
+        {
+          "term": "payment terms",
+          "pos": "noun (plural)",
+          "translation_fr": "conditions de paiement",
+          "definition_en": "The agreed rules about when and how to pay.",
+          "explanation_fr": "Les « payment terms » fixent le délai et le mode de paiement : « 30 jours fin de mois », virement…",
+          "example_en": "Our payment terms are thirty days.",
+          "example_fr": "Nos conditions de paiement sont de trente jours."
+        },
+        {
+          "term": "price list",
+          "pos": "noun",
+          "translation_fr": "liste de prix (tarifs)",
+          "definition_en": "A document with the prices of all products.",
+          "explanation_fr": "La « price list » donne les prix de tous les produits ou services.",
+          "example_en": "Here is our new price list for 2027.",
+          "example_fr": "Voici notre nouvelle liste de prix pour 2027."
+        }
+      ],
+      "sentences": [
+        { "en": "The customer has not paid yet", "fr": "Le client n'a pas encore payé" },
+        { "en": "We offer thirty days to pay", "fr": "Nous accordons trente jours pour payer" }
+      ],
+      "dialogues": [
+        {
+          "context": "Phone call with a customer",
+          "lines": [
+            { "speaker": "Customer", "text": "Five of the chairs you delivered are broken." }
+          ],
+          "options": [
+            "I'm sorry. We will send you a credit note for those five chairs.",
+            "That's your problem, not ours.",
+            "Please pay the full invoice first."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« We will send you a credit note for those five chairs » = « Nous vous enverrons un avoir pour ces cinq chaises ». L'avoir corrige la facture sans la supprimer."
+        }
+      ]
+    },
+    {
+      "title_en": "Cash in the office",
+      "terms": [
+        {
+          "term": "petty cash",
+          "pos": "noun",
+          "translation_fr": "petite caisse",
+          "definition_en": "A small amount of cash kept for small expenses.",
+          "explanation_fr": "La « petty cash » est la petite caisse pour les menues dépenses (eau, transport, fournitures).",
+          "example_en": "Buy the water with the petty cash.",
+          "example_fr": "Achète l'eau avec la petite caisse."
+        },
+        {
+          "term": "expense report",
+          "pos": "noun",
+          "translation_fr": "note de frais",
+          "definition_en": "A form to ask the company to pay back work expenses.",
+          "explanation_fr": "Une « expense report » est une note de frais : on y liste ses dépenses professionnelles avec les reçus pour être remboursé.",
+          "example_en": "Submit your expense report with the receipts.",
+          "example_fr": "Remets ta note de frais avec les reçus."
+        },
+        {
+          "term": "cash register",
+          "pos": "noun",
+          "translation_fr": "caisse enregistreuse",
+          "definition_en": "A machine that records sales and stores cash in a shop.",
+          "explanation_fr": "La « cash register » enregistre les ventes et garde l'argent dans un magasin.",
+          "example_en": "Count the cash register at the end of the day.",
+          "example_fr": "Compte la caisse enregistreuse en fin de journée."
+        },
+        {
+          "term": "change",
+          "pos": "noun",
+          "translation_fr": "monnaie (à rendre)",
+          "definition_en": "The money you give back when someone pays too much.",
+          "explanation_fr": "La « change » est la monnaie rendue au client ; « Keep the change » = gardez la monnaie.",
+          "example_en": "Give the customer his change and a receipt.",
+          "example_fr": "Rends la monnaie au client avec un reçu."
+        },
+        {
+          "term": "banknote",
+          "pos": "noun",
+          "translation_fr": "billet de banque",
+          "definition_en": "A piece of paper money.",
+          "explanation_fr": "Un « banknote » est un billet de banque (en américain : « bill »).",
+          "example_en": "Check every banknote with the machine.",
+          "example_fr": "Vérifie chaque billet avec la machine."
+        },
+        {
+          "term": "coin",
+          "pos": "noun",
+          "translation_fr": "pièce de monnaie",
+          "definition_en": "A small round piece of metal money.",
+          "explanation_fr": "Une « coin » est une pièce de monnaie.",
+          "example_en": "This machine counts every coin quickly.",
+          "example_fr": "Cette machine compte chaque pièce rapidement."
+        },
+        {
+          "term": "budget",
+          "pos": "noun",
+          "translation_fr": "budget",
+          "definition_en": "A plan of how much money you can spend.",
+          "explanation_fr": "Le « budget » est la somme prévue pour des dépenses sur une période.",
+          "example_en": "The training budget is almost used.",
+          "example_fr": "Le budget formation est presque épuisé."
+        },
+        {
+          "term": "spending limit",
+          "pos": "noun",
+          "translation_fr": "plafond de dépenses",
+          "definition_en": "The maximum amount a person may spend.",
+          "explanation_fr": "Le « spending limit » est le montant maximum qu'une personne peut dépenser sans autorisation.",
+          "example_en": "Your spending limit is fifty thousand francs.",
+          "example_fr": "Ton plafond de dépenses est de cinquante mille francs."
+        }
+      ],
+      "sentences": [
+        { "en": "Count the cash before you leave", "fr": "Compte l'argent avant de partir" },
+        { "en": "Attach the receipts to your report", "fr": "Joins les reçus à ta note" }
+      ],
+      "dialogues": [
+        {
+          "context": "End of the day",
+          "lines": [
+            { "speaker": "Cashier", "text": "The cash register is missing two thousand francs." }
+          ],
+          "options": [
+            "Let's count again and compare with the sales of the day.",
+            "Take two thousand from the petty cash and say nothing.",
+            "It's not important."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's count again and compare with the sales of the day » = « Recomptons et comparons avec les ventes du jour ». Un écart de caisse se recherche, il ne se cache pas."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "level": "B2",
+  "title_en": "AI & data",
+  "title_fr": "Intelligence artificielle et données",
+  "lessons": [
+    {
+      "title_en": "Machine learning",
+      "terms": [
+        {
+          "term": "artificial intelligence",
+          "pos": "noun (AI)",
+          "translation_fr": "intelligence artificielle (IA)",
+          "definition_en": "Computer systems that perform tasks that usually need human intelligence.",
+          "explanation_fr": "L'« artificial intelligence » (AI) désigne les systèmes capables de tâches « intelligentes » : comprendre un texte, reconnaître une image, prédire…",
+          "example_en": "Artificial intelligence can sort thousands of emails.",
+          "example_fr": "L'intelligence artificielle peut trier des milliers d'e-mails."
+        },
+        {
+          "term": "machine learning",
+          "pos": "noun",
+          "translation_fr": "apprentissage automatique",
+          "definition_en": "A type of AI that learns patterns from data instead of fixed rules.",
+          "explanation_fr": "Le « machine learning » apprend à partir d'exemples (données) plutôt que de règles écrites à la main.",
+          "example_en": "We use machine learning to detect fraud.",
+          "example_fr": "Nous utilisons l'apprentissage automatique pour détecter la fraude."
+        },
+        {
+          "term": "model",
+          "pos": "noun",
+          "translation_fr": "modèle",
+          "definition_en": "The result of training: a program that makes predictions.",
+          "explanation_fr": "Le « model » est ce qu'on obtient après l'entraînement : il fait des prédictions sur de nouvelles données.",
+          "example_en": "The model predicts which customers will leave.",
+          "example_fr": "Le modèle prédit quels clients vont partir."
+        },
+        {
+          "term": "training data",
+          "pos": "noun",
+          "translation_fr": "données d'entraînement",
+          "definition_en": "The examples used to teach a model.",
+          "explanation_fr": "Les « training data » sont les exemples montrés au modèle pour qu'il apprenne ; de mauvaises données donnent un mauvais modèle.",
+          "example_en": "The training data must be clean and varied.",
+          "example_fr": "Les données d'entraînement doivent être propres et variées."
+        },
+        {
+          "term": "algorithm",
+          "pos": "noun",
+          "translation_fr": "algorithme",
+          "definition_en": "A set of steps to solve a problem.",
+          "explanation_fr": "Un « algorithm » est une suite d'étapes précises pour résoudre un problème ou faire un calcul.",
+          "example_en": "This algorithm sorts the results by price.",
+          "example_fr": "Cet algorithme trie les résultats par prix."
+        },
+        {
+          "term": "prediction",
+          "pos": "noun",
+          "translation_fr": "prédiction",
+          "definition_en": "A result a model gives about something unknown.",
+          "explanation_fr": "Une « prediction » est l'estimation donnée par le modèle (« ce client va probablement acheter »).",
+          "example_en": "The prediction was correct for most users.",
+          "example_fr": "La prédiction était juste pour la plupart des utilisateurs."
+        },
+        {
+          "term": "accuracy",
+          "pos": "noun",
+          "translation_fr": "précision (taux de réussite)",
+          "definition_en": "The share of predictions that are correct.",
+          "explanation_fr": "L'« accuracy » est le pourcentage de bonnes prédictions ; 95 % d'accuracy = 95 bonnes réponses sur 100.",
+          "example_en": "The new model has a better accuracy.",
+          "example_fr": "Le nouveau modèle a une meilleure précision."
+        },
+        {
+          "term": "dataset",
+          "pos": "noun",
+          "translation_fr": "jeu de données",
+          "definition_en": "A collection of data used for analysis or training.",
+          "explanation_fr": "Un « dataset » est un ensemble de données organisées (souvent un grand tableau).",
+          "example_en": "The dataset contains ten thousand rows.",
+          "example_fr": "Le jeu de données contient dix mille lignes."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The model learns from past data",
+          "fr": "Le modèle apprend à partir des données passées"
+        },
+        {
+          "en": "We need more data to train it",
+          "fr": "Il nous faut plus de données pour l'entraîner"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Data team meeting",
+          "lines": [
+            {
+              "speaker": "Manager",
+              "text": "The model works well in tests but badly with real customers. Why?"
+            }
+          ],
+          "options": [
+            "The training data probably doesn't look like our real customers.",
+            "Real customers are wrong.",
+            "Models never work, let's stop."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« The training data probably doesn't look like our real customers » = « Les données d'entraînement ne ressemblent sans doute pas à nos vrais clients ». C'est la cause la plus fréquente."
+        }
+      ]
+    },
+    {
+      "title_en": "Working with data",
+      "terms": [
+        {
+          "term": "data analysis",
+          "pos": "noun",
+          "translation_fr": "analyse de données",
+          "definition_en": "Studying data to find useful information.",
+          "explanation_fr": "La « data analysis » consiste à étudier des données pour en tirer des conclusions utiles.",
+          "example_en": "Data analysis showed that most sales happen at night.",
+          "example_fr": "L'analyse de données a montré que la plupart des ventes ont lieu la nuit."
+        },
+        {
+          "term": "spreadsheet",
+          "pos": "noun",
+          "translation_fr": "tableur (feuille de calcul)",
+          "definition_en": "A file with rows and columns for numbers, like Excel.",
+          "explanation_fr": "Un « spreadsheet » est un fichier de type Excel ou Google Sheets, en lignes et colonnes.",
+          "example_en": "Export the results to a spreadsheet.",
+          "example_fr": "Exporte les résultats vers un tableur."
+        },
+        {
+          "term": "chart",
+          "pos": "noun",
+          "translation_fr": "graphique",
+          "definition_en": "A picture that shows numbers, like bars or lines.",
+          "explanation_fr": "Un « chart » représente des chiffres en image : barres, courbes, camembert…",
+          "example_en": "This chart shows sales for each month.",
+          "example_fr": "Ce graphique montre les ventes de chaque mois."
+        },
+        {
+          "term": "data cleaning",
+          "pos": "noun",
+          "translation_fr": "nettoyage des données",
+          "definition_en": "Fixing or removing wrong, missing or duplicate data.",
+          "explanation_fr": "Le « data cleaning » corrige ou supprime les données fausses, manquantes ou en double avant l'analyse.",
+          "example_en": "Data cleaning took most of the project time.",
+          "example_fr": "Le nettoyage des données a pris la plus grande partie du projet."
+        },
+        {
+          "term": "outlier",
+          "pos": "noun",
+          "translation_fr": "valeur aberrante",
+          "definition_en": "A value very different from the others.",
+          "explanation_fr": "Un « outlier » est une valeur très éloignée des autres (une erreur de saisie, ou un cas vraiment exceptionnel).",
+          "example_en": "One outlier changed the whole average.",
+          "example_fr": "Une valeur aberrante a changé toute la moyenne."
+        },
+        {
+          "term": "average",
+          "pos": "noun",
+          "translation_fr": "moyenne",
+          "definition_en": "The sum of the values divided by their number.",
+          "explanation_fr": "L'« average » est la moyenne : on additionne les valeurs et on divise par leur nombre.",
+          "example_en": "The average order is 12,000 francs.",
+          "example_fr": "La commande moyenne est de 12 000 francs."
+        },
+        {
+          "term": "trend",
+          "pos": "noun",
+          "translation_fr": "tendance",
+          "definition_en": "The general direction in which data changes.",
+          "explanation_fr": "Une « trend » est l'évolution générale : à la hausse, à la baisse, stable.",
+          "example_en": "The trend is clearly upward this year.",
+          "example_fr": "La tendance est clairement à la hausse cette année."
+        },
+        {
+          "term": "visualization",
+          "pos": "noun",
+          "translation_fr": "visualisation",
+          "definition_en": "Showing data as charts, maps or dashboards.",
+          "explanation_fr": "La « visualization » transforme des données en images faciles à comprendre (graphiques, cartes).",
+          "example_en": "A good visualization makes the results clear.",
+          "example_fr": "Une bonne visualisation rend les résultats clairs."
+        }
+      ],
+      "sentences": [
+        { "en": "The chart shows a clear trend", "fr": "Le graphique montre une tendance claire" },
+        {
+          "en": "Remove the duplicates before the analysis",
+          "fr": "Supprime les doublons avant l'analyse"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Report review",
+          "lines": [
+            { "speaker": "Director", "text": "Why is the average price so high this month?" }
+          ],
+          "options": [
+            "There is one outlier: a typing error. Without it, the average is normal.",
+            "Prices are always random.",
+            "I didn't look at the data."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« There is one outlier: a typing error » = « Il y a une valeur aberrante : une erreur de saisie ». Une seule valeur extrême peut fausser une moyenne."
+        }
+      ]
+    },
+    {
+      "title_en": "AI tools & ethics",
+      "terms": [
+        {
+          "term": "chatbot",
+          "pos": "noun",
+          "translation_fr": "agent conversationnel (chatbot)",
+          "definition_en": "A program that answers people in a conversation.",
+          "explanation_fr": "Un « chatbot » répond automatiquement aux questions, par écrit ou à l'oral.",
+          "example_en": "The chatbot answers customers at night.",
+          "example_fr": "Le chatbot répond aux clients la nuit."
+        },
+        {
+          "term": "prompt",
+          "pos": "noun",
+          "translation_fr": "consigne (prompt)",
+          "definition_en": "The instruction or question you give to an AI tool.",
+          "explanation_fr": "Un « prompt » est la consigne donnée à une IA ; plus elle est précise, meilleure est la réponse.",
+          "example_en": "Write a clear prompt with an example.",
+          "example_fr": "Rédige une consigne claire avec un exemple."
+        },
+        {
+          "term": "large language model",
+          "pos": "noun (LLM)",
+          "translation_fr": "grand modèle de langage",
+          "definition_en": "An AI model trained on huge amounts of text to understand and write language.",
+          "explanation_fr": "Un « large language model » (LLM) est une IA entraînée sur d'énormes quantités de textes : elle comprend et rédige du texte.",
+          "example_en": "A large language model can summarise a long report.",
+          "example_fr": "Un grand modèle de langage peut résumer un long rapport."
+        },
+        {
+          "term": "bias",
+          "pos": "noun",
+          "translation_fr": "biais",
+          "definition_en": "An unfair tendency in data or results.",
+          "explanation_fr": "Un « bias » est une injustice cachée dans les données ou les résultats (un modèle qui défavorise un groupe).",
+          "example_en": "Check the model for bias against women.",
+          "example_fr": "Vérifie que le modèle n'a pas de biais contre les femmes."
+        },
+        {
+          "term": "privacy",
+          "pos": "noun",
+          "translation_fr": "vie privée (confidentialité)",
+          "definition_en": "The right to keep personal information protected.",
+          "explanation_fr": "La « privacy » est la protection des informations personnelles : on ne donne pas de données de clients à n'importe quel outil.",
+          "example_en": "Respect user privacy when you use AI tools.",
+          "example_fr": "Respecte la vie privée des utilisateurs quand tu utilises des outils d'IA."
+        },
+        {
+          "term": "hallucination",
+          "pos": "noun",
+          "translation_fr": "hallucination (réponse inventée)",
+          "definition_en": "A false answer that an AI gives with confidence.",
+          "explanation_fr": "Une « hallucination » est une réponse inventée par l'IA, mais présentée comme vraie : il faut toujours vérifier.",
+          "example_en": "This date is a hallucination, the event never happened.",
+          "example_fr": "Cette date est une hallucination, l'événement n'a jamais eu lieu."
+        },
+        {
+          "term": "automation",
+          "pos": "noun",
+          "translation_fr": "automatisation",
+          "definition_en": "Using machines or software to do tasks without people.",
+          "explanation_fr": "L'« automation » fait faire une tâche répétitive par un programme à la place d'une personne.",
+          "example_en": "Automation saves us ten hours a week.",
+          "example_fr": "L'automatisation nous fait gagner dix heures par semaine."
+        },
+        {
+          "term": "transparency",
+          "pos": "noun",
+          "translation_fr": "transparence",
+          "definition_en": "Being open about how a system works and makes decisions.",
+          "explanation_fr": "La « transparency » consiste à expliquer comment l'IA est utilisée et comment elle décide.",
+          "example_en": "Transparency builds trust with customers.",
+          "example_fr": "La transparence crée la confiance avec les clients."
+        }
+      ],
+      "sentences": [
+        { "en": "Always check what the AI writes", "fr": "Vérifie toujours ce que l'IA écrit" },
+        {
+          "en": "Do not share personal data with the tool",
+          "fr": "Ne partage pas de données personnelles avec l'outil"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Team meeting",
+          "lines": [
+            {
+              "speaker": "Colleague",
+              "text": "I pasted our customer list into a free AI tool to analyse it. Is that OK?"
+            }
+          ],
+          "options": [
+            "No, that's a privacy risk. We should use an approved tool and anonymise the data.",
+            "Yes, free tools are always safe.",
+            "Yes, and let's share it on social media too."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« That's a privacy risk. We should use an approved tool and anonymise the data » = « C'est un risque pour la vie privée. Il faut un outil validé et des données anonymisées »."
+        }
+      ]
+    }
+  ]
+}

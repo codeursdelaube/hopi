@@ -1,0 +1,305 @@
+{
+  "level": "B1",
+  "title_en": "Agile project management",
+  "title_fr": "Gestion de projet agile",
+  "lessons": [
+    {
+      "title_en": "Agile & Scrum",
+      "terms": [
+        {
+          "term": "agile",
+          "pos": "adjective",
+          "translation_fr": "agile",
+          "definition_en": "A way of working in short cycles, with frequent feedback.",
+          "explanation_fr": "La méthode « agile » découpe le projet en petits cycles courts, avec des retours fréquents des utilisateurs.",
+          "example_en": "Our team follows an agile approach.",
+          "example_fr": "Notre équipe suit une approche agile."
+        },
+        {
+          "term": "Scrum",
+          "pos": "noun",
+          "translation_fr": "Scrum (méthode agile)",
+          "definition_en": "A popular agile framework with sprints and fixed roles.",
+          "explanation_fr": "« Scrum » est la méthode agile la plus utilisée : sprints de 1 à 4 semaines, réunions et rôles définis.",
+          "example_en": "We use Scrum with two-week sprints.",
+          "example_fr": "Nous utilisons Scrum avec des sprints de deux semaines."
+        },
+        {
+          "term": "backlog",
+          "pos": "noun",
+          "translation_fr": "carnet de produit (backlog)",
+          "definition_en": "The ordered list of work still to do.",
+          "explanation_fr": "Le « backlog » est la liste ordonnée de tout ce qu'il reste à faire sur le produit.",
+          "example_en": "Add this idea to the backlog.",
+          "example_fr": "Ajoute cette idée au backlog."
+        },
+        {
+          "term": "user story",
+          "pos": "noun",
+          "translation_fr": "récit utilisateur",
+          "definition_en": "A short need written from the user's point of view.",
+          "explanation_fr": "Une « user story » décrit un besoin du point de vue de l'utilisateur : « En tant qu'étudiant, je veux… afin de… ».",
+          "example_en": "Each user story must have a clear goal.",
+          "example_fr": "Chaque récit utilisateur doit avoir un objectif clair."
+        },
+        {
+          "term": "product owner",
+          "pos": "noun",
+          "translation_fr": "responsable produit (product owner)",
+          "definition_en": "The person who decides what the team builds first.",
+          "explanation_fr": "Le « product owner » choisit les priorités du backlog et représente les besoins des utilisateurs.",
+          "example_en": "Ask the product owner which task comes first.",
+          "example_fr": "Demande au responsable produit quelle tâche passe en premier."
+        },
+        {
+          "term": "Scrum master",
+          "pos": "noun",
+          "translation_fr": "Scrum master (facilitateur)",
+          "definition_en": "The person who helps the team follow Scrum and removes obstacles.",
+          "explanation_fr": "Le « Scrum master » anime les réunions et aide l'équipe à lever les blocages ; ce n'est pas un chef.",
+          "example_en": "The Scrum master organised the planning meeting.",
+          "example_fr": "Le Scrum master a organisé la réunion de planification."
+        },
+        {
+          "term": "retrospective",
+          "pos": "noun",
+          "translation_fr": "rétrospective",
+          "definition_en": "A meeting at the end of a sprint to improve the way of working.",
+          "explanation_fr": "La « retrospective » a lieu en fin de sprint : qu'est-ce qui a bien marché ? que faut-il améliorer ?",
+          "example_en": "In the retrospective, we talked about our meetings.",
+          "example_fr": "Pendant la rétrospective, nous avons parlé de nos réunions."
+        },
+        {
+          "term": "velocity",
+          "pos": "noun",
+          "translation_fr": "vélocité",
+          "definition_en": "How much work a team finishes in one sprint.",
+          "explanation_fr": "La « velocity » mesure la quantité de travail terminée par sprint ; elle aide à planifier les suivants.",
+          "example_en": "Our velocity is stable this quarter.",
+          "example_fr": "Notre vélocité est stable ce trimestre."
+        }
+      ],
+      "sentences": [
+        { "en": "This story is in the next sprint", "fr": "Ce récit est dans le prochain sprint" },
+        {
+          "en": "Let's improve our process in the retrospective",
+          "fr": "Améliorons notre façon de faire pendant la rétrospective"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Sprint planning",
+          "lines": [
+            {
+              "speaker": "Developer",
+              "text": "We have too many items for this sprint. What should we do?"
+            }
+          ],
+          "options": [
+            "Let's ask the product owner to choose the most important ones.",
+            "Let's work every weekend.",
+            "Let's take all of them and see."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's ask the product owner to choose the most important ones » = « Demandons au product owner de choisir les plus importants ». C'est son rôle de fixer les priorités."
+        }
+      ]
+    },
+    {
+      "title_en": "Planning & tracking",
+      "terms": [
+        {
+          "term": "ticket",
+          "pos": "noun",
+          "translation_fr": "ticket",
+          "definition_en": "A card that describes one piece of work or one problem.",
+          "explanation_fr": "Un « ticket » décrit une tâche ou un problème dans l'outil de suivi (Jira, Trello…).",
+          "example_en": "Create a ticket for this bug.",
+          "example_fr": "Crée un ticket pour ce bug."
+        },
+        {
+          "term": "assignee",
+          "pos": "noun",
+          "translation_fr": "personne assignée",
+          "definition_en": "The person responsible for a ticket.",
+          "explanation_fr": "L'« assignee » est la personne chargée du ticket.",
+          "example_en": "The assignee is Awa, she is working on it.",
+          "example_fr": "La personne assignée est Awa, elle s'en occupe."
+        },
+        {
+          "term": "milestone",
+          "pos": "noun",
+          "translation_fr": "jalon",
+          "definition_en": "An important step or date in a project.",
+          "explanation_fr": "Un « milestone » est une étape clé du projet : première version, lancement, livraison au client…",
+          "example_en": "The first milestone is the beta version.",
+          "example_fr": "Le premier jalon est la version bêta."
+        },
+        {
+          "term": "roadmap",
+          "pos": "noun",
+          "translation_fr": "feuille de route",
+          "definition_en": "A plan that shows what the product will get and when.",
+          "explanation_fr": "La « roadmap » montre les grandes fonctionnalités prévues dans les mois à venir.",
+          "example_en": "Mobile payments are on the roadmap for June.",
+          "example_fr": "Les paiements mobiles sont sur la feuille de route pour juin."
+        },
+        {
+          "term": "scope",
+          "pos": "noun",
+          "translation_fr": "périmètre",
+          "definition_en": "The list of things a project will and will not include.",
+          "explanation_fr": "Le « scope » définit ce qui est inclus dans le projet (et ce qui ne l'est pas).",
+          "example_en": "This feature is out of scope for version one.",
+          "example_fr": "Cette fonctionnalité est hors du périmètre de la version un."
+        },
+        {
+          "term": "dependency",
+          "pos": "noun",
+          "translation_fr": "dépendance",
+          "definition_en": "Work that must be finished before another task can start.",
+          "explanation_fr": "Une « dependency » est une tâche dont une autre a besoin pour commencer ; mal gérée, elle bloque l'équipe.",
+          "example_en": "The login page is a dependency for the profile page.",
+          "example_fr": "La page de connexion est une dépendance de la page de profil."
+        },
+        {
+          "term": "workload",
+          "pos": "noun",
+          "translation_fr": "charge de travail",
+          "definition_en": "The amount of work a person or team has to do.",
+          "explanation_fr": "La « workload » est la quantité de travail à faire ; trop lourde, elle fatigue l'équipe.",
+          "example_en": "My workload is too heavy this week.",
+          "example_fr": "Ma charge de travail est trop lourde cette semaine."
+        },
+        {
+          "term": "kanban board",
+          "pos": "noun",
+          "translation_fr": "tableau kanban",
+          "definition_en": "A board with columns like To do, In progress and Done.",
+          "explanation_fr": "Un « kanban board » affiche les tâches en colonnes « À faire », « En cours », « Terminé ».",
+          "example_en": "Move your ticket on the kanban board.",
+          "example_fr": "Déplace ton ticket sur le tableau kanban."
+        }
+      ],
+      "sentences": [
+        { "en": "I moved the ticket to done", "fr": "J'ai déplacé le ticket dans terminé" },
+        { "en": "This task depends on the API", "fr": "Cette tâche dépend de l'API" }
+      ],
+      "dialogues": [
+        {
+          "context": "Project meeting",
+          "lines": [
+            { "speaker": "Client", "text": "Can we also add a chat feature before the launch?" }
+          ],
+          "options": [
+            "It's out of scope for now, but we can add it to the roadmap.",
+            "Yes, we'll add everything you want with no delay.",
+            "No, we never add new features."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« It's out of scope for now, but we can add it to the roadmap » = « C'est hors périmètre pour l'instant, mais on peut l'ajouter à la feuille de route ». On protège la date de lancement sans dire non sèchement."
+        }
+      ]
+    },
+    {
+      "title_en": "Requirements & quality",
+      "terms": [
+        {
+          "term": "requirement",
+          "pos": "noun",
+          "translation_fr": "exigence (besoin)",
+          "definition_en": "Something the product must do or respect.",
+          "explanation_fr": "Une « requirement » est ce que le produit doit faire ou respecter (fonction, performance, sécurité).",
+          "example_en": "Offline access is a key requirement.",
+          "example_fr": "L'accès hors ligne est une exigence clé."
+        },
+        {
+          "term": "specification",
+          "pos": "noun",
+          "translation_fr": "cahier des charges (spécification)",
+          "definition_en": "A document that describes in detail what to build.",
+          "explanation_fr": "La « specification » (ou « spec ») décrit en détail ce qu'il faut construire et comment.",
+          "example_en": "Read the specification before you start coding.",
+          "example_fr": "Lis le cahier des charges avant de commencer à coder."
+        },
+        {
+          "term": "acceptance criteria",
+          "pos": "noun (plural)",
+          "translation_fr": "critères d'acceptation",
+          "definition_en": "Conditions a feature must meet to be accepted as done.",
+          "explanation_fr": "Les « acceptance criteria » sont les conditions précises à remplir pour que la tâche soit considérée comme terminée.",
+          "example_en": "The acceptance criteria are written in the ticket.",
+          "example_fr": "Les critères d'acceptation sont écrits dans le ticket."
+        },
+        {
+          "term": "prototype",
+          "pos": "noun",
+          "translation_fr": "prototype",
+          "definition_en": "An early, simple version used to test an idea.",
+          "explanation_fr": "Un « prototype » est une première version simple pour tester une idée avant de tout construire.",
+          "example_en": "We showed a prototype to ten users.",
+          "example_fr": "Nous avons montré un prototype à dix utilisateurs."
+        },
+        {
+          "term": "quality assurance",
+          "pos": "noun (QA)",
+          "translation_fr": "assurance qualité (QA)",
+          "definition_en": "The work of checking that a product has no defects.",
+          "explanation_fr": "La « quality assurance » (QA) vérifie que le produit fonctionne bien avant sa sortie.",
+          "example_en": "The quality assurance team found three bugs.",
+          "example_fr": "L'équipe d'assurance qualité a trouvé trois bugs."
+        },
+        {
+          "term": "regression",
+          "pos": "noun",
+          "translation_fr": "régression",
+          "definition_en": "A bug that breaks something that worked before.",
+          "explanation_fr": "Une « regression » est un bug qui casse une fonction qui marchait avant la modification.",
+          "example_en": "The new update caused a regression in the search.",
+          "example_fr": "La nouvelle mise à jour a causé une régression dans la recherche."
+        },
+        {
+          "term": "release notes",
+          "pos": "noun (plural)",
+          "translation_fr": "notes de version",
+          "definition_en": "A short text that lists what is new in a version.",
+          "explanation_fr": "Les « release notes » listent les nouveautés et corrections d'une version.",
+          "example_en": "Write the release notes in simple words.",
+          "example_fr": "Rédige les notes de version avec des mots simples."
+        },
+        {
+          "term": "stakeholder",
+          "pos": "noun",
+          "translation_fr": "partie prenante",
+          "definition_en": "A person or group affected by the project.",
+          "explanation_fr": "Un « stakeholder » est une personne concernée par le projet : client, direction, utilisateurs…",
+          "example_en": "We presented the demo to every stakeholder.",
+          "example_fr": "Nous avons présenté la démo à chaque partie prenante."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The feature meets all the criteria",
+          "fr": "La fonctionnalité remplit tous les critères"
+        },
+        {
+          "en": "QA tested the new version yesterday",
+          "fr": "La QA a testé la nouvelle version hier"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Sprint review",
+          "lines": [{ "speaker": "Product owner", "text": "Is the export feature done?" }],
+          "options": [
+            "Almost: two acceptance criteria are met, the last one is in testing.",
+            "Yes, I think so, I didn't check.",
+            "Done means I started it."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Two acceptance criteria are met, the last one is in testing » = « Deux critères d'acceptation sont remplis, le dernier est en test ». On répond précisément, critère par critère."
+        }
+      ]
+    }
+  ]
+}

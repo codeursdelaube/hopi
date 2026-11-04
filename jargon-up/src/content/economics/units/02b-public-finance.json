@@ -1,0 +1,310 @@
+{
+  "level": "B1",
+  "title_en": "Taxes & public finance",
+  "title_fr": "Impôts et finances publiques",
+  "lessons": [
+    {
+      "title_en": "Taxes",
+      "terms": [
+        {
+          "term": "income tax",
+          "pos": "noun",
+          "translation_fr": "impôt sur le revenu",
+          "definition_en": "A tax on the money people earn.",
+          "explanation_fr": "L'« income tax » est l'impôt sur les revenus des personnes, souvent retenu directement sur le salaire.",
+          "example_en": "Income tax is taken from the monthly salary.",
+          "example_fr": "L'impôt sur le revenu est prélevé sur le salaire mensuel."
+        },
+        {
+          "term": "corporate tax",
+          "pos": "noun",
+          "translation_fr": "impôt sur les sociétés",
+          "definition_en": "A tax on the profits of companies.",
+          "explanation_fr": "Le « corporate tax » est l'impôt sur les bénéfices des entreprises.",
+          "example_en": "The country lowered its corporate tax to attract investors.",
+          "example_fr": "Le pays a baissé son impôt sur les sociétés pour attirer les investisseurs."
+        },
+        {
+          "term": "value added tax",
+          "pos": "noun (VAT)",
+          "translation_fr": "taxe sur la valeur ajoutée (TVA)",
+          "definition_en": "A tax added to the price of most goods and services.",
+          "explanation_fr": "La « value added tax » (VAT/TVA) est payée par le consommateur à chaque achat ; c'est la première recette fiscale de beaucoup d'États africains.",
+          "example_en": "Value added tax is 18% in most WAEMU countries.",
+          "example_fr": "La TVA est de 18 % dans la plupart des pays de l'UEMOA."
+        },
+        {
+          "term": "tax base",
+          "pos": "noun",
+          "translation_fr": "assiette fiscale",
+          "definition_en": "All the income, sales or property that can be taxed.",
+          "explanation_fr": "La « tax base » est l'ensemble de ce qui peut être taxé ; avec un grand secteur informel, elle reste étroite.",
+          "example_en": "The informal economy keeps the tax base small.",
+          "example_fr": "L'économie informelle maintient une assiette fiscale étroite."
+        },
+        {
+          "term": "tax evasion",
+          "pos": "noun",
+          "translation_fr": "fraude fiscale",
+          "definition_en": "Illegally avoiding paying taxes.",
+          "explanation_fr": "La « tax evasion » est la fraude fiscale (illégale) ; « tax avoidance » est l'optimisation légale.",
+          "example_en": "Tax evasion reduces money for schools and hospitals.",
+          "example_fr": "La fraude fiscale réduit l'argent des écoles et des hôpitaux."
+        },
+        {
+          "term": "tax revenue",
+          "pos": "noun",
+          "translation_fr": "recettes fiscales",
+          "definition_en": "The money a government collects from taxes.",
+          "explanation_fr": "Les « tax revenue » sont les sommes collectées par l'État grâce aux impôts.",
+          "example_en": "Tax revenue grew thanks to digital payments.",
+          "example_fr": "Les recettes fiscales ont augmenté grâce aux paiements numériques."
+        },
+        {
+          "term": "progressive tax",
+          "pos": "noun",
+          "translation_fr": "impôt progressif",
+          "definition_en": "A tax where people with higher income pay a higher rate.",
+          "explanation_fr": "Un « progressive tax » a un taux qui augmente avec le revenu : les plus riches paient proportionnellement plus.",
+          "example_en": "A progressive tax can reduce inequality.",
+          "example_fr": "Un impôt progressif peut réduire les inégalités."
+        },
+        {
+          "term": "tax incentive",
+          "pos": "noun",
+          "translation_fr": "incitation fiscale (avantage fiscal)",
+          "definition_en": "A tax reduction to encourage an activity.",
+          "explanation_fr": "Un « tax incentive » est une réduction d'impôt pour encourager une activité (investir, embaucher, exporter).",
+          "example_en": "Startups get a tax incentive for three years.",
+          "example_fr": "Les startups bénéficient d'un avantage fiscal pendant trois ans."
+        }
+      ],
+      "sentences": [
+        { "en": "Everyone pays VAT when they buy", "fr": "Tout le monde paie la TVA en achetant" },
+        {
+          "en": "Taxes pay for roads and schools",
+          "fr": "Les impôts financent les routes et les écoles"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Policy debate",
+          "lines": [
+            {
+              "speaker": "Journalist",
+              "text": "How can the state collect more taxes without hurting the poor?"
+            }
+          ],
+          "options": [
+            "By widening the tax base and fighting tax evasion, rather than raising VAT.",
+            "By taxing only the poorest.",
+            "By stopping all public services."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« By widening the tax base and fighting tax evasion, rather than raising VAT » = « En élargissant l'assiette fiscale et en luttant contre la fraude, plutôt qu'en augmentant la TVA »."
+        }
+      ]
+    },
+    {
+      "title_en": "The state budget",
+      "terms": [
+        {
+          "term": "national budget",
+          "pos": "noun",
+          "translation_fr": "budget de l'État (loi de finances)",
+          "definition_en": "The government's plan of revenue and spending for a year.",
+          "explanation_fr": "Le « national budget » prévoit les recettes et dépenses de l'État pour l'année ; il est voté par le Parlement.",
+          "example_en": "Parliament voted the national budget in December.",
+          "example_fr": "Le Parlement a voté le budget de l'État en décembre."
+        },
+        {
+          "term": "budget surplus",
+          "pos": "noun",
+          "translation_fr": "excédent budgétaire",
+          "definition_en": "When government revenue is higher than spending.",
+          "explanation_fr": "Un « budget surplus » existe quand l'État encaisse plus qu'il ne dépense (le contraire du déficit).",
+          "example_en": "A budget surplus is rare in developing countries.",
+          "example_fr": "Un excédent budgétaire est rare dans les pays en développement."
+        },
+        {
+          "term": "expenditure",
+          "pos": "noun",
+          "translation_fr": "dépenses (publiques)",
+          "definition_en": "The money spent, especially by a government.",
+          "explanation_fr": "L'« expenditure » désigne les dépenses, notamment publiques (salaires, investissements, intérêts).",
+          "example_en": "Health expenditure rose by ten percent.",
+          "example_fr": "Les dépenses de santé ont augmenté de dix pour cent."
+        },
+        {
+          "term": "austerity",
+          "pos": "noun",
+          "translation_fr": "austérité (rigueur)",
+          "definition_en": "Strong cuts in public spending to reduce debt.",
+          "explanation_fr": "L'« austerity » est une politique de forte réduction des dépenses publiques pour réduire la dette.",
+          "example_en": "Austerity reduced the deficit but hurt public services.",
+          "example_fr": "L'austérité a réduit le déficit mais a nui aux services publics."
+        },
+        {
+          "term": "government bond",
+          "pos": "noun",
+          "translation_fr": "obligation d'État",
+          "definition_en": "A loan to the government that pays interest to investors.",
+          "explanation_fr": "Un « government bond » est un titre de dette émis par l'État : les investisseurs prêtent et reçoivent des intérêts.",
+          "example_en": "Togo issued a government bond on the regional market.",
+          "example_fr": "Le Togo a émis une obligation d'État sur le marché régional."
+        },
+        {
+          "term": "creditor",
+          "pos": "noun",
+          "translation_fr": "créancier",
+          "definition_en": "A person, bank or country that is owed money.",
+          "explanation_fr": "Le « creditor » est celui à qui l'on doit de l'argent (banque, pays, institution).",
+          "example_en": "China is a major creditor for many African states.",
+          "example_fr": "La Chine est un créancier important de nombreux États africains."
+        },
+        {
+          "term": "debt relief",
+          "pos": "noun",
+          "translation_fr": "allègement de la dette",
+          "definition_en": "Reducing or cancelling a country's debt.",
+          "explanation_fr": "Le « debt relief » réduit ou annule une partie de la dette d'un pays (ex. : initiative PPTE).",
+          "example_en": "Debt relief freed money for education.",
+          "example_fr": "L'allègement de la dette a libéré de l'argent pour l'éducation."
+        },
+        {
+          "term": "borrowing",
+          "pos": "noun",
+          "translation_fr": "emprunt (endettement)",
+          "definition_en": "Taking money that must be paid back.",
+          "explanation_fr": "Le « borrowing » est le fait d'emprunter ; l'État emprunte pour financer son déficit.",
+          "example_en": "Government borrowing increased during the crisis.",
+          "example_fr": "L'emprunt public a augmenté pendant la crise."
+        }
+      ],
+      "sentences": [
+        { "en": "The state spends more than it earns", "fr": "L'État dépense plus qu'il ne gagne" },
+        {
+          "en": "Interest on debt is a big expense",
+          "fr": "Les intérêts de la dette sont une grosse dépense"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Radio interview",
+          "lines": [
+            { "speaker": "Host", "text": "Why does the government borrow money every year?" }
+          ],
+          "options": [
+            "Because expenditure is higher than tax revenue, so borrowing covers the deficit.",
+            "Because it likes paying interest.",
+            "Governments never borrow."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Expenditure is higher than tax revenue, so borrowing covers the deficit » = « Les dépenses dépassent les recettes fiscales, l'emprunt couvre donc le déficit »."
+        }
+      ]
+    },
+    {
+      "title_en": "Public services & aid",
+      "terms": [
+        {
+          "term": "public services",
+          "pos": "noun (plural)",
+          "translation_fr": "services publics",
+          "definition_en": "Services provided by the state, like schools and hospitals.",
+          "explanation_fr": "Les « public services » sont fournis par l'État : écoles, hôpitaux, eau, électricité, routes.",
+          "example_en": "Better public services need more tax revenue.",
+          "example_fr": "De meilleurs services publics exigent plus de recettes fiscales."
+        },
+        {
+          "term": "welfare",
+          "pos": "noun",
+          "translation_fr": "aide sociale (bien-être)",
+          "definition_en": "Government help for people in need.",
+          "explanation_fr": "Le « welfare » désigne l'aide publique aux personnes en difficulté (et, plus largement, le bien-être).",
+          "example_en": "Cash transfers are a form of welfare.",
+          "example_fr": "Les transferts monétaires sont une forme d'aide sociale."
+        },
+        {
+          "term": "healthcare",
+          "pos": "noun",
+          "translation_fr": "soins de santé (système de santé)",
+          "definition_en": "The services that treat and prevent illness.",
+          "explanation_fr": "Le « healthcare » regroupe les soins et le système de santé.",
+          "example_en": "Access to healthcare is better in cities.",
+          "example_fr": "L'accès aux soins est meilleur en ville."
+        },
+        {
+          "term": "foreign aid",
+          "pos": "noun",
+          "translation_fr": "aide extérieure (aide au développement)",
+          "definition_en": "Money or help given by other countries.",
+          "explanation_fr": "La « foreign aid » est l'aide apportée par d'autres pays ou institutions (dons, prêts à taux réduit).",
+          "example_en": "Foreign aid financed the new hospital.",
+          "example_fr": "L'aide extérieure a financé le nouvel hôpital."
+        },
+        {
+          "term": "donor",
+          "pos": "noun",
+          "translation_fr": "bailleur de fonds (donateur)",
+          "definition_en": "A country or organisation that gives money.",
+          "explanation_fr": "Un « donor » est un bailleur de fonds : Banque mondiale, Union européenne, coopérations bilatérales…",
+          "example_en": "Each donor wants a clear report on results.",
+          "example_fr": "Chaque bailleur veut un rapport clair sur les résultats."
+        },
+        {
+          "term": "grant",
+          "pos": "noun",
+          "translation_fr": "subvention (don)",
+          "definition_en": "Money given that does not have to be paid back.",
+          "explanation_fr": "Un « grant » est un don qu'on ne rembourse pas, contrairement à un prêt.",
+          "example_en": "The project is funded by a grant, not a loan.",
+          "example_fr": "Le projet est financé par un don, pas par un prêt."
+        },
+        {
+          "term": "public investment",
+          "pos": "noun",
+          "translation_fr": "investissement public",
+          "definition_en": "Government spending on long-term projects like roads.",
+          "explanation_fr": "Le « public investment » finance des projets durables : routes, ports, réseaux électriques.",
+          "example_en": "Public investment in roads helps farmers reach markets.",
+          "example_fr": "L'investissement public dans les routes aide les agriculteurs à atteindre les marchés."
+        },
+        {
+          "term": "accountability",
+          "pos": "noun",
+          "translation_fr": "obligation de rendre des comptes",
+          "definition_en": "Being responsible for decisions and explaining how money was used.",
+          "explanation_fr": "L'« accountability » oblige les responsables à expliquer et justifier l'usage de l'argent public.",
+          "example_en": "Citizens demand more accountability from leaders.",
+          "example_fr": "Les citoyens exigent que les dirigeants rendent davantage de comptes."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Aid must reach the people who need it",
+          "fr": "L'aide doit atteindre ceux qui en ont besoin"
+        },
+        {
+          "en": "A grant does not need to be repaid",
+          "fr": "Un don n'a pas besoin d'être remboursé"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Project meeting",
+          "lines": [
+            { "speaker": "Donor", "text": "How will citizens know how our money was used?" }
+          ],
+          "options": [
+            "We will publish the budget and results online every quarter.",
+            "They don't need to know.",
+            "We will decide later."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« We will publish the budget and results online every quarter » = « Nous publierons le budget et les résultats en ligne chaque trimestre ». C'est de la redevabilité (accountability)."
+        }
+      ]
+    }
+  ]
+}

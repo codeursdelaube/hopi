@@ -1,0 +1,316 @@
+{
+  "level": "A2",
+  "title_en": "Consumer rights",
+  "title_fr": "Les droits du consommateur",
+  "lessons": [
+    {
+      "title_en": "Buying & guarantees",
+      "terms": [
+        {
+          "term": "consumer",
+          "pos": "noun",
+          "translation_fr": "consommateur",
+          "definition_en": "A person who buys goods or services for personal use.",
+          "explanation_fr": "Le « consumer » achète pour son usage personnel ; la loi le protège face aux vendeurs professionnels.",
+          "example_en": "The law protects the consumer.",
+          "example_fr": "La loi protège le consommateur."
+        },
+        {
+          "term": "warranty",
+          "pos": "noun",
+          "translation_fr": "garantie",
+          "definition_en": "A promise to repair or replace a product if it breaks.",
+          "explanation_fr": "La « warranty » est la garantie : le vendeur répare ou remplace le produit en panne pendant une durée fixée.",
+          "example_en": "The phone has a one-year warranty.",
+          "example_fr": "Le téléphone a une garantie d'un an."
+        },
+        {
+          "term": "proof of purchase",
+          "pos": "noun",
+          "translation_fr": "preuve d'achat",
+          "definition_en": "A document that shows you bought something, like a receipt.",
+          "explanation_fr": "La « proof of purchase » (ticket, facture) est indispensable pour faire jouer la garantie.",
+          "example_en": "Keep your proof of purchase for the warranty.",
+          "example_fr": "Garde ta preuve d'achat pour la garantie."
+        },
+        {
+          "term": "refund",
+          "pos": "noun / verb",
+          "translation_fr": "remboursement",
+          "definition_en": "Money given back to a buyer.",
+          "explanation_fr": "Un « refund » est un remboursement du prix payé.",
+          "example_en": "I asked for a refund because the shoes were broken.",
+          "example_fr": "J'ai demandé un remboursement car les chaussures étaient abîmées."
+        },
+        {
+          "term": "exchange",
+          "pos": "noun / verb",
+          "translation_fr": "échange",
+          "definition_en": "Giving back a product and getting another one.",
+          "explanation_fr": "Un « exchange » permet de rendre un produit contre un autre.",
+          "example_en": "Can I exchange this shirt for a bigger size?",
+          "example_fr": "Puis-je échanger cette chemise contre une taille au-dessus ?"
+        },
+        {
+          "term": "defective",
+          "pos": "adjective",
+          "translation_fr": "défectueux",
+          "definition_en": "Not working correctly because of a fault.",
+          "explanation_fr": "Un produit « defective » a un défaut de fabrication : il ne fonctionne pas comme prévu.",
+          "example_en": "The charger was defective from the first day.",
+          "example_fr": "Le chargeur était défectueux dès le premier jour."
+        },
+        {
+          "term": "return policy",
+          "pos": "noun",
+          "translation_fr": "politique de retour",
+          "definition_en": "A shop's rules for returning products.",
+          "explanation_fr": "La « return policy » fixe les règles de retour : délai, état du produit, ticket.",
+          "example_en": "Read the return policy before you buy online.",
+          "example_fr": "Lis la politique de retour avant d'acheter en ligne."
+        },
+        {
+          "term": "after-sales service",
+          "pos": "noun",
+          "translation_fr": "service après-vente",
+          "definition_en": "Help given to customers after they buy a product.",
+          "explanation_fr": "L'« after-sales service » (SAV) aide après l'achat : réparation, pièces, conseils.",
+          "example_en": "Their after-sales service repaired my TV for free.",
+          "example_fr": "Leur service après-vente a réparé ma télé gratuitement."
+        }
+      ],
+      "sentences": [
+        { "en": "Keep the receipt for the guarantee", "fr": "Garde le ticket pour la garantie" },
+        {
+          "en": "The product stopped working after a week",
+          "fr": "Le produit a cessé de fonctionner au bout d'une semaine"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "In a phone shop",
+          "lines": [
+            {
+              "speaker": "Customer",
+              "text": "I bought this phone last month and the screen doesn't work."
+            }
+          ],
+          "options": [
+            "It's under warranty. Do you have your proof of purchase? We'll repair or replace it.",
+            "That's your fault, you broke it.",
+            "We never repair phones."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« It's under warranty. Do you have your proof of purchase? » = « Il est sous garantie. Avez-vous votre preuve d'achat ? ». C'est la réponse d'un vendeur sérieux."
+        }
+      ]
+    },
+    {
+      "title_en": "Subscriptions & contracts",
+      "terms": [
+        {
+          "term": "subscription",
+          "pos": "noun",
+          "translation_fr": "abonnement",
+          "definition_en": "Paying regularly to receive a service.",
+          "explanation_fr": "Une « subscription » est un abonnement payé chaque mois ou chaque année (internet, TV, appli).",
+          "example_en": "My internet subscription costs 15,000 francs a month.",
+          "example_fr": "Mon abonnement internet coûte 15 000 francs par mois."
+        },
+        {
+          "term": "cancellation",
+          "pos": "noun",
+          "translation_fr": "résiliation (annulation)",
+          "definition_en": "Officially ending an agreement or an order.",
+          "explanation_fr": "La « cancellation » met fin à un abonnement ou annule une commande.",
+          "example_en": "Send your cancellation by email before the 1st.",
+          "example_fr": "Envoie ta résiliation par e-mail avant le 1er."
+        },
+        {
+          "term": "small print",
+          "pos": "noun",
+          "translation_fr": "petits caractères (clauses cachées)",
+          "definition_en": "Important details written in very small text.",
+          "explanation_fr": "Le « small print » désigne les détails importants écrits tout petit, qu'il faut lire avant de signer.",
+          "example_en": "Read the small print before you sign.",
+          "example_fr": "Lis les petits caractères avant de signer."
+        },
+        {
+          "term": "consent",
+          "pos": "noun",
+          "translation_fr": "consentement",
+          "definition_en": "Permission or agreement to something.",
+          "explanation_fr": "Le « consent » est l'accord libre et éclairé ; sans lui, un contrat peut être annulé.",
+          "example_en": "They used my photo without my consent.",
+          "example_fr": "Ils ont utilisé ma photo sans mon consentement."
+        },
+        {
+          "term": "automatic renewal",
+          "pos": "noun",
+          "translation_fr": "renouvellement automatique (tacite reconduction)",
+          "definition_en": "When a contract continues unless you cancel it.",
+          "explanation_fr": "L'« automatic renewal » prolonge le contrat tout seul si on ne le résilie pas à temps.",
+          "example_en": "Turn off automatic renewal if you don't want to pay again.",
+          "example_fr": "Désactive le renouvellement automatique si tu ne veux pas repayer."
+        },
+        {
+          "term": "cooling-off period",
+          "pos": "noun",
+          "translation_fr": "délai de rétractation",
+          "definition_en": "A short time when you can cancel a purchase for free.",
+          "explanation_fr": "Le « cooling-off period » est le délai pendant lequel on peut changer d'avis et annuler sans frais (souvent pour les achats à distance).",
+          "example_en": "You have a fourteen-day cooling-off period.",
+          "example_fr": "Tu as un délai de rétractation de quatorze jours."
+        },
+        {
+          "term": "unfair term",
+          "pos": "noun",
+          "translation_fr": "clause abusive",
+          "definition_en": "A contract rule that is unfairly against the consumer.",
+          "explanation_fr": "Un « unfair term » est une clause abusive, déséquilibrée au détriment du consommateur ; elle peut être annulée.",
+          "example_en": "The judge cancelled the unfair term.",
+          "example_fr": "Le juge a annulé la clause abusive."
+        },
+        {
+          "term": "monthly fee",
+          "pos": "noun",
+          "translation_fr": "mensualité (frais mensuels)",
+          "definition_en": "An amount you pay every month.",
+          "explanation_fr": "La « monthly fee » est le montant payé chaque mois.",
+          "example_en": "The monthly fee increased without notice.",
+          "example_fr": "La mensualité a augmenté sans préavis."
+        }
+      ],
+      "sentences": [
+        { "en": "I want to cancel my subscription", "fr": "Je veux résilier mon abonnement" },
+        {
+          "en": "Always read the contract before signing",
+          "fr": "Lis toujours le contrat avant de signer"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Customer call",
+          "lines": [
+            {
+              "speaker": "Operator",
+              "text": "Your contract renewed automatically for one more year."
+            }
+          ],
+          "options": [
+            "I didn't receive any notice. Please send me the contract terms, I want to cancel.",
+            "Okay, take all my money.",
+            "I'll never pay anything again."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« I didn't receive any notice. Please send me the contract terms, I want to cancel » = « Je n'ai reçu aucun préavis. Envoyez-moi les conditions du contrat, je veux résilier »."
+        }
+      ]
+    },
+    {
+      "title_en": "Solving a dispute",
+      "terms": [
+        {
+          "term": "consumer protection",
+          "pos": "noun",
+          "translation_fr": "protection des consommateurs",
+          "definition_en": "Laws and bodies that defend buyers.",
+          "explanation_fr": "La « consumer protection » regroupe les lois et organismes qui défendent les acheteurs.",
+          "example_en": "Call the consumer protection office for help.",
+          "example_fr": "Appelle le service de protection des consommateurs pour de l'aide."
+        },
+        {
+          "term": "mediation",
+          "pos": "noun",
+          "translation_fr": "médiation",
+          "definition_en": "Solving a disagreement with the help of a neutral person.",
+          "explanation_fr": "La « mediation » règle un conflit à l'amiable avec un tiers neutre, sans aller au tribunal.",
+          "example_en": "Mediation is faster and cheaper than court.",
+          "example_fr": "La médiation est plus rapide et moins chère qu'un procès."
+        },
+        {
+          "term": "mediator",
+          "pos": "noun",
+          "translation_fr": "médiateur",
+          "definition_en": "A neutral person who helps two sides agree.",
+          "explanation_fr": "Le « mediator » aide les deux parties à trouver un accord, sans imposer de décision.",
+          "example_en": "The mediator helped us find an agreement.",
+          "example_fr": "Le médiateur nous a aidés à trouver un accord."
+        },
+        {
+          "term": "claim",
+          "pos": "noun / verb",
+          "translation_fr": "réclamation (demande)",
+          "definition_en": "An official request for money or a right.",
+          "explanation_fr": "Un « claim » est une demande officielle (remboursement, indemnisation, droit).",
+          "example_en": "I made a claim to the insurance company.",
+          "example_fr": "J'ai fait une réclamation auprès de l'assurance."
+        },
+        {
+          "term": "compensation",
+          "pos": "noun",
+          "translation_fr": "indemnisation (dédommagement)",
+          "definition_en": "Money paid for a loss or damage.",
+          "explanation_fr": "La « compensation » est l'argent versé pour réparer un préjudice.",
+          "example_en": "The airline paid compensation for the delay.",
+          "example_fr": "La compagnie aérienne a payé une indemnisation pour le retard."
+        },
+        {
+          "term": "formal notice",
+          "pos": "noun",
+          "translation_fr": "mise en demeure",
+          "definition_en": "An official letter asking someone to do what they must.",
+          "explanation_fr": "La « formal notice » est une mise en demeure : un courrier officiel qui exige d'agir avant une date, avant d'aller en justice.",
+          "example_en": "Send a formal notice before going to court.",
+          "example_fr": "Envoie une mise en demeure avant d'aller au tribunal."
+        },
+        {
+          "term": "small claims court",
+          "pos": "noun",
+          "translation_fr": "tribunal pour les petits litiges",
+          "definition_en": "A simple court for disputes about small amounts.",
+          "explanation_fr": "Le « small claims court » juge les petits litiges simplement, souvent sans avocat.",
+          "example_en": "You can go to the small claims court without a lawyer.",
+          "example_fr": "Tu peux aller au tribunal des petits litiges sans avocat."
+        },
+        {
+          "term": "ombudsman",
+          "pos": "noun",
+          "translation_fr": "médiateur officiel (ombudsman)",
+          "definition_en": "An official who investigates complaints against organisations.",
+          "explanation_fr": "L'« ombudsman » est un médiateur officiel indépendant qui examine les plaintes contre une administration ou un secteur.",
+          "example_en": "The banking ombudsman reviewed my complaint.",
+          "example_fr": "Le médiateur bancaire a examiné ma plainte."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Let's try to find an agreement first",
+          "fr": "Essayons d'abord de trouver un accord"
+        },
+        {
+          "en": "I want compensation for the damage",
+          "fr": "Je veux un dédommagement pour le préjudice"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Advice from a friend",
+          "lines": [
+            {
+              "speaker": "Friend",
+              "text": "The shop refuses to refund my broken fridge. Should I go to court now?"
+            }
+          ],
+          "options": [
+            "First send a formal notice, then try mediation. Court is the last step.",
+            "Break something in the shop.",
+            "Forget it, consumers have no rights."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« First send a formal notice, then try mediation. Court is the last step » = « Envoie d'abord une mise en demeure, puis tente la médiation. Le tribunal est la dernière étape »."
+        }
+      ]
+    }
+  ]
+}

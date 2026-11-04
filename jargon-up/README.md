@@ -24,14 +24,14 @@ Première installation de la base : voir [docs/SETUP-SUPABASE.md](docs/SETUP-SUP
 
 ## Scripts
 
-| Commande            | Rôle                                                       |
-| ------------------- | ---------------------------------------------------------- |
-| `npm run dev`       | Serveur de développement                                   |
-| `npm run build`     | Build de production                                        |
-| `npm run lint`      | ESLint                                                     |
-| `npm run typecheck` | Vérification TypeScript                                    |
-| `npm test`          | Tests Vitest (logique de jeu, SM-2, contenu, composants)   |
-| `npm run format`    | Formatage Prettier (+ tri des classes)                     |
+| Commande            | Rôle                                                           |
+| ------------------- | -------------------------------------------------------------- |
+| `npm run dev`       | Serveur de développement                                       |
+| `npm run build`     | Build de production                                            |
+| `npm run lint`      | ESLint                                                         |
+| `npm run typecheck` | Vérification TypeScript                                        |
+| `npm test`          | Tests Vitest (logique de jeu, SM-2, contenu, composants)       |
+| `npm run format`    | Formatage Prettier (+ tri des classes)                         |
 | `npm run seed`      | Importe le contenu (`src/content/`) dans Supabase (idempotent) |
 
 ## Organisation
@@ -55,7 +55,7 @@ src/
     lesson/               LessonPlayer (moteur de leçon) + LessonResults (écran de fin)
     game/                 Mascot (Hopi), Confetti, StatsBar
   content/
-    <filière>/units/*.json contenu pédagogique (5 filières, 57 leçons, 456 termes)
+    <filière>/units/*.json contenu pédagogique (5 filières, 45 unités du niveau A2 au B2, 132 leçons, 1 056 termes)
     generate.ts           génération déterministe des exercices à partir des termes
   lib/
     gamification/         niveaux, série, dates locales, XP (fonctions pures testées)

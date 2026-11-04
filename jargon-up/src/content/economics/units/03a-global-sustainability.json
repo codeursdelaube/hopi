@@ -1,0 +1,319 @@
+{
+  "level": "B2",
+  "title_en": "Global economy, climate & inequality",
+  "title_fr": "Économie mondiale, climat et inégalités",
+  "lessons": [
+    {
+      "title_en": "The global economy",
+      "terms": [
+        {
+          "term": "supply chain",
+          "pos": "noun",
+          "translation_fr": "chaîne d'approvisionnement",
+          "definition_en": "All the steps from raw materials to the final customer.",
+          "explanation_fr": "La « supply chain » relie fournisseurs, usines, transporteurs et vendeurs jusqu'au client final.",
+          "example_en": "The pandemic broke many supply chain links.",
+          "example_fr": "La pandémie a rompu de nombreux maillons de la chaîne d'approvisionnement."
+        },
+        {
+          "term": "outsourcing",
+          "pos": "noun",
+          "translation_fr": "externalisation (sous-traitance)",
+          "definition_en": "Paying another company to do part of your work.",
+          "explanation_fr": "L'« outsourcing » confie une partie du travail à une autre entreprise (centre d'appels, comptabilité).",
+          "example_en": "Outsourcing created call centre jobs in Africa.",
+          "example_fr": "L'externalisation a créé des emplois de centres d'appels en Afrique."
+        },
+        {
+          "term": "multinational",
+          "pos": "noun / adjective",
+          "translation_fr": "multinationale",
+          "definition_en": "A company that operates in many countries.",
+          "explanation_fr": "Une « multinational » est une entreprise présente dans de nombreux pays.",
+          "example_en": "A multinational opened a factory near the port.",
+          "example_fr": "Une multinationale a ouvert une usine près du port."
+        },
+        {
+          "term": "comparative advantage",
+          "pos": "noun",
+          "translation_fr": "avantage comparatif",
+          "definition_en": "Producing something at a lower opportunity cost than others.",
+          "explanation_fr": "Le « comparative advantage » explique qu'un pays gagne à se spécialiser dans ce qu'il produit relativement le mieux, puis à échanger.",
+          "example_en": "Côte d'Ivoire has a comparative advantage in cocoa.",
+          "example_fr": "La Côte d'Ivoire a un avantage comparatif dans le cacao."
+        },
+        {
+          "term": "protectionism",
+          "pos": "noun",
+          "translation_fr": "protectionnisme",
+          "definition_en": "Protecting local industry by limiting imports.",
+          "explanation_fr": "Le « protectionism » limite les importations (droits de douane, quotas) pour protéger la production locale.",
+          "example_en": "Protectionism can raise prices for consumers.",
+          "example_fr": "Le protectionnisme peut faire monter les prix pour les consommateurs."
+        },
+        {
+          "term": "offshoring",
+          "pos": "noun",
+          "translation_fr": "délocalisation",
+          "definition_en": "Moving production to another country.",
+          "explanation_fr": "L'« offshoring » est la délocalisation de la production dans un autre pays, souvent pour réduire les coûts.",
+          "example_en": "Offshoring moved many textile jobs to Asia.",
+          "example_fr": "La délocalisation a déplacé de nombreux emplois du textile vers l'Asie."
+        },
+        {
+          "term": "trade war",
+          "pos": "noun",
+          "translation_fr": "guerre commerciale",
+          "definition_en": "When countries raise tariffs against each other.",
+          "explanation_fr": "Une « trade war » oppose des pays qui augmentent leurs droits de douane l'un contre l'autre.",
+          "example_en": "The trade war hurt exporters on both sides.",
+          "example_fr": "La guerre commerciale a nui aux exportateurs des deux côtés."
+        },
+        {
+          "term": "regional integration",
+          "pos": "noun",
+          "translation_fr": "intégration régionale",
+          "definition_en": "Countries of a region joining their markets and rules.",
+          "explanation_fr": "La « regional integration » rapproche les économies d'une région (CEDEAO, ZLECAf) : marché commun, règles partagées.",
+          "example_en": "The AfCFTA aims at deep regional integration.",
+          "example_fr": "La ZLECAf vise une intégration régionale profonde."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Africa trades too little with itself",
+          "fr": "L'Afrique commerce trop peu avec elle-même"
+        },
+        {
+          "en": "Each country should focus on its strengths",
+          "fr": "Chaque pays devrait se concentrer sur ses points forts"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Economic forum",
+          "lines": [
+            { "speaker": "Panelist", "text": "Why do we export raw cocoa instead of chocolate?" }
+          ],
+          "options": [
+            "Because most of the value chain is abroad. Local processing and regional integration could keep more value here.",
+            "Because chocolate is illegal.",
+            "Because nobody eats chocolate."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Local processing and regional integration could keep more value here » = « La transformation locale et l'intégration régionale garderaient plus de valeur ici ». C'est le débat clé sur la transformation des matières premières."
+        }
+      ]
+    },
+    {
+      "title_en": "Climate & the environment",
+      "terms": [
+        {
+          "term": "climate change",
+          "pos": "noun",
+          "translation_fr": "changement climatique",
+          "definition_en": "Long-term change in temperatures and weather patterns.",
+          "explanation_fr": "Le « climate change » désigne le réchauffement et le dérèglement durable du climat, qui touchent fortement l'agriculture africaine.",
+          "example_en": "Climate change threatens harvests in the Sahel.",
+          "example_fr": "Le changement climatique menace les récoltes au Sahel."
+        },
+        {
+          "term": "carbon emissions",
+          "pos": "noun (plural)",
+          "translation_fr": "émissions de carbone",
+          "definition_en": "Carbon dioxide released by fuel, industry and transport.",
+          "explanation_fr": "Les « carbon emissions » sont les rejets de CO₂ des carburants, de l'industrie et des transports.",
+          "example_en": "Africa produces a small share of global carbon emissions.",
+          "example_fr": "L'Afrique produit une petite part des émissions mondiales de carbone."
+        },
+        {
+          "term": "renewable energy",
+          "pos": "noun",
+          "translation_fr": "énergie renouvelable",
+          "definition_en": "Energy from sources that do not run out, like sun and wind.",
+          "explanation_fr": "La « renewable energy » vient de sources inépuisables : solaire, éolien, hydraulique.",
+          "example_en": "Solar panels bring renewable energy to villages.",
+          "example_fr": "Les panneaux solaires apportent l'énergie renouvelable aux villages."
+        },
+        {
+          "term": "green economy",
+          "pos": "noun",
+          "translation_fr": "économie verte",
+          "definition_en": "An economy that grows while protecting the environment.",
+          "explanation_fr": "La « green economy » cherche une croissance qui protège l'environnement et crée des emplois durables.",
+          "example_en": "The green economy can create jobs for young people.",
+          "example_fr": "L'économie verte peut créer des emplois pour les jeunes."
+        },
+        {
+          "term": "carbon tax",
+          "pos": "noun",
+          "translation_fr": "taxe carbone",
+          "definition_en": "A tax on activities that release carbon dioxide.",
+          "explanation_fr": "La « carbon tax » taxe les activités polluantes pour encourager les solutions propres.",
+          "example_en": "A carbon tax makes polluting fuels more expensive.",
+          "example_fr": "Une taxe carbone renchérit les carburants polluants."
+        },
+        {
+          "term": "deforestation",
+          "pos": "noun",
+          "translation_fr": "déforestation",
+          "definition_en": "Cutting down forests on a large scale.",
+          "explanation_fr": "La « deforestation » est la destruction des forêts (bois de chauffe, cultures, exploitation).",
+          "example_en": "Deforestation reduces rainfall in the region.",
+          "example_fr": "La déforestation réduit les pluies dans la région."
+        },
+        {
+          "term": "circular economy",
+          "pos": "noun",
+          "translation_fr": "économie circulaire",
+          "definition_en": "An economy that reuses and recycles instead of throwing away.",
+          "explanation_fr": "La « circular economy » réutilise, répare et recycle au lieu de jeter.",
+          "example_en": "Recycling plastic is part of the circular economy.",
+          "example_fr": "Recycler le plastique fait partie de l'économie circulaire."
+        },
+        {
+          "term": "energy transition",
+          "pos": "noun",
+          "translation_fr": "transition énergétique",
+          "definition_en": "Moving from fossil fuels to clean energy.",
+          "explanation_fr": "L'« energy transition » est le passage des énergies fossiles (pétrole, charbon) vers des énergies propres.",
+          "example_en": "The energy transition needs huge investment.",
+          "example_fr": "La transition énergétique demande d'énormes investissements."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Farmers suffer first from climate change",
+          "fr": "Les agriculteurs souffrent en premier du changement climatique"
+        },
+        {
+          "en": "Solar power is cheaper every year",
+          "fr": "L'énergie solaire est moins chère chaque année"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Climate conference",
+          "lines": [
+            {
+              "speaker": "Minister",
+              "text": "Why should poor countries invest in renewable energy now?"
+            }
+          ],
+          "options": [
+            "Because solar is now cheap, it brings power to villages and creates local jobs.",
+            "Because it is always more expensive.",
+            "Because the climate will never change."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Solar is now cheap, it brings power to villages and creates local jobs » = « Le solaire est désormais bon marché, il électrifie les villages et crée des emplois locaux »."
+        }
+      ]
+    },
+    {
+      "title_en": "Inequality & inclusion",
+      "terms": [
+        {
+          "term": "inequality",
+          "pos": "noun",
+          "translation_fr": "inégalité",
+          "definition_en": "Unequal sharing of income, wealth or opportunities.",
+          "explanation_fr": "L'« inequality » est la répartition inégale des revenus, des richesses ou des chances.",
+          "example_en": "Inequality between cities and villages is high.",
+          "example_fr": "L'inégalité entre villes et villages est forte."
+        },
+        {
+          "term": "wealth gap",
+          "pos": "noun",
+          "translation_fr": "écart de richesse",
+          "definition_en": "The difference in wealth between rich and poor.",
+          "explanation_fr": "Le « wealth gap » est l'écart entre les plus riches et les plus pauvres.",
+          "example_en": "The wealth gap grew during the crisis.",
+          "example_fr": "L'écart de richesse s'est creusé pendant la crise."
+        },
+        {
+          "term": "inclusive growth",
+          "pos": "noun",
+          "translation_fr": "croissance inclusive",
+          "definition_en": "Growth whose benefits reach all groups of society.",
+          "explanation_fr": "L'« inclusive growth » profite à toute la population, pas seulement à une minorité.",
+          "example_en": "Inclusive growth needs jobs for young people.",
+          "example_fr": "La croissance inclusive a besoin d'emplois pour les jeunes."
+        },
+        {
+          "term": "financial inclusion",
+          "pos": "noun",
+          "translation_fr": "inclusion financière",
+          "definition_en": "Giving everyone access to useful financial services.",
+          "explanation_fr": "La « financial inclusion » donne à tous accès aux services financiers ; le mobile money l'a beaucoup accélérée.",
+          "example_en": "Mobile money boosted financial inclusion in West Africa.",
+          "example_fr": "Le mobile money a dopé l'inclusion financière en Afrique de l'Ouest."
+        },
+        {
+          "term": "social mobility",
+          "pos": "noun",
+          "translation_fr": "mobilité sociale (ascenseur social)",
+          "definition_en": "The ability to move to a better social position.",
+          "explanation_fr": "La « social mobility » est la possibilité de s'élever socialement, souvent grâce à l'éducation.",
+          "example_en": "Education is the main driver of social mobility.",
+          "example_fr": "L'éducation est le principal moteur de la mobilité sociale."
+        },
+        {
+          "term": "human capital",
+          "pos": "noun",
+          "translation_fr": "capital humain",
+          "definition_en": "The skills, knowledge and health of a population.",
+          "explanation_fr": "Le « human capital » regroupe les compétences, les connaissances et la santé de la population.",
+          "example_en": "Investing in human capital pays off in the long run.",
+          "example_fr": "Investir dans le capital humain rapporte sur le long terme."
+        },
+        {
+          "term": "redistribution",
+          "pos": "noun",
+          "translation_fr": "redistribution",
+          "definition_en": "Moving income from richer to poorer people through taxes and benefits.",
+          "explanation_fr": "La « redistribution » transfère des revenus des plus riches vers les plus pauvres via les impôts et les aides.",
+          "example_en": "Redistribution reduces poverty but needs strong institutions.",
+          "example_fr": "La redistribution réduit la pauvreté mais exige des institutions solides."
+        },
+        {
+          "term": "youth unemployment",
+          "pos": "noun",
+          "translation_fr": "chômage des jeunes",
+          "definition_en": "Joblessness among young people.",
+          "explanation_fr": "Le « youth unemployment » est le chômage des jeunes, un défi majeur pour une population très jeune.",
+          "example_en": "Youth unemployment is the main challenge for the region.",
+          "example_fr": "Le chômage des jeunes est le principal défi de la région."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Growth must create jobs for young people",
+          "fr": "La croissance doit créer des emplois pour les jeunes"
+        },
+        {
+          "en": "Education opens doors for the poor",
+          "fr": "L'éducation ouvre des portes aux plus pauvres"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Job interview at a development bank",
+          "lines": [
+            {
+              "speaker": "Interviewer",
+              "text": "GDP grew by 6%, but poverty didn't fall. How do you explain that?"
+            }
+          ],
+          "options": [
+            "Growth was not inclusive: it came from sectors that create few jobs, so the benefits didn't reach the poor.",
+            "GDP and poverty are the same thing.",
+            "Poverty always falls when GDP grows."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Growth was not inclusive: it came from sectors that create few jobs » = « La croissance n'a pas été inclusive : elle venait de secteurs qui créent peu d'emplois ». Une réponse d'expert."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "level": "A2",
+  "title_en": "Law in everyday life",
+  "title_fr": "Le droit au quotidien",
+  "lessons": [
+    {
+      "title_en": "Family law",
+      "terms": [
+        {
+          "term": "marriage",
+          "pos": "noun",
+          "translation_fr": "mariage",
+          "definition_en": "The legal union of two people.",
+          "explanation_fr": "Le « marriage » est l'union légale de deux personnes, enregistrée à l'état civil.",
+          "example_en": "The marriage was registered at the town hall.",
+          "example_fr": "Le mariage a été enregistré à la mairie."
+        },
+        {
+          "term": "divorce",
+          "pos": "noun / verb",
+          "translation_fr": "divorce",
+          "definition_en": "The legal end of a marriage.",
+          "explanation_fr": "Le « divorce » met fin légalement au mariage, prononcé par un juge.",
+          "example_en": "The divorce took six months.",
+          "example_fr": "Le divorce a pris six mois."
+        },
+        {
+          "term": "custody",
+          "pos": "noun",
+          "translation_fr": "garde (des enfants)",
+          "definition_en": "The legal right to care for a child.",
+          "explanation_fr": "La « custody » est la garde de l'enfant après une séparation ; elle peut être partagée.",
+          "example_en": "The mother got custody of the children.",
+          "example_fr": "La mère a obtenu la garde des enfants."
+        },
+        {
+          "term": "child support",
+          "pos": "noun",
+          "translation_fr": "pension alimentaire",
+          "definition_en": "Money a parent pays to help raise a child.",
+          "explanation_fr": "Le « child support » est la pension alimentaire versée par un parent pour l'enfant.",
+          "example_en": "The father pays child support every month.",
+          "example_fr": "Le père verse une pension alimentaire chaque mois."
+        },
+        {
+          "term": "birth certificate",
+          "pos": "noun",
+          "translation_fr": "acte de naissance",
+          "definition_en": "An official document that records a birth.",
+          "explanation_fr": "Le « birth certificate » est l'acte de naissance, indispensable pour l'école ou les papiers d'identité.",
+          "example_en": "Bring a copy of your birth certificate.",
+          "example_fr": "Apporte une copie de ton acte de naissance."
+        },
+        {
+          "term": "will",
+          "pos": "noun",
+          "translation_fr": "testament",
+          "definition_en": "A document saying who gets your property after you die.",
+          "explanation_fr": "Un « will » est un testament : il indique qui reçoit les biens après le décès.",
+          "example_en": "He wrote a will with the help of a notary.",
+          "example_fr": "Il a rédigé un testament avec l'aide d'un notaire."
+        },
+        {
+          "term": "inheritance",
+          "pos": "noun",
+          "translation_fr": "héritage (succession)",
+          "definition_en": "Money or property received after someone dies.",
+          "explanation_fr": "L'« inheritance » est l'héritage reçu au décès d'un proche.",
+          "example_en": "The brothers shared the inheritance.",
+          "example_fr": "Les frères se sont partagé l'héritage."
+        },
+        {
+          "term": "heir",
+          "pos": "noun",
+          "translation_fr": "héritier",
+          "definition_en": "A person who receives property after someone dies.",
+          "explanation_fr": "Un « heir » est un héritier (le « h » ne se prononce pas : comme « air »).",
+          "example_en": "She is the only heir of her father.",
+          "example_fr": "Elle est la seule héritière de son père."
+        }
+      ],
+      "sentences": [
+        { "en": "The children live with their mother", "fr": "Les enfants vivent avec leur mère" },
+        {
+          "en": "Keep a copy of every official document",
+          "fr": "Garde une copie de chaque document officiel"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Legal aid office",
+          "lines": [
+            {
+              "speaker": "Client",
+              "text": "My father died without a will. What happens to the house?"
+            }
+          ],
+          "options": [
+            "The law decides how the inheritance is shared between the heirs. A notary can help you.",
+            "The house belongs to the first person who moves in.",
+            "The house is lost forever."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« The law decides how the inheritance is shared between the heirs. A notary can help you » = « La loi fixe le partage de l'héritage entre les héritiers. Un notaire peut vous aider »."
+        }
+      ]
+    },
+    {
+      "title_en": "Official documents",
+      "terms": [
+        {
+          "term": "identity card",
+          "pos": "noun",
+          "translation_fr": "carte d'identité",
+          "definition_en": "An official card that proves who you are.",
+          "explanation_fr": "L'« identity card » (ID card) est la carte nationale d'identité.",
+          "example_en": "Show your identity card at the bank.",
+          "example_fr": "Montre ta carte d'identité à la banque."
+        },
+        {
+          "term": "passport",
+          "pos": "noun",
+          "translation_fr": "passeport",
+          "definition_en": "An official document for travelling abroad.",
+          "explanation_fr": "Le « passport » permet de voyager à l'étranger.",
+          "example_en": "My passport expires next year.",
+          "example_fr": "Mon passeport expire l'an prochain."
+        },
+        {
+          "term": "residence permit",
+          "pos": "noun",
+          "translation_fr": "titre de séjour",
+          "definition_en": "A document that allows a foreigner to live in a country.",
+          "explanation_fr": "Le « residence permit » autorise un étranger à vivre dans un pays.",
+          "example_en": "He needs a residence permit to work in France.",
+          "example_fr": "Il a besoin d'un titre de séjour pour travailler en France."
+        },
+        {
+          "term": "certificate",
+          "pos": "noun",
+          "translation_fr": "certificat (attestation)",
+          "definition_en": "An official paper that proves a fact.",
+          "explanation_fr": "Un « certificate » est une attestation officielle : certificat de résidence, de scolarité, médical…",
+          "example_en": "The school asked for a medical certificate.",
+          "example_fr": "L'école a demandé un certificat médical."
+        },
+        {
+          "term": "stamp",
+          "pos": "noun",
+          "translation_fr": "cachet (tampon)",
+          "definition_en": "An official mark printed on a document.",
+          "explanation_fr": "Le « stamp » est le cachet officiel ; un document sans cachet peut être refusé (c'est aussi un timbre).",
+          "example_en": "The form is not valid without the stamp.",
+          "example_fr": "Le formulaire n'est pas valable sans le cachet."
+        },
+        {
+          "term": "application form",
+          "pos": "noun",
+          "translation_fr": "formulaire de demande",
+          "definition_en": "A form you fill in to ask for something officially.",
+          "explanation_fr": "L'« application form » est le formulaire à remplir pour une demande (passeport, bourse, emploi).",
+          "example_en": "Fill in the application form in capital letters.",
+          "example_fr": "Remplis le formulaire de demande en majuscules."
+        },
+        {
+          "term": "registration",
+          "pos": "noun",
+          "translation_fr": "enregistrement (immatriculation)",
+          "definition_en": "Putting a name or event on an official list.",
+          "explanation_fr": "La « registration » est l'inscription officielle : naissance, entreprise, véhicule…",
+          "example_en": "Business registration now takes one day.",
+          "example_fr": "L'immatriculation d'une entreprise prend maintenant un jour."
+        },
+        {
+          "term": "valid",
+          "pos": "adjective",
+          "translation_fr": "valide (en cours de validité)",
+          "definition_en": "Legally acceptable and not expired.",
+          "explanation_fr": "Un document « valid » est en cours de validité ; « expired » = périmé.",
+          "example_en": "Your visa is valid for three months.",
+          "example_fr": "Ton visa est valide pendant trois mois."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Bring two photos and your ID card",
+          "fr": "Apporte deux photos et ta carte d'identité"
+        },
+        { "en": "My passport is no longer valid", "fr": "Mon passeport n'est plus valide" }
+      ],
+      "dialogues": [
+        {
+          "context": "Administration office",
+          "lines": [
+            { "speaker": "Officer", "text": "Your application is missing the official stamp." }
+          ],
+          "options": [
+            "Thank you. Where can I get the stamp, and can I come back tomorrow?",
+            "Accept it anyway, please.",
+            "I'll put my own stamp on it."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Where can I get the stamp, and can I come back tomorrow? » = « Où puis-je obtenir le cachet, et puis-je revenir demain ? ». On corrige le dossier poliment."
+        }
+      ]
+    },
+    {
+      "title_en": "Citizens' rights",
+      "terms": [
+        {
+          "term": "citizen",
+          "pos": "noun",
+          "translation_fr": "citoyen",
+          "definition_en": "A person who legally belongs to a country.",
+          "explanation_fr": "Un « citizen » est un citoyen, avec des droits et des devoirs.",
+          "example_en": "Every citizen has the right to vote.",
+          "example_fr": "Chaque citoyen a le droit de vote."
+        },
+        {
+          "term": "constitution",
+          "pos": "noun",
+          "translation_fr": "constitution",
+          "definition_en": "The highest set of laws of a country.",
+          "explanation_fr": "La « constitution » est la loi suprême du pays : elle organise l'État et protège les libertés.",
+          "example_en": "The constitution protects freedom of religion.",
+          "example_fr": "La constitution protège la liberté de religion."
+        },
+        {
+          "term": "vote",
+          "pos": "noun / verb",
+          "translation_fr": "vote / voter",
+          "definition_en": "To choose officially in an election.",
+          "explanation_fr": "« To vote » = voter ; « a vote » = un vote.",
+          "example_en": "Young people must vote in the elections.",
+          "example_fr": "Les jeunes doivent voter aux élections."
+        },
+        {
+          "term": "election",
+          "pos": "noun",
+          "translation_fr": "élection",
+          "definition_en": "When people choose their leaders by voting.",
+          "explanation_fr": "Une « election » permet aux citoyens de choisir leurs représentants.",
+          "example_en": "The election will take place in April.",
+          "example_fr": "L'élection aura lieu en avril."
+        },
+        {
+          "term": "freedom of speech",
+          "pos": "noun",
+          "translation_fr": "liberté d'expression",
+          "definition_en": "The right to express your opinions freely.",
+          "explanation_fr": "La « freedom of speech » est la liberté d'exprimer ses opinions, dans les limites fixées par la loi.",
+          "example_en": "Freedom of speech has legal limits, like defamation.",
+          "example_fr": "La liberté d'expression a des limites légales, comme la diffamation."
+        },
+        {
+          "term": "equality",
+          "pos": "noun",
+          "translation_fr": "égalité",
+          "definition_en": "Having the same rights and chances.",
+          "explanation_fr": "L'« equality » signifie les mêmes droits pour tous devant la loi.",
+          "example_en": "The law guarantees equality between men and women.",
+          "example_fr": "La loi garantit l'égalité entre les hommes et les femmes."
+        },
+        {
+          "term": "discrimination",
+          "pos": "noun",
+          "translation_fr": "discrimination",
+          "definition_en": "Treating someone unfairly because of who they are.",
+          "explanation_fr": "La « discrimination » traite quelqu'un injustement à cause de son sexe, son origine, sa religion, son handicap…",
+          "example_en": "Discrimination at work is illegal.",
+          "example_fr": "La discrimination au travail est illégale."
+        },
+        {
+          "term": "civil rights",
+          "pos": "noun (plural)",
+          "translation_fr": "droits civiques",
+          "definition_en": "The rights of citizens to freedom and equal treatment.",
+          "explanation_fr": "Les « civil rights » sont les droits civiques : voter, s'exprimer, être traité également.",
+          "example_en": "The association defends civil rights.",
+          "example_fr": "L'association défend les droits civiques."
+        }
+      ],
+      "sentences": [
+        { "en": "Everyone is equal before the law", "fr": "Tout le monde est égal devant la loi" },
+        {
+          "en": "The constitution protects our freedoms",
+          "fr": "La constitution protège nos libertés"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Job interview",
+          "lines": [
+            {
+              "speaker": "Candidate",
+              "text": "The company refused me because I'm a woman. Is that legal?"
+            }
+          ],
+          "options": [
+            "No, that's discrimination. You can file a complaint with a labour inspector or a lawyer.",
+            "Yes, companies can choose anything.",
+            "Only if they say it politely."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« That's discrimination. You can file a complaint » = « C'est de la discrimination. Vous pouvez porter plainte ». Refuser un emploi à cause du sexe est illégal."
+        }
+      ]
+    }
+  ]
+}

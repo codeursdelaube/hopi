@@ -1,0 +1,297 @@
+{
+  "level": "A2",
+  "title_en": "Writing & calling at work",
+  "title_fr": "Écrire et téléphoner au travail",
+  "lessons": [
+    {
+      "title_en": "Writing basics",
+      "terms": [
+        {
+          "term": "draft",
+          "pos": "noun / verb",
+          "translation_fr": "brouillon / rédiger",
+          "definition_en": "A first version of a text that is not finished.",
+          "explanation_fr": "Un « draft » est un premier jet ; « to draft » = rédiger une première version.",
+          "example_en": "Send me the draft before Friday.",
+          "example_fr": "Envoie-moi le brouillon avant vendredi."
+        },
+        {
+          "term": "paragraph",
+          "pos": "noun",
+          "translation_fr": "paragraphe",
+          "definition_en": "A group of sentences about one idea.",
+          "explanation_fr": "Un « paragraph » développe une seule idée ; des paragraphes courts se lisent mieux sur téléphone.",
+          "example_en": "Keep each paragraph short and clear.",
+          "example_fr": "Garde chaque paragraphe court et clair."
+        },
+        {
+          "term": "headline",
+          "pos": "noun",
+          "translation_fr": "titre (accroche)",
+          "definition_en": "The title at the top of an article or a post.",
+          "explanation_fr": "Le « headline » est le titre qui donne envie de lire la suite.",
+          "example_en": "A good headline makes people click.",
+          "example_fr": "Un bon titre donne envie de cliquer."
+        },
+        {
+          "term": "summary",
+          "pos": "noun",
+          "translation_fr": "résumé",
+          "definition_en": "A short text with the main points.",
+          "explanation_fr": "Un « summary » reprend l'essentiel en quelques lignes.",
+          "example_en": "Write a summary of the meeting in five lines.",
+          "example_fr": "Rédige un résumé de la réunion en cinq lignes."
+        },
+        {
+          "term": "proofread",
+          "pos": "verb",
+          "translation_fr": "relire (corriger)",
+          "definition_en": "To read a text carefully to find mistakes.",
+          "explanation_fr": "« To proofread », c'est relire un texte pour corriger les fautes avant de l'envoyer.",
+          "example_en": "Always proofread before you publish.",
+          "example_fr": "Relis toujours avant de publier."
+        },
+        {
+          "term": "typo",
+          "pos": "noun",
+          "translation_fr": "faute de frappe",
+          "definition_en": "A small mistake made when typing.",
+          "explanation_fr": "Une « typo » est une faute de frappe (une lettre oubliée ou inversée).",
+          "example_en": "There is a typo in the client's name.",
+          "example_fr": "Il y a une faute de frappe dans le nom du client."
+        },
+        {
+          "term": "bullet point",
+          "pos": "noun",
+          "translation_fr": "puce (liste à puces)",
+          "definition_en": "A small dot before each item in a list.",
+          "explanation_fr": "Un « bullet point » est une puce ; les listes à puces rendent un message plus lisible.",
+          "example_en": "Put the three dates in a bullet point list.",
+          "example_fr": "Mets les trois dates dans une liste à puces."
+        },
+        {
+          "term": "word count",
+          "pos": "noun",
+          "translation_fr": "nombre de mots",
+          "definition_en": "The number of words in a text.",
+          "explanation_fr": "Le « word count » est le nombre de mots ; un article a souvent une limite.",
+          "example_en": "The word count must stay under 300.",
+          "example_fr": "Le nombre de mots doit rester sous 300."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Please check my draft before I send it",
+          "fr": "Vérifie mon brouillon avant que je l'envoie"
+        },
+        { "en": "Keep your message short and clear", "fr": "Garde ton message court et clair" }
+      ],
+      "dialogues": [
+        {
+          "context": "Office",
+          "lines": [{ "speaker": "Manager", "text": "Your report is good, but it's very long." }],
+          "options": [
+            "Thank you, I'll add a short summary and use bullet points.",
+            "Long reports are better.",
+            "Nobody reads reports anyway."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« I'll add a short summary and use bullet points » = « J'ajoute un court résumé et des listes à puces ». On rend le texte plus facile à lire."
+        }
+      ]
+    },
+    {
+      "title_en": "Everyday messages",
+      "terms": [
+        {
+          "term": "memo",
+          "pos": "noun",
+          "translation_fr": "note de service",
+          "definition_en": "A short official message inside a company.",
+          "explanation_fr": "Un « memo » est une note interne envoyée au personnel.",
+          "example_en": "The director sent a memo about the new hours.",
+          "example_fr": "Le directeur a envoyé une note de service sur les nouveaux horaires."
+        },
+        {
+          "term": "notice",
+          "pos": "noun",
+          "translation_fr": "avis (affiche)",
+          "definition_en": "A written message that gives information to many people.",
+          "explanation_fr": "Un « notice » est un avis affiché ou envoyé pour informer : « Notice: the office is closed ».",
+          "example_en": "Put a notice on the door.",
+          "example_fr": "Mets un avis sur la porte."
+        },
+        {
+          "term": "announcement",
+          "pos": "noun",
+          "translation_fr": "annonce",
+          "definition_en": "A public statement that tells people something new.",
+          "explanation_fr": "Une « announcement » informe d'une nouveauté : nomination, ouverture, changement.",
+          "example_en": "We will make an announcement on Monday.",
+          "example_fr": "Nous ferons une annonce lundi."
+        },
+        {
+          "term": "invitation",
+          "pos": "noun",
+          "translation_fr": "invitation",
+          "definition_en": "A message asking someone to come to an event.",
+          "explanation_fr": "Une « invitation » demande à quelqu'un de venir à un événement.",
+          "example_en": "Did you receive the invitation for the launch?",
+          "example_fr": "As-tu reçu l'invitation pour le lancement ?"
+        },
+        {
+          "term": "reminder",
+          "pos": "noun",
+          "translation_fr": "rappel",
+          "definition_en": "A message that helps people remember something.",
+          "explanation_fr": "Un « reminder » est un message de rappel (réunion, date limite).",
+          "example_en": "Send a reminder the day before the meeting.",
+          "example_fr": "Envoie un rappel la veille de la réunion."
+        },
+        {
+          "term": "greeting",
+          "pos": "noun",
+          "translation_fr": "formule de salutation",
+          "definition_en": "The words used to say hello at the start of a message.",
+          "explanation_fr": "Le « greeting » ouvre le message : « Dear Mr Mensah, », « Hello team, ».",
+          "example_en": "Use a polite greeting with a new client.",
+          "example_fr": "Utilise une formule de salutation polie avec un nouveau client."
+        },
+        {
+          "term": "sign-off",
+          "pos": "noun",
+          "translation_fr": "formule de politesse finale",
+          "definition_en": "The words used to end a message.",
+          "explanation_fr": "Le « sign-off » termine le message : « Best regards », « Kind regards ».",
+          "example_en": "\"Best regards\" is a common sign-off.",
+          "example_fr": "« Best regards » est une formule finale courante."
+        },
+        {
+          "term": "out-of-office",
+          "pos": "noun / adjective",
+          "translation_fr": "réponse d'absence",
+          "definition_en": "An automatic reply saying you are away.",
+          "explanation_fr": "L'« out-of-office » est le message automatique envoyé quand on est absent.",
+          "example_en": "Turn on your out-of-office before your holiday.",
+          "example_fr": "Active ta réponse d'absence avant tes vacances."
+        }
+      ],
+      "sentences": [
+        { "en": "The office is closed on Friday", "fr": "Le bureau est fermé vendredi" },
+        { "en": "I will be back on Monday", "fr": "Je serai de retour lundi" }
+      ],
+      "dialogues": [
+        {
+          "context": "Email to a new client",
+          "lines": [
+            {
+              "speaker": "Colleague",
+              "text": "How should I start the email to Mrs Kodjo? We've never met."
+            }
+          ],
+          "options": [
+            "Start with \"Dear Mrs Kodjo,\" and end with \"Kind regards\".",
+            "Start with \"Hey!\"",
+            "Don't use any greeting."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Dear Mrs Kodjo, … Kind regards » est la formule polie pour un premier contact. « Hey! » est trop familier."
+        }
+      ]
+    },
+    {
+      "title_en": "Phone & video calls",
+      "terms": [
+        {
+          "term": "phone call",
+          "pos": "noun",
+          "translation_fr": "appel téléphonique",
+          "definition_en": "A conversation by telephone.",
+          "explanation_fr": "Un « phone call » est un appel ; « to make a phone call » = passer un appel.",
+          "example_en": "I have a phone call with the client at ten.",
+          "example_fr": "J'ai un appel avec le client à dix heures."
+        },
+        {
+          "term": "voicemail",
+          "pos": "noun",
+          "translation_fr": "messagerie vocale",
+          "definition_en": "A recorded message left on a phone.",
+          "explanation_fr": "Le « voicemail » est la messagerie vocale (ou le message laissé dessus).",
+          "example_en": "Leave a voicemail with your number.",
+          "example_fr": "Laisse un message vocal avec ton numéro."
+        },
+        {
+          "term": "video call",
+          "pos": "noun",
+          "translation_fr": "appel vidéo (visio)",
+          "definition_en": "A call where people can see each other online.",
+          "explanation_fr": "Un « video call » est une visioconférence (Zoom, Meet, WhatsApp).",
+          "example_en": "Let's do a video call tomorrow morning.",
+          "example_fr": "Faisons un appel vidéo demain matin."
+        },
+        {
+          "term": "call back",
+          "pos": "phrasal verb",
+          "translation_fr": "rappeler",
+          "definition_en": "To phone someone again later.",
+          "explanation_fr": "« To call back », c'est rappeler quelqu'un : « Can I call you back? » = je peux te rappeler ?",
+          "example_en": "Can you call back in ten minutes?",
+          "example_fr": "Peux-tu rappeler dans dix minutes ?"
+        },
+        {
+          "term": "contact details",
+          "pos": "noun (plural)",
+          "translation_fr": "coordonnées",
+          "definition_en": "Phone number, email and address of a person.",
+          "explanation_fr": "Les « contact details » sont les coordonnées : téléphone, e-mail, adresse.",
+          "example_en": "Please share your contact details.",
+          "example_fr": "Merci de partager tes coordonnées."
+        },
+        {
+          "term": "appointment",
+          "pos": "noun",
+          "translation_fr": "rendez-vous",
+          "definition_en": "A meeting planned at a specific time.",
+          "explanation_fr": "Un « appointment » est un rendez-vous fixé à une heure précise.",
+          "example_en": "I'd like to book an appointment for Tuesday.",
+          "example_fr": "J'aimerais prendre rendez-vous pour mardi."
+        },
+        {
+          "term": "extension",
+          "pos": "noun",
+          "translation_fr": "poste (numéro interne)",
+          "definition_en": "An internal phone number in a company.",
+          "explanation_fr": "L'« extension » est le numéro de poste interne : « extension 204 ».",
+          "example_en": "Call me on extension 204.",
+          "example_fr": "Appelle-moi au poste 204."
+        },
+        {
+          "term": "mute",
+          "pos": "verb / adjective",
+          "translation_fr": "couper le micro",
+          "definition_en": "To turn off your microphone during a call.",
+          "explanation_fr": "« To mute », c'est couper son micro ; « You're on mute » = ton micro est coupé.",
+          "example_en": "Please mute your microphone when you are not speaking.",
+          "example_fr": "Coupe ton micro quand tu ne parles pas."
+        }
+      ],
+      "sentences": [
+        { "en": "Can I call you back later", "fr": "Je peux te rappeler plus tard" },
+        { "en": "You are on mute", "fr": "Ton micro est coupé" }
+      ],
+      "dialogues": [
+        {
+          "context": "Phone call",
+          "lines": [{ "speaker": "Caller", "text": "Hello, can I speak to Mr Agbo, please?" }],
+          "options": [
+            "I'm sorry, he's in a meeting. Can I take a message, or can he call you back?",
+            "No.",
+            "He doesn't want to talk to you."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Can I take a message, or can he call you back? » = « Puis-je prendre un message, ou peut-il vous rappeler ? ». Formule polie et utile au téléphone."
+        }
+      ]
+    }
+  ]
+}

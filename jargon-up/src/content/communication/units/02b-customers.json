@@ -1,0 +1,307 @@
+{
+  "level": "B1",
+  "title_en": "Customer communication",
+  "title_fr": "Communication client",
+  "lessons": [
+    {
+      "title_en": "Customer service",
+      "terms": [
+        {
+          "term": "customer service",
+          "pos": "noun",
+          "translation_fr": "service client",
+          "definition_en": "The help a company gives to its customers.",
+          "explanation_fr": "Le « customer service » répond aux questions et aux problèmes des clients.",
+          "example_en": "Our customer service answers on WhatsApp.",
+          "example_fr": "Notre service client répond sur WhatsApp."
+        },
+        {
+          "term": "complaint",
+          "pos": "noun",
+          "translation_fr": "réclamation (plainte)",
+          "definition_en": "A message saying a customer is not happy.",
+          "explanation_fr": "Une « complaint » est une réclamation d'un client mécontent ; bien traitée, elle peut créer de la fidélité.",
+          "example_en": "We received a complaint about the delivery.",
+          "example_fr": "Nous avons reçu une réclamation sur la livraison."
+        },
+        {
+          "term": "inquiry",
+          "pos": "noun",
+          "translation_fr": "demande d'information",
+          "definition_en": "A question asking for information.",
+          "explanation_fr": "Une « inquiry » est une demande d'information (prix, disponibilité, horaires).",
+          "example_en": "Reply to every inquiry within two hours.",
+          "example_fr": "Réponds à chaque demande d'information en moins de deux heures."
+        },
+        {
+          "term": "satisfaction",
+          "pos": "noun",
+          "translation_fr": "satisfaction",
+          "definition_en": "How happy customers are with a product or service.",
+          "explanation_fr": "La « satisfaction » mesure le contentement des clients (souvent par une note sur 5).",
+          "example_en": "Customer satisfaction rose to ninety percent.",
+          "example_fr": "La satisfaction client est montée à quatre-vingt-dix pour cent."
+        },
+        {
+          "term": "response time",
+          "pos": "noun",
+          "translation_fr": "délai de réponse",
+          "definition_en": "How long it takes to answer a customer.",
+          "explanation_fr": "Le « response time » est le temps mis pour répondre au client ; plus il est court, mieux c'est.",
+          "example_en": "Our response time is under one hour.",
+          "example_fr": "Notre délai de réponse est de moins d'une heure."
+        },
+        {
+          "term": "apology",
+          "pos": "noun",
+          "translation_fr": "excuses",
+          "definition_en": "Words saying you are sorry.",
+          "explanation_fr": "Une « apology » est une excuse ; « We apologise for the delay » = Nous nous excusons pour le retard.",
+          "example_en": "Start your reply with a sincere apology.",
+          "example_fr": "Commence ta réponse par des excuses sincères."
+        },
+        {
+          "term": "refund",
+          "pos": "noun / verb",
+          "translation_fr": "remboursement / rembourser",
+          "definition_en": "Money given back to a customer.",
+          "explanation_fr": "Un « refund » est un remboursement ; « to refund » = rembourser.",
+          "example_en": "The customer asked for a refund.",
+          "example_fr": "Le client a demandé un remboursement."
+        },
+        {
+          "term": "escalate",
+          "pos": "verb",
+          "translation_fr": "faire remonter (escalader)",
+          "definition_en": "To pass a problem to a more senior person.",
+          "explanation_fr": "« To escalate » un problème, c'est le transmettre à un responsable quand on ne peut pas le régler seul.",
+          "example_en": "If you can't solve it, escalate the case to your manager.",
+          "example_fr": "Si tu ne peux pas le régler, fais remonter le dossier à ton responsable."
+        }
+      ],
+      "sentences": [
+        { "en": "We are sorry for the delay", "fr": "Nous sommes désolés pour le retard" },
+        { "en": "How can I help you today", "fr": "Comment puis-je vous aider aujourd'hui" }
+      ],
+      "dialogues": [
+        {
+          "context": "Customer chat",
+          "lines": [
+            {
+              "speaker": "Customer",
+              "text": "I ordered a week ago and I still have nothing! This is unacceptable."
+            }
+          ],
+          "options": [
+            "I'm very sorry for the delay. Let me check your order now and give you a delivery date.",
+            "It's not my fault.",
+            "Please calm down and wait."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« I'm very sorry for the delay. Let me check your order now » = « Je suis vraiment désolé du retard. Je vérifie votre commande tout de suite ». S'excuser, puis agir."
+        }
+      ]
+    },
+    {
+      "title_en": "Email marketing",
+      "terms": [
+        {
+          "term": "mailing list",
+          "pos": "noun",
+          "translation_fr": "liste de diffusion",
+          "definition_en": "A list of email addresses that receive messages.",
+          "explanation_fr": "La « mailing list » est la liste des adresses qui reçoivent nos e-mails.",
+          "example_en": "Our mailing list has two thousand contacts.",
+          "example_fr": "Notre liste de diffusion compte deux mille contacts."
+        },
+        {
+          "term": "subscriber",
+          "pos": "noun",
+          "translation_fr": "abonné",
+          "definition_en": "A person who chose to receive your emails or content.",
+          "explanation_fr": "Un « subscriber » est une personne abonnée à la newsletter ou à la chaîne.",
+          "example_en": "Every new subscriber receives a welcome email.",
+          "example_fr": "Chaque nouvel abonné reçoit un e-mail de bienvenue."
+        },
+        {
+          "term": "open rate",
+          "pos": "noun",
+          "translation_fr": "taux d'ouverture",
+          "definition_en": "The percentage of people who open an email.",
+          "explanation_fr": "L'« open rate » est le pourcentage de destinataires qui ouvrent l'e-mail.",
+          "example_en": "A better subject improved the open rate.",
+          "example_fr": "Un meilleur objet a amélioré le taux d'ouverture."
+        },
+        {
+          "term": "unsubscribe",
+          "pos": "verb",
+          "translation_fr": "se désabonner",
+          "definition_en": "To stop receiving emails from a sender.",
+          "explanation_fr": "« To unsubscribe », c'est se désinscrire ; le lien doit toujours être visible.",
+          "example_en": "Add a clear link to unsubscribe.",
+          "example_fr": "Ajoute un lien clair pour se désabonner."
+        },
+        {
+          "term": "opt-in",
+          "pos": "noun",
+          "translation_fr": "consentement (inscription volontaire)",
+          "definition_en": "When a person agrees to receive messages.",
+          "explanation_fr": "L'« opt-in » est l'accord explicite de la personne pour recevoir des messages ; c'est obligatoire.",
+          "example_en": "Only send emails to people with an opt-in.",
+          "example_fr": "N'envoie d'e-mails qu'aux personnes qui ont donné leur consentement."
+        },
+        {
+          "term": "personalization",
+          "pos": "noun",
+          "translation_fr": "personnalisation",
+          "definition_en": "Adapting a message to each person.",
+          "explanation_fr": "La « personalization » adapte le message à chacun (prénom, ville, achats passés).",
+          "example_en": "Personalization makes emails more effective.",
+          "example_fr": "La personnalisation rend les e-mails plus efficaces."
+        },
+        {
+          "term": "spam folder",
+          "pos": "noun",
+          "translation_fr": "dossier des indésirables",
+          "definition_en": "The folder where unwanted emails go.",
+          "explanation_fr": "Le « spam folder » reçoit les e-mails jugés indésirables ; trop de majuscules ou de liens y mènent.",
+          "example_en": "Our newsletter went to the spam folder.",
+          "example_fr": "Notre newsletter est arrivée dans les indésirables."
+        },
+        {
+          "term": "segment",
+          "pos": "noun / verb",
+          "translation_fr": "segment / segmenter",
+          "definition_en": "A group of contacts with something in common.",
+          "explanation_fr": "Un « segment » est un groupe de contacts semblables (étudiants, clients fidèles) ; on leur envoie des messages adaptés.",
+          "example_en": "Send the offer only to the student segment.",
+          "example_fr": "Envoie l'offre seulement au segment étudiants."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Thank you for subscribing to our news",
+          "fr": "Merci de vous être abonné à nos actualités"
+        },
+        {
+          "en": "You can unsubscribe at any time",
+          "fr": "Vous pouvez vous désabonner à tout moment"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Marketing team",
+          "lines": [
+            {
+              "speaker": "Colleague",
+              "text": "I bought a list of 10,000 emails. Shall we send our offer?"
+            }
+          ],
+          "options": [
+            "No, without their opt-in it's spam and it's illegal. Let's grow our own list.",
+            "Yes, more emails means more sales.",
+            "Yes, and hide the unsubscribe link."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Without their opt-in it's spam and it's illegal » = « Sans leur consentement, c'est du spam et c'est illégal ». On construit sa propre liste."
+        }
+      ]
+    },
+    {
+      "title_en": "Managing social media",
+      "terms": [
+        {
+          "term": "community manager",
+          "pos": "noun",
+          "translation_fr": "gestionnaire de communauté",
+          "definition_en": "The person who runs a brand's social media.",
+          "explanation_fr": "Le « community manager » anime les réseaux sociaux de la marque et échange avec les abonnés.",
+          "example_en": "Our community manager answers messages every evening.",
+          "example_fr": "Notre gestionnaire de communauté répond aux messages chaque soir."
+        },
+        {
+          "term": "content calendar",
+          "pos": "noun",
+          "translation_fr": "calendrier éditorial",
+          "definition_en": "A plan of what to post and when.",
+          "explanation_fr": "Le « content calendar » planifie les publications à l'avance (dates, sujets, réseaux).",
+          "example_en": "The content calendar is ready for March.",
+          "example_fr": "Le calendrier éditorial est prêt pour mars."
+        },
+        {
+          "term": "scheduling",
+          "pos": "noun",
+          "translation_fr": "programmation (des publications)",
+          "definition_en": "Setting posts to be published automatically later.",
+          "explanation_fr": "Le « scheduling » programme les publications pour qu'elles partent automatiquement à la bonne heure.",
+          "example_en": "Scheduling saves us time on weekends.",
+          "example_fr": "La programmation nous fait gagner du temps le week-end."
+        },
+        {
+          "term": "moderation",
+          "pos": "noun",
+          "translation_fr": "modération",
+          "definition_en": "Checking and removing bad comments.",
+          "explanation_fr": "La « moderation » consiste à surveiller les commentaires et retirer les messages insultants ou faux.",
+          "example_en": "Comment moderation is important during a crisis.",
+          "example_fr": "La modération des commentaires est importante pendant une crise."
+        },
+        {
+          "term": "direct message",
+          "pos": "noun (DM)",
+          "translation_fr": "message privé",
+          "definition_en": "A private message on social media.",
+          "explanation_fr": "Un « direct message » (DM) est un message privé, utile pour régler un problème client loin des regards.",
+          "example_en": "Please send us a direct message with your order number.",
+          "example_fr": "Envoyez-nous un message privé avec votre numéro de commande."
+        },
+        {
+          "term": "engagement rate",
+          "pos": "noun",
+          "translation_fr": "taux d'engagement",
+          "definition_en": "The share of people who react to a post.",
+          "explanation_fr": "L'« engagement rate » mesure la part des personnes qui réagissent (likes, commentaires, partages).",
+          "example_en": "Videos have a higher engagement rate than photos.",
+          "example_fr": "Les vidéos ont un meilleur taux d'engagement que les photos."
+        },
+        {
+          "term": "user-generated content",
+          "pos": "noun (UGC)",
+          "translation_fr": "contenu créé par les utilisateurs",
+          "definition_en": "Photos or posts made by customers about a brand.",
+          "explanation_fr": "Le « user-generated content » est le contenu publié par les clients eux-mêmes (photos, avis).",
+          "example_en": "We repost user-generated content with permission.",
+          "example_fr": "Nous republions le contenu des utilisateurs avec leur accord."
+        },
+        {
+          "term": "trending",
+          "pos": "adjective",
+          "translation_fr": "tendance (populaire en ce moment)",
+          "definition_en": "Very popular on social media right now.",
+          "explanation_fr": "« Trending » se dit d'un sujet très populaire en ce moment sur les réseaux.",
+          "example_en": "This song is trending on TikTok.",
+          "example_fr": "Cette chanson est tendance sur TikTok."
+        }
+      ],
+      "sentences": [
+        { "en": "We post three times a week", "fr": "Nous publions trois fois par semaine" },
+        { "en": "Please send us a private message", "fr": "Merci de nous envoyer un message privé" }
+      ],
+      "dialogues": [
+        {
+          "context": "Social media",
+          "lines": [
+            { "speaker": "Comment", "text": "Your service is terrible, my order arrived broken!" }
+          ],
+          "options": [
+            "We're sorry! Please send us a direct message with your order number so we can fix it.",
+            "Delete the comment and block the user.",
+            "Reply that the customer is lying."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Please send us a direct message with your order number » = « Envoyez-nous un message privé avec votre numéro de commande ». On répond publiquement avec calme, puis on règle en privé."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "level": "A2",
+  "title_en": "Pay & HR basics",
+  "title_fr": "Paie et ressources humaines : les bases",
+  "lessons": [
+    {
+      "title_en": "Salaries & payslips",
+      "terms": [
+        {
+          "term": "salary",
+          "pos": "noun",
+          "translation_fr": "salaire (mensuel)",
+          "definition_en": "A fixed amount of money paid every month for work.",
+          "explanation_fr": "Le « salary » est un salaire fixe versé chaque mois ; le « wage » est plutôt payé à l'heure ou à la semaine.",
+          "example_en": "Her salary is paid at the end of the month.",
+          "example_fr": "Son salaire est versé à la fin du mois."
+        },
+        {
+          "term": "payslip",
+          "pos": "noun",
+          "translation_fr": "bulletin de paie",
+          "definition_en": "A document that shows how an employee's pay is calculated.",
+          "explanation_fr": "Le « payslip » (US : « pay stub ») détaille le salaire brut, les retenues et le net à payer.",
+          "example_en": "Check your payslip every month.",
+          "example_fr": "Vérifie ton bulletin de paie chaque mois."
+        },
+        {
+          "term": "bonus",
+          "pos": "noun",
+          "translation_fr": "prime",
+          "definition_en": "Extra money paid for good results or a special event.",
+          "explanation_fr": "Un « bonus » est une prime en plus du salaire : résultats, fin d'année, objectif atteint…",
+          "example_en": "The team received a bonus for the record sales.",
+          "example_fr": "L'équipe a reçu une prime pour les ventes record."
+        },
+        {
+          "term": "overtime",
+          "pos": "noun",
+          "translation_fr": "heures supplémentaires",
+          "definition_en": "Hours worked beyond normal working time.",
+          "explanation_fr": "L'« overtime » désigne les heures supplémentaires, souvent mieux payées.",
+          "example_en": "Overtime is paid at a higher rate.",
+          "example_fr": "Les heures supplémentaires sont payées à un taux plus élevé."
+        },
+        {
+          "term": "pay rise",
+          "pos": "noun",
+          "translation_fr": "augmentation de salaire",
+          "definition_en": "An increase in the amount someone is paid.",
+          "explanation_fr": "Une « pay rise » (US : « raise ») est une augmentation de salaire.",
+          "example_en": "She asked for a pay rise after two years.",
+          "example_fr": "Elle a demandé une augmentation après deux ans."
+        },
+        {
+          "term": "hourly rate",
+          "pos": "noun",
+          "translation_fr": "taux horaire",
+          "definition_en": "The amount paid for each hour of work.",
+          "explanation_fr": "L'« hourly rate » est le montant payé pour une heure de travail.",
+          "example_en": "The hourly rate for this job is fair.",
+          "example_fr": "Le taux horaire de ce poste est correct."
+        },
+        {
+          "term": "pay day",
+          "pos": "noun",
+          "translation_fr": "jour de paie",
+          "definition_en": "The day employees receive their pay.",
+          "explanation_fr": "Le « pay day » est le jour où les salaires sont versés.",
+          "example_en": "Pay day is the last working day of the month.",
+          "example_fr": "Le jour de paie est le dernier jour ouvré du mois."
+        },
+        {
+          "term": "advance",
+          "pos": "noun",
+          "translation_fr": "avance (sur salaire)",
+          "definition_en": "Part of a salary paid before the normal date.",
+          "explanation_fr": "Une « advance » est une avance sur salaire, retenue ensuite sur le bulletin.",
+          "example_en": "He asked for an advance to pay the school fees.",
+          "example_fr": "Il a demandé une avance pour payer les frais de scolarité."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Your payslip is ready to download",
+          "fr": "Ton bulletin de paie est prêt à télécharger"
+        },
+        {
+          "en": "Overtime is paid next month",
+          "fr": "Les heures supplémentaires sont payées le mois prochain"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Payroll desk",
+          "lines": [
+            { "speaker": "Employee", "text": "My payslip doesn't show my overtime from last week." }
+          ],
+          "options": [
+            "Let me check your timesheet. If it's missing, we'll add it next month.",
+            "Overtime is never paid.",
+            "Ask your colleague to pay you."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let me check your timesheet » = « Je vérifie ta feuille de temps ». On contrôle les heures avant de corriger la paie."
+        }
+      ]
+    },
+    {
+      "title_en": "Working time & leave",
+      "terms": [
+        {
+          "term": "annual leave",
+          "pos": "noun",
+          "translation_fr": "congés payés",
+          "definition_en": "Paid days off work each year.",
+          "explanation_fr": "L'« annual leave » désigne les congés payés annuels.",
+          "example_en": "I have ten days of annual leave left.",
+          "example_fr": "Il me reste dix jours de congés payés."
+        },
+        {
+          "term": "sick leave",
+          "pos": "noun",
+          "translation_fr": "congé maladie",
+          "definition_en": "Time off work because you are ill.",
+          "explanation_fr": "Le « sick leave » est un arrêt maladie, généralement justifié par un certificat médical.",
+          "example_en": "She is on sick leave until Monday.",
+          "example_fr": "Elle est en congé maladie jusqu'à lundi."
+        },
+        {
+          "term": "public holiday",
+          "pos": "noun",
+          "translation_fr": "jour férié",
+          "definition_en": "A national day when most people do not work.",
+          "explanation_fr": "Un « public holiday » est un jour férié (fête de l'indépendance, Noël…).",
+          "example_en": "The office is closed on the public holiday.",
+          "example_fr": "Le bureau est fermé le jour férié."
+        },
+        {
+          "term": "working day",
+          "pos": "noun",
+          "translation_fr": "jour ouvré",
+          "definition_en": "A day when people normally work, usually Monday to Friday.",
+          "explanation_fr": "Un « working day » est un jour travaillé (hors week-end et jours fériés).",
+          "example_en": "The transfer arrives on the next working day.",
+          "example_fr": "Le virement arrive le jour ouvré suivant."
+        },
+        {
+          "term": "part-time",
+          "pos": "adjective",
+          "translation_fr": "à temps partiel",
+          "definition_en": "Working fewer hours than a full working week.",
+          "explanation_fr": "Un emploi « part-time » est à temps partiel.",
+          "example_en": "He works part-time while he studies.",
+          "example_fr": "Il travaille à temps partiel pendant ses études."
+        },
+        {
+          "term": "full-time",
+          "pos": "adjective",
+          "translation_fr": "à temps plein",
+          "definition_en": "Working the normal number of hours in a week.",
+          "explanation_fr": "Un emploi « full-time » est à temps plein.",
+          "example_en": "We are hiring a full-time accountant.",
+          "example_fr": "Nous recrutons un comptable à temps plein."
+        },
+        {
+          "term": "absence",
+          "pos": "noun",
+          "translation_fr": "absence",
+          "definition_en": "Time when an employee is not at work.",
+          "explanation_fr": "Une « absence » est une période où le salarié n'est pas au travail, justifiée ou non.",
+          "example_en": "Please record every absence in the system.",
+          "example_fr": "Merci d'enregistrer chaque absence dans le système."
+        },
+        {
+          "term": "timesheet",
+          "pos": "noun",
+          "translation_fr": "feuille de temps",
+          "definition_en": "A record of the hours an employee has worked.",
+          "explanation_fr": "La « timesheet » enregistre les heures travaillées ; elle sert à calculer la paie et les heures supplémentaires.",
+          "example_en": "Fill in your timesheet every Friday.",
+          "example_fr": "Remplis ta feuille de temps chaque vendredi."
+        }
+      ],
+      "sentences": [
+        { "en": "I will be on leave next week", "fr": "Je serai en congé la semaine prochaine" },
+        { "en": "She works three days a week", "fr": "Elle travaille trois jours par semaine" }
+      ],
+      "dialogues": [
+        {
+          "context": "Asking for leave",
+          "lines": [{ "speaker": "Manager", "text": "You want two weeks off in December?" }],
+          "options": [
+            "Yes, I still have twelve days of annual leave. I'll finish my tasks before I go.",
+            "Yes, and I won't tell anyone.",
+            "I'm taking sick leave because I want a holiday."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« I still have twelve days of annual leave » = « Il me reste douze jours de congés payés ». Demander poliment et organiser son travail avant de partir."
+        }
+      ]
+    },
+    {
+      "title_en": "Benefits & expenses",
+      "terms": [
+        {
+          "term": "allowance",
+          "pos": "noun",
+          "translation_fr": "indemnité (allocation)",
+          "definition_en": "Money given regularly for a specific need, like transport.",
+          "explanation_fr": "Une « allowance » est une indemnité versée pour un besoin précis : transport, logement, repas…",
+          "example_en": "Staff receive a transport allowance.",
+          "example_fr": "Le personnel reçoit une indemnité de transport."
+        },
+        {
+          "term": "health insurance",
+          "pos": "noun",
+          "translation_fr": "assurance maladie",
+          "definition_en": "Insurance that pays medical costs.",
+          "explanation_fr": "La « health insurance » rembourse les frais médicaux ; l'employeur en paie souvent une partie.",
+          "example_en": "The company pays half of the health insurance.",
+          "example_fr": "L'entreprise paie la moitié de l'assurance maladie."
+        },
+        {
+          "term": "pension",
+          "pos": "noun",
+          "translation_fr": "retraite (pension)",
+          "definition_en": "Money paid regularly to a person after they stop working.",
+          "explanation_fr": "La « pension » est la retraite versée après la fin de la carrière, financée par des cotisations.",
+          "example_en": "Part of your salary goes to your pension.",
+          "example_fr": "Une partie de ton salaire va à ta retraite."
+        },
+        {
+          "term": "reimbursement",
+          "pos": "noun",
+          "translation_fr": "remboursement",
+          "definition_en": "Paying back money that someone spent for work.",
+          "explanation_fr": "Le « reimbursement » est le remboursement de frais avancés pour l'entreprise.",
+          "example_en": "The reimbursement will be on your next payslip.",
+          "example_fr": "Le remboursement figurera sur ton prochain bulletin."
+        },
+        {
+          "term": "meal voucher",
+          "pos": "noun",
+          "translation_fr": "titre-restaurant",
+          "definition_en": "A ticket given to staff to pay for meals.",
+          "explanation_fr": "Un « meal voucher » est un ticket ou titre-restaurant offert aux salariés.",
+          "example_en": "Each employee gets one meal voucher per day.",
+          "example_fr": "Chaque salarié reçoit un titre-restaurant par jour."
+        },
+        {
+          "term": "benefit",
+          "pos": "noun",
+          "translation_fr": "avantage",
+          "definition_en": "Something extra you get from your job besides salary.",
+          "explanation_fr": "Un « benefit » est un avantage lié à l'emploi : assurance, téléphone, formation…",
+          "example_en": "Free training is a great benefit.",
+          "example_fr": "La formation gratuite est un excellent avantage."
+        },
+        {
+          "term": "contribution",
+          "pos": "noun",
+          "translation_fr": "cotisation",
+          "definition_en": "Money regularly paid into a fund, such as social security.",
+          "explanation_fr": "Une « contribution » est une cotisation (retraite, sécurité sociale), payée par le salarié et l'employeur.",
+          "example_en": "The employer contribution is higher than yours.",
+          "example_fr": "La cotisation patronale est plus élevée que la tienne."
+        },
+        {
+          "term": "travel expenses",
+          "pos": "noun (plural)",
+          "translation_fr": "frais de déplacement",
+          "definition_en": "Costs of travelling for work: tickets, hotel, meals.",
+          "explanation_fr": "Les « travel expenses » sont les frais de déplacement professionnels, remboursés sur justificatifs.",
+          "example_en": "Keep your travel expenses under the limit.",
+          "example_fr": "Garde tes frais de déplacement sous le plafond."
+        }
+      ],
+      "sentences": [
+        { "en": "The company pays for your transport", "fr": "L'entreprise paie ton transport" },
+        { "en": "Send me the receipts for the hotel", "fr": "Envoie-moi les reçus de l'hôtel" }
+      ],
+      "dialogues": [
+        {
+          "context": "Payroll desk",
+          "lines": [
+            {
+              "speaker": "Employee",
+              "text": "When will I get back the money I spent on the trip to Kara?"
+            }
+          ],
+          "options": [
+            "As soon as you submit your expense report, the reimbursement will be on your next payslip.",
+            "Never, travel is your own choice.",
+            "Only if you lose the receipts."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« The reimbursement will be on your next payslip » = « Le remboursement sera sur ton prochain bulletin ». Il faut d'abord la note de frais avec les reçus."
+        }
+      ]
+    }
+  ]
+}

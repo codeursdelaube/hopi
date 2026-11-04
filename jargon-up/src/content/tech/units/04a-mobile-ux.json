@@ -1,0 +1,305 @@
+{
+  "level": "A2",
+  "title_en": "Mobile apps & UX",
+  "title_fr": "Applications mobiles et expérience utilisateur",
+  "lessons": [
+    {
+      "title_en": "Mobile apps",
+      "terms": [
+        {
+          "term": "mobile app",
+          "pos": "noun",
+          "translation_fr": "application mobile",
+          "definition_en": "A program made for a phone or a tablet.",
+          "explanation_fr": "Une « mobile app » est une application pour téléphone ou tablette.",
+          "example_en": "Our mobile app works on Android and iPhone.",
+          "example_fr": "Notre application mobile fonctionne sur Android et iPhone."
+        },
+        {
+          "term": "app store",
+          "pos": "noun",
+          "translation_fr": "boutique d'applications",
+          "definition_en": "An online shop where people download apps.",
+          "explanation_fr": "L'« app store » est la boutique en ligne où l'on télécharge les applications (App Store, Google Play).",
+          "example_en": "The new version is now on the app store.",
+          "example_fr": "La nouvelle version est maintenant sur la boutique d'applications."
+        },
+        {
+          "term": "install",
+          "pos": "verb",
+          "translation_fr": "installer",
+          "definition_en": "To put a program on a device so you can use it.",
+          "explanation_fr": "« To install » une application, c'est la mettre sur son appareil pour pouvoir l'utiliser.",
+          "example_en": "Users can install the app in one minute.",
+          "example_fr": "Les utilisateurs peuvent installer l'application en une minute."
+        },
+        {
+          "term": "push notification",
+          "pos": "noun",
+          "translation_fr": "notification push",
+          "definition_en": "A short message an app shows on the phone screen.",
+          "explanation_fr": "Une « push notification » est un petit message envoyé par l'application, même quand elle est fermée.",
+          "example_en": "Send a push notification when the order is ready.",
+          "example_fr": "Envoie une notification push quand la commande est prête."
+        },
+        {
+          "term": "offline mode",
+          "pos": "noun",
+          "translation_fr": "mode hors ligne",
+          "definition_en": "A way to use an app without an internet connection.",
+          "explanation_fr": "L'« offline mode » permet d'utiliser l'application sans connexion internet, très utile quand le réseau est faible.",
+          "example_en": "The offline mode helps users with a weak network.",
+          "example_fr": "Le mode hors ligne aide les utilisateurs qui ont un réseau faible."
+        },
+        {
+          "term": "screen size",
+          "pos": "noun",
+          "translation_fr": "taille d'écran",
+          "definition_en": "How big the display of a device is.",
+          "explanation_fr": "La « screen size » est la taille de l'écran : une page doit s'adapter aux petits et aux grands écrans.",
+          "example_en": "Test the page on every screen size.",
+          "example_fr": "Teste la page sur toutes les tailles d'écran."
+        },
+        {
+          "term": "native app",
+          "pos": "noun",
+          "translation_fr": "application native",
+          "definition_en": "An app built for one system, like iOS or Android.",
+          "explanation_fr": "Une « native app » est construite spécialement pour un système (iOS ou Android), contrairement à une application web.",
+          "example_en": "A native app can use the camera easily.",
+          "example_fr": "Une application native peut utiliser facilement l'appareil photo."
+        },
+        {
+          "term": "settings",
+          "pos": "noun",
+          "translation_fr": "réglages (paramètres)",
+          "definition_en": "The page where users change how an app works.",
+          "explanation_fr": "Les « settings » sont les réglages : langue, notifications, thème…",
+          "example_en": "You can change the language in the settings.",
+          "example_fr": "Tu peux changer la langue dans les réglages."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Download the app from the store",
+          "fr": "Télécharge l'application depuis la boutique"
+        },
+        { "en": "The app works without internet", "fr": "L'application fonctionne sans internet" }
+      ],
+      "dialogues": [
+        {
+          "context": "Product meeting",
+          "lines": [
+            {
+              "speaker": "Manager",
+              "text": "Many of our users have a weak network. What can we do?"
+            }
+          ],
+          "options": [
+            "We can add an offline mode and make the pages lighter.",
+            "We can ask them to buy a new phone.",
+            "Nothing, the network is not our problem."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« We can add an offline mode and make the pages lighter » = « On peut ajouter un mode hors ligne et alléger les pages ». C'est la bonne réponse pour un réseau faible."
+        }
+      ]
+    },
+    {
+      "title_en": "Designing screens",
+      "terms": [
+        {
+          "term": "user experience",
+          "pos": "noun",
+          "translation_fr": "expérience utilisateur (UX)",
+          "definition_en": "How easy and pleasant a product is to use.",
+          "explanation_fr": "La « user experience » (UX) décrit ce que ressent l'utilisateur : est-ce simple, rapide, agréable ?",
+          "example_en": "Good user experience keeps customers happy.",
+          "example_fr": "Une bonne expérience utilisateur rend les clients satisfaits."
+        },
+        {
+          "term": "user interface",
+          "pos": "noun",
+          "translation_fr": "interface utilisateur (UI)",
+          "definition_en": "The screens, buttons and menus people use.",
+          "explanation_fr": "La « user interface » (UI) est tout ce que l'on voit et touche : écrans, boutons, menus.",
+          "example_en": "The user interface must be clear and simple.",
+          "example_fr": "L'interface utilisateur doit être claire et simple."
+        },
+        {
+          "term": "wireframe",
+          "pos": "noun",
+          "translation_fr": "maquette fonctionnelle (wireframe)",
+          "definition_en": "A simple drawing of a screen, without colours.",
+          "explanation_fr": "Un « wireframe » est un croquis simple d'un écran, en noir et blanc, pour placer les éléments avant le design.",
+          "example_en": "Draw a wireframe before you start the design.",
+          "example_fr": "Dessine une maquette fonctionnelle avant de commencer le design."
+        },
+        {
+          "term": "mockup",
+          "pos": "noun",
+          "translation_fr": "maquette graphique",
+          "definition_en": "A detailed picture of how a screen will look.",
+          "explanation_fr": "Un « mockup » montre l'écran final avec les couleurs, les images et les textes.",
+          "example_en": "The designer shared the mockup with the team.",
+          "example_fr": "Le designer a partagé la maquette avec l'équipe."
+        },
+        {
+          "term": "layout",
+          "pos": "noun",
+          "translation_fr": "mise en page",
+          "definition_en": "The way elements are placed on a screen.",
+          "explanation_fr": "Le « layout » est la disposition des éléments sur l'écran.",
+          "example_en": "The layout changes on small phones.",
+          "example_fr": "La mise en page change sur les petits téléphones."
+        },
+        {
+          "term": "button",
+          "pos": "noun",
+          "translation_fr": "bouton",
+          "definition_en": "An element you click or tap to do an action.",
+          "explanation_fr": "Un « button » est un élément qu'on touche pour faire une action : « Valider », « Envoyer »…",
+          "example_en": "Make the button bigger for small screens.",
+          "example_fr": "Agrandis le bouton pour les petits écrans."
+        },
+        {
+          "term": "menu",
+          "pos": "noun",
+          "translation_fr": "menu",
+          "definition_en": "A list of options or pages to choose from.",
+          "explanation_fr": "Le « menu » liste les pages ou les actions disponibles.",
+          "example_en": "The menu has four main pages.",
+          "example_fr": "Le menu a quatre pages principales."
+        },
+        {
+          "term": "usability",
+          "pos": "noun",
+          "translation_fr": "facilité d'utilisation",
+          "definition_en": "How easy something is to use.",
+          "explanation_fr": "L'« usability » mesure si un produit est facile à prendre en main, sans aide.",
+          "example_en": "We tested the usability with ten students.",
+          "example_fr": "Nous avons testé la facilité d'utilisation avec dix étudiants."
+        }
+      ],
+      "sentences": [
+        { "en": "The button is too small on mobile", "fr": "Le bouton est trop petit sur mobile" },
+        { "en": "Users find the menu easily", "fr": "Les utilisateurs trouvent facilement le menu" }
+      ],
+      "dialogues": [
+        {
+          "context": "Design review",
+          "lines": [{ "speaker": "Designer", "text": "Do you want to see the colours now?" }],
+          "options": [
+            "Let's validate the wireframe first, then we'll look at the mockup.",
+            "Colours are the only thing that matters.",
+            "Let's skip the design and code directly."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's validate the wireframe first, then we'll look at the mockup » = « Validons d'abord le wireframe, ensuite on regardera la maquette ». On organise avant de décorer."
+        }
+      ]
+    },
+    {
+      "title_en": "Accessibility & speed",
+      "terms": [
+        {
+          "term": "accessibility",
+          "pos": "noun",
+          "translation_fr": "accessibilité",
+          "definition_en": "Making a product usable by everyone, including people with disabilities.",
+          "explanation_fr": "L'« accessibility » permet à tous d'utiliser le produit, y compris les personnes malvoyantes ou en situation de handicap.",
+          "example_en": "Accessibility is important for every user.",
+          "example_fr": "L'accessibilité est importante pour chaque utilisateur."
+        },
+        {
+          "term": "screen reader",
+          "pos": "noun",
+          "translation_fr": "lecteur d'écran",
+          "definition_en": "Software that reads the screen aloud for blind users.",
+          "explanation_fr": "Un « screen reader » lit l'écran à voix haute pour les personnes aveugles ou malvoyantes.",
+          "example_en": "Add labels so the screen reader can describe the buttons.",
+          "example_fr": "Ajoute des libellés pour que le lecteur d'écran décrive les boutons."
+        },
+        {
+          "term": "contrast",
+          "pos": "noun",
+          "translation_fr": "contraste",
+          "definition_en": "The difference between text colour and background colour.",
+          "explanation_fr": "Le « contrast » est l'écart entre la couleur du texte et celle du fond : trop faible, le texte devient illisible au soleil.",
+          "example_en": "The grey text has a low contrast.",
+          "example_fr": "Le texte gris a un faible contraste."
+        },
+        {
+          "term": "font size",
+          "pos": "noun",
+          "translation_fr": "taille de police",
+          "definition_en": "How big the letters of a text are.",
+          "explanation_fr": "La « font size » est la taille des lettres ; trop petite, elle fatigue les yeux.",
+          "example_en": "Increase the font size for older users.",
+          "example_fr": "Augmente la taille de police pour les utilisateurs âgés."
+        },
+        {
+          "term": "loading time",
+          "pos": "noun",
+          "translation_fr": "temps de chargement",
+          "definition_en": "How long a page takes to appear.",
+          "explanation_fr": "Le « loading time » est le temps d'attente avant que la page s'affiche ; au-delà de 3 secondes, beaucoup d'utilisateurs partent.",
+          "example_en": "The loading time is too long on 3G.",
+          "example_fr": "Le temps de chargement est trop long en 3G."
+        },
+        {
+          "term": "lazy loading",
+          "pos": "noun",
+          "translation_fr": "chargement différé",
+          "definition_en": "Loading images or content only when the user needs them.",
+          "explanation_fr": "Le « lazy loading » ne charge les images qu'au moment où l'utilisateur fait défiler jusqu'à elles.",
+          "example_en": "Lazy loading makes the first page faster.",
+          "example_fr": "Le chargement différé rend la première page plus rapide."
+        },
+        {
+          "term": "compression",
+          "pos": "noun",
+          "translation_fr": "compression",
+          "definition_en": "Making files smaller so they load faster.",
+          "explanation_fr": "La « compression » réduit le poids des fichiers (images, vidéos) pour qu'ils se chargent plus vite.",
+          "example_en": "Image compression saves mobile data.",
+          "example_fr": "La compression des images économise les données mobiles."
+        },
+        {
+          "term": "optimization",
+          "pos": "noun",
+          "translation_fr": "optimisation",
+          "definition_en": "Changes that make a product faster or lighter.",
+          "explanation_fr": "L'« optimization » regroupe les améliorations qui rendent l'application plus rapide ou moins gourmande.",
+          "example_en": "After the optimization, the app opens in one second.",
+          "example_fr": "Après l'optimisation, l'application s'ouvre en une seconde."
+        }
+      ],
+      "sentences": [
+        { "en": "The page loads in two seconds", "fr": "La page se charge en deux secondes" },
+        {
+          "en": "Everyone must be able to use the app",
+          "fr": "Tout le monde doit pouvoir utiliser l'application"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Team chat",
+          "lines": [
+            {
+              "speaker": "Tester",
+              "text": "The home page takes eight seconds to load on my phone."
+            }
+          ],
+          "options": [
+            "Let's compress the images and add lazy loading.",
+            "Tell users to wait longer.",
+            "Add more big pictures to the page."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's compress the images and add lazy loading » = « Compressons les images et ajoutons le chargement différé ». Deux solutions classiques pour accélérer une page."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "level": "A2",
+  "title_en": "Jobs & work",
+  "title_fr": "Emploi et travail",
+  "lessons": [
+    {
+      "title_en": "Finding work",
+      "terms": [
+        {
+          "term": "job",
+          "pos": "noun",
+          "translation_fr": "emploi (poste)",
+          "definition_en": "Work you do regularly to earn money.",
+          "explanation_fr": "Un « job » est un emploi ou un poste de travail.",
+          "example_en": "He found a job in a bank.",
+          "example_fr": "Il a trouvé un emploi dans une banque."
+        },
+        {
+          "term": "job offer",
+          "pos": "noun",
+          "translation_fr": "offre d'emploi",
+          "definition_en": "When an employer proposes a job to someone.",
+          "explanation_fr": "Une « job offer » est une proposition d'embauche faite à un candidat.",
+          "example_en": "She accepted the job offer yesterday.",
+          "example_fr": "Elle a accepté l'offre d'emploi hier."
+        },
+        {
+          "term": "employer",
+          "pos": "noun",
+          "translation_fr": "employeur",
+          "definition_en": "A person or company that pays people to work.",
+          "explanation_fr": "L'« employer » est celui qui embauche et paie les salariés.",
+          "example_en": "The state is the biggest employer in the country.",
+          "example_fr": "L'État est le plus gros employeur du pays."
+        },
+        {
+          "term": "employee",
+          "pos": "noun",
+          "translation_fr": "salarié (employé)",
+          "definition_en": "A person who works for an employer.",
+          "explanation_fr": "Un « employee » est un salarié qui travaille pour un employeur.",
+          "example_en": "Every new employee signs a contract.",
+          "example_fr": "Chaque nouveau salarié signe un contrat."
+        },
+        {
+          "term": "skill",
+          "pos": "noun",
+          "translation_fr": "compétence",
+          "definition_en": "An ability you have learned.",
+          "explanation_fr": "Une « skill » est une compétence : parler anglais, utiliser Excel, gérer une équipe.",
+          "example_en": "English is a useful skill for every job.",
+          "example_fr": "L'anglais est une compétence utile pour chaque emploi."
+        },
+        {
+          "term": "training",
+          "pos": "noun",
+          "translation_fr": "formation",
+          "definition_en": "Learning the skills needed for a job.",
+          "explanation_fr": "La « training » est une formation pour apprendre un métier ou une compétence.",
+          "example_en": "The company pays for your training.",
+          "example_fr": "L'entreprise paie ta formation."
+        },
+        {
+          "term": "apprenticeship",
+          "pos": "noun",
+          "translation_fr": "apprentissage",
+          "definition_en": "Learning a job by working with an expert.",
+          "explanation_fr": "Un « apprenticeship » est une formation en travaillant aux côtés d'un professionnel (couture, mécanique…).",
+          "example_en": "He did a two-year apprenticeship in a garage.",
+          "example_fr": "Il a fait un apprentissage de deux ans dans un garage."
+        },
+        {
+          "term": "career",
+          "pos": "noun",
+          "translation_fr": "carrière",
+          "definition_en": "The jobs you do during your working life.",
+          "explanation_fr": "La « career » est le parcours professionnel sur toute une vie.",
+          "example_en": "She wants a career in finance.",
+          "example_fr": "Elle veut faire carrière dans la finance."
+        }
+      ],
+      "sentences": [
+        { "en": "I am looking for a job in sales", "fr": "Je cherche un emploi dans la vente" },
+        { "en": "Learning English helps my career", "fr": "Apprendre l'anglais aide ma carrière" }
+      ],
+      "dialogues": [
+        {
+          "context": "Job fair",
+          "lines": [
+            { "speaker": "Recruiter", "text": "What skills can you bring to our company?" }
+          ],
+          "options": [
+            "I speak English and French, and I'm good with Excel and customers.",
+            "I don't know.",
+            "I just want the salary."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« I speak English and French, and I'm good with Excel and customers » = « Je parle anglais et français, et je suis à l'aise avec Excel et les clients ». On cite des compétences concrètes."
+        }
+      ]
+    },
+    {
+      "title_en": "Types of work",
+      "terms": [
+        {
+          "term": "worker",
+          "pos": "noun",
+          "translation_fr": "travailleur (ouvrier)",
+          "definition_en": "A person who works, often with their hands.",
+          "explanation_fr": "Un « worker » est un travailleur ; « factory worker » = ouvrier d'usine.",
+          "example_en": "Each worker has a safety helmet.",
+          "example_fr": "Chaque ouvrier a un casque de sécurité."
+        },
+        {
+          "term": "self-employed",
+          "pos": "adjective",
+          "translation_fr": "indépendant (à son compte)",
+          "definition_en": "Working for yourself, not for an employer.",
+          "explanation_fr": "Être « self-employed », c'est travailler à son compte, sans patron.",
+          "example_en": "Many tailors are self-employed.",
+          "example_fr": "Beaucoup de couturiers travaillent à leur compte."
+        },
+        {
+          "term": "freelancer",
+          "pos": "noun",
+          "translation_fr": "travailleur indépendant (freelance)",
+          "definition_en": "A person paid for each project, for different clients.",
+          "explanation_fr": "Un « freelancer » travaille par mission pour plusieurs clients (graphiste, développeur, traducteur).",
+          "example_en": "A freelancer designed our logo.",
+          "example_fr": "Un freelance a conçu notre logo."
+        },
+        {
+          "term": "shift",
+          "pos": "noun",
+          "translation_fr": "équipe (poste de travail)",
+          "definition_en": "A fixed period of work, like day or night.",
+          "explanation_fr": "Un « shift » est une période de travail fixe : « night shift » = travail de nuit.",
+          "example_en": "The night shift starts at ten.",
+          "example_fr": "L'équipe de nuit commence à vingt-deux heures."
+        },
+        {
+          "term": "working conditions",
+          "pos": "noun (plural)",
+          "translation_fr": "conditions de travail",
+          "definition_en": "Hours, safety, pay and environment at work.",
+          "explanation_fr": "Les « working conditions » regroupent horaires, sécurité, salaire et ambiance au travail.",
+          "example_en": "Workers asked for better working conditions.",
+          "example_fr": "Les travailleurs ont demandé de meilleures conditions de travail."
+        },
+        {
+          "term": "trade union",
+          "pos": "noun",
+          "translation_fr": "syndicat",
+          "definition_en": "A group that defends workers' rights.",
+          "explanation_fr": "Un « trade union » défend les droits et intérêts des travailleurs.",
+          "example_en": "The trade union met the director.",
+          "example_fr": "Le syndicat a rencontré le directeur."
+        },
+        {
+          "term": "strike",
+          "pos": "noun / verb",
+          "translation_fr": "grève / faire grève",
+          "definition_en": "When workers stop working to protest.",
+          "explanation_fr": "Une « strike » est une grève ; « to go on strike » = se mettre en grève.",
+          "example_en": "The teachers are on strike today.",
+          "example_fr": "Les enseignants sont en grève aujourd'hui."
+        },
+        {
+          "term": "job security",
+          "pos": "noun",
+          "translation_fr": "sécurité de l'emploi",
+          "definition_en": "Being sure you will keep your job.",
+          "explanation_fr": "La « job security » est l'assurance de garder son emploi (souvent plus forte dans la fonction publique).",
+          "example_en": "Public jobs offer more job security.",
+          "example_fr": "Les emplois publics offrent plus de sécurité de l'emploi."
+        }
+      ],
+      "sentences": [
+        { "en": "She works for herself now", "fr": "Elle travaille à son compte maintenant" },
+        { "en": "The factory works day and night", "fr": "L'usine tourne jour et nuit" }
+      ],
+      "dialogues": [
+        {
+          "context": "Career advice",
+          "lines": [
+            {
+              "speaker": "Student",
+              "text": "Should I be a freelancer or look for a full-time job?"
+            }
+          ],
+          "options": [
+            "Freelancing gives freedom but less job security. Maybe start with a job and freelance on the side.",
+            "Never work.",
+            "Freelancers never earn money."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Freelancing gives freedom but less job security » = « Le freelance donne de la liberté mais moins de sécurité de l'emploi ». On compare les avantages et les risques."
+        }
+      ]
+    },
+    {
+      "title_en": "Living standards",
+      "terms": [
+        {
+          "term": "salary",
+          "pos": "noun",
+          "translation_fr": "salaire",
+          "definition_en": "Fixed money paid every month for work.",
+          "explanation_fr": "Le « salary » est un salaire mensuel fixe.",
+          "example_en": "Her salary covers rent and food.",
+          "example_fr": "Son salaire couvre le loyer et la nourriture."
+        },
+        {
+          "term": "pension",
+          "pos": "noun",
+          "translation_fr": "retraite (pension)",
+          "definition_en": "Money paid regularly to people after they stop working.",
+          "explanation_fr": "La « pension » est la pension de retraite.",
+          "example_en": "Few informal workers will receive a pension.",
+          "example_fr": "Peu de travailleurs informels toucheront une retraite."
+        },
+        {
+          "term": "remittance",
+          "pos": "noun",
+          "translation_fr": "transfert de fonds (de la diaspora)",
+          "definition_en": "Money sent home by people working abroad.",
+          "explanation_fr": "Une « remittance » est l'argent envoyé au pays par les membres de la famille à l'étranger ; c'est une ressource majeure en Afrique de l'Ouest.",
+          "example_en": "Each remittance helps the family pay school fees.",
+          "example_fr": "Chaque transfert aide la famille à payer la scolarité."
+        },
+        {
+          "term": "social protection",
+          "pos": "noun",
+          "translation_fr": "protection sociale",
+          "definition_en": "Public help for health, old age, job loss and poverty.",
+          "explanation_fr": "La « social protection » regroupe les aides publiques : santé, retraite, chômage, aide aux plus pauvres.",
+          "example_en": "The government wants to extend social protection.",
+          "example_fr": "Le gouvernement veut étendre la protection sociale."
+        },
+        {
+          "term": "standard of living",
+          "pos": "noun",
+          "translation_fr": "niveau de vie",
+          "definition_en": "How comfortable people's lives are.",
+          "explanation_fr": "Le « standard of living » mesure le confort de vie : revenus, logement, santé, éducation.",
+          "example_en": "The standard of living improved in the city.",
+          "example_fr": "Le niveau de vie s'est amélioré en ville."
+        },
+        {
+          "term": "basic needs",
+          "pos": "noun (plural)",
+          "translation_fr": "besoins essentiels",
+          "definition_en": "Food, water, housing, health and education.",
+          "explanation_fr": "Les « basic needs » sont les besoins essentiels : se nourrir, boire, se loger, se soigner.",
+          "example_en": "Many families struggle to meet basic needs.",
+          "example_fr": "Beaucoup de familles ont du mal à couvrir leurs besoins essentiels."
+        },
+        {
+          "term": "saving",
+          "pos": "noun",
+          "translation_fr": "épargne (le fait d'épargner)",
+          "definition_en": "Keeping money for later instead of spending it.",
+          "explanation_fr": "Le « saving » est le fait de mettre de l'argent de côté ; les tontines sont une forme d'épargne collective.",
+          "example_en": "Regular saving protects you in hard times.",
+          "example_fr": "Épargner régulièrement te protège dans les moments difficiles."
+        },
+        {
+          "term": "middle class",
+          "pos": "noun",
+          "translation_fr": "classe moyenne",
+          "definition_en": "People between the rich and the poor.",
+          "explanation_fr": "La « middle class » regroupe les ménages entre les riches et les pauvres ; elle grandit dans les villes africaines.",
+          "example_en": "The middle class is growing in Africa.",
+          "example_fr": "La classe moyenne grandit en Afrique."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Prices rise faster than salaries",
+          "fr": "Les prix augmentent plus vite que les salaires"
+        },
+        {
+          "en": "Many families receive money from abroad",
+          "fr": "Beaucoup de familles reçoivent de l'argent de l'étranger"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Economics class",
+          "lines": [
+            {
+              "speaker": "Teacher",
+              "text": "Why are remittances important for many West African countries?"
+            }
+          ],
+          "options": [
+            "Because they help families meet basic needs and bring foreign currency into the country.",
+            "Because they are a tax.",
+            "They are not important at all."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« They help families meet basic needs and bring foreign currency into the country » = « Ils aident les familles à couvrir leurs besoins essentiels et font entrer des devises dans le pays »."
+        }
+      ]
+    }
+  ]
+}

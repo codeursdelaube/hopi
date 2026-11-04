@@ -1,0 +1,313 @@
+{
+  "level": "B1",
+  "title_en": "Treasury & closing",
+  "title_fr": "Trésorerie et clôture",
+  "lessons": [
+    {
+      "title_en": "Managing cash",
+      "terms": [
+        {
+          "term": "treasury",
+          "pos": "noun",
+          "translation_fr": "trésorerie",
+          "definition_en": "The management of a company's cash and bank accounts.",
+          "explanation_fr": "La « treasury » gère l'argent disponible de l'entreprise pour pouvoir payer à temps.",
+          "example_en": "The treasury team pays suppliers every Friday.",
+          "example_fr": "L'équipe trésorerie paie les fournisseurs chaque vendredi."
+        },
+        {
+          "term": "cash position",
+          "pos": "noun",
+          "translation_fr": "situation de trésorerie",
+          "definition_en": "How much cash a company has available today.",
+          "explanation_fr": "La « cash position » indique l'argent disponible aujourd'hui sur tous les comptes.",
+          "example_en": "Our cash position is strong this month.",
+          "example_fr": "Notre situation de trésorerie est solide ce mois-ci."
+        },
+        {
+          "term": "receivables",
+          "pos": "noun (plural)",
+          "translation_fr": "créances clients",
+          "definition_en": "Money that customers owe to the company.",
+          "explanation_fr": "Les « receivables » (accounts receivable) sont les sommes que les clients doivent encore payer.",
+          "example_en": "Our receivables are too high, clients pay late.",
+          "example_fr": "Nos créances clients sont trop élevées, les clients paient en retard."
+        },
+        {
+          "term": "payables",
+          "pos": "noun (plural)",
+          "translation_fr": "dettes fournisseurs",
+          "definition_en": "Money the company owes to its suppliers.",
+          "explanation_fr": "Les « payables » (accounts payable) sont les sommes que l'entreprise doit à ses fournisseurs.",
+          "example_en": "We must reduce payables before the audit.",
+          "example_fr": "Nous devons réduire les dettes fournisseurs avant l'audit."
+        },
+        {
+          "term": "cash forecast",
+          "pos": "noun",
+          "translation_fr": "prévision de trésorerie",
+          "definition_en": "An estimate of cash coming in and going out in the next weeks.",
+          "explanation_fr": "Le « cash forecast » prévoit les entrées et sorties d'argent pour éviter de manquer de liquidités.",
+          "example_en": "The cash forecast shows a problem in August.",
+          "example_fr": "La prévision de trésorerie montre un problème en août."
+        },
+        {
+          "term": "credit limit",
+          "pos": "noun",
+          "translation_fr": "plafond de crédit (encours autorisé)",
+          "definition_en": "The maximum amount a customer can owe.",
+          "explanation_fr": "Le « credit limit » est le montant maximum qu'un client peut devoir avant qu'on bloque ses commandes.",
+          "example_en": "This client has reached his credit limit.",
+          "example_fr": "Ce client a atteint son plafond de crédit."
+        },
+        {
+          "term": "standing order",
+          "pos": "noun",
+          "translation_fr": "virement permanent",
+          "definition_en": "A regular payment made automatically by the bank.",
+          "explanation_fr": "Un « standing order » est un virement automatique répété (loyer, abonnement).",
+          "example_en": "The rent is paid by standing order.",
+          "example_fr": "Le loyer est payé par virement permanent."
+        },
+        {
+          "term": "bank account",
+          "pos": "noun",
+          "translation_fr": "compte bancaire",
+          "definition_en": "An account at a bank where money is kept.",
+          "explanation_fr": "Le « bank account » est le compte en banque de l'entreprise.",
+          "example_en": "We opened a second bank account in euros.",
+          "example_fr": "Nous avons ouvert un second compte bancaire en euros."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "We have enough cash for three months",
+          "fr": "Nous avons assez de trésorerie pour trois mois"
+        },
+        { "en": "Clients must pay us faster", "fr": "Les clients doivent nous payer plus vite" }
+      ],
+      "dialogues": [
+        {
+          "context": "Finance meeting",
+          "lines": [
+            {
+              "speaker": "Director",
+              "text": "The cash forecast shows we can't pay salaries in August. What do we do?"
+            }
+          ],
+          "options": [
+            "Let's chase our receivables and ask the bank for a short-term overdraft.",
+            "Let's stop paying salaries.",
+            "Let's ignore the forecast."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's chase our receivables and ask the bank for a short-term overdraft » = « Relançons nos créances clients et demandons un découvert court terme à la banque »."
+        }
+      ]
+    },
+    {
+      "title_en": "Accounting software",
+      "terms": [
+        {
+          "term": "accounting software",
+          "pos": "noun",
+          "translation_fr": "logiciel de comptabilité",
+          "definition_en": "A program used to record and report financial data.",
+          "explanation_fr": "L'« accounting software » enregistre les opérations et produit les états financiers (Sage, QuickBooks, Odoo…).",
+          "example_en": "Our accounting software creates the VAT report.",
+          "example_fr": "Notre logiciel de comptabilité produit la déclaration de TVA."
+        },
+        {
+          "term": "chart of accounts",
+          "pos": "noun",
+          "translation_fr": "plan comptable",
+          "definition_en": "The list of all accounts a company uses.",
+          "explanation_fr": "Le « chart of accounts » est le plan comptable : la liste numérotée de tous les comptes (SYSCOHADA en Afrique de l'Ouest).",
+          "example_en": "Use the right code from the chart of accounts.",
+          "example_fr": "Utilise le bon numéro du plan comptable."
+        },
+        {
+          "term": "journal entry",
+          "pos": "noun",
+          "translation_fr": "écriture au journal",
+          "definition_en": "A record of one transaction with debits and credits.",
+          "explanation_fr": "Une « journal entry » enregistre une opération au journal, avec ses débits et crédits.",
+          "example_en": "Each journal entry needs a document.",
+          "example_fr": "Chaque écriture au journal a besoin d'une pièce."
+        },
+        {
+          "term": "posting",
+          "pos": "noun",
+          "translation_fr": "comptabilisation (report)",
+          "definition_en": "Moving entries from the journal to the ledger accounts.",
+          "explanation_fr": "Le « posting » reporte les écritures du journal dans les comptes du grand livre.",
+          "example_en": "The posting is done automatically every night.",
+          "example_fr": "La comptabilisation se fait automatiquement chaque nuit."
+        },
+        {
+          "term": "general ledger",
+          "pos": "noun",
+          "translation_fr": "grand livre",
+          "definition_en": "The main record of all accounts and their balances.",
+          "explanation_fr": "Le « general ledger » regroupe tous les comptes de l'entreprise avec leurs mouvements et soldes.",
+          "example_en": "Export the general ledger for the auditor.",
+          "example_fr": "Exporte le grand livre pour l'auditeur."
+        },
+        {
+          "term": "trial balance",
+          "pos": "noun",
+          "translation_fr": "balance (des comptes)",
+          "definition_en": "A list of all account balances to check that debits equal credits.",
+          "explanation_fr": "La « trial balance » liste les soldes de tous les comptes : le total des débits doit égaler celui des crédits.",
+          "example_en": "The trial balance is not balanced, let's find the error.",
+          "example_fr": "La balance n'est pas équilibrée, cherchons l'erreur."
+        },
+        {
+          "term": "accrual",
+          "pos": "noun",
+          "translation_fr": "régularisation (charge ou produit à rattacher)",
+          "definition_en": "Recording income or costs in the period they belong to, even if not paid yet.",
+          "explanation_fr": "Une « accrual » rattache une charge ou un produit à la bonne période, même si la facture ou le paiement arrive plus tard.",
+          "example_en": "Book an accrual for the December electricity.",
+          "example_fr": "Passe une régularisation pour l'électricité de décembre."
+        },
+        {
+          "term": "prepayment",
+          "pos": "noun",
+          "translation_fr": "charge constatée d'avance",
+          "definition_en": "A cost paid now for a service in a future period.",
+          "explanation_fr": "Un « prepayment » est payé maintenant pour une période future (assurance annuelle payée en janvier, par exemple).",
+          "example_en": "The annual insurance is a prepayment.",
+          "example_fr": "L'assurance annuelle est une charge constatée d'avance."
+        }
+      ],
+      "sentences": [
+        { "en": "Debits must equal credits", "fr": "Les débits doivent égaler les crédits" },
+        {
+          "en": "Every entry needs a supporting document",
+          "fr": "Chaque écriture a besoin d'une pièce justificative"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Accounting team",
+          "lines": [
+            {
+              "speaker": "Junior accountant",
+              "text": "The trial balance shows a difference of 10,000 francs."
+            }
+          ],
+          "options": [
+            "Let's check the last journal entries one by one.",
+            "Add 10,000 francs to any account.",
+            "A small difference is normal, close the books."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's check the last journal entries one by one » = « Vérifions les dernières écritures une par une ». On ne force jamais une balance."
+        }
+      ]
+    },
+    {
+      "title_en": "Month-end close",
+      "terms": [
+        {
+          "term": "month-end close",
+          "pos": "noun",
+          "translation_fr": "clôture mensuelle",
+          "definition_en": "The steps to finish and check the accounts of a month.",
+          "explanation_fr": "La « month-end close » regroupe les étapes pour finaliser et contrôler les comptes du mois.",
+          "example_en": "The month-end close takes three days.",
+          "example_fr": "La clôture mensuelle prend trois jours."
+        },
+        {
+          "term": "cut-off",
+          "pos": "noun",
+          "translation_fr": "séparation des exercices (cut-off)",
+          "definition_en": "Making sure transactions are recorded in the right period.",
+          "explanation_fr": "Le « cut-off » vérifie que chaque opération est enregistrée sur la bonne période.",
+          "example_en": "Check the cut-off for deliveries on the 31st.",
+          "example_fr": "Vérifie la séparation des exercices pour les livraisons du 31."
+        },
+        {
+          "term": "accrued expenses",
+          "pos": "noun (plural)",
+          "translation_fr": "charges à payer",
+          "definition_en": "Costs of the period that are not invoiced yet.",
+          "explanation_fr": "Les « accrued expenses » sont des charges du mois dont la facture n'est pas encore arrivée.",
+          "example_en": "Record the accrued expenses before closing.",
+          "example_fr": "Enregistre les charges à payer avant la clôture."
+        },
+        {
+          "term": "deferred income",
+          "pos": "noun",
+          "translation_fr": "produit constaté d'avance",
+          "definition_en": "Money received for a service not delivered yet.",
+          "explanation_fr": "Le « deferred income » est de l'argent reçu pour un service pas encore rendu (abonnement payé d'avance).",
+          "example_en": "Annual subscriptions create deferred income.",
+          "example_fr": "Les abonnements annuels créent des produits constatés d'avance."
+        },
+        {
+          "term": "provision",
+          "pos": "noun",
+          "translation_fr": "provision",
+          "definition_en": "An amount set aside for a probable future cost.",
+          "explanation_fr": "Une « provision » met de côté un montant pour une charge probable (litige, client qui risque de ne pas payer).",
+          "example_en": "We made a provision for the court case.",
+          "example_fr": "Nous avons constitué une provision pour le procès."
+        },
+        {
+          "term": "write-off",
+          "pos": "noun",
+          "translation_fr": "passage en perte (créance irrécouvrable)",
+          "definition_en": "Removing an amount that will never be recovered.",
+          "explanation_fr": "Un « write-off » passe en perte une somme qu'on ne récupérera jamais (client en faillite, stock perdu).",
+          "example_en": "The unpaid invoice became a write-off.",
+          "example_fr": "La facture impayée a été passée en perte."
+        },
+        {
+          "term": "closing entry",
+          "pos": "noun",
+          "translation_fr": "écriture de clôture",
+          "definition_en": "An entry made at the end of a period to update the accounts.",
+          "explanation_fr": "Une « closing entry » est passée en fin de période pour mettre les comptes à jour.",
+          "example_en": "The closing entry moves the profit to equity.",
+          "example_fr": "L'écriture de clôture transfère le résultat aux capitaux propres."
+        },
+        {
+          "term": "checklist",
+          "pos": "noun",
+          "translation_fr": "liste de contrôle",
+          "definition_en": "A list of tasks to check one by one.",
+          "explanation_fr": "La « checklist » liste toutes les tâches de clôture pour ne rien oublier.",
+          "example_en": "Follow the checklist for every closing.",
+          "example_fr": "Suis la liste de contrôle à chaque clôture."
+        }
+      ],
+      "sentences": [
+        { "en": "The books close on the fifth", "fr": "Les comptes sont clôturés le cinq" },
+        {
+          "en": "Record each cost in the right month",
+          "fr": "Enregistre chaque charge dans le bon mois"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Closing meeting",
+          "lines": [
+            {
+              "speaker": "CFO",
+              "text": "The electricity bill for June arrives in July. Where do we record it?"
+            }
+          ],
+          "options": [
+            "In June, as an accrued expense, to respect the cut-off.",
+            "In July, when the bill arrives.",
+            "We don't record electricity."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« In June, as an accrued expense, to respect the cut-off » = « En juin, en charge à payer, pour respecter la séparation des exercices ». La charge appartient au mois où elle est consommée."
+        }
+      ]
+    }
+  ]
+}

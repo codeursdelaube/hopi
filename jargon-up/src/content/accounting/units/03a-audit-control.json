@@ -1,0 +1,319 @@
+{
+  "level": "B2",
+  "title_en": "Audit & internal control",
+  "title_fr": "Audit et contrôle interne",
+  "lessons": [
+    {
+      "title_en": "The external audit",
+      "terms": [
+        {
+          "term": "auditor",
+          "pos": "noun",
+          "translation_fr": "auditeur (commissaire aux comptes)",
+          "definition_en": "An independent expert who checks a company's accounts.",
+          "explanation_fr": "L'« auditor » est l'expert indépendant qui vérifie que les comptes donnent une image fidèle de l'entreprise.",
+          "example_en": "The auditor asked for the bank statements.",
+          "example_fr": "L'auditeur a demandé les relevés bancaires."
+        },
+        {
+          "term": "audit trail",
+          "pos": "noun",
+          "translation_fr": "piste d'audit",
+          "definition_en": "The record that shows every step of a transaction.",
+          "explanation_fr": "L'« audit trail » permet de retrouver chaque étape d'une opération, de la pièce jusqu'aux comptes.",
+          "example_en": "The software keeps a full audit trail.",
+          "example_fr": "Le logiciel conserve une piste d'audit complète."
+        },
+        {
+          "term": "audit report",
+          "pos": "noun",
+          "translation_fr": "rapport d'audit",
+          "definition_en": "The document where the auditor gives an opinion on the accounts.",
+          "explanation_fr": "L'« audit report » présente l'opinion de l'auditeur sur les comptes annuels.",
+          "example_en": "The audit report will be ready in April.",
+          "example_fr": "Le rapport d'audit sera prêt en avril."
+        },
+        {
+          "term": "sample",
+          "pos": "noun",
+          "translation_fr": "échantillon",
+          "definition_en": "A small group of items chosen to test the whole.",
+          "explanation_fr": "L'auditeur ne contrôle pas tout : il prend un « sample » (échantillon) d'opérations à vérifier.",
+          "example_en": "The auditor tested a sample of fifty invoices.",
+          "example_fr": "L'auditeur a testé un échantillon de cinquante factures."
+        },
+        {
+          "term": "materiality",
+          "pos": "noun",
+          "translation_fr": "seuil de signification (matérialité)",
+          "definition_en": "How big an error must be to change a reader's decision.",
+          "explanation_fr": "La « materiality » fixe le montant à partir duquel une erreur devient importante pour le lecteur des comptes.",
+          "example_en": "This error is below the materiality level.",
+          "example_fr": "Cette erreur est sous le seuil de signification."
+        },
+        {
+          "term": "misstatement",
+          "pos": "noun",
+          "translation_fr": "anomalie (inexactitude)",
+          "definition_en": "A mistake or false amount in the financial statements.",
+          "explanation_fr": "Un « misstatement » est une erreur ou une inexactitude dans les états financiers, involontaire ou frauduleuse.",
+          "example_en": "The audit found a misstatement in inventory.",
+          "example_fr": "L'audit a trouvé une anomalie dans les stocks."
+        },
+        {
+          "term": "qualified opinion",
+          "pos": "noun",
+          "translation_fr": "opinion avec réserve",
+          "definition_en": "An audit opinion saying the accounts are fair except for one issue.",
+          "explanation_fr": "Une « qualified opinion » est une certification avec réserve : les comptes sont fidèles sauf sur un point précis.",
+          "example_en": "The company received a qualified opinion because of stock counts.",
+          "example_fr": "L'entreprise a reçu une opinion avec réserve à cause des inventaires."
+        },
+        {
+          "term": "supporting evidence",
+          "pos": "noun",
+          "translation_fr": "justificatifs (éléments probants)",
+          "definition_en": "Documents that prove an amount is correct.",
+          "explanation_fr": "Les « supporting evidence » sont les preuves (contrats, factures, confirmations bancaires) qui justifient un montant.",
+          "example_en": "Prepare the supporting evidence for each large payment.",
+          "example_fr": "Prépare les justificatifs pour chaque paiement important."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The auditor will visit us next week",
+          "fr": "L'auditeur viendra la semaine prochaine"
+        },
+        { "en": "Every amount must be justified", "fr": "Chaque montant doit être justifié" }
+      ],
+      "dialogues": [
+        {
+          "context": "Audit meeting",
+          "lines": [
+            {
+              "speaker": "Auditor",
+              "text": "I can't find the contract for this payment of five million francs."
+            }
+          ],
+          "options": [
+            "I'll send you the signed contract and the bank confirmation today.",
+            "We don't need contracts for big payments.",
+            "Just remove it from your sample."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« I'll send you the signed contract and the bank confirmation today » = « Je vous envoie aujourd'hui le contrat signé et la confirmation bancaire ». On fournit des justificatifs, on ne négocie pas l'échantillon."
+        }
+      ]
+    },
+    {
+      "title_en": "Internal control",
+      "terms": [
+        {
+          "term": "internal control",
+          "pos": "noun",
+          "translation_fr": "contrôle interne",
+          "definition_en": "Rules and checks that protect a company's assets and data.",
+          "explanation_fr": "Le « internal control » regroupe les règles qui protègent l'argent, les stocks et la fiabilité des comptes.",
+          "example_en": "Strong internal control reduces fraud.",
+          "example_fr": "Un contrôle interne solide réduit la fraude."
+        },
+        {
+          "term": "segregation of duties",
+          "pos": "noun",
+          "translation_fr": "séparation des tâches",
+          "definition_en": "Giving different steps of a process to different people.",
+          "explanation_fr": "La « segregation of duties » évite qu'une seule personne commande, valide et paie : chacun contrôle l'autre.",
+          "example_en": "Segregation of duties is weak in small teams.",
+          "example_fr": "La séparation des tâches est faible dans les petites équipes."
+        },
+        {
+          "term": "approval",
+          "pos": "noun",
+          "translation_fr": "approbation (validation)",
+          "definition_en": "Official permission before an action.",
+          "explanation_fr": "L'« approval » est la validation obligatoire avant une action (payer, acheter, recruter).",
+          "example_en": "Every payment needs approval from the manager.",
+          "example_fr": "Chaque paiement doit être validé par le responsable."
+        },
+        {
+          "term": "authorisation limit",
+          "pos": "noun",
+          "translation_fr": "seuil d'autorisation",
+          "definition_en": "The maximum amount a person may approve.",
+          "explanation_fr": "L'« authorisation limit » est le montant maximum qu'une personne peut valider seule.",
+          "example_en": "Above the authorisation limit, the director must sign.",
+          "example_fr": "Au-dessus du seuil d'autorisation, le directeur doit signer."
+        },
+        {
+          "term": "control procedure",
+          "pos": "noun",
+          "translation_fr": "procédure de contrôle",
+          "definition_en": "A written step to prevent or detect errors.",
+          "explanation_fr": "Une « control procedure » est une étape écrite pour éviter ou détecter les erreurs (double signature, inventaire mensuel).",
+          "example_en": "We added a control procedure for supplier changes.",
+          "example_fr": "Nous avons ajouté une procédure de contrôle pour les changements de fournisseur."
+        },
+        {
+          "term": "risk assessment",
+          "pos": "noun",
+          "translation_fr": "évaluation des risques",
+          "definition_en": "Identifying what could go wrong and how serious it is.",
+          "explanation_fr": "La « risk assessment » identifie les risques (fraude, erreur, perte) et mesure leur gravité.",
+          "example_en": "The risk assessment is updated every year.",
+          "example_fr": "L'évaluation des risques est mise à jour chaque année."
+        },
+        {
+          "term": "policy",
+          "pos": "noun",
+          "translation_fr": "politique (règlement interne)",
+          "definition_en": "An official rule that staff must follow.",
+          "explanation_fr": "Une « policy » est une règle interne officielle : « travel policy » = règlement des déplacements.",
+          "example_en": "Read the purchasing policy before you order.",
+          "example_fr": "Lis la politique d'achat avant de commander."
+        },
+        {
+          "term": "access rights",
+          "pos": "noun (plural)",
+          "translation_fr": "droits d'accès",
+          "definition_en": "What each user is allowed to see or change in a system.",
+          "explanation_fr": "Les « access rights » limitent ce que chaque utilisateur peut voir ou modifier dans le logiciel.",
+          "example_en": "Remove the access rights of staff who leave.",
+          "example_fr": "Supprime les droits d'accès des salariés qui partent."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Two people must sign each payment",
+          "fr": "Deux personnes doivent signer chaque paiement"
+        },
+        {
+          "en": "No one should pay their own invoices",
+          "fr": "Personne ne doit payer ses propres factures"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Control review",
+          "lines": [
+            {
+              "speaker": "Internal auditor",
+              "text": "The same person creates suppliers and pays them. Is that a problem?"
+            }
+          ],
+          "options": [
+            "Yes, it breaks the segregation of duties. Let's split these tasks between two people.",
+            "No, it's faster this way.",
+            "Only if the person is new."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« It breaks the segregation of duties » = « Cela viole la séparation des tâches ». Créer et payer un fournisseur doivent être faits par deux personnes différentes."
+        }
+      ]
+    },
+    {
+      "title_en": "Fraud & risk",
+      "terms": [
+        {
+          "term": "fraud",
+          "pos": "noun",
+          "translation_fr": "fraude",
+          "definition_en": "Deceiving others to get money or an advantage.",
+          "explanation_fr": "La « fraud » est une tromperie volontaire pour obtenir de l'argent ou un avantage.",
+          "example_en": "The fraud was found during the stock count.",
+          "example_fr": "La fraude a été découverte pendant l'inventaire."
+        },
+        {
+          "term": "embezzlement",
+          "pos": "noun",
+          "translation_fr": "détournement de fonds",
+          "definition_en": "Stealing money that you were trusted to manage.",
+          "explanation_fr": "L'« embezzlement » est le détournement par quelqu'un de l'argent qu'on lui avait confié.",
+          "example_en": "The cashier was accused of embezzlement.",
+          "example_fr": "Le caissier a été accusé de détournement de fonds."
+        },
+        {
+          "term": "red flag",
+          "pos": "noun",
+          "translation_fr": "signal d'alerte",
+          "definition_en": "A sign that something may be wrong.",
+          "explanation_fr": "Un « red flag » est un signal d'alerte : fournisseur inconnu, paiement urgent, facture sans commande…",
+          "example_en": "An urgent payment to a new supplier is a red flag.",
+          "example_fr": "Un paiement urgent à un nouveau fournisseur est un signal d'alerte."
+        },
+        {
+          "term": "whistleblower",
+          "pos": "noun",
+          "translation_fr": "lanceur d'alerte",
+          "definition_en": "A person who reports illegal acts inside an organisation.",
+          "explanation_fr": "Un « whistleblower » signale des actes illégaux dans son organisation ; la loi doit le protéger.",
+          "example_en": "A whistleblower reported the fake invoices.",
+          "example_fr": "Un lanceur d'alerte a signalé les fausses factures."
+        },
+        {
+          "term": "conflict of interest",
+          "pos": "noun",
+          "translation_fr": "conflit d'intérêts",
+          "definition_en": "A situation where personal interest may affect a work decision.",
+          "explanation_fr": "Un « conflict of interest » existe quand un intérêt personnel peut influencer une décision professionnelle (choisir l'entreprise de son frère).",
+          "example_en": "Declare any conflict of interest with a supplier.",
+          "example_fr": "Déclare tout conflit d'intérêts avec un fournisseur."
+        },
+        {
+          "term": "kickback",
+          "pos": "noun",
+          "translation_fr": "pot-de-vin (rétrocommission)",
+          "definition_en": "An illegal payment given in return for a contract.",
+          "explanation_fr": "Un « kickback » est une commission illégale versée en échange d'un marché.",
+          "example_en": "The buyer received a kickback from the supplier.",
+          "example_fr": "L'acheteur a reçu un pot-de-vin du fournisseur."
+        },
+        {
+          "term": "money laundering",
+          "pos": "noun",
+          "translation_fr": "blanchiment d'argent",
+          "definition_en": "Hiding the illegal origin of money.",
+          "explanation_fr": "Le « money laundering » consiste à cacher l'origine illégale d'argent en le faisant passer par des circuits légaux.",
+          "example_en": "Banks must report signs of money laundering.",
+          "example_fr": "Les banques doivent signaler les signes de blanchiment d'argent."
+        },
+        {
+          "term": "due diligence",
+          "pos": "noun",
+          "translation_fr": "vérifications préalables (due diligence)",
+          "definition_en": "Careful checks before a deal or a new partner.",
+          "explanation_fr": "La « due diligence » est l'ensemble des vérifications faites avant un accord, un rachat ou un nouveau partenaire.",
+          "example_en": "Do due diligence before you sign with a new supplier.",
+          "example_fr": "Fais les vérifications préalables avant de signer avec un nouveau fournisseur."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Report any suspicious payment to the manager",
+          "fr": "Signale tout paiement suspect au responsable"
+        },
+        {
+          "en": "Check the supplier before the first order",
+          "fr": "Vérifie le fournisseur avant la première commande"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Email from the director",
+          "lines": [
+            {
+              "speaker": "Email",
+              "text": "Urgent: pay 8 million francs today to this new account. Don't tell anyone."
+            }
+          ],
+          "options": [
+            "This is a red flag. I'll call the director on his usual number before paying anything.",
+            "I'll pay immediately, it's urgent.",
+            "I'll pay half to be safe."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« This is a red flag. I'll call the director on his usual number » = « C'est un signal d'alerte. J'appelle le directeur sur son numéro habituel ». C'est l'arnaque classique au faux président."
+        }
+      ]
+    }
+  ]
+}

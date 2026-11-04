@@ -1,0 +1,308 @@
+{
+  "level": "A2",
+  "title_en": "Programming basics",
+  "title_fr": "Les bases de la programmation",
+  "lessons": [
+    {
+      "title_en": "Variables & data types",
+      "terms": [
+        {
+          "term": "variable",
+          "pos": "noun",
+          "translation_fr": "variable",
+          "definition_en": "A named place in a program that stores a value.",
+          "explanation_fr": "Une « variable » est une boîte nommée qui garde une valeur (un nombre, un texte…) que le programme peut lire et modifier.",
+          "example_en": "Store the user's name in a variable.",
+          "example_fr": "Stocke le nom de l'utilisateur dans une variable."
+        },
+        {
+          "term": "value",
+          "pos": "noun",
+          "translation_fr": "valeur",
+          "definition_en": "The data stored in a variable, such as 42 or \"hello\".",
+          "explanation_fr": "La « value » est le contenu d'une variable : 42, « bonjour », vrai…",
+          "example_en": "The value of the counter is now ten.",
+          "example_fr": "La valeur du compteur est maintenant de dix."
+        },
+        {
+          "term": "string",
+          "pos": "noun",
+          "translation_fr": "chaîne de caractères",
+          "definition_en": "A piece of text in a program, written between quotes.",
+          "explanation_fr": "Une « string » est du texte dans un programme, écrit entre guillemets : \"Bonjour\".",
+          "example_en": "The email address is saved as a string.",
+          "example_fr": "L'adresse e-mail est enregistrée comme une chaîne de caractères."
+        },
+        {
+          "term": "integer",
+          "pos": "noun",
+          "translation_fr": "entier",
+          "definition_en": "A whole number without a decimal part, like 7 or -3.",
+          "explanation_fr": "Un « integer » est un nombre entier, sans virgule : 7, 0, -3.",
+          "example_en": "The age must be an integer.",
+          "example_fr": "L'âge doit être un entier."
+        },
+        {
+          "term": "boolean",
+          "pos": "noun",
+          "translation_fr": "booléen",
+          "definition_en": "A value that is either true or false.",
+          "explanation_fr": "Un « boolean » ne peut valoir que vrai (true) ou faux (false) : parfait pour une case cochée ou non.",
+          "example_en": "Use a boolean to know if the user is logged in.",
+          "example_fr": "Utilise un booléen pour savoir si l'utilisateur est connecté."
+        },
+        {
+          "term": "array",
+          "pos": "noun",
+          "translation_fr": "tableau",
+          "definition_en": "An ordered list of values stored in one variable.",
+          "explanation_fr": "Un « array » est une liste ordonnée de valeurs : [\"lundi\", \"mardi\", \"mercredi\"].",
+          "example_en": "The array contains five product names.",
+          "example_fr": "Le tableau contient cinq noms de produits."
+        },
+        {
+          "term": "constant",
+          "pos": "noun",
+          "translation_fr": "constante",
+          "definition_en": "A value that cannot change while the program runs.",
+          "explanation_fr": "Une « constant » est une valeur fixe, qu'on ne modifie pas : le taux de TVA, le nombre de jours dans une semaine…",
+          "example_en": "The tax rate is stored in a constant.",
+          "example_fr": "Le taux de taxe est stocké dans une constante."
+        },
+        {
+          "term": "data type",
+          "pos": "noun",
+          "translation_fr": "type de données",
+          "definition_en": "The kind of value: text, number, true or false, list…",
+          "explanation_fr": "Le « data type » indique la nature d'une valeur : texte (string), nombre (integer), vrai/faux (boolean)…",
+          "example_en": "Check the data type before you save the value.",
+          "example_fr": "Vérifie le type de données avant d'enregistrer la valeur."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "This variable stores the total price",
+          "fr": "Cette variable stocke le prix total"
+        },
+        {
+          "en": "The function returns a string",
+          "fr": "La fonction renvoie une chaîne de caractères"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Pair programming",
+          "lines": [
+            {
+              "speaker": "Senior developer",
+              "text": "The age field shows \"25\" with quotes. What's wrong?"
+            }
+          ],
+          "options": [
+            "It's stored as a string, we should convert it to an integer.",
+            "We should delete the age field.",
+            "The computer is too slow."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« It's stored as a string, we should convert it to an integer » = « Il est stocké comme du texte, il faut le convertir en entier ». Les guillemets montrent que c'est une chaîne de caractères."
+        }
+      ]
+    },
+    {
+      "title_en": "Functions & loops",
+      "terms": [
+        {
+          "term": "function",
+          "pos": "noun",
+          "translation_fr": "fonction",
+          "definition_en": "A named block of code that does one task and can be reused.",
+          "explanation_fr": "Une « function » est un bloc de code qui fait une tâche précise ; on l'écrit une fois et on la réutilise.",
+          "example_en": "Write a function that calculates the discount.",
+          "example_fr": "Écris une fonction qui calcule la remise."
+        },
+        {
+          "term": "parameter",
+          "pos": "noun",
+          "translation_fr": "paramètre",
+          "definition_en": "A variable listed in a function definition to receive input.",
+          "explanation_fr": "Un « parameter » est une entrée prévue par la fonction : dans calculer(prix), « prix » est le paramètre.",
+          "example_en": "The function takes one parameter: the price.",
+          "example_fr": "La fonction prend un paramètre : le prix."
+        },
+        {
+          "term": "argument",
+          "pos": "noun",
+          "translation_fr": "argument",
+          "definition_en": "The actual value you give to a function when you call it.",
+          "explanation_fr": "L'« argument » est la valeur réelle envoyée à la fonction : dans calculer(5000), 5000 est l'argument.",
+          "example_en": "Pass the user ID as an argument.",
+          "example_fr": "Passe l'identifiant de l'utilisateur en argument."
+        },
+        {
+          "term": "return value",
+          "pos": "noun",
+          "translation_fr": "valeur de retour",
+          "definition_en": "The result that a function sends back.",
+          "explanation_fr": "La « return value » est le résultat que la fonction renvoie à celui qui l'a appelée.",
+          "example_en": "The return value is the final price.",
+          "example_fr": "La valeur de retour est le prix final."
+        },
+        {
+          "term": "loop",
+          "pos": "noun",
+          "translation_fr": "boucle",
+          "definition_en": "Code that repeats the same steps several times.",
+          "explanation_fr": "Une « loop » répète des instructions plusieurs fois, par exemple pour traiter chaque élément d'une liste.",
+          "example_en": "Use a loop to send an email to every customer.",
+          "example_fr": "Utilise une boucle pour envoyer un e-mail à chaque client."
+        },
+        {
+          "term": "condition",
+          "pos": "noun",
+          "translation_fr": "condition",
+          "definition_en": "A test that decides which code runs (if… else…).",
+          "explanation_fr": "Une « condition » est un test (si… sinon…) qui choisit quel code exécuter.",
+          "example_en": "Add a condition to check the password length.",
+          "example_fr": "Ajoute une condition pour vérifier la longueur du mot de passe."
+        },
+        {
+          "term": "iteration",
+          "pos": "noun",
+          "translation_fr": "itération (tour de boucle)",
+          "definition_en": "One pass through a loop.",
+          "explanation_fr": "Une « iteration » est un tour de boucle : une boucle sur 10 éléments fait 10 itérations.",
+          "example_en": "The loop stops after the last iteration.",
+          "example_fr": "La boucle s'arrête après la dernière itération."
+        },
+        {
+          "term": "call",
+          "pos": "verb / noun",
+          "translation_fr": "appeler (une fonction)",
+          "definition_en": "To run a function by using its name.",
+          "explanation_fr": "« To call » une fonction, c'est la lancer en écrivant son nom ; « a call » est cet appel.",
+          "example_en": "Call the function when the user clicks the button.",
+          "example_fr": "Appelle la fonction quand l'utilisateur clique sur le bouton."
+        }
+      ],
+      "sentences": [
+        { "en": "The loop runs ten times", "fr": "La boucle s'exécute dix fois" },
+        {
+          "en": "Call this function with two arguments",
+          "fr": "Appelle cette fonction avec deux arguments"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Code review",
+          "lines": [
+            { "speaker": "Reviewer", "text": "You copied the same ten lines in three places. Why?" }
+          ],
+          "options": [
+            "You're right, I'll move them into a function.",
+            "Copying code is always the best practice.",
+            "I don't know what a function is."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« I'll move them into a function » = « Je vais les mettre dans une fonction ». Une fonction évite de répéter le même code."
+        }
+      ]
+    },
+    {
+      "title_en": "Bugs & debugging",
+      "terms": [
+        {
+          "term": "bug",
+          "pos": "noun",
+          "translation_fr": "bug (bogue)",
+          "definition_en": "A mistake in a program that makes it behave wrongly.",
+          "explanation_fr": "Un « bug » est une erreur dans le code qui fait mal fonctionner le programme.",
+          "example_en": "There is a bug in the payment form.",
+          "example_fr": "Il y a un bug dans le formulaire de paiement."
+        },
+        {
+          "term": "error message",
+          "pos": "noun",
+          "translation_fr": "message d'erreur",
+          "definition_en": "Text that explains what went wrong.",
+          "explanation_fr": "Un « error message » explique ce qui ne va pas : il faut toujours le lire en entier avant de chercher la solution.",
+          "example_en": "Read the error message carefully.",
+          "example_fr": "Lis attentivement le message d'erreur."
+        },
+        {
+          "term": "debugger",
+          "pos": "noun",
+          "translation_fr": "débogueur",
+          "definition_en": "A tool that runs code step by step to find bugs.",
+          "explanation_fr": "Un « debugger » permet d'exécuter le code pas à pas et de voir la valeur des variables à chaque étape.",
+          "example_en": "Open the debugger to see what happens.",
+          "example_fr": "Ouvre le débogueur pour voir ce qui se passe."
+        },
+        {
+          "term": "breakpoint",
+          "pos": "noun",
+          "translation_fr": "point d'arrêt",
+          "definition_en": "A marked line where the debugger pauses the program.",
+          "explanation_fr": "Un « breakpoint » est une ligne où le programme se met en pause pour qu'on l'examine.",
+          "example_en": "Put a breakpoint on line 42.",
+          "example_fr": "Mets un point d'arrêt à la ligne 42."
+        },
+        {
+          "term": "stack trace",
+          "pos": "noun",
+          "translation_fr": "trace d'appels (pile d'appels)",
+          "definition_en": "The list of function calls that led to an error.",
+          "explanation_fr": "La « stack trace » montre le chemin des fonctions appelées jusqu'à l'erreur : elle indique où chercher.",
+          "example_en": "The stack trace points to the login function.",
+          "example_fr": "La trace d'appels pointe vers la fonction de connexion."
+        },
+        {
+          "term": "syntax error",
+          "pos": "noun",
+          "translation_fr": "erreur de syntaxe",
+          "definition_en": "An error caused by code that breaks the language rules.",
+          "explanation_fr": "Une « syntax error » vient d'une faute d'écriture du code : parenthèse oubliée, guillemet manquant…",
+          "example_en": "A missing bracket caused a syntax error.",
+          "example_fr": "Une parenthèse manquante a causé une erreur de syntaxe."
+        },
+        {
+          "term": "log",
+          "pos": "noun / verb",
+          "translation_fr": "journal (log)",
+          "definition_en": "A record of events written by a program.",
+          "explanation_fr": "Un « log » est un message que le programme écrit pour garder une trace de ce qu'il fait ; « to log » = enregistrer.",
+          "example_en": "Check the log to see when the error started.",
+          "example_fr": "Consulte le journal pour voir quand l'erreur a commencé."
+        },
+        {
+          "term": "crash",
+          "pos": "noun / verb",
+          "translation_fr": "plantage / planter",
+          "definition_en": "When a program suddenly stops working.",
+          "explanation_fr": "Un « crash », c'est quand l'application s'arrête brutalement ; « the app crashed » = l'appli a planté.",
+          "example_en": "A photo that is too big can crash the app.",
+          "example_fr": "Une photo trop grande peut faire planter l'application."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "I found the bug in the login page",
+          "fr": "J'ai trouvé le bug dans la page de connexion"
+        },
+        { "en": "Can you send me the error message", "fr": "Peux-tu m'envoyer le message d'erreur" }
+      ],
+      "dialogues": [
+        {
+          "context": "Support chat",
+          "lines": [{ "speaker": "Colleague", "text": "The app crashed again on my phone." }],
+          "options": [
+            "Can you send me the stack trace and the steps to reproduce it?",
+            "Just buy a new phone.",
+            "It works on my computer, so it's fine."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Can you send me the stack trace and the steps to reproduce it? » = « Peux-tu m'envoyer la trace d'appels et les étapes pour reproduire le problème ? ». C'est la bonne façon de déboguer."
+        }
+      ]
+    }
+  ]
+}

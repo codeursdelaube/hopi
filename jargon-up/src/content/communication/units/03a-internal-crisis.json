@@ -1,0 +1,308 @@
+{
+  "level": "B2",
+  "title_en": "Internal & crisis communication",
+  "title_fr": "Communication interne et de crise",
+  "lessons": [
+    {
+      "title_en": "Internal communication",
+      "terms": [
+        {
+          "term": "internal communication",
+          "pos": "noun",
+          "translation_fr": "communication interne",
+          "definition_en": "Communication between a company and its employees.",
+          "explanation_fr": "La « internal communication » informe et mobilise les salariés : notes, réunions, intranet.",
+          "example_en": "Good internal communication reduces rumours.",
+          "example_fr": "Une bonne communication interne réduit les rumeurs."
+        },
+        {
+          "term": "intranet",
+          "pos": "noun",
+          "translation_fr": "intranet",
+          "definition_en": "A private website used only inside an organisation.",
+          "explanation_fr": "L'« intranet » est le site interne réservé aux salariés (actualités, documents, annuaire).",
+          "example_en": "The new policy is on the intranet.",
+          "example_fr": "La nouvelle politique est sur l'intranet."
+        },
+        {
+          "term": "town hall meeting",
+          "pos": "noun",
+          "translation_fr": "réunion générale (plénière)",
+          "definition_en": "A meeting where leaders speak to all staff and answer questions.",
+          "explanation_fr": "Un « town hall meeting » réunit tout le personnel avec la direction, avec un temps de questions.",
+          "example_en": "The CEO will explain the changes at the town hall meeting.",
+          "example_fr": "Le PDG expliquera les changements lors de la réunion générale."
+        },
+        {
+          "term": "employee engagement",
+          "pos": "noun",
+          "translation_fr": "implication des salariés",
+          "definition_en": "How motivated and committed employees are.",
+          "explanation_fr": "L'« employee engagement » mesure à quel point les salariés sont motivés et impliqués.",
+          "example_en": "Employee engagement fell after the reorganisation.",
+          "example_fr": "L'implication des salariés a baissé après la réorganisation."
+        },
+        {
+          "term": "onboarding",
+          "pos": "noun",
+          "translation_fr": "intégration (des nouveaux)",
+          "definition_en": "Helping new employees settle into a company.",
+          "explanation_fr": "L'« onboarding » est l'accueil et l'intégration des nouveaux salariés.",
+          "example_en": "Our onboarding lasts two weeks.",
+          "example_fr": "Notre programme d'intégration dure deux semaines."
+        },
+        {
+          "term": "change management",
+          "pos": "noun",
+          "translation_fr": "conduite du changement",
+          "definition_en": "Helping people accept and adapt to change.",
+          "explanation_fr": "La « change management » accompagne les équipes face à un changement (nouvel outil, nouvelle organisation).",
+          "example_en": "Change management is key when we move to new software.",
+          "example_fr": "La conduite du changement est essentielle quand on change de logiciel."
+        },
+        {
+          "term": "transparency",
+          "pos": "noun",
+          "translation_fr": "transparence",
+          "definition_en": "Sharing information openly and honestly.",
+          "explanation_fr": "La « transparency » consiste à partager l'information honnêtement, même quand elle n'est pas bonne.",
+          "example_en": "Staff appreciated the transparency about the results.",
+          "example_fr": "Le personnel a apprécié la transparence sur les résultats."
+        },
+        {
+          "term": "morale",
+          "pos": "noun",
+          "translation_fr": "moral (des équipes)",
+          "definition_en": "The confidence and mood of a group of people.",
+          "explanation_fr": "Le « morale » est le moral d'une équipe ; attention : « moral » (sans e) veut dire « morale » au sens éthique.",
+          "example_en": "Team morale is high after the success.",
+          "example_fr": "Le moral de l'équipe est bon après le succès."
+        }
+      ],
+      "sentences": [
+        { "en": "Tell the staff before the press", "fr": "Informe le personnel avant la presse" },
+        {
+          "en": "Employees want honest information",
+          "fr": "Les salariés veulent une information honnête"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Management meeting",
+          "lines": [
+            {
+              "speaker": "Director",
+              "text": "We are closing one office. When should we tell the staff?"
+            }
+          ],
+          "options": [
+            "Before any public announcement, in a town hall meeting with time for questions.",
+            "After the journalists publish it.",
+            "Never, they will find out."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Before any public announcement, in a town hall meeting » = « Avant toute annonce publique, en réunion générale ». Les salariés ne doivent pas l'apprendre par la presse."
+        }
+      ]
+    },
+    {
+      "title_en": "Managing a crisis",
+      "terms": [
+        {
+          "term": "crisis plan",
+          "pos": "noun",
+          "translation_fr": "plan de crise",
+          "definition_en": "A plan prepared in advance for emergencies.",
+          "explanation_fr": "Le « crisis plan » prévoit à l'avance qui fait quoi et qui parle en cas de crise.",
+          "example_en": "Update the crisis plan every year.",
+          "example_fr": "Mets à jour le plan de crise chaque année."
+        },
+        {
+          "term": "holding statement",
+          "pos": "noun",
+          "translation_fr": "déclaration d'attente",
+          "definition_en": "A short first message while you collect the facts.",
+          "explanation_fr": "Le « holding statement » est un premier message court (« nous sommes au courant, nous enquêtons ») en attendant les faits.",
+          "example_en": "Publish a holding statement within one hour.",
+          "example_fr": "Publie une déclaration d'attente dans l'heure."
+        },
+        {
+          "term": "damage control",
+          "pos": "noun",
+          "translation_fr": "limitation des dégâts",
+          "definition_en": "Actions to reduce the harm of a bad situation.",
+          "explanation_fr": "Le « damage control » regroupe les actions pour limiter les conséquences d'une crise.",
+          "example_en": "The team worked all night on damage control.",
+          "example_fr": "L'équipe a travaillé toute la nuit pour limiter les dégâts."
+        },
+        {
+          "term": "backlash",
+          "pos": "noun",
+          "translation_fr": "levée de boucliers (réaction hostile)",
+          "definition_en": "A strong negative reaction from the public.",
+          "explanation_fr": "Un « backlash » est une forte réaction négative du public, souvent sur les réseaux.",
+          "example_en": "The ad caused a huge backlash online.",
+          "example_fr": "La publicité a provoqué une énorme réaction hostile en ligne."
+        },
+        {
+          "term": "rumour",
+          "pos": "noun",
+          "translation_fr": "rumeur",
+          "definition_en": "Information spread without proof.",
+          "explanation_fr": "Une « rumour » est une information non vérifiée qui circule ; il faut la corriger vite avec des faits.",
+          "example_en": "A false rumour spread on WhatsApp.",
+          "example_fr": "Une fausse rumeur s'est répandue sur WhatsApp."
+        },
+        {
+          "term": "fact-checking",
+          "pos": "noun",
+          "translation_fr": "vérification des faits",
+          "definition_en": "Checking that information is true before sharing it.",
+          "explanation_fr": "Le « fact-checking » vérifie qu'une information est vraie avant de la publier ou de la démentir.",
+          "example_en": "Fact-checking takes time but protects us.",
+          "example_fr": "La vérification des faits prend du temps mais nous protège."
+        },
+        {
+          "term": "media training",
+          "pos": "noun",
+          "translation_fr": "formation aux médias (media training)",
+          "definition_en": "Training to speak well to journalists.",
+          "explanation_fr": "Le « media training » prépare les dirigeants à répondre aux journalistes, surtout en situation difficile.",
+          "example_en": "The director had media training before the interview.",
+          "example_fr": "Le directeur a suivi une formation aux médias avant l'interview."
+        },
+        {
+          "term": "public apology",
+          "pos": "noun",
+          "translation_fr": "excuses publiques",
+          "definition_en": "Saying sorry officially, in front of everyone.",
+          "explanation_fr": "Une « public apology » est une excuse officielle et publique ; elle doit être sincère et suivie d'actions.",
+          "example_en": "The company made a public apology to its clients.",
+          "example_fr": "L'entreprise a présenté des excuses publiques à ses clients."
+        }
+      ],
+      "sentences": [
+        { "en": "Check the facts before you answer", "fr": "Vérifie les faits avant de répondre" },
+        {
+          "en": "Only the spokesperson talks to the media",
+          "fr": "Seul le porte-parole parle aux médias"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Crisis call",
+          "lines": [
+            {
+              "speaker": "CEO",
+              "text": "A video says our water is dirty. It's going viral. What do we say now?"
+            }
+          ],
+          "options": [
+            "Let's publish a holding statement now and share test results as soon as we have them.",
+            "Let's say nothing and wait.",
+            "Let's attack the person who posted the video."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's publish a holding statement now and share test results as soon as we have them » = « Publions tout de suite une déclaration d'attente et partageons les résultats des analyses dès qu'on les a »."
+        }
+      ]
+    },
+    {
+      "title_en": "Persuasion & negotiation",
+      "terms": [
+        {
+          "term": "negotiation",
+          "pos": "noun",
+          "translation_fr": "négociation",
+          "definition_en": "A discussion to reach an agreement.",
+          "explanation_fr": "Une « negotiation » est une discussion pour arriver à un accord (prix, délai, conditions).",
+          "example_en": "The negotiation with the sponsor took three weeks.",
+          "example_fr": "La négociation avec le sponsor a duré trois semaines."
+        },
+        {
+          "term": "argument",
+          "pos": "noun",
+          "translation_fr": "argument",
+          "definition_en": "A reason given to support an idea.",
+          "explanation_fr": "Un « argument » est une raison qui soutient une idée (attention : « an argument » peut aussi vouloir dire une dispute).",
+          "example_en": "Your best argument is the low price.",
+          "example_fr": "Ton meilleur argument est le prix bas."
+        },
+        {
+          "term": "objection",
+          "pos": "noun",
+          "translation_fr": "objection",
+          "definition_en": "A reason someone gives for not agreeing.",
+          "explanation_fr": "Une « objection » est une raison avancée pour refuser ; il faut l'écouter et y répondre calmement.",
+          "example_en": "Prepare an answer for each objection.",
+          "example_fr": "Prépare une réponse pour chaque objection."
+        },
+        {
+          "term": "compromise",
+          "pos": "noun",
+          "translation_fr": "compromis",
+          "definition_en": "An agreement where both sides give up something.",
+          "explanation_fr": "Un « compromise » est un accord où chacun fait un pas vers l'autre.",
+          "example_en": "We found a compromise on the delivery date.",
+          "example_fr": "Nous avons trouvé un compromis sur la date de livraison."
+        },
+        {
+          "term": "consensus",
+          "pos": "noun",
+          "translation_fr": "consensus",
+          "definition_en": "General agreement within a group.",
+          "explanation_fr": "Le « consensus » est un accord général du groupe.",
+          "example_en": "The team reached a consensus on the new name.",
+          "example_fr": "L'équipe est arrivée à un consensus sur le nouveau nom."
+        },
+        {
+          "term": "persuade",
+          "pos": "verb",
+          "translation_fr": "convaincre (persuader)",
+          "definition_en": "To make someone agree or do something.",
+          "explanation_fr": "« To persuade », c'est convaincre quelqu'un, avec des arguments et des preuves.",
+          "example_en": "Use real numbers to persuade the board.",
+          "example_fr": "Utilise de vrais chiffres pour convaincre le conseil."
+        },
+        {
+          "term": "counter-offer",
+          "pos": "noun",
+          "translation_fr": "contre-proposition",
+          "definition_en": "A new offer made in reply to another offer.",
+          "explanation_fr": "Une « counter-offer » est une contre-proposition faite après une offre.",
+          "example_en": "The client made a counter-offer of ten percent less.",
+          "example_fr": "Le client a fait une contre-proposition à dix pour cent de moins."
+        },
+        {
+          "term": "win-win",
+          "pos": "adjective",
+          "translation_fr": "gagnant-gagnant",
+          "definition_en": "Good for both sides.",
+          "explanation_fr": "Une solution « win-win » est bénéfique pour les deux parties.",
+          "example_en": "We want a win-win partnership.",
+          "example_fr": "Nous voulons un partenariat gagnant-gagnant."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Let's find a solution that works for both",
+          "fr": "Trouvons une solution qui convient aux deux"
+        },
+        { "en": "I understand your concern", "fr": "Je comprends votre inquiétude" }
+      ],
+      "dialogues": [
+        {
+          "context": "Negotiation with a sponsor",
+          "lines": [{ "speaker": "Sponsor", "text": "Your price is too high for us." }],
+          "options": [
+            "I understand. If we add two extra posts, can we meet halfway on the price?",
+            "Then goodbye.",
+            "Okay, it's free."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« If we add two extra posts, can we meet halfway on the price? » = « Si on ajoute deux publications, peut-on couper la poire en deux ? ». On cherche un compromis gagnant-gagnant."
+        }
+      ]
+    }
+  ]
+}

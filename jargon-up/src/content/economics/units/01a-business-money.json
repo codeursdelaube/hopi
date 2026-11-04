@@ -1,0 +1,303 @@
+{
+  "level": "A2",
+  "title_en": "Business & money basics",
+  "title_fr": "Entreprise et argent : les bases",
+  "lessons": [
+    {
+      "title_en": "Running a business",
+      "terms": [
+        {
+          "term": "business",
+          "pos": "noun",
+          "translation_fr": "entreprise (affaires)",
+          "definition_en": "An organisation that sells goods or services to make money.",
+          "explanation_fr": "Un « business » est une entreprise ; « to do business » = faire des affaires.",
+          "example_en": "She started a small business in Lomé.",
+          "example_fr": "Elle a créé une petite entreprise à Lomé."
+        },
+        {
+          "term": "owner",
+          "pos": "noun",
+          "translation_fr": "propriétaire",
+          "definition_en": "The person who owns a business or a thing.",
+          "explanation_fr": "L'« owner » est le propriétaire de l'entreprise ou d'un bien.",
+          "example_en": "The owner works in the shop every day.",
+          "example_fr": "Le propriétaire travaille dans la boutique chaque jour."
+        },
+        {
+          "term": "customer",
+          "pos": "noun",
+          "translation_fr": "client",
+          "definition_en": "A person who buys goods or services.",
+          "explanation_fr": "Un « customer » est un client qui achète.",
+          "example_en": "Every customer receives a receipt.",
+          "example_fr": "Chaque client reçoit un reçu."
+        },
+        {
+          "term": "profit",
+          "pos": "noun",
+          "translation_fr": "bénéfice",
+          "definition_en": "Money left after paying all costs.",
+          "explanation_fr": "Le « profit » est ce qui reste quand on a payé tous les coûts.",
+          "example_en": "The shop made a profit this year.",
+          "example_fr": "La boutique a fait un bénéfice cette année."
+        },
+        {
+          "term": "cost",
+          "pos": "noun",
+          "translation_fr": "coût",
+          "definition_en": "The money you must pay to make or buy something.",
+          "explanation_fr": "Le « cost » est ce qu'il faut payer pour produire ou acheter quelque chose.",
+          "example_en": "The cost of transport is rising.",
+          "example_fr": "Le coût du transport augmente."
+        },
+        {
+          "term": "revenue",
+          "pos": "noun",
+          "translation_fr": "chiffre d'affaires (recettes)",
+          "definition_en": "All the money a business receives from sales.",
+          "explanation_fr": "Le « revenue » est le total des ventes, avant de retirer les coûts.",
+          "example_en": "Revenue grew by twenty percent.",
+          "example_fr": "Le chiffre d'affaires a augmenté de vingt pour cent."
+        },
+        {
+          "term": "sale",
+          "pos": "noun",
+          "translation_fr": "vente",
+          "definition_en": "The act of selling something.",
+          "explanation_fr": "Une « sale » est une vente ; « on sale » = en solde.",
+          "example_en": "The first sale of the day was at eight.",
+          "example_fr": "La première vente de la journée a eu lieu à huit heures."
+        },
+        {
+          "term": "shop",
+          "pos": "noun",
+          "translation_fr": "boutique (magasin)",
+          "definition_en": "A place where goods are sold.",
+          "explanation_fr": "Un « shop » (US : « store ») est un magasin ou une boutique.",
+          "example_en": "The shop opens at seven in the morning.",
+          "example_fr": "La boutique ouvre à sept heures du matin."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Our costs are higher than last year",
+          "fr": "Nos coûts sont plus élevés que l'an dernier"
+        },
+        {
+          "en": "The business needs more customers",
+          "fr": "L'entreprise a besoin de plus de clients"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Small business",
+          "lines": [
+            {
+              "speaker": "Owner",
+              "text": "We sell a lot, but at the end of the month we have no money left."
+            }
+          ],
+          "options": [
+            "Let's compare our revenue with our costs to find where the money goes.",
+            "Let's sell even more without checking.",
+            "Money problems are normal, do nothing."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's compare our revenue with our costs » = « Comparons notre chiffre d'affaires et nos coûts ». Vendre beaucoup ne veut pas dire faire du bénéfice."
+        }
+      ]
+    },
+    {
+      "title_en": "Personal finance",
+      "terms": [
+        {
+          "term": "budget",
+          "pos": "noun",
+          "translation_fr": "budget",
+          "definition_en": "A plan of how to use your money.",
+          "explanation_fr": "Un « budget » prévoit comment utiliser son argent chaque mois.",
+          "example_en": "Make a budget at the start of the month.",
+          "example_fr": "Fais un budget au début du mois."
+        },
+        {
+          "term": "spending",
+          "pos": "noun",
+          "translation_fr": "dépenses",
+          "definition_en": "The money you use to buy things.",
+          "explanation_fr": "Le « spending » désigne l'ensemble des dépenses.",
+          "example_en": "Our spending on food went up.",
+          "example_fr": "Nos dépenses alimentaires ont augmenté."
+        },
+        {
+          "term": "expense",
+          "pos": "noun",
+          "translation_fr": "dépense (frais)",
+          "definition_en": "Money spent on something.",
+          "explanation_fr": "Une « expense » est une dépense précise : loyer, transport, électricité.",
+          "example_en": "Rent is my biggest expense.",
+          "example_fr": "Le loyer est ma plus grosse dépense."
+        },
+        {
+          "term": "bill",
+          "pos": "noun",
+          "translation_fr": "facture (note)",
+          "definition_en": "A paper that says how much you must pay.",
+          "explanation_fr": "Un « bill » est une facture à payer (électricité, eau, restaurant).",
+          "example_en": "Pay the electricity bill before Friday.",
+          "example_fr": "Paie la facture d'électricité avant vendredi."
+        },
+        {
+          "term": "bank account",
+          "pos": "noun",
+          "translation_fr": "compte bancaire",
+          "definition_en": "An account at a bank where you keep money.",
+          "explanation_fr": "Le « bank account » est un compte en banque.",
+          "example_en": "Open a bank account to save safely.",
+          "example_fr": "Ouvre un compte bancaire pour épargner en sécurité."
+        },
+        {
+          "term": "cash",
+          "pos": "noun",
+          "translation_fr": "espèces (argent liquide)",
+          "definition_en": "Money in coins and notes.",
+          "explanation_fr": "Le « cash » est l'argent liquide ; « to pay cash » = payer en espèces.",
+          "example_en": "Many markets accept only cash.",
+          "example_fr": "Beaucoup de marchés n'acceptent que les espèces."
+        },
+        {
+          "term": "credit card",
+          "pos": "noun",
+          "translation_fr": "carte de crédit",
+          "definition_en": "A card that lets you buy now and pay later.",
+          "explanation_fr": "La « credit card » permet d'acheter maintenant et de payer plus tard (avec intérêts si on tarde).",
+          "example_en": "Pay your credit card on time to avoid interest.",
+          "example_fr": "Rembourse ta carte de crédit à temps pour éviter les intérêts."
+        },
+        {
+          "term": "balance",
+          "pos": "noun",
+          "translation_fr": "solde",
+          "definition_en": "The amount of money in an account.",
+          "explanation_fr": "Le « balance » est le solde : l'argent disponible sur un compte.",
+          "example_en": "Check your balance on the app.",
+          "example_fr": "Vérifie ton solde sur l'application."
+        }
+      ],
+      "sentences": [
+        { "en": "I save some money every month", "fr": "J'économise un peu d'argent chaque mois" },
+        { "en": "Rent is my biggest cost", "fr": "Le loyer est ma plus grosse charge" }
+      ],
+      "dialogues": [
+        {
+          "context": "Talking with a friend",
+          "lines": [{ "speaker": "Friend", "text": "I never know where my salary goes." }],
+          "options": [
+            "Write a simple budget and note every expense for one month.",
+            "Spend it faster.",
+            "Borrow money every month."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Write a simple budget and note every expense for one month » = « Fais un budget simple et note chaque dépense pendant un mois ». C'est la base pour mieux gérer son argent."
+        }
+      ]
+    },
+    {
+      "title_en": "Buying & selling",
+      "terms": [
+        {
+          "term": "buyer",
+          "pos": "noun",
+          "translation_fr": "acheteur",
+          "definition_en": "A person who buys something.",
+          "explanation_fr": "Le « buyer » est celui qui achète.",
+          "example_en": "The buyer wants a lower price.",
+          "example_fr": "L'acheteur veut un prix plus bas."
+        },
+        {
+          "term": "seller",
+          "pos": "noun",
+          "translation_fr": "vendeur",
+          "definition_en": "A person who sells something.",
+          "explanation_fr": "Le « seller » est celui qui vend.",
+          "example_en": "The seller explained the product.",
+          "example_fr": "Le vendeur a expliqué le produit."
+        },
+        {
+          "term": "retail",
+          "pos": "noun / adjective",
+          "translation_fr": "vente au détail",
+          "definition_en": "Selling goods to the public in small quantities.",
+          "explanation_fr": "Le « retail » est la vente au détail, directement aux consommateurs.",
+          "example_en": "She works in retail, in a clothes shop.",
+          "example_fr": "Elle travaille dans la vente au détail, dans une boutique de vêtements."
+        },
+        {
+          "term": "wholesale",
+          "pos": "noun / adjective",
+          "translation_fr": "vente en gros",
+          "definition_en": "Selling goods in large quantities to shops.",
+          "explanation_fr": "Le « wholesale » est la vente en gros aux commerçants, à prix plus bas.",
+          "example_en": "We buy rice at wholesale prices.",
+          "example_fr": "Nous achetons le riz au prix de gros."
+        },
+        {
+          "term": "discount",
+          "pos": "noun",
+          "translation_fr": "réduction (remise)",
+          "definition_en": "A lower price than usual.",
+          "explanation_fr": "Un « discount » est une réduction sur le prix normal.",
+          "example_en": "Students get a discount of ten percent.",
+          "example_fr": "Les étudiants ont une réduction de dix pour cent."
+        },
+        {
+          "term": "bargain",
+          "pos": "noun / verb",
+          "translation_fr": "bonne affaire / marchander",
+          "definition_en": "Something bought cheaply; or to discuss a price.",
+          "explanation_fr": "Un « bargain » est une bonne affaire ; « to bargain » = marchander, très courant au marché.",
+          "example_en": "At the market, people bargain for a better price.",
+          "example_fr": "Au marché, les gens marchandent pour un meilleur prix."
+        },
+        {
+          "term": "intermediary",
+          "pos": "noun",
+          "translation_fr": "intermédiaire",
+          "definition_en": "A person between the producer and the buyer.",
+          "explanation_fr": "Un « intermediary » se place entre le producteur et l'acheteur ; chaque intermédiaire augmente le prix final.",
+          "example_en": "Selling online removes one intermediary.",
+          "example_fr": "Vendre en ligne supprime un intermédiaire."
+        },
+        {
+          "term": "online shopping",
+          "pos": "noun",
+          "translation_fr": "achats en ligne",
+          "definition_en": "Buying things on the internet.",
+          "explanation_fr": "L'« online shopping » consiste à acheter sur internet, souvent payé par mobile money.",
+          "example_en": "Online shopping is growing fast in Africa.",
+          "example_fr": "Les achats en ligne progressent vite en Afrique."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Prices are lower at the wholesale market",
+          "fr": "Les prix sont plus bas au marché de gros"
+        },
+        { "en": "Can you give me a better price", "fr": "Pouvez-vous me faire un meilleur prix" }
+      ],
+      "dialogues": [
+        {
+          "context": "At the market",
+          "lines": [{ "speaker": "Seller", "text": "This bag is 15,000 francs." }],
+          "options": [
+            "It's a bit expensive. Can you give me a discount if I buy two?",
+            "Here is 50,000, keep the change.",
+            "I will steal it."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Can you give me a discount if I buy two? » = « Pouvez-vous me faire une réduction si j'en prends deux ? ». Une façon polie de marchander."
+        }
+      ]
+    }
+  ]
+}

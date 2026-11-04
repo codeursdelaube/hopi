@@ -1,0 +1,299 @@
+{
+  "level": "B1",
+  "title_en": "Property & renting",
+  "title_fr": "Immobilier et location",
+  "lessons": [
+    {
+      "title_en": "Land & ownership",
+      "terms": [
+        {
+          "term": "ownership",
+          "pos": "noun",
+          "translation_fr": "propriété (droit de propriété)",
+          "definition_en": "The legal right to own something.",
+          "explanation_fr": "L'« ownership » est le droit de propriété sur un bien.",
+          "example_en": "The document proves your ownership of the land.",
+          "example_fr": "Le document prouve ta propriété sur le terrain."
+        },
+        {
+          "term": "land title",
+          "pos": "noun",
+          "translation_fr": "titre foncier",
+          "definition_en": "The official document that proves who owns a piece of land.",
+          "explanation_fr": "Le « land title » (titre foncier) est la preuve la plus sûre de propriété d'un terrain.",
+          "example_en": "Never buy land without a land title.",
+          "example_fr": "N'achète jamais un terrain sans titre foncier."
+        },
+        {
+          "term": "plot",
+          "pos": "noun",
+          "translation_fr": "parcelle (lot)",
+          "definition_en": "A small piece of land.",
+          "explanation_fr": "Un « plot » est une parcelle de terrain.",
+          "example_en": "She bought a plot near the new road.",
+          "example_fr": "Elle a acheté une parcelle près de la nouvelle route."
+        },
+        {
+          "term": "land registry",
+          "pos": "noun",
+          "translation_fr": "cadastre (conservation foncière)",
+          "definition_en": "The official office that records who owns land.",
+          "explanation_fr": "La « land registry » enregistre les propriétés foncières : c'est là qu'on vérifie un titre.",
+          "example_en": "Check the plot at the land registry first.",
+          "example_fr": "Vérifie d'abord la parcelle à la conservation foncière."
+        },
+        {
+          "term": "boundary",
+          "pos": "noun",
+          "translation_fr": "limite (bornage)",
+          "definition_en": "The official line that marks the edge of a property.",
+          "explanation_fr": "La « boundary » est la limite d'une propriété, marquée par des bornes.",
+          "example_en": "The neighbours disagree about the boundary.",
+          "example_fr": "Les voisins ne sont pas d'accord sur la limite."
+        },
+        {
+          "term": "customary land",
+          "pos": "noun",
+          "translation_fr": "terre coutumière",
+          "definition_en": "Land owned according to traditional rules of a community.",
+          "explanation_fr": "La « customary land » appartient selon les règles coutumières (famille, communauté), souvent sans titre écrit : source fréquente de litiges.",
+          "example_en": "Most rural plots are customary land.",
+          "example_fr": "La plupart des parcelles rurales sont des terres coutumières."
+        },
+        {
+          "term": "expropriation",
+          "pos": "noun",
+          "translation_fr": "expropriation",
+          "definition_en": "When the state takes private property for public use, with compensation.",
+          "explanation_fr": "L'« expropriation » permet à l'État de prendre un bien pour un projet public, contre une indemnité.",
+          "example_en": "The new road required the expropriation of ten houses.",
+          "example_fr": "La nouvelle route a exigé l'expropriation de dix maisons."
+        },
+        {
+          "term": "property tax",
+          "pos": "noun",
+          "translation_fr": "impôt foncier",
+          "definition_en": "A tax paid by owners of land or buildings.",
+          "explanation_fr": "La « property tax » est l'impôt payé par les propriétaires de terrains ou de bâtiments.",
+          "example_en": "Pay the property tax before June.",
+          "example_fr": "Paie l'impôt foncier avant juin."
+        }
+      ],
+      "sentences": [
+        { "en": "This land belongs to my family", "fr": "Ce terrain appartient à ma famille" },
+        { "en": "Check the title before you buy", "fr": "Vérifie le titre avant d'acheter" }
+      ],
+      "dialogues": [
+        {
+          "context": "Buying land",
+          "lines": [
+            { "speaker": "Seller", "text": "Trust me, this plot is mine. No need for papers." }
+          ],
+          "options": [
+            "I'm sorry, I will only buy after checking the land title at the land registry.",
+            "Okay, here is all my money.",
+            "Let's sign on a piece of paper in the street."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« I will only buy after checking the land title at the land registry » = « Je n'achèterai qu'après avoir vérifié le titre foncier à la conservation foncière ». La première protection contre les arnaques foncières."
+        }
+      ]
+    },
+    {
+      "title_en": "Renting a home",
+      "terms": [
+        {
+          "term": "tenant",
+          "pos": "noun",
+          "translation_fr": "locataire",
+          "definition_en": "A person who pays rent to live in a place.",
+          "explanation_fr": "Le « tenant » est le locataire.",
+          "example_en": "The tenant must pay the rent on time.",
+          "example_fr": "Le locataire doit payer le loyer à temps."
+        },
+        {
+          "term": "landlord",
+          "pos": "noun",
+          "translation_fr": "propriétaire (bailleur)",
+          "definition_en": "A person who rents a property to someone.",
+          "explanation_fr": "Le « landlord » est le propriétaire qui loue le logement (le bailleur).",
+          "example_en": "The landlord repaired the roof.",
+          "example_fr": "Le propriétaire a réparé le toit."
+        },
+        {
+          "term": "rent",
+          "pos": "noun / verb",
+          "translation_fr": "loyer / louer",
+          "definition_en": "Money paid regularly to live in a property.",
+          "explanation_fr": "Le « rent » est le loyer ; « to rent » = louer.",
+          "example_en": "The rent is due on the fifth of each month.",
+          "example_fr": "Le loyer est dû le cinq de chaque mois."
+        },
+        {
+          "term": "security deposit",
+          "pos": "noun",
+          "translation_fr": "dépôt de garantie (caution)",
+          "definition_en": "Money paid at the start and returned at the end if there is no damage.",
+          "explanation_fr": "La « security deposit » est la caution versée à l'entrée et rendue au départ s'il n'y a pas de dégâts.",
+          "example_en": "The landlord kept part of the security deposit.",
+          "example_fr": "Le propriétaire a gardé une partie de la caution."
+        },
+        {
+          "term": "rental agreement",
+          "pos": "noun",
+          "translation_fr": "contrat de bail",
+          "definition_en": "The written contract between a landlord and a tenant.",
+          "explanation_fr": "Le « rental agreement » est le contrat de location : loyer, durée, obligations de chacun.",
+          "example_en": "Read the rental agreement before you pay.",
+          "example_fr": "Lis le contrat de bail avant de payer."
+        },
+        {
+          "term": "eviction",
+          "pos": "noun",
+          "translation_fr": "expulsion",
+          "definition_en": "Forcing a tenant to leave a property.",
+          "explanation_fr": "L'« eviction » est l'expulsion du locataire ; elle doit respecter une procédure légale.",
+          "example_en": "An eviction needs a court decision.",
+          "example_fr": "Une expulsion nécessite une décision de justice."
+        },
+        {
+          "term": "maintenance",
+          "pos": "noun",
+          "translation_fr": "entretien",
+          "definition_en": "Work to keep a building in good condition.",
+          "explanation_fr": "La « maintenance » est l'entretien du logement : petites réparations au locataire, gros travaux au propriétaire.",
+          "example_en": "Who pays for the maintenance of the water pump?",
+          "example_fr": "Qui paie l'entretien de la pompe à eau ?"
+        },
+        {
+          "term": "sublet",
+          "pos": "verb",
+          "translation_fr": "sous-louer",
+          "definition_en": "To rent your rented home to another person.",
+          "explanation_fr": "« To sublet », c'est sous-louer son logement à quelqu'un d'autre ; c'est souvent interdit sans accord du propriétaire.",
+          "example_en": "You cannot sublet without the landlord's permission.",
+          "example_fr": "Tu ne peux pas sous-louer sans l'accord du propriétaire."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The rent includes water and electricity",
+          "fr": "Le loyer comprend l'eau et l'électricité"
+        },
+        { "en": "I paid three months in advance", "fr": "J'ai payé trois mois d'avance" }
+      ],
+      "dialogues": [
+        {
+          "context": "Leaving an apartment",
+          "lines": [{ "speaker": "Landlord", "text": "I'm keeping your whole security deposit." }],
+          "options": [
+            "Can you show me the damage and the repair costs? The rental agreement says the deposit must be returned otherwise.",
+            "Okay, keep everything.",
+            "Then I'll break the door."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Can you show me the damage and the repair costs? » = « Pouvez-vous me montrer les dégâts et le coût des réparations ? ». La caution ne peut être retenue que pour des dégâts justifiés."
+        }
+      ]
+    },
+    {
+      "title_en": "Buying & building",
+      "terms": [
+        {
+          "term": "purchase agreement",
+          "pos": "noun",
+          "translation_fr": "compromis (promesse) de vente",
+          "definition_en": "A contract in which a buyer and seller agree on a sale.",
+          "explanation_fr": "Le « purchase agreement » fixe les conditions de la vente avant l'acte définitif chez le notaire.",
+          "example_en": "We signed the purchase agreement at the notary's office.",
+          "example_fr": "Nous avons signé le compromis de vente chez le notaire."
+        },
+        {
+          "term": "mortgage",
+          "pos": "noun",
+          "translation_fr": "prêt immobilier (hypothèque)",
+          "definition_en": "A loan to buy a property, with the property as security.",
+          "explanation_fr": "Un « mortgage » est un prêt immobilier garanti par le bien : si on ne rembourse pas, la banque peut le saisir (le « t » ne se prononce pas).",
+          "example_en": "They got a twenty-year mortgage.",
+          "example_fr": "Ils ont obtenu un prêt immobilier sur vingt ans."
+        },
+        {
+          "term": "down payment",
+          "pos": "noun",
+          "translation_fr": "apport (premier versement)",
+          "definition_en": "The first part of the price paid in cash.",
+          "explanation_fr": "Le « down payment » est l'apport personnel versé au départ ; la banque finance le reste.",
+          "example_en": "The bank asks for a down payment of 20%.",
+          "example_fr": "La banque demande un apport de 20 %."
+        },
+        {
+          "term": "building permit",
+          "pos": "noun",
+          "translation_fr": "permis de construire",
+          "definition_en": "Official permission to build or change a building.",
+          "explanation_fr": "Le « building permit » autorise la construction ; sans lui, le bâtiment peut être démoli.",
+          "example_en": "Get a building permit before you start the works.",
+          "example_fr": "Obtiens un permis de construire avant de commencer les travaux."
+        },
+        {
+          "term": "surveyor",
+          "pos": "noun",
+          "translation_fr": "géomètre",
+          "definition_en": "An expert who measures land and its boundaries.",
+          "explanation_fr": "Le « surveyor » est le géomètre qui mesure le terrain et pose les bornes.",
+          "example_en": "The surveyor measured the plot.",
+          "example_fr": "Le géomètre a mesuré la parcelle."
+        },
+        {
+          "term": "real estate agent",
+          "pos": "noun",
+          "translation_fr": "agent immobilier",
+          "definition_en": "A person who helps buy, sell or rent property.",
+          "explanation_fr": "Le « real estate agent » aide à acheter, vendre ou louer un bien, contre une commission.",
+          "example_en": "The real estate agent showed us three houses.",
+          "example_fr": "L'agent immobilier nous a montré trois maisons."
+        },
+        {
+          "term": "transfer of ownership",
+          "pos": "noun",
+          "translation_fr": "transfert de propriété (mutation)",
+          "definition_en": "When ownership officially passes from seller to buyer.",
+          "explanation_fr": "Le « transfer of ownership » est le moment où la propriété passe officiellement à l'acheteur, après enregistrement.",
+          "example_en": "The transfer of ownership is registered at the land registry.",
+          "example_fr": "Le transfert de propriété est enregistré à la conservation foncière."
+        },
+        {
+          "term": "co-ownership",
+          "pos": "noun",
+          "translation_fr": "copropriété (indivision)",
+          "definition_en": "When several people own one property together.",
+          "explanation_fr": "La « co-ownership » est la propriété partagée entre plusieurs personnes (famille, héritiers).",
+          "example_en": "The house is in co-ownership between four brothers.",
+          "example_fr": "La maison est en indivision entre quatre frères."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "We need a permit to build here",
+          "fr": "Il nous faut un permis pour construire ici"
+        },
+        { "en": "The bank will finance the rest", "fr": "La banque financera le reste" }
+      ],
+      "dialogues": [
+        {
+          "context": "Construction site",
+          "lines": [
+            { "speaker": "Builder", "text": "Let's start building now. The permit can come later." }
+          ],
+          "options": [
+            "No, without a building permit the house could be demolished. Let's wait for it.",
+            "Yes, permits are useless.",
+            "Build two floors more than planned."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Without a building permit the house could be demolished » = « Sans permis de construire, la maison pourrait être démolie ». On attend l'autorisation."
+        }
+      ]
+    }
+  ]
+}

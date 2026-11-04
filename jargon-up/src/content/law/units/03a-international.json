@@ -1,0 +1,313 @@
+{
+  "level": "B2",
+  "title_en": "International law & human rights",
+  "title_fr": "Droit international et droits humains",
+  "lessons": [
+    {
+      "title_en": "International law",
+      "terms": [
+        {
+          "term": "treaty",
+          "pos": "noun",
+          "translation_fr": "traité",
+          "definition_en": "A formal written agreement between countries.",
+          "explanation_fr": "Un « treaty » est un accord écrit entre États, qui crée des obligations juridiques.",
+          "example_en": "The two countries signed a border treaty.",
+          "example_fr": "Les deux pays ont signé un traité frontalier."
+        },
+        {
+          "term": "convention",
+          "pos": "noun",
+          "translation_fr": "convention (internationale)",
+          "definition_en": "An international agreement on a specific subject.",
+          "explanation_fr": "Une « convention » est un traité sur un thème précis (droits de l'enfant, climat, travail).",
+          "example_en": "Togo ratified the convention on the rights of the child.",
+          "example_fr": "Le Togo a ratifié la convention relative aux droits de l'enfant."
+        },
+        {
+          "term": "ratify",
+          "pos": "verb",
+          "translation_fr": "ratifier",
+          "definition_en": "To officially approve a treaty so it becomes binding.",
+          "explanation_fr": "« To ratify » un traité, c'est l'approuver officiellement pour qu'il s'applique au pays.",
+          "example_en": "Parliament must ratify the agreement.",
+          "example_fr": "Le Parlement doit ratifier l'accord."
+        },
+        {
+          "term": "sovereignty",
+          "pos": "noun",
+          "translation_fr": "souveraineté",
+          "definition_en": "A state's full power to govern itself.",
+          "explanation_fr": "La « sovereignty » est le pouvoir d'un État de décider lui-même, sans autorité supérieure.",
+          "example_en": "Each state defends its sovereignty.",
+          "example_fr": "Chaque État défend sa souveraineté."
+        },
+        {
+          "term": "international organisation",
+          "pos": "noun",
+          "translation_fr": "organisation internationale",
+          "definition_en": "A body created by several states, like the UN or the AU.",
+          "explanation_fr": "Une « international organisation » est créée par plusieurs États : ONU, Union africaine, CEDEAO.",
+          "example_en": "ECOWAS is a regional international organisation.",
+          "example_fr": "La CEDEAO est une organisation internationale régionale."
+        },
+        {
+          "term": "sanction",
+          "pos": "noun",
+          "translation_fr": "sanction",
+          "definition_en": "A penalty imposed on a country or person to force a change.",
+          "explanation_fr": "Une « sanction » est une mesure de pression (gel des avoirs, embargo) contre un État ou une personne.",
+          "example_en": "The regional bloc imposed a sanction after the coup.",
+          "example_fr": "Le bloc régional a imposé une sanction après le coup d'État."
+        },
+        {
+          "term": "diplomatic immunity",
+          "pos": "noun",
+          "translation_fr": "immunité diplomatique",
+          "definition_en": "Protection of diplomats from local courts.",
+          "explanation_fr": "L'immunité diplomatique (« diplomatic immunity ») protège les diplomates des poursuites dans le pays où ils sont en poste.",
+          "example_en": "The ambassador has diplomatic immunity.",
+          "example_fr": "L'ambassadeur bénéficie de l'immunité diplomatique."
+        },
+        {
+          "term": "extradition",
+          "pos": "noun",
+          "translation_fr": "extradition",
+          "definition_en": "Sending a suspect to another country to be tried.",
+          "explanation_fr": "L'« extradition » remet un suspect à un autre État pour qu'il y soit jugé.",
+          "example_en": "The court approved his extradition.",
+          "example_fr": "Le tribunal a approuvé son extradition."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The treaty enters into force next year",
+          "fr": "Le traité entre en vigueur l'an prochain"
+        },
+        {
+          "en": "States must respect their commitments",
+          "fr": "Les États doivent respecter leurs engagements"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "International law exam",
+          "lines": [
+            {
+              "speaker": "Professor",
+              "text": "A country signed a treaty but never ratified it. Is it bound by the treaty?"
+            }
+          ],
+          "options": [
+            "Not fully: it is bound only after ratification, but it must not act against the treaty's purpose.",
+            "Yes, signing always means full obligation.",
+            "Treaties are never binding."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« It is bound only after ratification, but it must not act against the treaty's purpose » = « Il n'est lié qu'après ratification, mais ne doit pas agir contre l'objet du traité » (Convention de Vienne)."
+        }
+      ]
+    },
+    {
+      "title_en": "Human rights",
+      "terms": [
+        {
+          "term": "human rights",
+          "pos": "noun (plural)",
+          "translation_fr": "droits de l'homme (droits humains)",
+          "definition_en": "Basic rights that belong to every person.",
+          "explanation_fr": "Les « human rights » sont les droits fondamentaux de toute personne : vie, liberté, dignité, égalité.",
+          "example_en": "The NGO reports human rights abuses.",
+          "example_fr": "L'ONG signale les violations des droits humains."
+        },
+        {
+          "term": "right to a fair trial",
+          "pos": "noun",
+          "translation_fr": "droit à un procès équitable",
+          "definition_en": "The right to be judged fairly by an independent court.",
+          "explanation_fr": "Le « right to a fair trial » garantit un juge indépendant, un avocat et un délai raisonnable.",
+          "example_en": "Long detention without judgment violates the right to a fair trial.",
+          "example_fr": "Une longue détention sans jugement viole le droit à un procès équitable."
+        },
+        {
+          "term": "rule of law",
+          "pos": "noun",
+          "translation_fr": "État de droit",
+          "definition_en": "The principle that everyone, including leaders, must obey the law.",
+          "explanation_fr": "Le « rule of law » (État de droit) : personne n'est au-dessus de la loi, pas même les dirigeants.",
+          "example_en": "Investors trust countries with a strong rule of law.",
+          "example_fr": "Les investisseurs font confiance aux pays où l'État de droit est solide."
+        },
+        {
+          "term": "asylum",
+          "pos": "noun",
+          "translation_fr": "asile",
+          "definition_en": "Protection given by a country to someone fleeing danger.",
+          "explanation_fr": "L'« asylum » est la protection accordée à une personne qui fuit des persécutions.",
+          "example_en": "She asked for asylum after fleeing the war.",
+          "example_fr": "Elle a demandé l'asile après avoir fui la guerre."
+        },
+        {
+          "term": "refugee",
+          "pos": "noun",
+          "translation_fr": "réfugié",
+          "definition_en": "A person forced to leave their country because of war or persecution.",
+          "explanation_fr": "Un « refugee » a dû fuir son pays (guerre, persécution) et bénéficie d'une protection internationale.",
+          "example_en": "The camp hosts every refugee who arrives.",
+          "example_fr": "Le camp accueille chaque réfugié qui arrive."
+        },
+        {
+          "term": "torture",
+          "pos": "noun",
+          "translation_fr": "torture",
+          "definition_en": "Causing severe pain to punish or force a confession.",
+          "explanation_fr": "La « torture » est absolument interdite par le droit international, même en cas de guerre ; un aveu obtenu ainsi n'a aucune valeur.",
+          "example_en": "A confession obtained by torture is not valid.",
+          "example_fr": "Un aveu obtenu sous la torture n'est pas valable."
+        },
+        {
+          "term": "due process",
+          "pos": "noun",
+          "translation_fr": "garanties procédurales (procédure régulière)",
+          "definition_en": "Fair legal procedures that must be followed.",
+          "explanation_fr": "Le « due process » exige le respect des règles de procédure : être informé, défendu, entendu.",
+          "example_en": "The arrest did not respect due process.",
+          "example_fr": "L'arrestation n'a pas respecté les garanties procédurales."
+        },
+        {
+          "term": "freedom of assembly",
+          "pos": "noun",
+          "translation_fr": "liberté de réunion (de manifestation)",
+          "definition_en": "The right to meet and demonstrate peacefully.",
+          "explanation_fr": "La « freedom of assembly » est le droit de se réunir et de manifester pacifiquement.",
+          "example_en": "The constitution protects freedom of assembly.",
+          "example_fr": "La constitution protège la liberté de réunion."
+        }
+      ],
+      "sentences": [
+        { "en": "No one is above the law", "fr": "Personne n'est au-dessus de la loi" },
+        { "en": "Everyone has the right to a lawyer", "fr": "Toute personne a droit à un avocat" }
+      ],
+      "dialogues": [
+        {
+          "context": "NGO meeting",
+          "lines": [
+            {
+              "speaker": "Activist",
+              "text": "Some prisoners have waited three years without a trial."
+            }
+          ],
+          "options": [
+            "That violates the right to a fair trial. Let's document each case and file a complaint.",
+            "Prisons are full, it's normal.",
+            "Let's say nothing to avoid problems."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« That violates the right to a fair trial. Let's document each case » = « Cela viole le droit à un procès équitable. Documentons chaque cas ». On agit avec des faits."
+        }
+      ]
+    },
+    {
+      "title_en": "International courts",
+      "terms": [
+        {
+          "term": "tribunal",
+          "pos": "noun",
+          "translation_fr": "tribunal (juridiction spéciale)",
+          "definition_en": "A court or body set up to judge specific cases.",
+          "explanation_fr": "Un « tribunal » est une juridiction, souvent créée pour un type d'affaires précis (tribunal pénal international, arbitral…).",
+          "example_en": "An international tribunal judged the war leaders.",
+          "example_fr": "Un tribunal international a jugé les chefs de guerre."
+        },
+        {
+          "term": "binding",
+          "pos": "adjective",
+          "translation_fr": "contraignant (obligatoire)",
+          "definition_en": "That must legally be obeyed.",
+          "explanation_fr": "Une décision « binding » est obligatoire ; une recommandation ne l'est pas.",
+          "example_en": "The court's decision is binding on both states.",
+          "example_fr": "La décision de la cour est contraignante pour les deux États."
+        },
+        {
+          "term": "enforcement",
+          "pos": "noun",
+          "translation_fr": "exécution (application)",
+          "definition_en": "Making sure a law or decision is actually applied.",
+          "explanation_fr": "L'« enforcement » est l'application concrète d'une loi ou d'une décision ; c'est souvent le point faible du droit international.",
+          "example_en": "Without enforcement, the judgment has little effect.",
+          "example_fr": "Sans exécution, le jugement a peu d'effet."
+        },
+        {
+          "term": "petition",
+          "pos": "noun",
+          "translation_fr": "requête (pétition)",
+          "definition_en": "A formal written request to a court or authority.",
+          "explanation_fr": "Une « petition » est une requête écrite adressée à une juridiction ou à une autorité.",
+          "example_en": "The victims filed a petition with the regional court.",
+          "example_fr": "Les victimes ont déposé une requête devant la cour régionale."
+        },
+        {
+          "term": "war crime",
+          "pos": "noun",
+          "translation_fr": "crime de guerre",
+          "definition_en": "A serious violation of the laws of war, like attacking civilians.",
+          "explanation_fr": "Un « war crime » viole gravement le droit de la guerre (attaquer des civils, des hôpitaux).",
+          "example_en": "Attacking a hospital is a war crime.",
+          "example_fr": "Attaquer un hôpital est un crime de guerre."
+        },
+        {
+          "term": "crimes against humanity",
+          "pos": "noun (plural)",
+          "translation_fr": "crimes contre l'humanité",
+          "definition_en": "Widespread attacks against civilians, like mass killings.",
+          "explanation_fr": "Les « crimes against humanity » sont des attaques massives et systématiques contre des civils ; ils ne se prescrivent pas.",
+          "example_en": "The court tried him for crimes against humanity.",
+          "example_fr": "La cour l'a jugé pour crimes contre l'humanité."
+        },
+        {
+          "term": "precedent",
+          "pos": "noun",
+          "translation_fr": "précédent (jurisprudentiel)",
+          "definition_en": "An earlier decision used as an example for later cases.",
+          "explanation_fr": "Un « precedent » est une décision passée qui sert de référence pour juger les affaires suivantes.",
+          "example_en": "This ruling sets an important precedent.",
+          "example_fr": "Cette décision crée un précédent important."
+        },
+        {
+          "term": "case law",
+          "pos": "noun",
+          "translation_fr": "jurisprudence",
+          "definition_en": "Law based on earlier court decisions.",
+          "explanation_fr": "La « case law » est la jurisprudence : l'ensemble des décisions des tribunaux qui interprètent la loi.",
+          "example_en": "Lawyers study case law to prepare their arguments.",
+          "example_fr": "Les avocats étudient la jurisprudence pour préparer leurs arguments."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The decision is binding on all members",
+          "fr": "La décision s'impose à tous les membres"
+        },
+        {
+          "en": "Victims can file a petition with the court",
+          "fr": "Les victimes peuvent saisir la cour par une requête"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Moot court",
+          "lines": [
+            { "speaker": "Judge", "text": "Counsel, is there any precedent for your argument?" }
+          ],
+          "options": [
+            "Yes, Your Honour: the regional court ruled the same way in a similar case in 2019.",
+            "No, but please trust me.",
+            "Precedents are not important."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« The regional court ruled the same way in a similar case » = « La cour régionale a statué dans le même sens dans une affaire similaire ». On appuie son argument sur la jurisprudence."
+        }
+      ]
+    }
+  ]
+}

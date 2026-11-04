@@ -1,0 +1,316 @@
+{
+  "level": "B1",
+  "title_en": "Money, prices & inflation",
+  "title_fr": "Monnaie, prix et inflation",
+  "lessons": [
+    {
+      "title_en": "Measuring prices",
+      "terms": [
+        {
+          "term": "consumer price index",
+          "pos": "noun (CPI)",
+          "translation_fr": "indice des prix à la consommation",
+          "definition_en": "A measure of the average change in prices paid by households.",
+          "explanation_fr": "Le « consumer price index » (CPI) suit l'évolution des prix d'un panier de produits courants : c'est la mesure officielle de l'inflation.",
+          "example_en": "The consumer price index rose by 4% this year.",
+          "example_fr": "L'indice des prix à la consommation a augmenté de 4 % cette année."
+        },
+        {
+          "term": "deflation",
+          "pos": "noun",
+          "translation_fr": "déflation",
+          "definition_en": "A general fall in prices over time.",
+          "explanation_fr": "La « deflation » est une baisse générale et durable des prix ; elle peut freiner l'économie car on attend avant d'acheter.",
+          "example_en": "Deflation can be as dangerous as inflation.",
+          "example_fr": "La déflation peut être aussi dangereuse que l'inflation."
+        },
+        {
+          "term": "hyperinflation",
+          "pos": "noun",
+          "translation_fr": "hyperinflation",
+          "definition_en": "Extremely fast inflation, often over 50% a month.",
+          "explanation_fr": "L'« hyperinflation » est une hausse des prix extrêmement rapide : la monnaie perd sa valeur en quelques semaines.",
+          "example_en": "Hyperinflation destroyed people's savings.",
+          "example_fr": "L'hyperinflation a détruit l'épargne des gens."
+        },
+        {
+          "term": "price stability",
+          "pos": "noun",
+          "translation_fr": "stabilité des prix",
+          "definition_en": "When prices rise only slowly and predictably.",
+          "explanation_fr": "La « price stability » est l'objectif principal de la BCEAO : une inflation faible et prévisible.",
+          "example_en": "The main goal of the central bank is price stability.",
+          "example_fr": "L'objectif principal de la banque centrale est la stabilité des prix."
+        },
+        {
+          "term": "real wage",
+          "pos": "noun",
+          "translation_fr": "salaire réel",
+          "definition_en": "A wage measured by what it can buy after inflation.",
+          "explanation_fr": "Le « real wage » est le salaire corrigé de l'inflation : si les prix montent plus vite que le salaire, le salaire réel baisse.",
+          "example_en": "Her real wage fell because prices rose faster.",
+          "example_fr": "Son salaire réel a baissé car les prix ont monté plus vite."
+        },
+        {
+          "term": "nominal",
+          "pos": "adjective",
+          "translation_fr": "nominal",
+          "definition_en": "Measured in current money, without adjusting for inflation.",
+          "explanation_fr": "Une valeur « nominal » est en monnaie courante, sans tenir compte de l'inflation (contraire de « real »).",
+          "example_en": "Nominal growth hides the effect of inflation.",
+          "example_fr": "La croissance nominale cache l'effet de l'inflation."
+        },
+        {
+          "term": "shortage",
+          "pos": "noun",
+          "translation_fr": "pénurie",
+          "definition_en": "When there is not enough of a product.",
+          "explanation_fr": "Une « shortage » est une pénurie : l'offre ne suffit pas, les prix montent.",
+          "example_en": "A fuel shortage pushed transport prices up.",
+          "example_fr": "Une pénurie de carburant a fait grimper les prix du transport."
+        },
+        {
+          "term": "price control",
+          "pos": "noun",
+          "translation_fr": "contrôle des prix",
+          "definition_en": "A government rule that limits prices.",
+          "explanation_fr": "Le « price control » fixe un prix maximum (pain, carburant) ; il protège les ménages mais peut créer des pénuries.",
+          "example_en": "The government introduced a price control on bread.",
+          "example_fr": "Le gouvernement a instauré un contrôle des prix du pain."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Prices rose faster than wages",
+          "fr": "Les prix ont augmenté plus vite que les salaires"
+        },
+        {
+          "en": "Inflation reduces the value of money",
+          "fr": "L'inflation réduit la valeur de l'argent"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Economics seminar",
+          "lines": [
+            {
+              "speaker": "Professor",
+              "text": "My salary rose by 3%, but inflation was 6%. Am I richer?"
+            }
+          ],
+          "options": [
+            "No, your real wage fell by about 3% because prices rose faster.",
+            "Yes, you earn more money.",
+            "Inflation has no effect on salaries."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Your real wage fell by about 3% » = « Ton salaire réel a baissé d'environ 3 % ». C'est le pouvoir d'achat qui compte, pas le montant nominal."
+        }
+      ]
+    },
+    {
+      "title_en": "Banks & credit",
+      "terms": [
+        {
+          "term": "commercial bank",
+          "pos": "noun",
+          "translation_fr": "banque commerciale",
+          "definition_en": "A bank that takes deposits and lends to people and firms.",
+          "explanation_fr": "Une « commercial bank » reçoit l'épargne et prête aux ménages et aux entreprises.",
+          "example_en": "A commercial bank gave us a loan for the truck.",
+          "example_fr": "Une banque commerciale nous a prêté pour le camion."
+        },
+        {
+          "term": "lending",
+          "pos": "noun",
+          "translation_fr": "prêt (activité de crédit)",
+          "definition_en": "Giving money that must be paid back with interest.",
+          "explanation_fr": "Le « lending » est l'activité de prêt des banques.",
+          "example_en": "Bank lending to farmers is still low.",
+          "example_fr": "Les prêts bancaires aux agriculteurs restent faibles."
+        },
+        {
+          "term": "borrower",
+          "pos": "noun",
+          "translation_fr": "emprunteur",
+          "definition_en": "A person or firm that borrows money.",
+          "explanation_fr": "Le « borrower » est celui qui emprunte.",
+          "example_en": "The borrower must repay within two years.",
+          "example_fr": "L'emprunteur doit rembourser en deux ans."
+        },
+        {
+          "term": "lender",
+          "pos": "noun",
+          "translation_fr": "prêteur",
+          "definition_en": "A person or institution that lends money.",
+          "explanation_fr": "Le « lender » est celui qui prête (banque, institution de microfinance).",
+          "example_en": "The lender asked for a guarantee.",
+          "example_fr": "Le prêteur a demandé une garantie."
+        },
+        {
+          "term": "deposit",
+          "pos": "noun",
+          "translation_fr": "dépôt (bancaire)",
+          "definition_en": "Money placed in a bank account.",
+          "explanation_fr": "Un « deposit » est de l'argent déposé à la banque ; les dépôts permettent aux banques de prêter.",
+          "example_en": "Each deposit is protected up to a limit.",
+          "example_fr": "Chaque dépôt est protégé jusqu'à un plafond."
+        },
+        {
+          "term": "credit rating",
+          "pos": "noun",
+          "translation_fr": "note de crédit (notation)",
+          "definition_en": "A score that shows how likely a borrower is to repay.",
+          "explanation_fr": "La « credit rating » note la capacité d'un emprunteur (entreprise ou État) à rembourser ; une bonne note fait baisser les taux.",
+          "example_en": "A better credit rating lowers the cost of borrowing.",
+          "example_fr": "Une meilleure note de crédit réduit le coût de l'emprunt."
+        },
+        {
+          "term": "default",
+          "pos": "noun / verb",
+          "translation_fr": "défaut de paiement",
+          "definition_en": "Failing to repay a loan.",
+          "explanation_fr": "Le « default » est le défaut de paiement : l'emprunteur ne rembourse pas.",
+          "example_en": "The risk of default is high for new businesses.",
+          "example_fr": "Le risque de défaut est élevé pour les nouvelles entreprises."
+        },
+        {
+          "term": "collateral",
+          "pos": "noun",
+          "translation_fr": "garantie (nantissement)",
+          "definition_en": "Property promised to a lender if a loan is not repaid.",
+          "explanation_fr": "Le « collateral » est un bien donné en garantie (terrain, véhicule) ; son absence bloque l'accès au crédit de nombreux jeunes.",
+          "example_en": "Young entrepreneurs often lack collateral.",
+          "example_fr": "Les jeunes entrepreneurs manquent souvent de garanties."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Banks lend the money people deposit",
+          "fr": "Les banques prêtent l'argent que les gens déposent"
+        },
+        {
+          "en": "It is hard to borrow without a guarantee",
+          "fr": "Il est difficile d'emprunter sans garantie"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Bank appointment",
+          "lines": [
+            { "speaker": "Banker", "text": "What collateral can you offer for this loan?" }
+          ],
+          "options": [
+            "I have no land, but I can show three years of sales and a guarantee from my cooperative.",
+            "Nothing, just trust me.",
+            "I don't want to repay."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« I can show three years of sales and a guarantee from my cooperative » = « Je peux montrer trois ans de ventes et une garantie de ma coopérative ». On rassure le prêteur avec des preuves."
+        }
+      ]
+    },
+    {
+      "title_en": "Currencies & exchange",
+      "terms": [
+        {
+          "term": "CFA franc",
+          "pos": "noun",
+          "translation_fr": "franc CFA",
+          "definition_en": "The currency used in many West and Central African countries.",
+          "explanation_fr": "Le « CFA franc » est la monnaie commune de l'UEMOA (Afrique de l'Ouest) et de la CEMAC (Afrique centrale), arrimée à l'euro.",
+          "example_en": "Togo uses the CFA franc.",
+          "example_fr": "Le Togo utilise le franc CFA."
+        },
+        {
+          "term": "devaluation",
+          "pos": "noun",
+          "translation_fr": "dévaluation",
+          "definition_en": "An official decision to lower the value of a currency.",
+          "explanation_fr": "La « devaluation » baisse officiellement la valeur de la monnaie : les exportations deviennent moins chères, les importations plus chères.",
+          "example_en": "The 1994 devaluation doubled import prices.",
+          "example_fr": "La dévaluation de 1994 a doublé le prix des importations."
+        },
+        {
+          "term": "foreign currency",
+          "pos": "noun",
+          "translation_fr": "devise étrangère",
+          "definition_en": "Money from another country, like dollars or euros.",
+          "explanation_fr": "Une « foreign currency » est une monnaie étrangère (dollar, euro, naira).",
+          "example_en": "Importers need foreign currency to pay suppliers.",
+          "example_fr": "Les importateurs ont besoin de devises pour payer leurs fournisseurs."
+        },
+        {
+          "term": "foreign reserves",
+          "pos": "noun (plural)",
+          "translation_fr": "réserves de change",
+          "definition_en": "Foreign money and gold held by a central bank.",
+          "explanation_fr": "Les « foreign reserves » sont les devises et l'or détenus par la banque centrale pour défendre la monnaie et payer les importations.",
+          "example_en": "Foreign reserves cover five months of imports.",
+          "example_fr": "Les réserves de change couvrent cinq mois d'importations."
+        },
+        {
+          "term": "fixed exchange rate",
+          "pos": "noun",
+          "translation_fr": "taux de change fixe",
+          "definition_en": "An exchange rate kept at the same level against another currency.",
+          "explanation_fr": "Un « fixed exchange rate » reste stable face à une autre monnaie : 1 euro = 655,957 francs CFA.",
+          "example_en": "A fixed exchange rate reduces uncertainty for traders.",
+          "example_fr": "Un taux de change fixe réduit l'incertitude pour les commerçants."
+        },
+        {
+          "term": "floating exchange rate",
+          "pos": "noun",
+          "translation_fr": "taux de change flottant",
+          "definition_en": "An exchange rate set by supply and demand on the market.",
+          "explanation_fr": "Un « floating exchange rate » varie librement selon l'offre et la demande (cas du naira ou du cedi).",
+          "example_en": "Ghana has a floating exchange rate.",
+          "example_fr": "Le Ghana a un taux de change flottant."
+        },
+        {
+          "term": "appreciation",
+          "pos": "noun",
+          "translation_fr": "appréciation (hausse de la monnaie)",
+          "definition_en": "An increase in the value of a currency.",
+          "explanation_fr": "L'« appreciation » est la hausse de valeur d'une monnaie : on importe moins cher, mais on exporte plus difficilement.",
+          "example_en": "The appreciation of the euro made our exports more expensive.",
+          "example_fr": "L'appréciation de l'euro a rendu nos exportations plus chères."
+        },
+        {
+          "term": "currency union",
+          "pos": "noun",
+          "translation_fr": "union monétaire",
+          "definition_en": "A group of countries sharing one currency.",
+          "explanation_fr": "Une « currency union » rassemble des pays qui partagent une monnaie (UEMOA, zone euro) ; le projet d'« eco » vise la CEDEAO.",
+          "example_en": "WAEMU is a currency union of eight countries.",
+          "example_fr": "L'UEMOA est une union monétaire de huit pays."
+        }
+      ],
+      "sentences": [
+        { "en": "The franc is linked to the euro", "fr": "Le franc est lié à l'euro" },
+        {
+          "en": "Imports cost more after a devaluation",
+          "fr": "Les importations coûtent plus cher après une dévaluation"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Business meeting",
+          "lines": [
+            {
+              "speaker": "Importer",
+              "text": "We buy our machines in dollars. What is our main risk?"
+            }
+          ],
+          "options": [
+            "The exchange rate risk: if the dollar rises, our machines will cost more in CFA francs.",
+            "There is no risk with foreign currency.",
+            "The weather."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« If the dollar rises, our machines will cost more in CFA francs » = « Si le dollar monte, nos machines coûteront plus cher en francs CFA ». C'est le risque de change."
+        }
+      ]
+    }
+  ]
+}

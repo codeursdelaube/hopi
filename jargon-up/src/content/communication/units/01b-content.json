@@ -1,0 +1,294 @@
+{
+  "level": "A2",
+  "title_en": "Creating content",
+  "title_fr": "Créer du contenu",
+  "lessons": [
+    {
+      "title_en": "Photos & videos",
+      "terms": [
+        {
+          "term": "caption",
+          "pos": "noun",
+          "translation_fr": "légende",
+          "definition_en": "The short text under a photo or video.",
+          "explanation_fr": "La « caption » est la légende d'une photo ou d'une vidéo sur les réseaux.",
+          "example_en": "Write a short caption under the photo.",
+          "example_fr": "Écris une courte légende sous la photo."
+        },
+        {
+          "term": "thumbnail",
+          "pos": "noun",
+          "translation_fr": "miniature",
+          "definition_en": "A small picture that shows what a video is about.",
+          "explanation_fr": "La « thumbnail » est l'image miniature d'une vidéo ; elle décide souvent si on clique.",
+          "example_en": "A bright thumbnail gets more views.",
+          "example_fr": "Une miniature lumineuse obtient plus de vues."
+        },
+        {
+          "term": "video clip",
+          "pos": "noun",
+          "translation_fr": "extrait vidéo (clip)",
+          "definition_en": "A short piece of video.",
+          "explanation_fr": "Un « video clip » est une courte vidéo, idéale pour les réseaux sociaux.",
+          "example_en": "Share a thirty-second video clip of the event.",
+          "example_fr": "Partage un extrait vidéo de trente secondes de l'événement."
+        },
+        {
+          "term": "live stream",
+          "pos": "noun / verb",
+          "translation_fr": "direct (diffusion en direct)",
+          "definition_en": "A video broadcast in real time on the internet.",
+          "explanation_fr": "Un « live stream » est une vidéo diffusée en direct (Facebook Live, TikTok Live).",
+          "example_en": "We will do a live stream of the opening.",
+          "example_fr": "Nous ferons un direct de l'inauguration."
+        },
+        {
+          "term": "story",
+          "pos": "noun",
+          "translation_fr": "story (publication éphémère)",
+          "definition_en": "A short post that disappears after 24 hours.",
+          "explanation_fr": "Une « story » est une publication qui disparaît au bout de 24 h (Instagram, WhatsApp).",
+          "example_en": "Post a story to show the new menu.",
+          "example_fr": "Publie une story pour montrer le nouveau menu."
+        },
+        {
+          "term": "edit",
+          "pos": "verb",
+          "translation_fr": "monter (modifier)",
+          "definition_en": "To change and improve a video, photo or text.",
+          "explanation_fr": "« To edit » = modifier, monter une vidéo ou retoucher un texte.",
+          "example_en": "I need one hour to edit the video.",
+          "example_fr": "J'ai besoin d'une heure pour monter la vidéo."
+        },
+        {
+          "term": "subtitles",
+          "pos": "noun (plural)",
+          "translation_fr": "sous-titres",
+          "definition_en": "Text at the bottom of a video that shows what people say.",
+          "explanation_fr": "Les « subtitles » sont les sous-titres ; beaucoup regardent les vidéos sans le son.",
+          "example_en": "Add subtitles because many people watch without sound.",
+          "example_fr": "Ajoute des sous-titres car beaucoup regardent sans le son."
+        },
+        {
+          "term": "footage",
+          "pos": "noun",
+          "translation_fr": "images (séquences filmées)",
+          "definition_en": "Raw video recorded with a camera.",
+          "explanation_fr": "Le « footage » désigne les images filmées, avant le montage.",
+          "example_en": "We have two hours of footage from the event.",
+          "example_fr": "Nous avons deux heures d'images de l'événement."
+        }
+      ],
+      "sentences": [
+        { "en": "Add subtitles to the video", "fr": "Ajoute des sous-titres à la vidéo" },
+        { "en": "We will go live at six", "fr": "Nous serons en direct à six heures" }
+      ],
+      "dialogues": [
+        {
+          "context": "Content team",
+          "lines": [{ "speaker": "Manager", "text": "Our videos have few views. Any ideas?" }],
+          "options": [
+            "Let's make shorter clips, add subtitles and use a better thumbnail.",
+            "Let's make the videos one hour long.",
+            "Let's stop posting."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's make shorter clips, add subtitles and use a better thumbnail » = « Faisons des clips plus courts, ajoutons des sous-titres et une meilleure miniature »."
+        }
+      ]
+    },
+    {
+      "title_en": "Writing for the web",
+      "terms": [
+        {
+          "term": "blog post",
+          "pos": "noun",
+          "translation_fr": "article de blog",
+          "definition_en": "An article published on a blog.",
+          "explanation_fr": "Un « blog post » est un article publié sur un blog.",
+          "example_en": "Our latest blog post explains the new service.",
+          "example_fr": "Notre dernier article de blog explique le nouveau service."
+        },
+        {
+          "term": "article",
+          "pos": "noun",
+          "translation_fr": "article",
+          "definition_en": "A piece of writing in a newspaper, magazine or website.",
+          "explanation_fr": "Un « article » est un texte publié dans la presse ou en ligne.",
+          "example_en": "The article was shared a thousand times.",
+          "example_fr": "L'article a été partagé mille fois."
+        },
+        {
+          "term": "website",
+          "pos": "noun",
+          "translation_fr": "site web",
+          "definition_en": "A group of pages on the internet.",
+          "explanation_fr": "Un « website » est un site internet.",
+          "example_en": "Update the prices on the website.",
+          "example_fr": "Mets à jour les prix sur le site web."
+        },
+        {
+          "term": "link",
+          "pos": "noun",
+          "translation_fr": "lien",
+          "definition_en": "Text or an image you click to go to another page.",
+          "explanation_fr": "Un « link » est un lien cliquable vers une autre page.",
+          "example_en": "Put the link in the bio.",
+          "example_fr": "Mets le lien dans la bio."
+        },
+        {
+          "term": "comment",
+          "pos": "noun / verb",
+          "translation_fr": "commentaire",
+          "definition_en": "A reaction written under a post.",
+          "explanation_fr": "Un « comment » est un commentaire laissé sous une publication.",
+          "example_en": "Answer every comment within a day.",
+          "example_fr": "Réponds à chaque commentaire dans la journée."
+        },
+        {
+          "term": "share",
+          "pos": "verb / noun",
+          "translation_fr": "partager / partage",
+          "definition_en": "To send a post to other people.",
+          "explanation_fr": "« To share » = partager ; « a share » = un partage.",
+          "example_en": "Ask your friends to share the post.",
+          "example_fr": "Demande à tes amis de partager la publication."
+        },
+        {
+          "term": "like",
+          "pos": "noun / verb",
+          "translation_fr": "mention « j'aime »",
+          "definition_en": "A click to show you enjoy a post.",
+          "explanation_fr": "Un « like » est un « j'aime » sur une publication.",
+          "example_en": "Every like helps the post reach more people.",
+          "example_fr": "Chaque « j'aime » aide la publication à toucher plus de monde."
+        },
+        {
+          "term": "tag",
+          "pos": "verb / noun",
+          "translation_fr": "identifier (mentionner)",
+          "definition_en": "To add someone's name to a post so they see it.",
+          "explanation_fr": "« To tag » quelqu'un, c'est l'identifier dans une publication pour qu'il la voie.",
+          "example_en": "Tag our partners in the photo.",
+          "example_fr": "Identifie nos partenaires sur la photo."
+        }
+      ],
+      "sentences": [
+        { "en": "Click the link to read more", "fr": "Clique sur le lien pour en savoir plus" },
+        { "en": "Thank you for sharing our post", "fr": "Merci d'avoir partagé notre publication" }
+      ],
+      "dialogues": [
+        {
+          "context": "Social media",
+          "lines": [{ "speaker": "Customer comment", "text": "Where can I buy your products?" }],
+          "options": [
+            "Thanks for your question! Here is the link to our shop and our address.",
+            "Ignore the comment.",
+            "Delete the comment."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Here is the link to our shop » = « Voici le lien de notre boutique ». On répond vite et utilement aux commentaires."
+        }
+      ]
+    },
+    {
+      "title_en": "Visual design",
+      "terms": [
+        {
+          "term": "poster",
+          "pos": "noun",
+          "translation_fr": "affiche",
+          "definition_en": "A large printed picture or notice put on a wall.",
+          "explanation_fr": "Un « poster » est une affiche.",
+          "example_en": "Print the poster in A3 size.",
+          "example_fr": "Imprime l'affiche en format A3."
+        },
+        {
+          "term": "flyer",
+          "pos": "noun",
+          "translation_fr": "prospectus (flyer)",
+          "definition_en": "A small printed sheet given to people to advertise something.",
+          "explanation_fr": "Un « flyer » est un prospectus distribué à la main.",
+          "example_en": "We gave a flyer to every student.",
+          "example_fr": "Nous avons donné un prospectus à chaque étudiant."
+        },
+        {
+          "term": "infographic",
+          "pos": "noun",
+          "translation_fr": "infographie",
+          "definition_en": "A picture that explains information with icons and numbers.",
+          "explanation_fr": "Une « infographic » explique des chiffres ou des étapes avec des images simples.",
+          "example_en": "This infographic explains the results clearly.",
+          "example_fr": "Cette infographie explique clairement les résultats."
+        },
+        {
+          "term": "template",
+          "pos": "noun",
+          "translation_fr": "modèle (gabarit)",
+          "definition_en": "A ready design you can reuse and change.",
+          "explanation_fr": "Un « template » est un modèle prêt à l'emploi (Canva, PowerPoint).",
+          "example_en": "Use the company template for every post.",
+          "example_fr": "Utilise le modèle de l'entreprise pour chaque publication."
+        },
+        {
+          "term": "font",
+          "pos": "noun",
+          "translation_fr": "police (de caractères)",
+          "definition_en": "A style of letters.",
+          "explanation_fr": "La « font » est la police d'écriture ; deux polices maximum pour rester lisible.",
+          "example_en": "This font is hard to read on a phone.",
+          "example_fr": "Cette police est difficile à lire sur un téléphone."
+        },
+        {
+          "term": "colour palette",
+          "pos": "noun",
+          "translation_fr": "palette de couleurs",
+          "definition_en": "The set of colours used in a design.",
+          "explanation_fr": "La « colour palette » est l'ensemble des couleurs utilisées, pour que tout soit cohérent.",
+          "example_en": "Stick to our colour palette.",
+          "example_fr": "Respecte notre palette de couleurs."
+        },
+        {
+          "term": "icon",
+          "pos": "noun",
+          "translation_fr": "icône",
+          "definition_en": "A small simple picture that represents something.",
+          "explanation_fr": "Une « icon » est un petit pictogramme (téléphone, e-mail, panier).",
+          "example_en": "Add a phone icon next to the number.",
+          "example_fr": "Ajoute une icône de téléphone à côté du numéro."
+        },
+        {
+          "term": "image",
+          "pos": "noun",
+          "translation_fr": "image (visuel)",
+          "definition_en": "A picture or photo used in a design.",
+          "explanation_fr": "Une « image » est un visuel ; vérifie toujours que tu as le droit de l'utiliser.",
+          "example_en": "Use only an image we are allowed to use.",
+          "example_fr": "N'utilise qu'une image que nous avons le droit d'utiliser."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "The poster needs a bigger title",
+          "fr": "L'affiche a besoin d'un titre plus grand"
+        },
+        { "en": "Use the same colours everywhere", "fr": "Utilise les mêmes couleurs partout" }
+      ],
+      "dialogues": [
+        {
+          "context": "Design review",
+          "lines": [
+            { "speaker": "Designer", "text": "I used six different fonts on the flyer. Is it OK?" }
+          ],
+          "options": [
+            "It's a bit busy. Let's keep two fonts and our colour palette.",
+            "Use even more fonts.",
+            "Fonts don't matter."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's keep two fonts and our colour palette » = « Gardons deux polices et notre palette de couleurs ». Moins de polices = plus lisible et plus professionnel."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "level": "B1",
+  "title_en": "Criminal procedure",
+  "title_fr": "La procédure pénale",
+  "lessons": [
+    {
+      "title_en": "The investigation",
+      "terms": [
+        {
+          "term": "investigation",
+          "pos": "noun",
+          "translation_fr": "enquête",
+          "definition_en": "An official search for facts about a crime.",
+          "explanation_fr": "L'« investigation » est l'enquête menée par la police ou un juge pour établir les faits.",
+          "example_en": "The police opened an investigation into the robbery.",
+          "example_fr": "La police a ouvert une enquête sur le vol à main armée."
+        },
+        {
+          "term": "police report",
+          "pos": "noun",
+          "translation_fr": "procès-verbal (déclaration à la police)",
+          "definition_en": "An official written record of a crime made by the police.",
+          "explanation_fr": "Le « police report » est le document officiel où la police enregistre les faits déclarés.",
+          "example_en": "The insurance company asked for the police report.",
+          "example_fr": "L'assurance a demandé le procès-verbal de police."
+        },
+        {
+          "term": "search warrant",
+          "pos": "noun",
+          "translation_fr": "mandat de perquisition",
+          "definition_en": "A document from a judge that allows police to search a place.",
+          "explanation_fr": "Le « search warrant » autorise la police à fouiller un lieu ; sans lui, la fouille peut être illégale.",
+          "example_en": "The officers had a search warrant for the house.",
+          "example_fr": "Les policiers avaient un mandat de perquisition pour la maison."
+        },
+        {
+          "term": "police custody",
+          "pos": "noun",
+          "translation_fr": "garde à vue",
+          "definition_en": "Being held by the police for questioning.",
+          "explanation_fr": "La « police custody » est la garde à vue : la personne est retenue pour être interrogée, avec une durée limitée par la loi.",
+          "example_en": "He spent one night in police custody.",
+          "example_fr": "Il a passé une nuit en garde à vue."
+        },
+        {
+          "term": "interrogation",
+          "pos": "noun",
+          "translation_fr": "interrogatoire",
+          "definition_en": "Formal questioning of a suspect.",
+          "explanation_fr": "L'« interrogation » est l'interrogatoire d'un suspect ; il a le droit d'être assisté d'un avocat.",
+          "example_en": "His lawyer was present during the interrogation.",
+          "example_fr": "Son avocat était présent pendant l'interrogatoire."
+        },
+        {
+          "term": "forensic",
+          "pos": "adjective",
+          "translation_fr": "médico-légal (scientifique)",
+          "definition_en": "Using science to investigate crimes.",
+          "explanation_fr": "« Forensic » désigne la police scientifique : empreintes, ADN, analyses.",
+          "example_en": "Forensic tests found his fingerprints.",
+          "example_fr": "Les analyses de la police scientifique ont trouvé ses empreintes."
+        },
+        {
+          "term": "charge",
+          "pos": "verb / noun",
+          "translation_fr": "inculper / chef d'accusation",
+          "definition_en": "To accuse someone officially of a crime.",
+          "explanation_fr": "« To charge » quelqu'un, c'est l'accuser officiellement ; « a charge » = un chef d'accusation.",
+          "example_en": "The police decided to charge him with theft.",
+          "example_fr": "La police a décidé de l'inculper de vol."
+        },
+        {
+          "term": "alibi",
+          "pos": "noun",
+          "translation_fr": "alibi",
+          "definition_en": "Proof that a person was somewhere else during a crime.",
+          "explanation_fr": "Un « alibi » prouve que la personne se trouvait ailleurs au moment des faits.",
+          "example_en": "Her colleagues confirmed her alibi.",
+          "example_fr": "Ses collègues ont confirmé son alibi."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "You have the right to remain silent",
+          "fr": "Vous avez le droit de garder le silence"
+        },
+        { "en": "I want to speak to my lawyer", "fr": "Je veux parler à mon avocat" }
+      ],
+      "dialogues": [
+        {
+          "context": "Police station",
+          "lines": [
+            {
+              "speaker": "Officer",
+              "text": "You are in police custody. Do you want to answer our questions now?"
+            }
+          ],
+          "options": [
+            "I would like to speak to my lawyer before answering any questions.",
+            "Yes, I'll sign anything.",
+            "I'll run away."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« I would like to speak to my lawyer before answering any questions » = « Je souhaite parler à mon avocat avant de répondre ». C'est un droit fondamental en garde à vue."
+        }
+      ]
+    },
+    {
+      "title_en": "Prosecution & defence",
+      "terms": [
+        {
+          "term": "prosecutor",
+          "pos": "noun",
+          "translation_fr": "procureur",
+          "definition_en": "The lawyer who accuses a person in a criminal case for the state.",
+          "explanation_fr": "Le « prosecutor » est le procureur : il représente l'État et soutient l'accusation.",
+          "example_en": "The prosecutor asked for five years in prison.",
+          "example_fr": "Le procureur a requis cinq ans de prison."
+        },
+        {
+          "term": "defence lawyer",
+          "pos": "noun",
+          "translation_fr": "avocat de la défense",
+          "definition_en": "The lawyer who defends the accused person.",
+          "explanation_fr": "Le « defence lawyer » défend la personne poursuivie.",
+          "example_en": "The defence lawyer asked for more time.",
+          "example_fr": "L'avocat de la défense a demandé plus de temps."
+        },
+        {
+          "term": "accused",
+          "pos": "noun",
+          "translation_fr": "accusé (prévenu)",
+          "definition_en": "The person officially accused of a crime.",
+          "explanation_fr": "« The accused » est la personne poursuivie devant le tribunal pénal.",
+          "example_en": "The accused denied all the facts.",
+          "example_fr": "L'accusé a nié tous les faits."
+        },
+        {
+          "term": "indictment",
+          "pos": "noun",
+          "translation_fr": "acte d'accusation",
+          "definition_en": "A formal document listing the crimes someone is accused of.",
+          "explanation_fr": "L'« indictment » est l'acte officiel qui liste les accusations (le « c » ne se prononce pas : « in-dite-ment »).",
+          "example_en": "The indictment lists three crimes.",
+          "example_fr": "L'acte d'accusation énumère trois infractions."
+        },
+        {
+          "term": "plea",
+          "pos": "noun",
+          "translation_fr": "déclaration (de culpabilité ou d'innocence)",
+          "definition_en": "What the accused says in court: guilty or not guilty.",
+          "explanation_fr": "Le « plea » est la réponse de l'accusé : « guilty » (coupable) ou « not guilty » (non coupable).",
+          "example_en": "He entered a plea of not guilty.",
+          "example_fr": "Il a plaidé non coupable."
+        },
+        {
+          "term": "bail",
+          "pos": "noun",
+          "translation_fr": "liberté sous caution (caution)",
+          "definition_en": "Money paid so an accused person can stay free until the trial.",
+          "explanation_fr": "Le « bail » est la caution qui permet à l'accusé de rester libre jusqu'au procès.",
+          "example_en": "The judge released him on bail.",
+          "example_fr": "Le juge l'a libéré sous caution."
+        },
+        {
+          "term": "legal aid",
+          "pos": "noun",
+          "translation_fr": "aide juridictionnelle",
+          "definition_en": "Free or cheap legal help for people with little money.",
+          "explanation_fr": "Le « legal aid » permet à l'État de payer tout ou partie de l'avocat des personnes modestes.",
+          "example_en": "She got legal aid to pay her lawyer.",
+          "example_fr": "Elle a obtenu l'aide juridictionnelle pour payer son avocat."
+        },
+        {
+          "term": "presumption of innocence",
+          "pos": "noun",
+          "translation_fr": "présomption d'innocence",
+          "definition_en": "The principle that a person is innocent until proven guilty.",
+          "explanation_fr": "La « presumption of innocence » : toute personne est innocente tant que sa culpabilité n'est pas prouvée.",
+          "example_en": "The media must respect the presumption of innocence.",
+          "example_fr": "Les médias doivent respecter la présomption d'innocence."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "He is innocent until proven guilty",
+          "fr": "Il est innocent jusqu'à preuve du contraire"
+        },
+        { "en": "The judge released her on bail", "fr": "Le juge l'a libérée sous caution" }
+      ],
+      "dialogues": [
+        {
+          "context": "Newsroom",
+          "lines": [
+            {
+              "speaker": "Editor",
+              "text": "Can we write that the businessman is a thief? He was arrested yesterday."
+            }
+          ],
+          "options": [
+            "No, he is only accused. We must respect the presumption of innocence and say \"suspected\".",
+            "Yes, an arrest proves guilt.",
+            "Yes, and publish his home address."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« He is only accused. We must respect the presumption of innocence » = « Il est seulement accusé. Nous devons respecter la présomption d'innocence »."
+        }
+      ]
+    },
+    {
+      "title_en": "Trial & punishment",
+      "terms": [
+        {
+          "term": "trial",
+          "pos": "noun",
+          "translation_fr": "procès",
+          "definition_en": "The process in court to decide if someone is guilty.",
+          "explanation_fr": "Le « trial » est le procès où l'on juge l'accusé.",
+          "example_en": "The trial will start in March.",
+          "example_fr": "Le procès commencera en mars."
+        },
+        {
+          "term": "jury",
+          "pos": "noun",
+          "translation_fr": "jury",
+          "definition_en": "A group of citizens who decide the verdict in some trials.",
+          "explanation_fr": "Le « jury » est un groupe de citoyens qui décide de la culpabilité dans certains procès (cours d'assises).",
+          "example_en": "The jury found him not guilty.",
+          "example_fr": "Le jury l'a déclaré non coupable."
+        },
+        {
+          "term": "acquittal",
+          "pos": "noun",
+          "translation_fr": "acquittement",
+          "definition_en": "A court decision that the accused is not guilty.",
+          "explanation_fr": "L'« acquittal » est l'acquittement : l'accusé est déclaré non coupable et libéré.",
+          "example_en": "The lack of evidence led to an acquittal.",
+          "example_fr": "Le manque de preuves a conduit à un acquittement."
+        },
+        {
+          "term": "conviction",
+          "pos": "noun",
+          "translation_fr": "condamnation",
+          "definition_en": "A court decision that someone is guilty.",
+          "explanation_fr": "La « conviction » est la condamnation (attention : faux ami, ce n'est pas une « conviction » au sens d'opinion).",
+          "example_en": "His conviction was confirmed on appeal.",
+          "example_fr": "Sa condamnation a été confirmée en appel."
+        },
+        {
+          "term": "imprisonment",
+          "pos": "noun",
+          "translation_fr": "emprisonnement",
+          "definition_en": "The punishment of being kept in prison.",
+          "explanation_fr": "L'« imprisonment » est la peine de prison.",
+          "example_en": "The crime is punished by five years' imprisonment.",
+          "example_fr": "L'infraction est punie de cinq ans d'emprisonnement."
+        },
+        {
+          "term": "probation",
+          "pos": "noun",
+          "translation_fr": "sursis avec mise à l'épreuve",
+          "definition_en": "Staying free under supervision instead of going to prison.",
+          "explanation_fr": "La « probation » permet au condamné de rester libre sous surveillance, avec des obligations.",
+          "example_en": "She was given two years of probation.",
+          "example_fr": "Elle a été condamnée à deux ans de sursis avec mise à l'épreuve."
+        },
+        {
+          "term": "community service",
+          "pos": "noun",
+          "translation_fr": "travail d'intérêt général",
+          "definition_en": "Unpaid work for the community as a punishment.",
+          "explanation_fr": "Le « community service » est un travail non payé au service de la collectivité, à la place de la prison.",
+          "example_en": "He did a hundred hours of community service.",
+          "example_fr": "Il a effectué cent heures de travail d'intérêt général."
+        },
+        {
+          "term": "criminal record",
+          "pos": "noun",
+          "translation_fr": "casier judiciaire",
+          "definition_en": "An official list of a person's past convictions.",
+          "explanation_fr": "Le « criminal record » est le casier judiciaire ; certains employeurs demandent un extrait vierge.",
+          "example_en": "The bank asked for a clean criminal record.",
+          "example_fr": "La banque a demandé un casier judiciaire vierge."
+        }
+      ],
+      "sentences": [
+        { "en": "The court found her not guilty", "fr": "Le tribunal l'a déclarée non coupable" },
+        { "en": "He has no criminal record", "fr": "Il n'a pas de casier judiciaire" }
+      ],
+      "dialogues": [
+        {
+          "context": "Law class",
+          "lines": [
+            {
+              "speaker": "Student",
+              "text": "Is \"conviction\" the same as \"conviction\" in French?"
+            }
+          ],
+          "options": [
+            "No, it's a false friend: in law, a conviction is a court decision that someone is guilty.",
+            "Yes, it means a strong opinion.",
+            "It means acquittal."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« A conviction is a court decision that someone is guilty » = « Une conviction est une décision de justice déclarant quelqu'un coupable ». Faux ami classique en anglais juridique."
+        }
+      ]
+    }
+  ]
+}

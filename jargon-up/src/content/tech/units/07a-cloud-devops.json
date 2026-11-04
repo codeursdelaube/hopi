@@ -1,0 +1,308 @@
+{
+  "level": "B1",
+  "title_en": "Cloud & DevOps",
+  "title_fr": "Cloud et DevOps",
+  "lessons": [
+    {
+      "title_en": "Cloud services",
+      "terms": [
+        {
+          "term": "cloud computing",
+          "pos": "noun",
+          "translation_fr": "informatique en nuage (cloud)",
+          "definition_en": "Using servers and services over the internet instead of your own machines.",
+          "explanation_fr": "Le « cloud computing » consiste à louer des serveurs et des services sur internet au lieu d'acheter ses propres machines.",
+          "example_en": "Cloud computing reduces the cost of hardware.",
+          "example_fr": "Le cloud réduit le coût du matériel."
+        },
+        {
+          "term": "cloud provider",
+          "pos": "noun",
+          "translation_fr": "fournisseur cloud",
+          "definition_en": "A company that rents servers and services online.",
+          "explanation_fr": "Un « cloud provider » loue des serveurs en ligne : AWS, Google Cloud, Azure…",
+          "example_en": "Our cloud provider has a data centre in Africa.",
+          "example_fr": "Notre fournisseur cloud a un centre de données en Afrique."
+        },
+        {
+          "term": "virtual machine",
+          "pos": "noun",
+          "translation_fr": "machine virtuelle",
+          "definition_en": "A computer that runs as software on a bigger physical server.",
+          "explanation_fr": "Une « virtual machine » est un ordinateur simulé par logiciel ; plusieurs tournent sur un même serveur physique.",
+          "example_en": "We run the database on a virtual machine.",
+          "example_fr": "Nous faisons tourner la base de données sur une machine virtuelle."
+        },
+        {
+          "term": "instance",
+          "pos": "noun",
+          "translation_fr": "instance (serveur cloud)",
+          "definition_en": "One running server in the cloud.",
+          "explanation_fr": "Une « instance » est un serveur cloud en marche ; on peut en ajouter ou en arrêter selon le besoin.",
+          "example_en": "Start a second instance during busy hours.",
+          "example_fr": "Démarre une deuxième instance pendant les heures de pointe."
+        },
+        {
+          "term": "region",
+          "pos": "noun",
+          "translation_fr": "région (zone géographique)",
+          "definition_en": "The place in the world where cloud servers are located.",
+          "explanation_fr": "La « region » est l'endroit où se trouvent les serveurs ; plus elle est proche des utilisateurs, plus c'est rapide.",
+          "example_en": "Choose a region close to your users.",
+          "example_fr": "Choisis une région proche de tes utilisateurs."
+        },
+        {
+          "term": "scalability",
+          "pos": "noun",
+          "translation_fr": "capacité à monter en charge",
+          "definition_en": "The ability to handle more users by adding resources.",
+          "explanation_fr": "La « scalability » est la capacité d'un système à supporter plus d'utilisateurs en ajoutant des ressources.",
+          "example_en": "Scalability matters when the number of users grows fast.",
+          "example_fr": "La montée en charge compte quand le nombre d'utilisateurs augmente vite."
+        },
+        {
+          "term": "SaaS",
+          "pos": "noun (Software as a Service)",
+          "translation_fr": "logiciel en ligne (SaaS)",
+          "definition_en": "Software you use online with a subscription, without installing it.",
+          "explanation_fr": "Un « SaaS » est un logiciel utilisé en ligne par abonnement : Gmail, Slack, Canva…",
+          "example_en": "Many startups sell a SaaS product.",
+          "example_fr": "Beaucoup de startups vendent un produit SaaS."
+        },
+        {
+          "term": "uptime",
+          "pos": "noun",
+          "translation_fr": "disponibilité (temps de fonctionnement)",
+          "definition_en": "The time a service is working and available.",
+          "explanation_fr": "L'« uptime » est le temps pendant lequel le service fonctionne ; 99,9 % d'uptime = moins de 9 h de panne par an.",
+          "example_en": "The provider promises 99.9% uptime.",
+          "example_fr": "Le fournisseur promet 99,9 % de disponibilité."
+        }
+      ],
+      "sentences": [
+        { "en": "Our servers are in the cloud", "fr": "Nos serveurs sont dans le cloud" },
+        {
+          "en": "We can add more servers in minutes",
+          "fr": "Nous pouvons ajouter des serveurs en quelques minutes"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Architecture meeting",
+          "lines": [
+            { "speaker": "CTO", "text": "Next month we expect ten times more users. Are we ready?" }
+          ],
+          "options": [
+            "Yes, we can scale by adding instances automatically.",
+            "No, we will turn off the website.",
+            "Users never grow, don't worry."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« We can scale by adding instances automatically » = « On peut monter en charge en ajoutant des instances automatiquement ». C'est tout l'intérêt du cloud."
+        }
+      ]
+    },
+    {
+      "title_en": "Environments & releases",
+      "terms": [
+        {
+          "term": "container",
+          "pos": "noun",
+          "translation_fr": "conteneur",
+          "definition_en": "A package with an app and everything it needs to run.",
+          "explanation_fr": "Un « container » emballe l'application avec tout ce dont elle a besoin : elle tourne pareil partout (Docker).",
+          "example_en": "Each service runs in its own container.",
+          "example_fr": "Chaque service tourne dans son propre conteneur."
+        },
+        {
+          "term": "environment",
+          "pos": "noun",
+          "translation_fr": "environnement",
+          "definition_en": "A place where the app runs: development, test or production.",
+          "explanation_fr": "Un « environment » est un lieu d'exécution : développement (dev), test (staging) ou production (les vrais utilisateurs).",
+          "example_en": "Never test new code in the live environment.",
+          "example_fr": "Ne teste jamais du nouveau code dans l'environnement en ligne."
+        },
+        {
+          "term": "production",
+          "pos": "noun",
+          "translation_fr": "production (prod)",
+          "definition_en": "The environment used by real customers.",
+          "explanation_fr": "La « production » (ou « prod ») est la version utilisée par les vrais clients : une erreur ici touche tout le monde.",
+          "example_en": "The bug is only in production.",
+          "example_fr": "Le bug n'existe qu'en production."
+        },
+        {
+          "term": "staging",
+          "pos": "noun",
+          "translation_fr": "préproduction",
+          "definition_en": "A copy of production used for final tests.",
+          "explanation_fr": "Le « staging » est une copie de la production où l'on teste une dernière fois avant la mise en ligne.",
+          "example_en": "Check the new feature on staging first.",
+          "example_fr": "Vérifie d'abord la nouvelle fonctionnalité en préproduction."
+        },
+        {
+          "term": "release",
+          "pos": "noun / verb",
+          "translation_fr": "version publiée / publier",
+          "definition_en": "A new version of software made available to users.",
+          "explanation_fr": "Une « release » est une nouvelle version mise à disposition des utilisateurs ; « to release » = la publier.",
+          "example_en": "The next release is planned for Friday.",
+          "example_fr": "La prochaine version est prévue pour vendredi."
+        },
+        {
+          "term": "rollback",
+          "pos": "noun",
+          "translation_fr": "retour en arrière",
+          "definition_en": "Going back to the previous working version.",
+          "explanation_fr": "Un « rollback » remet l'ancienne version qui marchait quand la nouvelle pose problème.",
+          "example_en": "We did a rollback after the payment errors.",
+          "example_fr": "Nous avons fait un retour en arrière après les erreurs de paiement."
+        },
+        {
+          "term": "configuration",
+          "pos": "noun",
+          "translation_fr": "configuration",
+          "definition_en": "The settings that control how an app runs.",
+          "explanation_fr": "La « configuration » regroupe les réglages (adresses, clés, options) qui changent selon l'environnement.",
+          "example_en": "The configuration is different in staging and production.",
+          "example_fr": "La configuration est différente en préproduction et en production."
+        },
+        {
+          "term": "environment variable",
+          "pos": "noun",
+          "translation_fr": "variable d'environnement",
+          "definition_en": "A setting stored outside the code, such as a secret key.",
+          "explanation_fr": "Une « environment variable » garde un réglage hors du code (clé secrète, adresse de base de données) : on ne met jamais un secret dans le code.",
+          "example_en": "Put the API key in an environment variable.",
+          "example_fr": "Mets la clé d'API dans une variable d'environnement."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Test it on staging before production",
+          "fr": "Teste-le en préproduction avant la production"
+        },
+        {
+          "en": "We can roll back in two minutes",
+          "fr": "Nous pouvons revenir en arrière en deux minutes"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Incident call",
+          "lines": [{ "speaker": "Support", "text": "Since the new release, nobody can pay!" }],
+          "options": [
+            "Let's do a rollback now, then we'll fix the bug on staging.",
+            "Let's wait until Monday.",
+            "Let's add a new feature to production."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Let's do a rollback now, then we'll fix the bug on staging » = « Revenons à l'ancienne version tout de suite, puis on corrigera le bug en préproduction ». On répare d'abord pour les clients."
+        }
+      ]
+    },
+    {
+      "title_en": "CI/CD & monitoring",
+      "terms": [
+        {
+          "term": "pipeline",
+          "pos": "noun",
+          "translation_fr": "chaîne automatisée (pipeline)",
+          "definition_en": "Automatic steps that test and deploy code.",
+          "explanation_fr": "Un « pipeline » enchaîne automatiquement des étapes : tests, construction, déploiement.",
+          "example_en": "The pipeline runs after every push.",
+          "example_fr": "La chaîne automatisée se lance après chaque push."
+        },
+        {
+          "term": "build",
+          "pos": "noun / verb",
+          "translation_fr": "compilation (build)",
+          "definition_en": "The process that turns code into a version ready to run.",
+          "explanation_fr": "Le « build » transforme le code source en version prête à être lancée ; « the build failed » = la construction a échoué.",
+          "example_en": "The build failed because of a missing file.",
+          "example_fr": "La compilation a échoué à cause d'un fichier manquant."
+        },
+        {
+          "term": "continuous integration",
+          "pos": "noun (CI)",
+          "translation_fr": "intégration continue",
+          "definition_en": "Merging and testing code automatically many times a day.",
+          "explanation_fr": "La « continuous integration » (CI) teste automatiquement chaque modification dès qu'elle est envoyée.",
+          "example_en": "Continuous integration catches errors early.",
+          "example_fr": "L'intégration continue détecte les erreurs tôt."
+        },
+        {
+          "term": "test suite",
+          "pos": "noun",
+          "translation_fr": "suite de tests",
+          "definition_en": "All the automatic tests of a project.",
+          "explanation_fr": "La « test suite » est l'ensemble des tests automatiques d'un projet.",
+          "example_en": "The full test suite takes four minutes.",
+          "example_fr": "La suite de tests complète prend quatre minutes."
+        },
+        {
+          "term": "monitoring",
+          "pos": "noun",
+          "translation_fr": "supervision (monitoring)",
+          "definition_en": "Watching a system to see if it works well.",
+          "explanation_fr": "Le « monitoring » surveille en continu le système : temps de réponse, erreurs, mémoire…",
+          "example_en": "Our monitoring shows a spike in errors.",
+          "example_fr": "Notre supervision montre un pic d'erreurs."
+        },
+        {
+          "term": "alert",
+          "pos": "noun",
+          "translation_fr": "alerte",
+          "definition_en": "A message sent when something goes wrong.",
+          "explanation_fr": "Une « alert » prévient l'équipe automatiquement quand un problème apparaît.",
+          "example_en": "I received an alert at three in the morning.",
+          "example_fr": "J'ai reçu une alerte à trois heures du matin."
+        },
+        {
+          "term": "incident",
+          "pos": "noun",
+          "translation_fr": "incident",
+          "definition_en": "An event that breaks or slows down a service.",
+          "explanation_fr": "Un « incident » est un problème qui perturbe le service (panne, lenteur) et qu'il faut traiter vite.",
+          "example_en": "The team wrote a report after the incident.",
+          "example_fr": "L'équipe a rédigé un rapport après l'incident."
+        },
+        {
+          "term": "metrics",
+          "pos": "noun (plural)",
+          "translation_fr": "indicateurs (métriques)",
+          "definition_en": "Numbers that measure how a system behaves.",
+          "explanation_fr": "Les « metrics » sont des mesures chiffrées : nombre de requêtes, temps de réponse, taux d'erreurs…",
+          "example_en": "Check the metrics before and after the release.",
+          "example_fr": "Vérifie les indicateurs avant et après la mise en ligne."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "All the tests passed in the pipeline",
+          "fr": "Tous les tests sont passés dans la chaîne automatisée"
+        },
+        {
+          "en": "We got an alert from the monitoring",
+          "fr": "Nous avons reçu une alerte de la supervision"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Code review",
+          "lines": [
+            { "speaker": "Reviewer", "text": "The pipeline is red. Can I merge your pull request?" }
+          ],
+          "options": [
+            "Not yet, I'll fix the failing tests first.",
+            "Yes, a red pipeline is fine.",
+            "Just delete the tests."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Not yet, I'll fix the failing tests first » = « Pas encore, je corrige d'abord les tests qui échouent ». Un pipeline rouge signifie qu'il y a un problème."
+        }
+      ]
+    }
+  ]
+}

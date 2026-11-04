@@ -1,0 +1,313 @@
+{
+  "level": "B1",
+  "title_en": "Costs & pricing",
+  "title_fr": "Coûts et fixation des prix",
+  "lessons": [
+    {
+      "title_en": "Types of costs",
+      "terms": [
+        {
+          "term": "direct cost",
+          "pos": "noun",
+          "translation_fr": "coût direct",
+          "definition_en": "A cost linked to one product, like its raw materials.",
+          "explanation_fr": "Un « direct cost » est lié directement à un produit : matières premières, main-d'œuvre de fabrication.",
+          "example_en": "Flour is a direct cost for a bakery.",
+          "example_fr": "La farine est un coût direct pour une boulangerie."
+        },
+        {
+          "term": "indirect cost",
+          "pos": "noun",
+          "translation_fr": "coût indirect",
+          "definition_en": "A cost shared by several products, like rent.",
+          "explanation_fr": "Un « indirect cost » est commun à plusieurs produits (loyer, électricité) : il faut le répartir.",
+          "example_en": "Rent is an indirect cost for every product.",
+          "example_fr": "Le loyer est un coût indirect pour chaque produit."
+        },
+        {
+          "term": "labour cost",
+          "pos": "noun",
+          "translation_fr": "coût de la main-d'œuvre",
+          "definition_en": "The cost of paying workers, including taxes and benefits.",
+          "explanation_fr": "Le « labour cost » comprend salaires, charges sociales et avantages versés aux travailleurs.",
+          "example_en": "Our labour cost increased by five percent.",
+          "example_fr": "Notre coût de main-d'œuvre a augmenté de cinq pour cent."
+        },
+        {
+          "term": "raw materials",
+          "pos": "noun (plural)",
+          "translation_fr": "matières premières",
+          "definition_en": "Basic materials used to make products.",
+          "explanation_fr": "Les « raw materials » sont les matières de base transformées en produit : coton, cacao, bois…",
+          "example_en": "The price of raw materials changes every month.",
+          "example_fr": "Le prix des matières premières change chaque mois."
+        },
+        {
+          "term": "production cost",
+          "pos": "noun",
+          "translation_fr": "coût de production",
+          "definition_en": "The total cost of making a product.",
+          "explanation_fr": "Le « production cost » additionne tout ce qu'il faut pour fabriquer un produit.",
+          "example_en": "The production cost of one shirt is 2,500 francs.",
+          "example_fr": "Le coût de production d'une chemise est de 2 500 francs."
+        },
+        {
+          "term": "cost centre",
+          "pos": "noun",
+          "translation_fr": "centre de coûts",
+          "definition_en": "A department whose costs are tracked separately.",
+          "explanation_fr": "Un « cost centre » est un service dont on suit les coûts à part (atelier, informatique, RH).",
+          "example_en": "The IT department is a cost centre.",
+          "example_fr": "Le service informatique est un centre de coûts."
+        },
+        {
+          "term": "allocation",
+          "pos": "noun",
+          "translation_fr": "répartition (imputation)",
+          "definition_en": "Sharing indirect costs between products or departments.",
+          "explanation_fr": "L'« allocation » répartit les coûts indirects entre les produits selon une clé (heures, surface…).",
+          "example_en": "The allocation of rent is based on floor space.",
+          "example_fr": "La répartition du loyer se fait selon la surface occupée."
+        },
+        {
+          "term": "unit cost",
+          "pos": "noun",
+          "translation_fr": "coût unitaire",
+          "definition_en": "The cost of producing one item.",
+          "explanation_fr": "Le « unit cost » est le coût d'une seule unité : coût total divisé par la quantité produite.",
+          "example_en": "Producing more lowers the unit cost.",
+          "example_fr": "Produire plus fait baisser le coût unitaire."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Rent is shared between all products",
+          "fr": "Le loyer est partagé entre tous les produits"
+        },
+        {
+          "en": "Our main cost is raw materials",
+          "fr": "Notre principal coût est la matière première"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Management meeting",
+          "lines": [
+            { "speaker": "Director", "text": "Why is the unit cost so high for the small orders?" }
+          ],
+          "options": [
+            "Because fixed costs are shared between fewer units.",
+            "Because customers don't like small orders.",
+            "Unit cost doesn't depend on quantity."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Fixed costs are shared between fewer units » = « Les coûts fixes sont partagés entre moins d'unités ». Moins on produit, plus chaque unité coûte cher."
+        }
+      ]
+    },
+    {
+      "title_en": "Setting prices",
+      "terms": [
+        {
+          "term": "selling price",
+          "pos": "noun",
+          "translation_fr": "prix de vente",
+          "definition_en": "The price a customer pays.",
+          "explanation_fr": "Le « selling price » est le prix payé par le client.",
+          "example_en": "The selling price includes VAT.",
+          "example_fr": "Le prix de vente inclut la TVA."
+        },
+        {
+          "term": "cost price",
+          "pos": "noun",
+          "translation_fr": "prix de revient",
+          "definition_en": "The total cost of a product before profit.",
+          "explanation_fr": "Le « cost price » est le prix de revient : ce que le produit coûte à l'entreprise, avant bénéfice.",
+          "example_en": "Never sell below the cost price.",
+          "example_fr": "Ne vends jamais en dessous du prix de revient."
+        },
+        {
+          "term": "markup",
+          "pos": "noun",
+          "translation_fr": "majoration (taux de marque)",
+          "definition_en": "The amount added to the cost to get the selling price.",
+          "explanation_fr": "Le « markup » est le montant (ou pourcentage) ajouté au coût pour obtenir le prix de vente.",
+          "example_en": "We apply a markup of forty percent.",
+          "example_fr": "Nous appliquons une majoration de quarante pour cent."
+        },
+        {
+          "term": "gross margin",
+          "pos": "noun",
+          "translation_fr": "marge brute",
+          "definition_en": "Sales minus the cost of the goods sold.",
+          "explanation_fr": "La « gross margin » est le chiffre d'affaires moins le coût des produits vendus.",
+          "example_en": "Our gross margin improved this year.",
+          "example_fr": "Notre marge brute s'est améliorée cette année."
+        },
+        {
+          "term": "pricing strategy",
+          "pos": "noun",
+          "translation_fr": "stratégie de prix",
+          "definition_en": "The plan used to decide prices.",
+          "explanation_fr": "La « pricing strategy » décide comment fixer les prix : bas pour gagner des clients, premium pour la qualité…",
+          "example_en": "Our pricing strategy targets students.",
+          "example_fr": "Notre stratégie de prix vise les étudiants."
+        },
+        {
+          "term": "price increase",
+          "pos": "noun",
+          "translation_fr": "hausse de prix",
+          "definition_en": "A rise in the price of a product.",
+          "explanation_fr": "Une « price increase » est une augmentation de prix, à annoncer clairement aux clients.",
+          "example_en": "We announced a small price increase in March.",
+          "example_fr": "Nous avons annoncé une petite hausse de prix en mars."
+        },
+        {
+          "term": "rebate",
+          "pos": "noun",
+          "translation_fr": "ristourne",
+          "definition_en": "Money given back to a customer after a purchase.",
+          "explanation_fr": "Une « rebate » est une ristourne versée après l'achat, par exemple pour un gros volume annuel.",
+          "example_en": "Big clients get a rebate at the end of the year.",
+          "example_fr": "Les gros clients reçoivent une ristourne en fin d'année."
+        },
+        {
+          "term": "competitive price",
+          "pos": "noun",
+          "translation_fr": "prix compétitif",
+          "definition_en": "A price that is attractive compared with competitors.",
+          "explanation_fr": "Un « competitive price » est un prix attractif par rapport à la concurrence.",
+          "example_en": "We offer a competitive price with better quality.",
+          "example_fr": "Nous proposons un prix compétitif avec une meilleure qualité."
+        }
+      ],
+      "sentences": [
+        { "en": "The price covers our costs", "fr": "Le prix couvre nos coûts" },
+        { "en": "We cannot sell below cost", "fr": "Nous ne pouvons pas vendre à perte" }
+      ],
+      "dialogues": [
+        {
+          "context": "Sales meeting",
+          "lines": [
+            {
+              "speaker": "Sales manager",
+              "text": "A client wants a fifty percent discount. Should we accept?"
+            }
+          ],
+          "options": [
+            "Only if the price stays above our cost price. Let's check the margin first.",
+            "Yes, always say yes to clients.",
+            "Let's double the price instead."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« Only if the price stays above our cost price » = « Seulement si le prix reste au-dessus de notre prix de revient ». On vérifie la marge avant d'accorder une remise."
+        }
+      ]
+    },
+    {
+      "title_en": "Planning & control",
+      "terms": [
+        {
+          "term": "standard cost",
+          "pos": "noun",
+          "translation_fr": "coût standard (prévu)",
+          "definition_en": "The expected cost of a product, used for comparison.",
+          "explanation_fr": "Le « standard cost » est le coût prévu d'un produit ; on le compare ensuite au coût réel.",
+          "example_en": "The real cost is higher than the standard cost.",
+          "example_fr": "Le coût réel est plus élevé que le coût standard."
+        },
+        {
+          "term": "contribution margin",
+          "pos": "noun",
+          "translation_fr": "marge sur coûts variables",
+          "definition_en": "Sales minus variable costs, used to cover fixed costs.",
+          "explanation_fr": "La « contribution margin » est le chiffre d'affaires moins les coûts variables : elle sert à couvrir les coûts fixes.",
+          "example_en": "Each bag has a contribution margin of 800 francs.",
+          "example_fr": "Chaque sac a une marge sur coûts variables de 800 francs."
+        },
+        {
+          "term": "cost analysis",
+          "pos": "noun",
+          "translation_fr": "analyse des coûts",
+          "definition_en": "A study of costs to find savings or problems.",
+          "explanation_fr": "La « cost analysis » étudie les coûts pour trouver des économies ou des anomalies.",
+          "example_en": "The cost analysis found waste in packaging.",
+          "example_fr": "L'analyse des coûts a trouvé du gaspillage dans l'emballage."
+        },
+        {
+          "term": "profit centre",
+          "pos": "noun",
+          "translation_fr": "centre de profit",
+          "definition_en": "A unit responsible for both its costs and its revenue.",
+          "explanation_fr": "Un « profit centre » gère ses coûts ET ses recettes : une boutique, une agence régionale…",
+          "example_en": "Each shop is a profit centre.",
+          "example_fr": "Chaque boutique est un centre de profit."
+        },
+        {
+          "term": "target",
+          "pos": "noun",
+          "translation_fr": "objectif (cible)",
+          "definition_en": "A result you plan to reach.",
+          "explanation_fr": "Un « target » est un objectif chiffré : « sales target » = objectif de ventes.",
+          "example_en": "We reached our cost target this quarter.",
+          "example_fr": "Nous avons atteint notre objectif de coûts ce trimestre."
+        },
+        {
+          "term": "actual",
+          "pos": "adjective / noun",
+          "translation_fr": "réel (réalisé)",
+          "definition_en": "What really happened, compared with the plan.",
+          "explanation_fr": "« Actual » veut dire réel, réalisé (faux ami : ce n'est pas « actuel ») : « budget vs actual » = prévu contre réalisé.",
+          "example_en": "Compare the budget with the actual figures.",
+          "example_fr": "Compare le budget avec les chiffres réels."
+        },
+        {
+          "term": "operating budget",
+          "pos": "noun",
+          "translation_fr": "budget de fonctionnement",
+          "definition_en": "The plan of income and costs for normal activities.",
+          "explanation_fr": "L'« operating budget » prévoit les recettes et dépenses de l'activité courante pour l'année.",
+          "example_en": "The operating budget is approved in December.",
+          "example_fr": "Le budget de fonctionnement est approuvé en décembre."
+        },
+        {
+          "term": "capacity",
+          "pos": "noun",
+          "translation_fr": "capacité de production",
+          "definition_en": "The maximum amount a business can produce.",
+          "explanation_fr": "La « capacity » est la quantité maximale qu'on peut produire ; travailler à pleine capacité réduit les coûts unitaires.",
+          "example_en": "The factory works at eighty percent of its capacity.",
+          "example_fr": "L'usine tourne à quatre-vingts pour cent de sa capacité."
+        }
+      ],
+      "sentences": [
+        {
+          "en": "Actual costs were above the budget",
+          "fr": "Les coûts réels ont dépassé le budget"
+        },
+        {
+          "en": "Each shop must reach its target",
+          "fr": "Chaque boutique doit atteindre son objectif"
+        }
+      ],
+      "dialogues": [
+        {
+          "context": "Monthly review",
+          "lines": [
+            {
+              "speaker": "CFO",
+              "text": "Actual costs are fifteen percent above the standard cost. Why?"
+            }
+          ],
+          "options": [
+            "The price of raw materials rose. I'll present a cost analysis on Friday.",
+            "Actual costs are always wrong.",
+            "Let's change the standard cost to hide the gap."
+          ],
+          "answerIndex": 0,
+          "explanation_fr": "« I'll present a cost analysis on Friday » = « Je présenterai une analyse des coûts vendredi ». On explique l'écart avec des faits, on ne le cache pas."
+        }
+      ]
+    }
+  ]
+}
