@@ -21,7 +21,28 @@ if (!url || !secretKey) {
   );
 }
 
-const supabase = createClient(url, secretKey, { auth: { persistSession: false } });
+/**
+ * Coupure réseau (« fetch failed ») : on retente jusqu'à 5 fois avant d'abandonner.
+ * Les requêtes de l'import sont rejouables (upsert, mise à jour) ; et l'import entier peut
+ * être relancé sans doublon.
+ */
+async function fetchWithRetry(input: RequestInfo | URL, init?: RequestInit): Promise<Response> {
+  const attempts = 5;
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await fetch(input, init);
+    } catch (error) {
+      if (attempt >= attempts) throw error;
+      console.warn(`  ↻ connexion interrompue, nouvel essai ${attempt}/${attempts - 1}…`);
+      await new Promise((resolve) => setTimeout(resolve, 1000 * attempt));
+    }
+  }
+}
+
+const supabase = createClient(url, secretKey, {
+  auth: { persistSession: false },
+  global: { fetch: fetchWithRetry },
+});
 const contentDir = join(import.meta.dirname, "..", "src", "content");
 
 function check<T>(result: { data: T | null; error: { message: string } | null }, what: string): T {
