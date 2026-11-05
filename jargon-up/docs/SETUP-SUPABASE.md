@@ -120,6 +120,20 @@ Bon à savoir : Apple ne transmet le nom de l'utilisateur qu'à la **première**
 choisir de **masquer son e-mail** (adresse relais `@privaterelay.appleid.com`). Le nom affiché se
 modifie dans _Réglages_.
 
+## 8. « Explique-moi » (explication d'une erreur par l'IA)
+
+Sans clé, le bouton n'apparaît pas et l'explication écrite reste affichée.
+
+1. Appliquer la migration `20261109090000_ai_explanations.sql` (limite quotidienne par élève).
+2. Créer une clé dans [Google AI Studio](https://aistudio.google.com/apikey) et l'ajouter à
+   `.env.local` et à Vercel (_Settings → Environment Variables_) : `GEMINI_API_KEY`, sans préfixe
+   `NEXT_PUBLIC_`. Redéployer.
+
+⚠️ Conditions de l'offre gratuite de Gemini : Google peut réutiliser les contenus envoyés et des
+personnes peuvent les relire (d'où l'absence de nom et d'e-mail dans les messages) ; le bouton est
+masqué dans l'EEE, en Suisse et au Royaume-Uni ; les conditions interdisent les services accessibles
+aux moins de 18 ans. Vérifier les quotas sur <https://aistudio.google.com/rate-limit>.
+
 ## En production (Vercel)
 
 Ajouter dans _Project Settings → Environment Variables_ : `NEXT_PUBLIC_SUPABASE_URL`,

@@ -12,6 +12,7 @@ import { MultipleChoice } from "@/components/exercises/MultipleChoice";
 import { OrderWords } from "@/components/exercises/OrderWords";
 import type { CheckStatus } from "@/components/exercises/types";
 import { Mascot } from "@/components/game/Mascot";
+import { AiExplain } from "@/components/lesson/AiExplain";
 import { LessonResults } from "@/components/lesson/LessonResults";
 import { correctAnswerText, isCorrect, isTypo } from "@/lib/exercises/grade";
 import type { Answer, PlayableExercise } from "@/lib/exercises/schemas";
@@ -29,6 +30,8 @@ type Props = {
   finish: (input: FinishInput) => Promise<FinishResult>;
   soundEnabled: boolean;
   mode?: "lesson" | "review";
+  /** Bouton « Explique-moi » proposé (clé d'IA configurée, pays autorisé). */
+  aiExplain?: boolean;
 };
 
 type Phase =
@@ -41,7 +44,13 @@ function pick<T>(list: readonly T[], n: number): T {
   return list[n % list.length];
 }
 
-export function LessonPlayer({ exercises, finish, soundEnabled, mode = "lesson" }: Props) {
+export function LessonPlayer({
+  exercises,
+  finish,
+  soundEnabled,
+  mode = "lesson",
+  aiExplain = false,
+}: Props) {
   const router = useRouter();
   const [queue, setQueue] = useState<number[]>(() => exercises.map((_, i) => i));
   const [cursor, setCursor] = useState(0);
@@ -262,6 +271,17 @@ export function LessonPlayer({ exercises, finish, soundEnabled, mode = "lesson" 
         }
         correctionLabel={status === "wrong" ? t.correctAnswer : t.typo}
         explanation={exercise.explanation_fr}
+        aiSlot={
+          aiExplain && status === "wrong" && answer ? (
+            <AiExplain
+              key={cursor}
+              source={mode}
+              exerciseId={exercise.id}
+              answer={answer}
+              previousMistakes={queue.slice(0, cursor).filter((i) => i === index).length}
+            />
+          ) : null
+        }
         showExplanation={showExplanation}
         onToggleExplanation={() => setShowExplanation((s) => !s)}
         praise={pick(t.praise, cursor)}
@@ -280,6 +300,8 @@ type FeedbackProps = {
   correction: string | null;
   correctionLabel: string;
   explanation: string | null;
+  /** « Explique-moi » (IA), affiché après une erreur. */
+  aiSlot: React.ReactNode;
   showExplanation: boolean;
   onToggleExplanation: () => void;
   praise: string;
@@ -295,6 +317,7 @@ function FeedbackBar({
   correction,
   correctionLabel,
   explanation,
+  aiSlot,
   showExplanation,
   onToggleExplanation,
   praise,
@@ -350,6 +373,7 @@ function FeedbackBar({
                     {showExplanation ? t.hideExplain : t.explain}
                   </button>
                 )}
+                {aiSlot}
               </div>
             </m.div>
           )}

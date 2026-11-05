@@ -438,6 +438,19 @@ export const fr = {
     skipListen: "Je ne peux pas écouter maintenant",
     explain: "Explication en français",
     hideExplain: "Masquer l'explication",
+    ai: {
+      ask: "Explique-moi",
+      again: "Explique autrement",
+      loading: "Hopi réfléchit…",
+      remaining: (n: number) =>
+        n > 1
+          ? `${n} explications restantes aujourd'hui`
+          : n === 1
+            ? "Dernière explication aujourd'hui"
+            : "Plus d'explication aujourd'hui, à demain !",
+      limit: (max: number) => `Tu as atteint la limite de ${max} explications par jour. À demain !`,
+      unavailable: "L'explication n'est pas disponible pour l'instant. Réessaie dans un moment.",
+    },
     correctAnswer: "Bonne réponse :",
     praise: ["Bravo !", "Excellent !", "Parfait !", "Super !", "Yes!"],
     encourage: ["Pas tout à fait…", "Presque !", "Oups !"],

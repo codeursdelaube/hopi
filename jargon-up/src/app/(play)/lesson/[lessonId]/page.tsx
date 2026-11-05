@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { z } from "zod";
 import { LessonPlayer } from "@/components/lesson/LessonPlayer";
 import { Mascot } from "@/components/game/Mascot";
+import { isAiExplainAvailable } from "@/lib/ai/gemini";
 import { requireProfile } from "@/lib/auth/session";
 import { toPlayable } from "@/lib/exercises/load";
 import { loadPath } from "@/lib/learn/load";
@@ -48,6 +49,7 @@ async function LessonLoader({ params }: Pick<PageProps<"/lesson/[lessonId]">, "p
       exercises={exercises}
       finish={completeLesson.bind(null, lessonId)}
       soundEnabled={profile.sound_enabled}
+      aiExplain={await isAiExplainAvailable()}
     />
   );
 }

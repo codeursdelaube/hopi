@@ -10,7 +10,7 @@ export const LEGAL = {
   /** Adresse e-mail de contact (questions, exercice des droits sur les données). */
   contactEmail: "adokoueric117@gmail.com",
   /** Date de dernière mise à jour des documents. */
-  updatedAt: "1 novembre 2026",
-  /** Âge minimum pour créer un compte. */
-  minimumAge: 13,
+  updatedAt: "5 novembre 2026",
+  /** Âge minimum pour créer un compte (les conditions de Gemini excluent les moins de 18 ans). */
+  minimumAge: 18,
 } as const;

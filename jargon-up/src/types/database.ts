@@ -166,6 +166,7 @@ export type Database = {
         },
         "creator_id" | "field_id" | "puzzle" | "ends_at"
       >;
+      ai_explanations: Table<{ id: number; user_id: string; created_at: string }, "user_id">;
       challenge_room_hidden: Table<
         { user_id: string; room_id: string; hidden_at: string },
         "user_id" | "room_id"

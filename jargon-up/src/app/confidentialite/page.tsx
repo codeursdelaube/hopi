@@ -75,6 +75,14 @@ export default function ConfidentialitePage() {
           Google (connexion avec ton compte Google) et les services de notification de ton
           navigateur (Google, Apple ou Mozilla) pour acheminer les rappels.
         </li>
+        <li>
+          <strong>Google (Gemini)</strong>, seulement quand tu touches « Explique-moi » après une
+          erreur : l&apos;exercice, ta réponse et ton niveau sont envoyés pour rédiger
+          l&apos;explication, sans ton nom ni ton e-mail. Dans le cadre de l&apos;offre gratuite de
+          Gemini, Google peut utiliser ces contenus pour améliorer ses services, et des personnes
+          peuvent les relire. N&apos;écris donc pas d&apos;informations personnelles dans tes
+          réponses. Hopi ne conserve ni ta question, ni l&apos;explication.
+        </li>
       </ul>
       <p>
         Certains de ces prestataires peuvent stocker des données hors du Togo ; ils appliquent des
@@ -144,8 +152,9 @@ export default function ConfidentialitePage() {
 
       <h2>9. Mineurs</h2>
       <p>
-        Hopi s&apos;adresse aux personnes d&apos;au moins {LEGAL.minimumAge} ans. En dessous de cet
-        âge, l&apos;accord d&apos;un parent ou tuteur est nécessaire.
+        Hopi s&apos;adresse uniquement aux personnes d&apos;au moins {LEGAL.minimumAge} ans. Si tu
+        as moins de {LEGAL.minimumAge} ans, n&apos;utilise pas Hopi. Si tu penses qu&apos;un compte
+        appartient à une personne plus jeune, écris-nous : nous le supprimerons.
       </p>
 
       <h2>10. Modifications</h2>

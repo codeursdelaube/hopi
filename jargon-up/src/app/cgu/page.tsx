@@ -41,7 +41,7 @@ export default function CguPage() {
         </li>
         <li>
           La création d&apos;un compte se fait avec un compte Google. Tu dois avoir au moins{" "}
-          {LEGAL.minimumAge} ans, ou l&apos;accord d&apos;un parent ou tuteur.
+          {LEGAL.minimumAge} ans pour utiliser Hopi.
         </li>
         <li>
           Tu es responsable de l&apos;accès à ton compte Google et des actions réalisées depuis ton

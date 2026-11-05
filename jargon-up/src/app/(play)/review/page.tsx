@@ -4,6 +4,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { LessonPlayer } from "@/components/lesson/LessonPlayer";
 import { Mascot } from "@/components/game/Mascot";
+import { isAiExplainAvailable } from "@/lib/ai/gemini";
 import { requireProfile } from "@/lib/auth/session";
 import { buildReviewSession } from "@/lib/review/build";
 import { fr } from "@/lib/i18n/fr";
@@ -55,6 +56,7 @@ async function ReviewLoader() {
         finish={completeReview}
         soundEnabled={profile.sound_enabled}
         mode="review"
+        aiExplain={await isAiExplainAvailable()}
       />
     </>
   );
