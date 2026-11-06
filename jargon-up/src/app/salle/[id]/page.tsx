@@ -3,11 +3,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { z } from "zod";
-import { Check, Clock, Medal, Rabbit, Shuffle, Star, Timer, Users, X } from "lucide-react";
+import { Check, Clock, Medal, Shuffle, Star, Timer, Users, X } from "lucide-react";
 import { Mascot } from "@/components/game/Mascot";
-import { StartRoomButton } from "@/components/rooms/RoomButtons";
+import { Lobby } from "@/components/rooms/Lobby";
+import { PlayerAvatar } from "@/components/rooms/PlayerAvatar";
+import { JoinRoomButton } from "@/components/rooms/RoomButtons";
+import { RoomRefresher } from "@/components/rooms/RoomRefresher";
 import { SortGame } from "@/components/rooms/SortGame";
-import { ShareButton } from "@/components/share/ShareDialog";
 import { requireProfile } from "@/lib/auth/session";
 import { firstName } from "@/lib/push/reminder";
 import { loadRoom, type RoomView } from "@/lib/rooms/load";
@@ -15,6 +17,7 @@ import {
   ROOM,
   formatDuration,
   formatLimit,
+  isGameRunning,
   isRoomOpen,
   minutesLeft,
   publicPuzzle,
@@ -71,12 +74,11 @@ async function RoomContent({ params }: Pick<PageProps<"/salle/[id]">, "params">)
 
   const now = new Date();
   const open = isRoomOpen(room.endsAt, now);
-  const remaining = minutesLeft(room.endsAt, now);
-  const playing = room.me && !room.me.finishedAt;
   const finished = room.me?.finishedAt;
+  const isHost = me === room.creatorId;
 
-  // Partie en cours : le jeu prend toute la place.
-  if (playing && me) {
+  // Partie lancée : le jeu prend toute la place (compte à rebours commun, puis les mots).
+  if (room.startedAt && room.me && !finished) {
     const profile = await requireProfile();
     return (
       <>
@@ -86,7 +88,8 @@ async function RoomContent({ params }: Pick<PageProps<"/salle/[id]">, "params">)
         <SortGame
           roomId={room.id}
           puzzle={publicPuzzle(room.puzzle)}
-          startedAt={room.me!.startedAt.toISOString()}
+          startedAt={room.me.startedAt.toISOString()}
+          serverNow={now.toISOString()}
           timeLimitSeconds={room.timeLimitSeconds}
           soundEnabled={profile.sound_enabled}
         />
@@ -94,18 +97,23 @@ async function RoomContent({ params }: Pick<PageProps<"/salle/[id]">, "params">)
     );
   }
 
-  return (
+  const header = (
     <>
       <Mascot mood={finished ? "proud" : "happy"} size={120} />
       <div className="flex flex-col gap-2">
         <h1 className="flex items-center justify-center gap-2 font-display text-3xl font-bold">
           <Shuffle className="size-8 shrink-0 text-accent" aria-hidden />
-          {me === room.creatorId ? t.itemMine : t.invite(firstName(room.creatorName))}
+          {isHost ? t.itemMine : t.invite(firstName(room.creatorName))}
         </h1>
         <p className="text-base-content/70">{t.rules}</p>
         <div className="flex flex-wrap justify-center gap-2">
           <span className="badge gap-1 badge-lg badge-warning">
-            <Clock className="size-4" aria-hidden /> {open ? t.timeLeft(remaining) : t.closed}
+            <Clock className="size-4" aria-hidden />{" "}
+            {room.startedAt
+              ? t.launched
+              : open
+                ? t.timeLeft(minutesLeft(room.endsAt, now))
+                : t.closed}
           </span>
           <span className="badge gap-1 badge-lg badge-accent">
             <Timer className="size-4" aria-hidden />{" "}
@@ -116,42 +124,58 @@ async function RoomContent({ params }: Pick<PageProps<"/salle/[id]">, "params">)
           </span>
         </div>
       </div>
+    </>
+  );
+
+  // Salle d'attente : la liste des joueurs se met à jour toute seule, et le lancement de
+  // l'hôte fait basculer chaque téléphone dans le jeu.
+  if (!room.startedAt && open && room.me && me) {
+    return (
+      <>
+        {header}
+        <RoomRefresher intervalMs={ROOM.lobbyRefreshMs} />
+        <Lobby
+          roomId={room.id}
+          meId={me}
+          hostId={room.creatorId}
+          hostName={firstName(room.creatorName) ?? fr.leaderboard.anonymous}
+          players={room.players.map((p) => ({
+            ...p,
+            name: firstName(p.name) ?? fr.leaderboard.anonymous,
+          }))}
+        />
+      </>
+    );
+  }
+
+  // Tant que des joueurs peuvent finir, le classement se met à jour tout seul.
+  const othersPlaying =
+    room.startedAt !== null &&
+    room.ranking.length < room.playerCount &&
+    isGameRunning(room.startedAt, room.timeLimitSeconds, now);
+
+  return (
+    <>
+      {header}
+      {othersPlaying && <RoomRefresher intervalMs={ROOM.resultsRefreshMs} />}
 
       {finished && room.me ? <MyResult room={room} /> : null}
 
       <div className="flex w-full flex-col gap-3">
         {finished ? (
-          <>
-            {open && (
-              <ShareButton
-                title={t.shareTitle}
-                text={t.shareText}
-                path={`/salle/${room.id}`}
-                label={t.inviteMore}
-                className="btn w-full btn-pop btn-lg btn-secondary"
-              />
-            )}
-            <Link href="/leaderboard" className="btn w-full btn-pop btn-lg">
-              {t.createOwn}
-            </Link>
-          </>
+          <Link href="/leaderboard" className="btn w-full btn-pop btn-lg">
+            {t.createOwn}
+          </Link>
+        ) : room.startedAt ? (
+          <p className="text-base-content/70">{t.alreadyStarted}</p>
         ) : !open ? (
-          <p className="text-base-content/70">{t.over}</p>
+          <p className="text-base-content/70">{t.expired}</p>
         ) : room.playerCount >= ROOM.maxPlayers ? (
           <p className="text-base-content/70">{t.full}</p>
         ) : me ? (
           <>
             <p className="text-sm text-base-content/60">{t.xpRule}</p>
-            <StartRoomButton roomId={room.id} />
-            {me === room.creatorId && (
-              <ShareButton
-                title={t.shareTitle}
-                text={t.shareText}
-                path={`/salle/${room.id}`}
-                label={t.inviteMore}
-                className="btn w-full btn-outline"
-              />
-            )}
+            <JoinRoomButton roomId={room.id} />
           </>
         ) : (
           <>
@@ -166,7 +190,7 @@ async function RoomContent({ params }: Pick<PageProps<"/salle/[id]">, "params">)
         )}
       </div>
 
-      <Ranking room={room} me={me} />
+      {room.startedAt && <Ranking room={room} me={me} />}
     </>
   );
 }
@@ -260,21 +284,7 @@ function Ranking({ room, me }: { room: RoomView; me: string | null }) {
                 <span className="w-7 text-center font-display font-bold" aria-hidden>
                   {MEDALS[i] ? <Medal className={`mx-auto size-6 ${MEDALS[i]}`} /> : i + 1}
                 </span>
-                {r.avatarUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={r.avatarUrl}
-                    alt=""
-                    width={36}
-                    height={36}
-                    referrerPolicy="no-referrer"
-                    className="rounded-full"
-                  />
-                ) : (
-                  <span className="flex size-9 items-center justify-center rounded-full bg-base-300">
-                    <Rabbit className="size-5 text-base-content/60" aria-hidden />
-                  </span>
-                )}
+                <PlayerAvatar url={r.avatarUrl} />
                 <span className="min-w-0 flex-1 truncate font-semibold" aria-hidden>
                   {name}
                   {mine && <span className="ml-2 badge badge-sm badge-primary">{t.you}</span>}

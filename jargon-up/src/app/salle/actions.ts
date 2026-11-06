@@ -11,6 +11,7 @@ import {
   buildPuzzle,
   gradePlacements,
   isOpenDuration,
+  isRoomJoinable,
   isTimeLimit,
   puzzleSchema,
   roomXp,
@@ -23,8 +24,8 @@ export type CreateRoomResult =
 
 /**
  * Crée une salle « Tri express » avec un puzzle tiré dans la filière du créateur. L'hôte
- * choisit le temps limite de jeu et la durée d'ouverture de la salle (parmi les valeurs
- * proposées) ; une fois fermée, la salle ne se joue plus et reste visible dans l'historique.
+ * choisit le temps limite de jeu et combien de temps la salle attend les joueurs (parmi les
+ * valeurs proposées) ; sans lancement à temps, elle ferme et reste dans l'historique.
  */
 export async function createRoom(
   timeLimit: number,
@@ -43,6 +44,7 @@ export async function createRoom(
       .from("challenge_rooms")
       .select("id", { count: "exact", head: true })
       .eq("creator_id", profile.id)
+      .is("started_at", null)
       .gt("ends_at", now.toISOString());
     if (countError) throw new Error(countError.message);
     if ((count ?? 0) >= ROOM.maxActive) return { ok: false, reason: "limit" };
@@ -63,6 +65,12 @@ export async function createRoom(
       .single();
     if (error) throw new Error(error.message);
 
+    // L'hôte est le premier joueur de la salle d'attente, et il est prêt par définition.
+    const { error: hostError } = await admin
+      .from("challenge_room_players")
+      .insert({ room_id: room.id, user_id: profile.id, ready: true });
+    if (hostError) throw new Error(hostError.message);
+
     revalidatePath("/leaderboard");
     return { ok: true, id: room.id };
   } catch (e) {
@@ -71,16 +79,16 @@ export async function createRoom(
   }
 }
 
-export type StartRoomResult = { ok: true } | { ok: false; reason: "over" | "full" | "error" };
+export type JoinRoomResult = { ok: true } | { ok: false; reason: "over" | "full" | "error" };
 
-/** Démarre la partie du joueur : le chronomètre part ici, côté serveur (pas de remise à zéro). */
-export async function startRoom(id: string): Promise<StartRoomResult> {
+/** Entre dans la salle d'attente (impossible une fois la partie lancée ou la salle fermée). */
+export async function joinRoom(id: string): Promise<JoinRoomResult> {
   if (!z.uuid().safeParse(id).success) return { ok: false, reason: "error" };
   try {
     const profile = await requireProfile();
     const admin = createAdminClient();
     const [{ data: room, error }, { count }] = await Promise.all([
-      admin.from("challenge_rooms").select("ends_at").eq("id", id).maybeSingle(),
+      admin.from("challenge_rooms").select("ends_at, started_at").eq("id", id).maybeSingle(),
       admin
         .from("challenge_room_players")
         .select("user_id", { count: "exact", head: true })
@@ -88,7 +96,10 @@ export async function startRoom(id: string): Promise<StartRoomResult> {
     ]);
     if (error) throw new Error(error.message);
     if (!room) return { ok: false, reason: "error" };
-    if (Date.now() >= new Date(room.ends_at).getTime()) return { ok: false, reason: "over" };
+    const startedAt = room.started_at ? new Date(room.started_at) : null;
+    if (!isRoomJoinable(startedAt, new Date(room.ends_at), new Date())) {
+      return { ok: false, reason: "over" };
+    }
     if ((count ?? 0) >= ROOM.maxPlayers) return { ok: false, reason: "full" };
 
     const { error: insertError } = await admin
@@ -102,7 +113,64 @@ export async function startRoom(id: string): Promise<StartRoomResult> {
     revalidatePath(`/salle/${id}`);
     return { ok: true };
   } catch (e) {
-    console.error("startRoom :", e);
+    console.error("joinRoom :", e);
+    return { ok: false, reason: "error" };
+  }
+}
+
+/** « Je suis prêt » / « Pas encore », uniquement avant le lancement. */
+export async function setRoomReady(id: string, ready: boolean): Promise<{ ok: boolean }> {
+  if (!z.uuid().safeParse(id).success) return { ok: false };
+  try {
+    const profile = await requireProfile();
+    const admin = createAdminClient();
+    const { data: room, error } = await admin
+      .from("challenge_rooms")
+      .select("creator_id, started_at")
+      .eq("id", id)
+      .maybeSingle();
+    if (error) throw new Error(error.message);
+    // L'hôte est toujours prêt : c'est lui qui lance.
+    if (!room || room.started_at || room.creator_id === profile.id) return { ok: false };
+
+    const { error: updateError } = await admin
+      .from("challenge_room_players")
+      .update({ ready: Boolean(ready) })
+      .eq("room_id", id)
+      .eq("user_id", profile.id);
+    if (updateError) throw new Error(updateError.message);
+
+    revalidatePath(`/salle/${id}`);
+    return { ok: true };
+  } catch (e) {
+    console.error("setRoomReady :", e);
+    return { ok: false };
+  }
+}
+
+export type LaunchRoomResult =
+  { ok: true } | { ok: false; reason: "not_enough" | "already" | "closed" | "error" };
+
+/** L'hôte lance la partie. Tout est vérifié et appliqué par la base, en une seule transaction. */
+export async function launchRoom(id: string): Promise<LaunchRoomResult> {
+  if (!z.uuid().safeParse(id).success) return { ok: false, reason: "error" };
+  try {
+    const profile = await requireProfile();
+    const { data, error } = await createAdminClient().rpc("launch_challenge_room", {
+      p_room_id: id,
+      p_host_id: profile.id,
+      p_countdown_seconds: ROOM.countdownSeconds,
+    });
+    if (error) throw new Error(error.message);
+
+    revalidatePath(`/salle/${id}`);
+    if (data === "ok") return { ok: true };
+    if (data === "not_enough" || data === "already" || data === "closed") {
+      return { ok: false, reason: data };
+    }
+    return { ok: false, reason: "error" };
+  } catch (e) {
+    console.error("launchRoom :", e);
     return { ok: false, reason: "error" };
   }
 }
@@ -126,7 +194,11 @@ export async function submitRoom(id: string, raw: unknown): Promise<SubmitRoomRe
     const profile = await requireProfile();
     const admin = createAdminClient();
     const [{ data: room, error }, { data: player, error: playerError }] = await Promise.all([
-      admin.from("challenge_rooms").select("puzzle, time_limit_seconds").eq("id", id).maybeSingle(),
+      admin
+        .from("challenge_rooms")
+        .select("puzzle, time_limit_seconds, started_at")
+        .eq("id", id)
+        .maybeSingle(),
       admin
         .from("challenge_room_players")
         .select("started_at, finished_at")
@@ -140,10 +212,12 @@ export async function submitRoom(id: string, raw: unknown): Promise<SubmitRoomRe
     if (!player) return { ok: false, reason: "not_started" };
     if (player.finished_at) return { ok: false, reason: "already" };
 
-    // Pas de contrôle de fermeture ici : on ne peut commencer qu'une salle ouverte (startRoom),
-    // et le temps de jeu est vérifié par timedScore. Une partie commencée juste avant la
-    // fermeture peut donc être terminée, sans dépasser son temps limite.
+    // Rien n'est accepté avant le départ commun (salle d'attente, compte à rebours). Ensuite,
+    // seul le temps de jeu compte (timedScore), même si l'attente de la salle est terminée.
     const now = new Date();
+    if (!room.started_at || now < new Date(room.started_at)) {
+      return { ok: false, reason: "not_started" };
+    }
 
     const puzzle = puzzleSchema.parse(room.puzzle);
     const placements = Object.fromEntries(

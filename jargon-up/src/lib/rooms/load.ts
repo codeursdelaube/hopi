@@ -6,6 +6,7 @@ import {
   rankOf,
   rankResults,
   type LessonTerms,
+  type LobbyPlayer,
   type Puzzle,
   type RoomResult,
 } from "@/lib/rooms/room";
@@ -76,13 +77,17 @@ export type RoomView = {
   creatorId: string;
   creatorName: string | null;
   endsAt: Date;
+  /** Départ commun fixé par l'hôte ; null = salle d'attente. */
+  startedAt: Date | null;
   /** Temps limite fixé par l'hôte (secondes). */
   timeLimitSeconds: number;
   puzzle: Puzzle;
+  /** Tous les joueurs de la salle, pour la salle d'attente. */
+  players: LobbyPlayer[];
   /** Joueurs ayant terminé, classés. */
   ranking: RoomResult[];
   playerCount: number;
-  /** Partie du visiteur (null s'il n'a pas commencé ou n'est pas connecté). */
+  /** Place du visiteur dans la salle (null s'il n'y est pas ou n'est pas connecté). */
   me: PlayerRow | null;
 };
 
@@ -95,12 +100,14 @@ export async function loadRoom(id: string, viewerId: string | null): Promise<Roo
   const [{ data: room, error }, { data: players, error: playersError }] = await Promise.all([
     admin
       .from("challenge_rooms")
-      .select("id, creator_id, puzzle, ends_at, time_limit_seconds")
+      .select("id, creator_id, puzzle, ends_at, time_limit_seconds, started_at")
       .eq("id", id)
       .maybeSingle(),
     admin
       .from("challenge_room_players")
-      .select("user_id, started_at, finished_at, correct, total, duration_ms, xp, placements")
+      .select(
+        "user_id, started_at, finished_at, correct, total, duration_ms, xp, placements, ready",
+      )
       .eq("room_id", id),
   ]);
   if (error) throw new Error(`Chargement de la salle : ${error.message}`);
@@ -139,8 +146,15 @@ export async function loadRoom(id: string, viewerId: string | null): Promise<Roo
     creatorId: room.creator_id,
     creatorName: profileById.get(room.creator_id)?.display_name ?? null,
     endsAt: new Date(room.ends_at),
+    startedAt: room.started_at ? new Date(room.started_at) : null,
     timeLimitSeconds: room.time_limit_seconds,
     puzzle,
+    players: players.map((p) => ({
+      userId: p.user_id,
+      name: profileById.get(p.user_id)?.display_name ?? null,
+      avatarUrl: profileById.get(p.user_id)?.avatar_url ?? null,
+      ready: p.ready,
+    })),
     ranking,
     playerCount: players.length,
     me: mine
@@ -159,7 +173,7 @@ export async function loadRoom(id: string, viewerId: string | null): Promise<Roo
 
 export type ActiveRoom = { id: string; creatorName: string | null; endsAt: Date; mine: boolean };
 
-/** Salles encore ouvertes que l'utilisateur a créées ou rejointes. */
+/** Salles d'attente encore ouvertes que l'utilisateur a créées ou rejointes. */
 export async function loadActiveRooms(userId: string): Promise<ActiveRoom[]> {
   const admin = createAdminClient();
   const nowIso = new Date().toISOString();
@@ -179,6 +193,7 @@ export async function loadActiveRooms(userId: string): Promise<ActiveRoom[]> {
     .select("id, creator_id, ends_at")
     .or(filter)
     .gt("ends_at", nowIso)
+    .is("started_at", null)
     .order("ends_at")
     .limit(10);
   if (roomsError) throw new Error(`Chargement des salles : ${roomsError.message}`);
@@ -204,6 +219,8 @@ export type RoomHistoryItem = {
   mine: boolean;
   createdAt: Date;
   endsAt: Date;
+  /** Départ de la partie ; null = salle d'attente. */
+  startedAt: Date | null;
   /** Joueurs ayant terminé. */
   players: number;
   /** Partie de l'utilisateur (null s'il n'a pas joué, ex. sa propre salle). */
@@ -240,7 +257,7 @@ export async function loadRoomHistory(userId: string, limit = 20): Promise<RoomH
 
   const { data: rooms, error: roomsError } = await admin
     .from("challenge_rooms")
-    .select("id, creator_id, created_at, ends_at")
+    .select("id, creator_id, created_at, ends_at, started_at")
     .in("id", ids)
     .order("created_at", { ascending: false })
     .limit(limit);
@@ -288,6 +305,7 @@ export async function loadRoomHistory(userId: string, limit = 20): Promise<RoomH
       mine: room.creator_id === userId,
       createdAt: new Date(room.created_at),
       endsAt: new Date(room.ends_at),
+      startedAt: room.started_at ? new Date(room.started_at) : null,
       players: ranking.length,
       result:
         mineResult && rank

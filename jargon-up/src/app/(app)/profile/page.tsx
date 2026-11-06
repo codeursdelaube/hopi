@@ -11,7 +11,7 @@ import { can } from "@/lib/features";
 import { getHeaderStats } from "@/lib/game/stats";
 import { firstName } from "@/lib/push/reminder";
 import { loadRoomHistory } from "@/lib/rooms/load";
-import { isRoomOpen } from "@/lib/rooms/room";
+import { isRoomJoinable } from "@/lib/rooms/room";
 import { createClient } from "@/lib/supabase/server";
 import { fr } from "@/lib/i18n/fr";
 
@@ -215,7 +215,7 @@ async function RoomHistory({ userId }: { userId: string }) {
         <>
           <ul className="flex flex-col gap-2">
             {history.map((item) => {
-              const open = isRoomOpen(item.endsAt, now);
+              const open = isRoomJoinable(item.startedAt, item.endsAt, now);
               return (
                 <li key={item.id}>
                   <Link

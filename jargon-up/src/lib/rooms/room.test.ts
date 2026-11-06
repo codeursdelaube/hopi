@@ -6,7 +6,10 @@ import {
   formatDuration,
   formatLimit,
   isOpenDuration,
+  isGameRunning,
+  isRoomJoinable,
   isRoomOpen,
+  lobbyStatus,
   minutesLeft,
   rankOf,
   isTimeLimit,
@@ -170,5 +173,46 @@ describe("temps limite", () => {
       durationMs: 60_000,
       late: true,
     });
+  });
+});
+
+describe("salle d'attente", () => {
+  const player = (userId: string, ready: boolean) => ({
+    userId,
+    name: userId,
+    avatarUrl: null,
+    ready,
+  });
+
+  it("l'hôte seul ne peut pas lancer", () => {
+    expect(lobbyStatus([player("hote", true)], "hote").canLaunch).toBe(false);
+  });
+
+  it("un joueur présent mais pas prêt ne suffit pas", () => {
+    const status = lobbyStatus([player("hote", true), player("a", false)], "hote");
+    expect(status).toMatchObject({ others: 1, readyOthers: 0, canLaunch: false });
+  });
+
+  it("lancement possible dès qu'un autre joueur est prêt", () => {
+    const status = lobbyStatus(
+      [player("hote", true), player("a", true), player("b", false)],
+      "hote",
+    );
+    expect(status).toEqual({ others: 2, readyOthers: 1, participants: 2, canLaunch: true });
+  });
+
+  it("on ne rejoint ni une partie lancée, ni une salle fermée", () => {
+    const now = new Date("2026-11-06T10:00:00Z");
+    const later = new Date("2026-11-06T11:00:00Z");
+    const before = new Date("2026-11-06T09:00:00Z");
+    expect(isRoomJoinable(null, later, now)).toBe(true);
+    expect(isRoomJoinable(before, later, now)).toBe(false);
+    expect(isRoomJoinable(null, before, now)).toBe(false);
+  });
+
+  it("la partie tourne jusqu'au temps limite plus la marge réseau", () => {
+    const start = new Date("2026-11-06T10:00:00Z");
+    expect(isGameRunning(start, 60, new Date("2026-11-06T10:01:09Z"))).toBe(true);
+    expect(isGameRunning(start, 60, new Date("2026-11-06T10:01:10Z"))).toBe(false);
   });
 });

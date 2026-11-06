@@ -6,7 +6,7 @@ vi.mock("next/navigation", () => ({ useRouter: () => ({ push, refresh: vi.fn() }
 const createRoom = vi.fn().mockResolvedValue({ ok: true, id: "room-42" });
 vi.mock("@/app/salle/actions", () => ({
   createRoom: (...args: unknown[]) => createRoom(...args),
-  startRoom: vi.fn(),
+  joinRoom: vi.fn(),
 }));
 
 const { CreateRoomButton } = await import("./RoomButtons");

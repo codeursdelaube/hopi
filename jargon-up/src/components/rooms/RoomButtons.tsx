@@ -2,8 +2,8 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { Play, Shuffle } from "lucide-react";
-import { createRoom, startRoom } from "@/app/salle/actions";
+import { LogIn, Shuffle } from "lucide-react";
+import { createRoom, joinRoom } from "@/app/salle/actions";
 import { ShareDialog } from "@/components/share/ShareDialog";
 import { ROOM, formatLimit, type OpenDuration, type TimeLimit } from "@/lib/rooms/room";
 import { fr } from "@/lib/i18n/fr";
@@ -11,8 +11,8 @@ import { fr } from "@/lib/i18n/fr";
 const t = fr.room;
 
 /**
- * L'hôte choisit le temps limite de jeu et la durée d'ouverture de la salle, crée la salle,
- * partage le lien, puis arrive dans la salle pour jouer.
+ * L'hôte choisit le temps limite de jeu et le temps d'attente des joueurs, crée la salle,
+ * partage le lien, puis arrive dans la salle d'attente.
  */
 export function CreateRoomButton() {
   const router = useRouter();
@@ -121,20 +121,20 @@ export function CreateRoomButton() {
   );
 }
 
-/** Lance la partie (le chronomètre démarre côté serveur). */
-export function StartRoomButton({ roomId }: { roomId: string }) {
+/** Entre dans la salle d'attente. */
+export function JoinRoomButton({ roomId }: { roomId: string }) {
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
 
-  function start() {
+  function join() {
     setError(null);
     startTransition(async () => {
-      const result = await startRoom(roomId);
+      const result = await joinRoom(roomId);
       if (result.ok) router.refresh();
       else
         setError(
-          result.reason === "over" ? t.over : result.reason === "full" ? t.full : t.startError,
+          result.reason === "over" ? t.over : result.reason === "full" ? t.full : t.joinError,
         );
     });
   }
@@ -143,16 +143,16 @@ export function StartRoomButton({ roomId }: { roomId: string }) {
     <div className="flex w-full flex-col gap-2">
       <button
         type="button"
-        onClick={start}
+        onClick={join}
         disabled={pending}
         className="btn w-full btn-pop font-display text-lg btn-lg btn-primary"
       >
         {pending ? (
           <span className="loading loading-spinner" aria-hidden />
         ) : (
-          <Play className="size-6" aria-hidden />
+          <LogIn className="size-6" aria-hidden />
         )}
-        {t.start}
+        {t.join}
       </button>
       {error && (
         <p role="alert" className="text-sm text-error">

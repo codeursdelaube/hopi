@@ -8,10 +8,10 @@ import { shuffle } from "@/lib/random";
 export const ROOM = {
   concepts: 4,
   termsPerConcept: 3,
-  /** Durées d'ouverture que l'hôte peut choisir (minutes) : 15 min, 1 h, 24 h, 3 jours. */
+  /** Temps d'attente des joueurs que l'hôte peut choisir (minutes) : 15 min, 1 h, 24 h, 3 jours. */
   openDurations: [15, 60, 1440, 4320],
   defaultOpenDuration: 60,
-  /** Salles ouvertes en même temps par créateur (anti-abus). */
+  /** Salles d'attente en même temps par créateur (anti-abus). */
   maxActive: 5,
   maxPlayers: 30,
   /** Temps limites que l'hôte peut choisir (secondes). */
@@ -19,6 +19,13 @@ export const ROOM = {
   defaultTimeLimit: 90,
   /** Marge pour la latence réseau avant de refuser une réponse arrivée trop tard. */
   lateGraceMs: 10_000,
+  /** Joueurs nécessaires pour lancer une partie (hôte compris). */
+  minPlayers: 2,
+  /** Compte à rebours après le lancement : tous les téléphones ont le temps de le recevoir. */
+  countdownSeconds: 5,
+  /** Mise à jour de l'écran : salle d'attente, puis résultats des autres joueurs. */
+  lobbyRefreshMs: 3000,
+  resultsRefreshMs: 5000,
 } as const;
 
 export type TimeLimit = (typeof ROOM.timeLimits)[number];
@@ -131,6 +138,37 @@ export function minutesLeft(endsAt: Date, now: Date): number {
 
 export function isRoomOpen(endsAt: Date, now: Date): boolean {
   return now.getTime() < endsAt.getTime();
+}
+
+/** On ne rejoint qu'une salle d'attente encore ouverte (pas une partie déjà lancée). */
+export function isRoomJoinable(startedAt: Date | null, endsAt: Date, now: Date): boolean {
+  return startedAt === null && isRoomOpen(endsAt, now);
+}
+
+export type LobbyPlayer = {
+  userId: string;
+  name: string | null;
+  avatarUrl: string | null;
+  ready: boolean;
+};
+
+/** L'hôte peut lancer dès qu'au moins un autre joueur est prêt. */
+export function lobbyStatus(players: readonly LobbyPlayer[], hostId: string) {
+  const others = players.filter((p) => p.userId !== hostId);
+  const readyOthers = others.filter((p) => p.ready).length;
+  // Joueurs qui participeront si l'hôte lance maintenant (lui compris).
+  const participants = readyOthers + 1;
+  return {
+    others: others.length,
+    readyOthers,
+    participants,
+    canLaunch: participants >= ROOM.minPlayers,
+  };
+}
+
+/** Des joueurs peuvent-ils encore envoyer leur score ? (sinon, inutile de rafraîchir) */
+export function isGameRunning(startedAt: Date, timeLimitSeconds: number, now: Date): boolean {
+  return now.getTime() < startedAt.getTime() + timeLimitSeconds * 1000 + ROOM.lateGraceMs;
 }
 
 /** Rang (1 = premier) d'un joueur dans un classement déjà trié, ou null s'il n'y figure pas. */

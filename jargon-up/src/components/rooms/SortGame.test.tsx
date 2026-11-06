@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { act, fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { PublicPuzzle } from "@/lib/rooms/room";
 
@@ -21,12 +21,13 @@ const puzzle: PublicPuzzle = {
   ],
 };
 
-function renderGame(startedAt = new Date()) {
+function renderGame(startedAt = new Date(), serverNow = new Date()) {
   return render(
     <SortGame
       roomId="room-1"
       puzzle={puzzle}
       startedAt={startedAt.toISOString()}
+      serverNow={serverNow.toISOString()}
       timeLimitSeconds={60}
       soundEnabled={false}
     />,
@@ -97,6 +98,31 @@ describe("SortGame (un mot à la fois)", () => {
     await waitFor(() => expect(submitRoom).toHaveBeenCalledTimes(1));
     expect(submitRoom.mock.calls[0][1].placements).toEqual([]);
     expect((category("Git") as HTMLButtonElement).disabled).toBe(true);
+  });
+
+  it("compte à rebours : ni mot ni catégorie avant le départ commun", () => {
+    vi.useFakeTimers();
+    try {
+      renderGame(new Date(Date.now() + 5000));
+      expect(screen.getByText("La partie commence dans…")).toBeTruthy();
+      expect(screen.getByText("5")).toBeTruthy();
+      expect(screen.queryByText("commit")).toBeNull();
+      expect(screen.queryByRole("button")).toBeNull();
+      fireEvent.keyDown(window, { key: "1" });
+      expect(submitRoom).not.toHaveBeenCalled();
+
+      act(() => void vi.advanceTimersByTime(5000));
+      expect(screen.getByText("commit")).toBeTruthy();
+      expect(screen.getByText("Mot 1/3")).toBeTruthy();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("téléphone en retard d'une minute : la partie démarre quand même à l'heure du serveur", () => {
+    const serverNow = new Date(Date.now() + 60_000);
+    renderGame(serverNow, serverNow);
+    expect(screen.getByText("commit")).toBeTruthy();
   });
 
   it("erreur d'envoi : message et bouton pour réessayer", async () => {

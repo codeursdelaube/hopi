@@ -18,8 +18,10 @@ const TONES = ["btn-primary", "btn-secondary", "btn-accent", "btn-info"];
 type Props = {
   roomId: string;
   puzzle: PublicPuzzle;
-  /** Début de la partie (mesuré par le serveur), pour le compte à rebours affiché. */
+  /** Départ commun de la partie, fixé par le serveur (quelques secondes après le lancement). */
   startedAt: string;
+  /** Heure du serveur à l'affichage : corrige l'horloge du téléphone, si elle n'est pas à l'heure. */
+  serverNow: string;
   /** Temps limite fixé par l'hôte (secondes). */
   timeLimitSeconds: number;
   soundEnabled: boolean;
@@ -35,31 +37,43 @@ type Placements = Record<string, string>;
  * aussitôt et le suivant arrive. Après le dernier mot (ou à la fin du chrono), la partie est
  * envoyée automatiquement. Correction et chronomètre officiel : côté serveur.
  */
-export function SortGame({ roomId, puzzle, startedAt, timeLimitSeconds, soundEnabled }: Props) {
+export function SortGame({
+  roomId,
+  puzzle,
+  startedAt,
+  serverNow,
+  timeLimitSeconds,
+  soundEnabled,
+}: Props) {
   const router = useRouter();
   const [placements, setPlacements] = useState<Placements>({});
   const [index, setIndex] = useState(0);
-  const [elapsed, setElapsed] = useState(0);
+  // Négatif pendant le compte à rebours de départ.
+  const [elapsed, setElapsed] = useState(
+    () => new Date(serverNow).getTime() - new Date(startedAt).getTime(),
+  );
   const [error, setError] = useState(false);
   const [pending, startTransition] = useTransition();
   const sent = useRef(false);
 
   useEffect(() => {
     const start = new Date(startedAt).getTime();
-    const tick = () => setElapsed(Date.now() - start);
+    const clockOffset = new Date(serverNow).getTime() - Date.now();
+    const tick = () => setElapsed(Date.now() + clockOffset - start);
     tick();
     const id = window.setInterval(tick, 250);
     return () => window.clearInterval(id);
-  }, [startedAt]);
+  }, [startedAt, serverNow]);
 
   const limitMs = timeLimitSeconds * 1000;
-  const remaining = Math.max(0, limitMs - elapsed);
+  const waiting = elapsed < 0;
+  const remaining = Math.min(limitMs, Math.max(0, limitMs - elapsed));
   const timeUp = remaining <= 0;
   const hurry = !timeUp && remaining <= HURRY_MS;
   const total = puzzle.terms.length;
   const current = puzzle.terms[index] ?? null;
   const finished = current === null;
-  const locked = finished || timeUp || pending;
+  const locked = waiting || finished || timeUp || pending;
 
   const submit = useCallback(
     (answers: Placements) => {
@@ -111,6 +125,18 @@ export function SortGame({ roomId, puzzle, startedAt, timeLimitSeconds, soundEna
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [classify, puzzle.concepts]);
+
+  // Compte à rebours commun : ni les mots ni les catégories avant le départ.
+  if (waiting) {
+    return (
+      <div className="flex w-full flex-1 flex-col items-center justify-center gap-4" role="status">
+        <p className="font-display text-xl font-bold">{t.countdown}</p>
+        <p className="font-display text-8xl font-bold text-accent tabular-nums">
+          {Math.ceil(-elapsed / 1000)}
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="flex w-full flex-1 flex-col gap-4">

@@ -161,6 +161,8 @@ export type Database = {
           field_id: string;
           puzzle: unknown;
           time_limit_seconds: number;
+          /** Départ commun fixé par l'hôte ; null = salle d'attente. */
+          started_at: string | null;
           created_at: string;
           ends_at: string;
         },
@@ -182,12 +184,17 @@ export type Database = {
           duration_ms: number | null;
           xp: number | null;
           placements: Record<string, string> | null;
+          ready: boolean;
         },
         "room_id" | "user_id"
       >;
     };
     Views: Record<never, never>;
     Functions: {
+      launch_challenge_room: {
+        Args: { p_room_id: string; p_host_id: string; p_countdown_seconds: number };
+        Returns: string;
+      };
       weekly_leaderboard: {
         Args: { limit_count?: number };
         Returns: {

@@ -181,7 +181,7 @@ export const fr = {
       "Crée une salle : 12 mots anglais défilent un par un, classe-les vite dans leur catégorie. Le plus juste et le plus rapide gagne !",
     create: "Créer une salle",
     timeLimit: "Temps limite pour trier",
-    openDuration: "Salle ouverte pendant",
+    openDuration: "La salle attend les joueurs pendant",
     openDurations: { 15: "15 min", 60: "1 h", 1440: "24 h", 4320: "3 jours" } as Record<
       number,
       string
@@ -194,11 +194,11 @@ export const fr = {
     shareText:
       "Je t'invite dans ma salle Tri express sur Hopi ! 12 mots anglais à classer à toute vitesse : on verra qui est le plus rapide. Installe l'appli gratuitement et rejoins la salle :",
     limit: (max: number) =>
-      `Tu as déjà ${max} salles ouvertes. Attends qu'une salle se ferme pour en créer une autre.`,
+      `Tu as déjà ${max} salles en attente. Lance une partie ou attends qu'une salle se ferme.`,
     noField: "Choisis d'abord ta filière pour créer une salle.",
     noContent: "Pas encore assez de leçons dans ta filière pour créer une salle.",
     error: "La salle n'a pas pu être créée. Réessaie.",
-    active: "Mes salles ouvertes",
+    active: "Mes salles en attente",
     itemMine: "Ta salle",
     item: (name: string | null) => `Salle de ${name ?? "ton ami"}`,
     timeLeft: (minutes: number) =>
@@ -209,17 +209,35 @@ export const fr = {
           : `${Math.ceil(minutes / 1440)} j restants`,
     invite: (name: string | null) => `${name ?? "Un ami"} t'invite au Tri express !`,
     rules:
-      "Les mots anglais arrivent un par un : touche vite la catégorie de chacun. Le classement se fait au nombre de bonnes réponses, puis au temps.",
+      "Quand l'hôte lance la partie, les mots anglais arrivent un par un : touche vite la catégorie de chacun. Le classement se fait au nombre de bonnes réponses, puis au temps.",
     xpRule: "2 XP par mot bien classé, +5 si tout est juste.",
     players: (n: number) =>
       n > 1 ? `${n} joueurs` : n === 1 ? "1 joueur" : "Aucun joueur pour l'instant",
-    start: "C'est parti !",
+    join: "Entrer dans la salle",
+    lobby: "Salle d'attente",
+    host: "Hôte",
+    ready: "Prêt",
+    notReady: "Pas encore prêt",
+    iAmReady: "Je suis prêt",
+    notYet: "Finalement, pas encore",
+    waitingHost: (name: string) => `Tu es prêt ! La partie commencera quand ${name} la lancera.`,
+    getReady: "Touche « Je suis prêt » quand tu peux jouer.",
+    launch: (participants: number) =>
+      participants > 1 ? `Lancer la partie (${participants} joueurs)` : "Lancer la partie",
+    needPlayers: "Il faut au moins un autre joueur prêt pour lancer la partie. Invite tes amis !",
+    notAllReady: (ready: number, others: number) =>
+      `Prêts : ${ready} sur ${others}. Les autres ne joueront pas si tu lances maintenant.`,
+    launched: "Partie lancée",
+    alreadyStarted: "La partie a commencé sans toi. Tu peux suivre le classement ci-dessous.",
+    expired: "Personne n'a lancé la partie à temps : cette salle est fermée.",
+    countdown: "La partie commence dans…",
+    actionError: "L'action n'a pas abouti. Réessaie.",
     login: "Rejoindre la salle",
     newcomer: "Pas encore sur Hopi ? C'est gratuit : connecte-toi avec Google en un clic.",
     full: "Cette salle est complète.",
     over: "Cette salle est fermée : on ne peut plus y jouer.",
     closed: "Fermée",
-    startError: "Impossible de lancer la partie. Réessaie.",
+    joinError: "Impossible d'entrer dans la salle. Réessaie.",
     submitting: "Correction…",
     wordCount: (n: number, total: number) => `Mot ${n}/${total}`,
     pickCategory: "Touche la catégorie de ce mot. Il disparaît aussitôt : vite, le suivant !",
@@ -230,7 +248,7 @@ export const fr = {
     xpWon: (n: number) => `+${n} XP`,
     correction: "Correction",
     ranking: "Classement de la salle",
-    noRanking: "Personne n'a encore terminé. Sois le premier !",
+    noRanking: "Personne n'a encore terminé.",
     you: "Toi",
     inviteMore: "Inviter d'autres amis",
     createOwn: "Créer ma salle",
@@ -243,7 +261,7 @@ export const fr = {
     historyRank: (rank: number, players: number) =>
       `${rank}${rank === 1 ? "er" : "e"} sur ${players}`,
     historyNotPlayed: "Pas joué",
-    historyOpen: "Ouverte",
+    historyOpen: "En attente",
     historyDate: (date: string) => `Le ${date}`,
     clearHistory: "Vider l'historique",
     clearConfirm:
